@@ -1,0 +1,49 @@
+{
+  "updated": "2026-10-21",
+  "items": [
+    {
+      "category": "news",
+      "label": "AI 模型 API",
+      "date": "2026-10-21",
+      "title": "关注长上下文缓存在游戏 Agent 中的成本价值",
+      "summary": "重复使用世界观、角色设定和工具定义时，缓存机制值得单独评估。",
+      "facts": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。",
+      "value": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。",
+      "action": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。",
+      "url": "https://platform.openai.com/docs/guides/prompt-caching"
+    },
+    {
+      "category": "learn",
+      "label": "AI 实战教程",
+      "date": "2026-10-21",
+      "title": "用 Claude Code / Codex 建立可复现的游戏开发任务",
+      "summary": "从单次提示词转向项目文档、明确验收标准和自动测试。",
+      "facts": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。",
+      "value": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。",
+      "action": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。",
+      "url": "https://github.com/openai/codex"
+    },
+    {
+      "category": "tools",
+      "label": "游戏开发工具",
+      "date": "2026-10-21",
+      "title": "ComfyUI：为游戏素材建立可复用的生成流程",
+      "summary": "角色、道具和场景素材要追求批量一致性，而不只是单张效果。",
+      "facts": "ComfyUI 是节点式生成工作流工具，可用于组织图像等生成任务；具体模型许可与商用权利需分别核查。此条是工具推荐，不是当天新发布。",
+      "value": "适合固定美术风格、重复生产图标和概念草图，并保留参数与版本。",
+      "action": "制作10件同系列道具，测量风格一致性、可用率和手动修图耗时。",
+      "url": "https://github.com/comfyanonymous/ComfyUI"
+    },
+    {
+      "category": "ideas",
+      "label": "玩法创意",
+      "date": "2026-10-21",
+      "title": "从信息不对称设计低成本双人合作玩法",
+      "summary": "让两名玩家各自掌握不同信息，可以用较少资产创造沟通乐趣。",
+      "facts": "这是玩法设计思路，不是新闻报道。典型机制包括一人负责操作，另一人掌握路线或谜题信息。",
+      "value": "机制易于用小型原型验证，不必先制作大量关卡或复杂美术。",
+      "action": "制作90秒双人原型：一人移动，一人只能通过语言提示方向，测试误解是否带来有趣体验。",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest"
+    }
+  ]
+}
