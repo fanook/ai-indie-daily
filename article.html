@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta name="description" content="为 AI 辅助独立游戏开发者整理值得读的资讯、可以实践的教程、趁手的工具与值得验证的创意。">
+  <title>阅读文章 · AI × INDIE LAB</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=5">
+  <script src="./theme.js?v=5"></script><script src="./app.js?v=5" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="AI × INDIE LAB 首页"><span>AI <span class="brand-times">×</span> INDIE <strong>LAB</strong></span></a>
+      <div class="header-actions">
+        <a class="saved-link" id="saved-link" href="./?saved=1"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg><span>收藏</span><span id="saved-count" class="saved-count">0</span></a>
+        <button class="icon-button" id="theme-toggle" aria-label="切换至深色模式" title="切换主题"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.4 13A8.5 8.5 0 0 1 11 3.6 8.5 8.5 0 1 0 20.4 13Z"/></svg></button>
+      </div>
+    </div>
+    <nav class="article-nav" aria-label="内容栏目"><label class="section-picker"><span class="sr-only">选择栏目</span><select id="section-select" aria-label="选择栏目"><option value="" disabled>选择栏目</option><option value="news">AI 资讯</option><option value="learn">AI 学习</option><option value="tools">游戏工具</option><option value="ideas">游戏创意</option></select></label></nav>
+  </header>
+  <main id="main" class="reading-shell" tabindex="-1">
+    <a id="back-link" class="back-link" href="./">← 返回列表</a>
+    <article id="article" aria-busy="true"><div class="state-message">正在读取文章…</div></article>
+    <noscript><p class="state-message">请启用 JavaScript 以阅读文章。</p></noscript>
+  </main>
+  <footer class="site-footer"><span>AI × INDIE LAB</span><a href="https://github.com/fanook/ai-indie-daily" target="_blank" rel="noopener noreferrer">内容与源码 ↗</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

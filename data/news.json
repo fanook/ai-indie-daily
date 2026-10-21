@@ -10,7 +10,13 @@
       "facts": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。",
       "value": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。",
       "action": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。",
-      "url": "https://platform.openai.com/docs/guides/prompt-caching"
+      "url": "https://platform.openai.com/docs/guides/prompt-caching",
+      "id": "post-139c157c3d2c1049",
+      "legacyIndex": 0,
+      "cover": {
+        "src": "./assets/covers/context.svg",
+        "alt": "上下文复用与缓存流程示意"
+      }
     },
     {
       "category": "learn",
@@ -21,7 +27,13 @@
       "facts": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。",
       "value": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。",
       "action": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。",
-      "url": "https://github.com/openai/codex"
+      "url": "https://github.com/openai/codex",
+      "id": "post-1f66b3bc5f831b80",
+      "legacyIndex": 1,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -32,7 +44,13 @@
       "facts": "ComfyUI 是节点式生成工作流工具，可用于组织图像等生成任务；具体模型许可与商用权利需分别核查。此条是工具推荐，不是当天新发布。",
       "value": "适合固定美术风格、重复生产图标和概念草图，并保留参数与版本。",
       "action": "制作10件同系列道具，测量风格一致性、可用率和手动修图耗时。",
-      "url": "https://github.com/comfyanonymous/ComfyUI"
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "id": "post-9a1f8875e9d6f4bb",
+      "legacyIndex": 2,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -43,7 +61,13 @@
       "facts": "这是玩法设计思路，不是新闻报道。典型机制包括一人负责操作，另一人掌握路线或谜题信息。",
       "value": "机制易于用小型原型验证，不必先制作大量关卡或复杂美术。",
       "action": "制作90秒双人原型：一人移动，一人只能通过语言提示方向，测试误解是否带来有趣体验。",
-      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest"
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+      "id": "post-78716180acd5adfb",
+      "legacyIndex": 3,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     },
     {
       "category": "news",
@@ -55,7 +79,14 @@
       "value": "游戏项目的 CI、审计日志和部署安全检查不应由同一个 Agent 任意改动。",
       "action": "将安全检查独立于 Agent 运行，并要求人工审批关键配置修改。",
       "url": "https://www.reuters.com/legal/litigation/openai-says-its-ai-agents-weakened-internal-monitoring-system-2026-10-21/",
-      "type": "新闻"
+      "type": "新闻",
+      "id": "post-3405929c6388488f",
+      "legacyIndex": 4,
+      "verification": "unreviewed",
+      "cover": {
+        "src": "./assets/covers/safety.svg",
+        "alt": "代码监控与权限保护的概念示意"
+      }
     },
     {
       "category": "news",
@@ -67,7 +98,14 @@
       "value": "游戏工程的复杂目录、资源依赖和脚本可能受到 CLI 版本变化影响。",
       "action": "先在测试分支执行固定的重构与自动测试任务。",
       "url": "https://github.com/anthropics/claude-code/releases",
-      "type": "新闻"
+      "type": "新闻",
+      "id": "post-82b5a88de6dea9ec",
+      "legacyIndex": 5,
+      "verification": "unreviewed",
+      "cover": {
+        "src": "./assets/covers/terminal.svg",
+        "alt": "编程终端的概念插画"
+      }
     },
     {
       "category": "news",
@@ -79,7 +117,14 @@
       "value": "独立开发者需要在封面、截图、玩法首屏和试玩流程中清晰传达差异化。",
       "action": "试玩三款同类型 Demo，记录核心乐趣出现时间。",
       "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
-      "type": "新闻"
+      "type": "新闻",
+      "id": "post-ec20ea6072221c11",
+      "legacyIndex": 6,
+      "verification": "unreviewed",
+      "cover": {
+        "src": "./assets/covers/demo.svg",
+        "alt": "游戏手柄与试玩卡片的概念插画"
+      }
     },
     {
       "category": "news",
@@ -91,7 +136,14 @@
       "value": "适合建立未来游戏的发行时间表，提前准备商店页与试玩版审核。",
       "action": "为自己的项目倒排 Demo 完成、商店页和宣传视频时间。",
       "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
-      "type": "新闻"
+      "type": "新闻",
+      "id": "post-5e384a8397be2ba3",
+      "legacyIndex": 7,
+      "verification": "unreviewed",
+      "cover": {
+        "src": "./assets/covers/calendar.svg",
+        "alt": "游戏活动日历的概念插画"
+      }
     },
     {
       "category": "news",
@@ -103,7 +155,14 @@
       "value": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。",
       "action": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。",
       "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
-      "type": "新闻"
+      "type": "新闻",
+      "id": "post-bb8f70b509e23521",
+      "legacyIndex": 8,
+      "verification": "unreviewed",
+      "cover": {
+        "src": "./assets/covers/remix.svg",
+        "alt": "原创与复制机制的概念示意"
+      }
     },
     {
       "category": "learn",
@@ -115,7 +174,13 @@
       "value": "减少游戏功能实现后才发现边界遗漏的情况。",
       "action": "为背包系统写3条验收标准，再用 Codex 实现并记录返工时间。",
       "url": "https://github.com/openai/codex",
-      "type": "学习"
+      "type": "学习",
+      "id": "post-651e12b1c194ec54",
+      "legacyIndex": 9,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "learn",
@@ -127,7 +192,13 @@
       "value": "有助于跨仓库协作和长期开发时减少重复解释。",
       "action": "写一页 game-design.md 与 architecture.md，让 Agent 先读后改。",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
-      "type": "学习"
+      "type": "学习",
+      "id": "post-119e1b48c591b518",
+      "legacyIndex": 10,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "learn",
@@ -139,7 +210,13 @@
       "value": "比单张效果图更贴近独立游戏的实际美术生产需求。",
       "action": "固定色板和材质描述，生成12件道具并统计人工修正时间。",
       "url": "https://docs.comfy.org/",
-      "type": "学习"
+      "type": "学习",
+      "id": "post-c0276a53e29c893d",
+      "legacyIndex": 11,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "learn",
@@ -151,7 +228,13 @@
       "value": "避免不可预测的对话破坏核心玩法，也方便控制 API 成本。",
       "action": "设置3种情绪、2种任务状态，测试50次 NPC 对话。",
       "url": "https://platform.openai.com/docs/guides/text",
-      "type": "学习"
+      "type": "学习",
+      "id": "post-5f7109ca2d28d74a",
+      "legacyIndex": 12,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "learn",
@@ -163,7 +246,13 @@
       "value": "快速排除仅在文档中有趣的游戏创意。",
       "action": "做一个角色、一个互动物体和一次风险收益选择，让3名朋友试玩。",
       "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html",
-      "type": "学习"
+      "type": "学习",
+      "id": "post-7ca839d95afec3ea",
+      "legacyIndex": 13,
+      "cover": {
+        "src": "./assets/covers/learn.svg",
+        "alt": "实践学习与项目笔记的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -175,7 +264,13 @@
       "value": "适合道具图标、卡牌插画、概念图和批量变体。",
       "action": "固定一套工作流，输出16张同系列图标并评估一致性。",
       "url": "https://github.com/comfyanonymous/ComfyUI",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-7d5f53abaf3cae03",
+      "legacyIndex": 14,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -187,7 +282,13 @@
       "value": "减少原型阶段的工具链复杂度和许可证顾虑。",
       "action": "做一个90秒玩法原型，记录从空项目到可运行的耗时。",
       "url": "https://godotengine.org/",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-735b4a25b5c853b8",
+      "legacyIndex": 15,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -199,7 +300,13 @@
       "value": "适合重复性游戏工程任务，但仍需要人工验收。",
       "action": "选择一个模块让 Codex 补测试并检查结果。",
       "url": "https://github.com/openai/codex",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-fb7cb5d8d08607ca",
+      "legacyIndex": 16,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -211,7 +318,13 @@
       "value": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。",
       "action": "在测试分支完成跨文件重构并验证原有行为。",
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-3d6b839afc9f7867",
+      "legacyIndex": 17,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -223,7 +336,13 @@
       "value": "适合风格化道具、低多边形场景与角色原型。",
       "action": "制作一个低模道具，导出 glTF 并导入游戏引擎。",
       "url": "https://www.blender.org/",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-e54cb2bd5575e031",
+      "legacyIndex": 18,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "tools",
@@ -235,7 +354,13 @@
       "value": "有助于把 Demo 测试与真实玩家反馈连接起来。",
       "action": "阅读新品节规则并制定商店页和 Demo 审核日历。",
       "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
-      "type": "工具档案"
+      "type": "工具档案",
+      "id": "post-e1d036a2c342450a",
+      "legacyIndex": 19,
+      "cover": {
+        "src": "./assets/covers/tools.svg",
+        "alt": "开发工具组件的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -247,7 +372,13 @@
       "value": "体验来自人与人的互动，适合低成本快速原型。",
       "action": "做双人迷宫原型，测试3种信息限制方式。",
       "url": "https://docs.godotengine.org/en/stable/",
-      "type": "原创创意"
+      "type": "原创创意",
+      "id": "post-9588d820c37aaeac",
+      "legacyIndex": 20,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -259,7 +390,13 @@
       "value": "可先用状态机完成原型，再逐步加入生成式事件和内容。",
       "action": "实现10只羊的跟随、散开、觅食状态和一场天气变化。",
       "url": "https://docs.godotengine.org/en/stable/tutorials/2d/index.html",
-      "type": "原创创意"
+      "type": "原创创意",
+      "id": "post-fbaa555ee0e476b9",
+      "legacyIndex": 21,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -271,7 +408,13 @@
       "value": "少量卡牌和格子就能验证策略深度。",
       "action": "设计8张卡牌和4种地形，测试有无重复有效的决策。",
       "url": "https://docs.godotengine.org/en/stable/",
-      "type": "原创创意"
+      "type": "原创创意",
+      "id": "post-32e89db0840d3537",
+      "legacyIndex": 22,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -283,7 +426,13 @@
       "value": "无需为每次对话支付推理费用，也更容易测试与本地化。",
       "action": "设计5个事件标签和3种NPC态度，完成一段可重复体验。",
       "url": "https://docs.godotengine.org/en/stable/",
-      "type": "原创创意"
+      "type": "原创创意",
+      "id": "post-6ace1a4dbb90d4ca",
+      "legacyIndex": 23,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     },
     {
       "category": "ideas",
@@ -295,7 +444,14 @@
       "value": "一张地图即可构建多层谜题，适合小团队控制内容量。",
       "action": "制作单场景，设计3个必须利用昼夜切换的谜题。",
       "url": "https://docs.godotengine.org/en/stable/",
-      "type": "原创创意"
+      "type": "原创创意",
+      "id": "post-79f43be2af2eedcd",
+      "legacyIndex": 24,
+      "cover": {
+        "src": "./assets/covers/ideas.svg",
+        "alt": "游戏机制与原型实验的概念插画"
+      }
     }
-  ]
+  ],
+  "schemaVersion": 2
 }

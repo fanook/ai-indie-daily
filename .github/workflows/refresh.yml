@@ -1,23 +1,26 @@
-name: Refresh news feeds
+name: Collect RSS candidates (manual)
+
+# Daily editorial content is maintained by the user's scheduled model session.
+# This optional utility creates an artifact for review; it does not publish.
 on:
-  schedule:
-    - cron: '30 1 * * *'
   workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+
 jobs:
-  refresh:
+  collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install feedparser
-      - run: python scripts/update.py
-      - name: Commit updates
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json
-          git diff --cached --quiet || (git commit -m "chore: refresh verified source feed entries" && git push)
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - run: python scripts/update.py --output /tmp/news-candidates.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rss-candidates
+          path: /tmp/news-candidates.json
+          retention-days: 7
