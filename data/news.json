@@ -164,6 +164,138 @@
       "action": "做一个角色、一个互动物体和一次风险收益选择，让3名朋友试玩。",
       "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html",
       "type": "学习"
+    },
+    {
+      "category": "tools",
+      "label": "开源 · AI 美术",
+      "date": "2026-10-21",
+      "title": "ComfyUI：节点式图像生成工作流",
+      "summary": "把角色、道具和场景素材生产变成可复现流程。",
+      "facts": "ComfyUI 是开源的节点式生成工作流工具，支持能力取决于模型和节点。商用权利需要单独核查模型许可。",
+      "value": "适合道具图标、卡牌插画、概念图和批量变体。",
+      "action": "固定一套工作流，输出16张同系列图标并评估一致性。",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "type": "工具档案"
+    },
+    {
+      "category": "tools",
+      "label": "开源 · 游戏引擎",
+      "date": "2026-10-21",
+      "title": "Godot：快速构建 2D/3D 游戏原型",
+      "summary": "轻量引擎适合个人开发者验证核心玩法。",
+      "facts": "Godot 是开源游戏引擎，支持2D与3D开发。特定语言支持和导出能力取决于版本与平台。",
+      "value": "减少原型阶段的工具链复杂度和许可证顾虑。",
+      "action": "做一个90秒玩法原型，记录从空项目到可运行的耗时。",
+      "url": "https://godotengine.org/",
+      "type": "工具档案"
+    },
+    {
+      "category": "tools",
+      "label": "AI 编程 · CLI",
+      "date": "2026-10-21",
+      "title": "Codex：在真实仓库中执行开发任务",
+      "summary": "跨文件修改、补测试、查 Bug 和自动化工程任务。",
+      "facts": "Codex 提供 AI 辅助软件开发工作流；可用功能、额度和计费以官方说明为准。",
+      "value": "适合重复性游戏工程任务，但仍需要人工验收。",
+      "action": "选择一个模块让 Codex 补测试并检查结果。",
+      "url": "https://github.com/openai/codex",
+      "type": "工具档案"
+    },
+    {
+      "category": "tools",
+      "label": "AI 编程 · CLI",
+      "date": "2026-10-21",
+      "title": "Claude Code：多文件协作与长任务助手",
+      "summary": "重构、查 Bug、整理规范和脚本开发。",
+      "facts": "Claude Code 是 Anthropic 的 Agent 编程工具，权限与费用需参考官方文档。",
+      "value": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。",
+      "action": "在测试分支完成跨文件重构并验证原有行为。",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "type": "工具档案"
+    },
+    {
+      "category": "tools",
+      "label": "开源 · 3D 制作",
+      "date": "2026-10-21",
+      "title": "Blender：独立游戏 3D 资产核心工具",
+      "summary": "建模、绑定、动画、烘焙和导出集中完成。",
+      "facts": "Blender 是免费开源 3D 创作软件，包含建模、动画、材质和渲染工具。",
+      "value": "适合风格化道具、低多边形场景与角色原型。",
+      "action": "制作一个低模道具，导出 glTF 并导入游戏引擎。",
+      "url": "https://www.blender.org/",
+      "type": "工具档案"
+    },
+    {
+      "category": "tools",
+      "label": "发行 · 平台工具",
+      "date": "2026-10-21",
+      "title": "Steamworks：Demo、商店页和愿望单运营",
+      "summary": "从游戏开发中期就开始规划发行节奏。",
+      "facts": "Steamworks 提供 Steam 商店管理、发行、活动参与等官方文档；参与活动须满足平台规则。",
+      "value": "有助于把 Demo 测试与真实玩家反馈连接起来。",
+      "action": "阅读新品节规则并制定商店页和 Demo 审核日历。",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+      "type": "工具档案"
+    },
+    {
+      "category": "ideas",
+      "label": "创意实验 · 合作",
+      "date": "2026-10-21",
+      "title": "非对称信息合作：一人操作，一人导航",
+      "summary": "通过沟通、误解和协作创造低资产量玩法。",
+      "facts": "原创设计练习：操作玩家看不到地图，导航玩家无法操作角色，双方在倒计时内合作。不是新闻报道。",
+      "value": "体验来自人与人的互动，适合低成本快速原型。",
+      "action": "做双人迷宫原型，测试3种信息限制方式。",
+      "url": "https://docs.godotengine.org/en/stable/",
+      "type": "原创创意"
+    },
+    {
+      "category": "ideas",
+      "label": "创意实验 · 模拟",
+      "date": "2026-10-21",
+      "title": "会变化的羊群：放牧与生态经营",
+      "summary": "让天气、地形和羊群习性形成策略循环。",
+      "facts": "原创玩法方向：羊群有饥饿、警觉、跟随等状态，玩家通过路线、牧草与营地管理风险。",
+      "value": "可先用状态机完成原型，再逐步加入生成式事件和内容。",
+      "action": "实现10只羊的跟随、散开、觅食状态和一场天气变化。",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/index.html",
+      "type": "原创创意"
+    },
+    {
+      "category": "ideas",
+      "label": "创意实验 · 卡牌",
+      "date": "2026-10-21",
+      "title": "让地图成为卡组：每回合改变战场",
+      "summary": "每张牌同时影响战斗效果与地形布局。",
+      "facts": "原创玩法练习：卡牌兼具即时技能和长期地形效果，玩家在短期收益与长期布局之间权衡。",
+      "value": "少量卡牌和格子就能验证策略深度。",
+      "action": "设计8张卡牌和4种地形，测试有无重复有效的决策。",
+      "url": "https://docs.godotengine.org/en/stable/",
+      "type": "原创创意"
+    },
+    {
+      "category": "ideas",
+      "label": "创意实验 · 叙事",
+      "date": "2026-10-21",
+      "title": "NPC 记住你的行为，但不依赖在线模型",
+      "summary": "用事件标签和有限状态创造角色记忆感。",
+      "facts": "原创玩法：把玩家的关键选择写成事件标签，NPC 台词和行为由有限规则触发；AI 只辅助创作台词。",
+      "value": "无需为每次对话支付推理费用，也更容易测试与本地化。",
+      "action": "设计5个事件标签和3种NPC态度，完成一段可重复体验。",
+      "url": "https://docs.godotengine.org/en/stable/",
+      "type": "原创创意"
+    },
+    {
+      "category": "ideas",
+      "label": "创意实验 · 解谜",
+      "date": "2026-10-21",
+      "title": "昼夜双视角：同一地图拥有两套规则",
+      "summary": "切换视角改变可见路径、机关和敌人行为。",
+      "facts": "原创玩法：白天看得到路径，夜晚才能激活隐藏机关；切换带来风险和收益。",
+      "value": "一张地图即可构建多层谜题，适合小团队控制内容量。",
+      "action": "制作单场景，设计3个必须利用昼夜切换的谜题。",
+      "url": "https://docs.godotengine.org/en/stable/",
+      "type": "原创创意"
     }
   ]
 }
