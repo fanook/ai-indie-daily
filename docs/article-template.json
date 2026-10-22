@@ -1,0 +1,19 @@
+{
+  "id": "replace-with-stable-id",
+  "slug": "replace-with-stable-id",
+  "category": "learn",
+  "type": "实战教程",
+  "label": "替换为主题分类",
+  "date": "2026-10-22",
+  "title": "替换为具体标题",
+  "summary": "替换为中性、具体的摘要。",
+  "tags": [],
+  "blocks": [
+    {"type": "heading", "text": "替换为章节标题"},
+    {"type": "paragraph", "text": "替换为核实过的实际正文；格式模板本身不是可发布文章。"}
+  ],
+  "sources": [
+    {"title": "替换为核实过的来源标题", "url": "https://example.org/replace-with-verified-source", "accessed": "2026-10-22"}
+  ],
+  "coverProvenance": {"status": "unavailable", "reason": "暂无已核实的原文或官方配图。"}
+}

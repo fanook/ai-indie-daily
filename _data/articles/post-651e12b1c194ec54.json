@@ -1,0 +1,55 @@
+{
+  "category": "learn",
+  "label": "实战教程 · 20分钟",
+  "date": "2026-10-21",
+  "title": "用 Codex 建立需求到验收的开发闭环",
+  "summary": "让 Agent 不只写代码，还能跑测试并接受人工检查。",
+  "facts": "学习路线：先写目标、约束和验收标准，再让 Agent 阅读代码仓库、修改文件、运行测试，最后人工审查 Diff。此条为编辑整理的教程，不是当天新闻。",
+  "value": "减少游戏功能实现后才发现边界遗漏的情况。",
+  "action": "为背包系统写3条验收标准，再用 Codex 实现并记录返工时间。",
+  "url": "https://github.com/openai/codex",
+  "type": "学习",
+  "id": "post-651e12b1c194ec54",
+  "legacyIndex": 9,
+  "slug": "post-651e12b1c194ec54",
+  "sources": [
+    {
+      "url": "https://github.com/openai/codex",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "学习路线：先写目标、约束和验收标准，再让 Agent 阅读代码仓库、修改文件、运行测试，最后人工审查 Diff。此条为编辑整理的教程，不是当天新闻。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "减少游戏功能实现后才发现边界遗漏的情况。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "为背包系统写3条验收标准，再用 Codex 实现并记录返工时间。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

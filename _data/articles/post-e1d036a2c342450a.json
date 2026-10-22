@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "发行 · 平台工具",
+  "date": "2026-10-21",
+  "title": "Steamworks：Demo、商店页和愿望单运营",
+  "summary": "从游戏开发中期就开始规划发行节奏。",
+  "facts": "Steamworks 提供 Steam 商店管理、发行、活动参与等官方文档；参与活动须满足平台规则。",
+  "value": "有助于把 Demo 测试与真实玩家反馈连接起来。",
+  "action": "阅读新品节规则并制定商店页和 Demo 审核日历。",
+  "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+  "type": "工具档案",
+  "id": "post-e1d036a2c342450a",
+  "legacyIndex": 19,
+  "slug": "post-e1d036a2c342450a",
+  "sources": [
+    {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+      "title": "partner.steamgames.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Steamworks 提供 Steam 商店管理、发行、活动参与等官方文档；参与活动须满足平台规则。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "有助于把 Demo 测试与真实玩家反馈连接起来。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "阅读新品节规则并制定商店页和 Demo 审核日历。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

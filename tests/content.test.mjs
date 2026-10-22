@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {loadArticles} from '../scripts/articles.mjs';
 import {filterItems, readState, stateQuery, renderBlocks, imageURL, safeURL, migrateSaved, validateData} from '../content.mjs';
-const data = JSON.parse(readFileSync(new URL('../data/news.json', import.meta.url), 'utf8'));
+const data = loadArticles();
 
 test('all current articles have unique stable IDs and fixed legacy links', () => {
   validateData(data);
@@ -37,7 +37,7 @@ test('filters survive a detail round trip and reject unknown categories', () => 
   const href = new URL('https://example.org/project/article.html');
   href.searchParams.set('from', stateQuery(state));
   assert.deepEqual(readState(href.searchParams.get('from')), state);
-  assert.equal(readState('?section=__proto__').section,'news');
+  assert.equal(readState('?section=__proto__').section,'all');
 });
 test('untrusted article blocks cannot inject markup or executable URLs', () => {
   const html = renderBlocks([

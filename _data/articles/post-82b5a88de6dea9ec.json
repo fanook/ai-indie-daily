@@ -1,0 +1,56 @@
+{
+  "category": "news",
+  "label": "Claude Code",
+  "date": "2026-10-20",
+  "title": "Claude Code 2.1.305 发布",
+  "summary": "新稳定版可用；升级前应核对修复内容与兼容性。",
+  "facts": "公开版本跟踪显示 Claude Code 2.1.305 于10月20日发布。具体修复项以官方 GitHub Release Notes 为准，不代表底层模型能力升级。",
+  "value": "游戏工程的复杂目录、资源依赖和脚本可能受到 CLI 版本变化影响。",
+  "action": "先在测试分支执行固定的重构与自动测试任务。",
+  "url": "https://github.com/anthropics/claude-code/releases",
+  "type": "新闻",
+  "id": "post-82b5a88de6dea9ec",
+  "legacyIndex": 5,
+  "verification": "unreviewed",
+  "slug": "post-82b5a88de6dea9ec",
+  "sources": [
+    {
+      "url": "https://github.com/anthropics/claude-code/releases",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "事实与背景"
+    },
+    {
+      "type": "paragraph",
+      "text": "公开版本跟踪显示 Claude Code 2.1.305 于10月20日发布。具体修复项以官方 GitHub Release Notes 为准，不代表底层模型能力升级。"
+    },
+    {
+      "type": "heading",
+      "text": "对开发者的价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "游戏工程的复杂目录、资源依赖和脚本可能受到 CLI 版本变化影响。"
+    },
+    {
+      "type": "heading",
+      "text": "可执行建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "先在测试分支执行固定的重构与自动测试任务。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/terminal.svg",
+    "alt": "编程终端的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

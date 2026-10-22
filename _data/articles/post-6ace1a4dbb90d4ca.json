@@ -1,0 +1,55 @@
+{
+  "category": "ideas",
+  "label": "创意实验 · 叙事",
+  "date": "2026-10-21",
+  "title": "NPC 记住你的行为，但不依赖在线模型",
+  "summary": "用事件标签和有限状态创造角色记忆感。",
+  "facts": "原创玩法：把玩家的关键选择写成事件标签，NPC 台词和行为由有限规则触发；AI 只辅助创作台词。",
+  "value": "无需为每次对话支付推理费用，也更容易测试与本地化。",
+  "action": "设计5个事件标签和3种NPC态度，完成一段可重复体验。",
+  "url": "https://docs.godotengine.org/en/stable/",
+  "type": "原创创意",
+  "id": "post-6ace1a4dbb90d4ca",
+  "legacyIndex": 23,
+  "slug": "post-6ace1a4dbb90d4ca",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "核心玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "原创玩法：把玩家的关键选择写成事件标签，NPC 台词和行为由有限规则触发；AI 只辅助创作台词。"
+    },
+    {
+      "type": "heading",
+      "text": "设计价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "无需为每次对话支付推理费用，也更容易测试与本地化。"
+    },
+    {
+      "type": "heading",
+      "text": "最小可玩原型"
+    },
+    {
+      "type": "paragraph",
+      "text": "设计5个事件标签和3种NPC态度，完成一段可重复体验。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/ideas.svg",
+    "alt": "游戏机制与原型实验的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

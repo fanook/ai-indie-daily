@@ -1,9 +1,10 @@
 import {readFileSync, existsSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
-import {validateData, safeURL} from '../content.mjs';
+import {safeURL} from '../content.mjs';
+import {loadArticles} from './articles.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
-const data = validateData(JSON.parse(readFileSync(path.join(root, 'data/news.json'), 'utf8')));
+const data = loadArticles();
 const errors = [];
 const legacy = new Set();
 for (const item of data.items) {

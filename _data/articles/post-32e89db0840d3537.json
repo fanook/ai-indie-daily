@@ -1,0 +1,55 @@
+{
+  "category": "ideas",
+  "label": "创意实验 · 卡牌",
+  "date": "2026-10-21",
+  "title": "让地图成为卡组：每回合改变战场",
+  "summary": "每张牌同时影响战斗效果与地形布局。",
+  "facts": "原创玩法练习：卡牌兼具即时技能和长期地形效果，玩家在短期收益与长期布局之间权衡。",
+  "value": "少量卡牌和格子就能验证策略深度。",
+  "action": "设计8张卡牌和4种地形，测试有无重复有效的决策。",
+  "url": "https://docs.godotengine.org/en/stable/",
+  "type": "原创创意",
+  "id": "post-32e89db0840d3537",
+  "legacyIndex": 22,
+  "slug": "post-32e89db0840d3537",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "核心玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "原创玩法练习：卡牌兼具即时技能和长期地形效果，玩家在短期收益与长期布局之间权衡。"
+    },
+    {
+      "type": "heading",
+      "text": "设计价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "少量卡牌和格子就能验证策略深度。"
+    },
+    {
+      "type": "heading",
+      "text": "最小可玩原型"
+    },
+    {
+      "type": "paragraph",
+      "text": "设计8张卡牌和4种地形，测试有无重复有效的决策。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/ideas.svg",
+    "alt": "游戏机制与原型实验的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

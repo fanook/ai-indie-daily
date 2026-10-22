@@ -1,0 +1,55 @@
+{
+  "category": "learn",
+  "label": "玩法学习 · 15分钟",
+  "date": "2026-10-21",
+  "title": "90 秒原型验证核心玩法",
+  "summary": "先验证玩家是否愿意重复做一个决策，再增加内容。",
+  "facts": "小团队实践方法：限制一个机制、一种反馈和一个失败条件，优先测试核心循环。不是当日新闻。",
+  "value": "快速排除仅在文档中有趣的游戏创意。",
+  "action": "做一个角色、一个互动物体和一次风险收益选择，让3名朋友试玩。",
+  "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html",
+  "type": "学习",
+  "id": "post-7ca839d95afec3ea",
+  "legacyIndex": 13,
+  "slug": "post-7ca839d95afec3ea",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "小团队实践方法：限制一个机制、一种反馈和一个失败条件，优先测试核心循环。不是当日新闻。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "快速排除仅在文档中有趣的游戏创意。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "做一个角色、一个互动物体和一次风险收益选择，让3名朋友试玩。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "AI 编程 · CLI",
+  "date": "2026-10-21",
+  "title": "Codex：在真实仓库中执行开发任务",
+  "summary": "跨文件修改、补测试、查 Bug 和自动化工程任务。",
+  "facts": "Codex 提供 AI 辅助软件开发工作流；可用功能、额度和计费以官方说明为准。",
+  "value": "适合重复性游戏工程任务，但仍需要人工验收。",
+  "action": "选择一个模块让 Codex 补测试并检查结果。",
+  "url": "https://github.com/openai/codex",
+  "type": "工具档案",
+  "id": "post-fb7cb5d8d08607ca",
+  "legacyIndex": 16,
+  "slug": "post-fb7cb5d8d08607ca",
+  "sources": [
+    {
+      "url": "https://github.com/openai/codex",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Codex 提供 AI 辅助软件开发工作流；可用功能、额度和计费以官方说明为准。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合重复性游戏工程任务，但仍需要人工验收。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "选择一个模块让 Codex 补测试并检查结果。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

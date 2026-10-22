@@ -1,0 +1,55 @@
+{
+  "category": "ideas",
+  "label": "创意实验 · 解谜",
+  "date": "2026-10-21",
+  "title": "昼夜双视角：同一地图拥有两套规则",
+  "summary": "切换视角改变可见路径、机关和敌人行为。",
+  "facts": "原创玩法：白天看得到路径，夜晚才能激活隐藏机关；切换带来风险和收益。",
+  "value": "一张地图即可构建多层谜题，适合小团队控制内容量。",
+  "action": "制作单场景，设计3个必须利用昼夜切换的谜题。",
+  "url": "https://docs.godotengine.org/en/stable/",
+  "type": "原创创意",
+  "id": "post-79f43be2af2eedcd",
+  "legacyIndex": 24,
+  "slug": "post-79f43be2af2eedcd",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "核心玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "原创玩法：白天看得到路径，夜晚才能激活隐藏机关；切换带来风险和收益。"
+    },
+    {
+      "type": "heading",
+      "text": "设计价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "一张地图即可构建多层谜题，适合小团队控制内容量。"
+    },
+    {
+      "type": "heading",
+      "text": "最小可玩原型"
+    },
+    {
+      "type": "paragraph",
+      "text": "制作单场景，设计3个必须利用昼夜切换的谜题。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/ideas.svg",
+    "alt": "游戏机制与原型实验的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

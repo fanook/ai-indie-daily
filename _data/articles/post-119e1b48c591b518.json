@@ -1,0 +1,55 @@
+{
+  "category": "learn",
+  "label": "实战教程 · 30分钟",
+  "date": "2026-10-21",
+  "title": "为 AI 游戏开发建立长期项目记忆",
+  "summary": "将世界观、玩法规则和架构地图沉淀为可维护文档。",
+  "facts": "推荐维护 README、设计约束、架构图和决策记录，避免长期项目依赖对话上下文。不同 Agent 的项目规则机制需查阅各自文档。",
+  "value": "有助于跨仓库协作和长期开发时减少重复解释。",
+  "action": "写一页 game-design.md 与 architecture.md，让 Agent 先读后改。",
+  "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+  "type": "学习",
+  "id": "post-119e1b48c591b518",
+  "legacyIndex": 10,
+  "slug": "post-119e1b48c591b518",
+  "sources": [
+    {
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "title": "docs.anthropic.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "推荐维护 README、设计约束、架构图和决策记录，避免长期项目依赖对话上下文。不同 Agent 的项目规则机制需查阅各自文档。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "有助于跨仓库协作和长期开发时减少重复解释。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "写一页 game-design.md 与 architecture.md，让 Agent 先读后改。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "category": "news",
+  "label": "Steam 官方",
+  "date": "2026-10-19",
+  "title": "Steam Next Fest 十月档开启",
+  "summary": "官方规则明确了 Demo、商店页面与参展时间要求。",
+  "facts": "Steamworks 官方说明活动于10月19日10:00 PDT开始，10月26日结束。参展游戏须尚未发售且具有公开商店页面和试玩版。",
+  "value": "适合建立未来游戏的发行时间表，提前准备商店页与试玩版审核。",
+  "action": "为自己的项目倒排 Demo 完成、商店页和宣传视频时间。",
+  "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+  "type": "新闻",
+  "id": "post-5e384a8397be2ba3",
+  "legacyIndex": 7,
+  "verification": "unreviewed",
+  "slug": "post-5e384a8397be2ba3",
+  "sources": [
+    {
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+      "title": "partner.steamgames.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "事实与背景"
+    },
+    {
+      "type": "paragraph",
+      "text": "Steamworks 官方说明活动于10月19日10:00 PDT开始，10月26日结束。参展游戏须尚未发售且具有公开商店页面和试玩版。"
+    },
+    {
+      "type": "heading",
+      "text": "对开发者的价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合建立未来游戏的发行时间表，提前准备商店页与试玩版审核。"
+    },
+    {
+      "type": "heading",
+      "text": "可执行建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "为自己的项目倒排 Demo 完成、商店页和宣传视频时间。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/calendar.svg",
+    "alt": "游戏活动日历的概念插画"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+    "sourceTitle": "Steam Next Fest October 2026 官方活动文档",
+    "accessed": "2026-10-22",
+    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+  },
+  "cover": {
+    "src": "https://shared.fastly.steamstatic.com/community_assets/images/steamworks_docs/english/nf_oct26_doc_banner.jpg",
+    "alt": "Steam Next Fest 官方活动横幅，标注 10 月 19 日至 26 日",
+    "fit": "contain"
+  }
+}

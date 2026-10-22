@@ -1,0 +1,65 @@
+{
+  "category": "news",
+  "label": "Steam 新品节",
+  "date": "2026-10-20",
+  "title": "Steam 新品节出现数千款 Demo",
+  "summary": "玩家注意力竞争加剧，游戏前几分钟的体验更重要。",
+  "facts": "Steam 官方确认本届活动于10月19日至26日举行。GamingOnLinux 10月20日援引 SteamDB 统计约7164款 Demo；具体数量会因统计口径变化。",
+  "value": "独立开发者需要在封面、截图、玩法首屏和试玩流程中清晰传达差异化。",
+  "action": "试玩三款同类型 Demo，记录核心乐趣出现时间。",
+  "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
+  "type": "新闻",
+  "id": "post-ec20ea6072221c11",
+  "legacyIndex": 6,
+  "verification": "unreviewed",
+  "slug": "post-ec20ea6072221c11",
+  "sources": [
+    {
+      "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
+      "title": "www.gamingonlinux.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "事实与背景"
+    },
+    {
+      "type": "paragraph",
+      "text": "Steam 官方确认本届活动于10月19日至26日举行。GamingOnLinux 10月20日援引 SteamDB 统计约7164款 Demo；具体数量会因统计口径变化。"
+    },
+    {
+      "type": "heading",
+      "text": "对开发者的价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "独立开发者需要在封面、截图、玩法首屏和试玩流程中清晰传达差异化。"
+    },
+    {
+      "type": "heading",
+      "text": "可执行建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "试玩三款同类型 Demo，记录核心乐趣出现时间。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/demo.svg",
+    "alt": "游戏手柄与试玩卡片的概念插画"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+    "sourceTitle": "Steam Next Fest October 2026 官方活动文档",
+    "accessed": "2026-10-22",
+    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+  },
+  "cover": {
+    "src": "https://shared.fastly.steamstatic.com/community_assets/images/steamworks_docs/english/nf_oct26_doc_banner.jpg",
+    "alt": "Steam Next Fest 官方活动横幅，标注 10 月 19 日至 26 日",
+    "fit": "contain"
+  }
+}

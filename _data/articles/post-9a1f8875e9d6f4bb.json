@@ -1,0 +1,54 @@
+{
+  "category": "tools",
+  "label": "游戏开发工具",
+  "date": "2026-10-21",
+  "title": "ComfyUI：为游戏素材建立可复用的生成流程",
+  "summary": "角色、道具和场景素材要追求批量一致性，而不只是单张效果。",
+  "facts": "ComfyUI 是节点式生成工作流工具，可用于组织图像等生成任务；具体模型许可与商用权利需分别核查。此条是工具推荐，不是当天新发布。",
+  "value": "适合固定美术风格、重复生产图标和概念草图，并保留参数与版本。",
+  "action": "制作10件同系列道具，测量风格一致性、可用率和手动修图耗时。",
+  "url": "https://github.com/comfyanonymous/ComfyUI",
+  "id": "post-9a1f8875e9d6f4bb",
+  "legacyIndex": 2,
+  "slug": "post-9a1f8875e9d6f4bb",
+  "sources": [
+    {
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "ComfyUI 是节点式生成工作流工具，可用于组织图像等生成任务；具体模型许可与商用权利需分别核查。此条是工具推荐，不是当天新发布。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合固定美术风格、重复生产图标和概念草图，并保留参数与版本。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "制作10件同系列道具，测量风格一致性、可用率和手动修图耗时。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

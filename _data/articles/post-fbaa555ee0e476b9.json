@@ -1,0 +1,55 @@
+{
+  "category": "ideas",
+  "label": "创意实验 · 模拟",
+  "date": "2026-10-21",
+  "title": "会变化的羊群：放牧与生态经营",
+  "summary": "让天气、地形和羊群习性形成策略循环。",
+  "facts": "原创玩法方向：羊群有饥饿、警觉、跟随等状态，玩家通过路线、牧草与营地管理风险。",
+  "value": "可先用状态机完成原型，再逐步加入生成式事件和内容。",
+  "action": "实现10只羊的跟随、散开、觅食状态和一场天气变化。",
+  "url": "https://docs.godotengine.org/en/stable/tutorials/2d/index.html",
+  "type": "原创创意",
+  "id": "post-fbaa555ee0e476b9",
+  "legacyIndex": 21,
+  "slug": "post-fbaa555ee0e476b9",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/index.html",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "核心玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "原创玩法方向：羊群有饥饿、警觉、跟随等状态，玩家通过路线、牧草与营地管理风险。"
+    },
+    {
+      "type": "heading",
+      "text": "设计价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "可先用状态机完成原型，再逐步加入生成式事件和内容。"
+    },
+    {
+      "type": "heading",
+      "text": "最小可玩原型"
+    },
+    {
+      "type": "paragraph",
+      "text": "实现10只羊的跟随、散开、觅食状态和一场天气变化。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/ideas.svg",
+    "alt": "游戏机制与原型实验的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

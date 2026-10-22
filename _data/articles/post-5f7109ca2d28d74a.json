@@ -1,0 +1,55 @@
+{
+  "category": "learn",
+  "label": "实战教程 · 40分钟",
+  "date": "2026-10-21",
+  "title": "低成本 NPC AI 对话原型",
+  "summary": "让模型负责有限的角色表达，核心游戏规则仍由代码控制。",
+  "facts": "建议将任务状态和规则保留在游戏状态机中，模型只生成限定范围的台词，并测量延迟、成本和失败回退。",
+  "value": "避免不可预测的对话破坏核心玩法，也方便控制 API 成本。",
+  "action": "设置3种情绪、2种任务状态，测试50次 NPC 对话。",
+  "url": "https://platform.openai.com/docs/guides/text",
+  "type": "学习",
+  "id": "post-5f7109ca2d28d74a",
+  "legacyIndex": 12,
+  "slug": "post-5f7109ca2d28d74a",
+  "sources": [
+    {
+      "url": "https://platform.openai.com/docs/guides/text",
+      "title": "platform.openai.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "建议将任务状态和规则保留在游戏状态机中，模型只生成限定范围的台词，并测量延迟、成本和失败回退。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "避免不可预测的对话破坏核心玩法，也方便控制 API 成本。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "设置3种情绪、2种任务状态，测试50次 NPC 对话。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

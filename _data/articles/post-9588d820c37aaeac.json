@@ -1,0 +1,55 @@
+{
+  "category": "ideas",
+  "label": "创意实验 · 合作",
+  "date": "2026-10-21",
+  "title": "非对称信息合作：一人操作，一人导航",
+  "summary": "通过沟通、误解和协作创造低资产量玩法。",
+  "facts": "原创设计练习：操作玩家看不到地图，导航玩家无法操作角色，双方在倒计时内合作。不是新闻报道。",
+  "value": "体验来自人与人的互动，适合低成本快速原型。",
+  "action": "做双人迷宫原型，测试3种信息限制方式。",
+  "url": "https://docs.godotengine.org/en/stable/",
+  "type": "原创创意",
+  "id": "post-9588d820c37aaeac",
+  "legacyIndex": 20,
+  "slug": "post-9588d820c37aaeac",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/stable/",
+      "title": "docs.godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "核心玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "原创设计练习：操作玩家看不到地图，导航玩家无法操作角色，双方在倒计时内合作。不是新闻报道。"
+    },
+    {
+      "type": "heading",
+      "text": "设计价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "体验来自人与人的互动，适合低成本快速原型。"
+    },
+    {
+      "type": "heading",
+      "text": "最小可玩原型"
+    },
+    {
+      "type": "paragraph",
+      "text": "做双人迷宫原型，测试3种信息限制方式。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/ideas.svg",
+    "alt": "游戏机制与原型实验的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

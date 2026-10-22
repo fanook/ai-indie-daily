@@ -1,0 +1,63 @@
+{
+  "category": "news",
+  "label": "AI 模型 API",
+  "date": "2026-10-21",
+  "title": "关注长上下文缓存在游戏 Agent 中的成本价值",
+  "summary": "重复使用世界观、角色设定和工具定义时，缓存机制值得单独评估。",
+  "facts": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。",
+  "value": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。",
+  "action": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。",
+  "url": "https://platform.openai.com/docs/guides/prompt-caching",
+  "id": "post-139c157c3d2c1049",
+  "legacyIndex": 0,
+  "slug": "post-139c157c3d2c1049",
+  "sources": [
+    {
+      "url": "https://platform.openai.com/docs/guides/prompt-caching",
+      "title": "platform.openai.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "事实与背景"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。"
+    },
+    {
+      "type": "heading",
+      "text": "对开发者的价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。"
+    },
+    {
+      "type": "heading",
+      "text": "可执行建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/context.svg",
+    "alt": "上下文复用与缓存流程示意"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "sourceTitle": "OpenAI Prompt caching 官方文档",
+    "accessed": "2026-10-22",
+    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+  },
+  "cover": {
+    "src": "https://developers.openai.com/og/api/docs/guides/prompt-caching.png",
+    "alt": "OpenAI 官方 Prompt caching 文档预览图",
+    "fit": "contain"
+  }
+}

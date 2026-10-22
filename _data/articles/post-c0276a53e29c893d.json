@@ -1,0 +1,55 @@
+{
+  "category": "learn",
+  "label": "实战教程 · 45分钟",
+  "date": "2026-10-21",
+  "title": "ComfyUI 批量制作同风格游戏道具",
+  "summary": "以可用率与风格一致性评估 AI 美术工作流。",
+  "facts": "ComfyUI 可组织节点式图像生成工作流，具体模型和素材商用许可需要单独核查。此条为实战学习主题。",
+  "value": "比单张效果图更贴近独立游戏的实际美术生产需求。",
+  "action": "固定色板和材质描述，生成12件道具并统计人工修正时间。",
+  "url": "https://docs.comfy.org/",
+  "type": "学习",
+  "id": "post-c0276a53e29c893d",
+  "legacyIndex": 11,
+  "slug": "post-c0276a53e29c893d",
+  "sources": [
+    {
+      "url": "https://docs.comfy.org/",
+      "title": "docs.comfy.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "ComfyUI 可组织节点式图像生成工作流，具体模型和素材商用许可需要单独核查。此条为实战学习主题。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "比单张效果图更贴近独立游戏的实际美术生产需求。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "固定色板和材质描述，生成12件道具并统计人工修正时间。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

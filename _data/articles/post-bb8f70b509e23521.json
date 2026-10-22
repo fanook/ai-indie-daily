@@ -1,0 +1,56 @@
+{
+  "category": "news",
+  "label": "独立游戏观察",
+  "date": "2026-10-19",
+  "title": "AI 辅助快速克隆引发独立开发者担忧",
+  "summary": "制作门槛下降的同时，创意曝光与模仿风险引发讨论。",
+  "facts": "PC Gamer 10月19日周报讨论了 AI 辅助游戏制作和模仿的争议。报道包含作者评论，不应等同于平台官方结论。",
+  "value": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。",
+  "action": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。",
+  "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
+  "type": "新闻",
+  "id": "post-bb8f70b509e23521",
+  "legacyIndex": 8,
+  "verification": "unreviewed",
+  "slug": "post-bb8f70b509e23521",
+  "sources": [
+    {
+      "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
+      "title": "www.pcgamer.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "事实与背景"
+    },
+    {
+      "type": "paragraph",
+      "text": "PC Gamer 10月19日周报讨论了 AI 辅助游戏制作和模仿的争议。报道包含作者评论，不应等同于平台官方结论。"
+    },
+    {
+      "type": "heading",
+      "text": "对开发者的价值"
+    },
+    {
+      "type": "paragraph",
+      "text": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。"
+    },
+    {
+      "type": "heading",
+      "text": "可执行建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/remix.svg",
+    "alt": "原创与复制机制的概念示意"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

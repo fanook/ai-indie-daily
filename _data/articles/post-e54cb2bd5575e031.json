@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "开源 · 3D 制作",
+  "date": "2026-10-21",
+  "title": "Blender：独立游戏 3D 资产核心工具",
+  "summary": "建模、绑定、动画、烘焙和导出集中完成。",
+  "facts": "Blender 是免费开源 3D 创作软件，包含建模、动画、材质和渲染工具。",
+  "value": "适合风格化道具、低多边形场景与角色原型。",
+  "action": "制作一个低模道具，导出 glTF 并导入游戏引擎。",
+  "url": "https://www.blender.org/",
+  "type": "工具档案",
+  "id": "post-e54cb2bd5575e031",
+  "legacyIndex": 18,
+  "slug": "post-e54cb2bd5575e031",
+  "sources": [
+    {
+      "url": "https://www.blender.org/",
+      "title": "www.blender.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Blender 是免费开源 3D 创作软件，包含建模、动画、材质和渲染工具。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合风格化道具、低多边形场景与角色原型。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "制作一个低模道具，导出 glTF 并导入游戏引擎。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

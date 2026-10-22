@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "AI 编程 · CLI",
+  "date": "2026-10-21",
+  "title": "Claude Code：多文件协作与长任务助手",
+  "summary": "重构、查 Bug、整理规范和脚本开发。",
+  "facts": "Claude Code 是 Anthropic 的 Agent 编程工具，权限与费用需参考官方文档。",
+  "value": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。",
+  "action": "在测试分支完成跨文件重构并验证原有行为。",
+  "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+  "type": "工具档案",
+  "id": "post-3d6b839afc9f7867",
+  "legacyIndex": 17,
+  "slug": "post-3d6b839afc9f7867",
+  "sources": [
+    {
+      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "title": "docs.anthropic.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Claude Code 是 Anthropic 的 Agent 编程工具，权限与费用需参考官方文档。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "在测试分支完成跨文件重构并验证原有行为。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "开源 · 游戏引擎",
+  "date": "2026-10-21",
+  "title": "Godot：快速构建 2D/3D 游戏原型",
+  "summary": "轻量引擎适合个人开发者验证核心玩法。",
+  "facts": "Godot 是开源游戏引擎，支持2D与3D开发。特定语言支持和导出能力取决于版本与平台。",
+  "value": "减少原型阶段的工具链复杂度和许可证顾虑。",
+  "action": "做一个90秒玩法原型，记录从空项目到可运行的耗时。",
+  "url": "https://godotengine.org/",
+  "type": "工具档案",
+  "id": "post-735b4a25b5c853b8",
+  "legacyIndex": 15,
+  "slug": "post-735b4a25b5c853b8",
+  "sources": [
+    {
+      "url": "https://godotengine.org/",
+      "title": "godotengine.org"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Godot 是开源游戏引擎，支持2D与3D开发。特定语言支持和导出能力取决于版本与平台。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "减少原型阶段的工具链复杂度和许可证顾虑。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "做一个90秒玩法原型，记录从空项目到可运行的耗时。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

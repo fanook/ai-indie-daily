@@ -1,0 +1,54 @@
+{
+  "category": "learn",
+  "label": "AI 实战教程",
+  "date": "2026-10-21",
+  "title": "用 Claude Code / Codex 建立可复现的游戏开发任务",
+  "summary": "从单次提示词转向项目文档、明确验收标准和自动测试。",
+  "facts": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。",
+  "value": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。",
+  "action": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。",
+  "url": "https://github.com/openai/codex",
+  "id": "post-1f66b3bc5f831b80",
+  "legacyIndex": 1,
+  "slug": "post-1f66b3bc5f831b80",
+  "sources": [
+    {
+      "url": "https://github.com/openai/codex",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "学习目标与方法"
+    },
+    {
+      "type": "paragraph",
+      "text": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。"
+    },
+    {
+      "type": "heading",
+      "text": "为什么值得实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。"
+    },
+    {
+      "type": "heading",
+      "text": "动手练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/learn.svg",
+    "alt": "实践学习与项目笔记的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

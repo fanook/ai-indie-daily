@@ -1,0 +1,55 @@
+{
+  "category": "tools",
+  "label": "开源 · AI 美术",
+  "date": "2026-10-21",
+  "title": "ComfyUI：节点式图像生成工作流",
+  "summary": "把角色、道具和场景素材生产变成可复现流程。",
+  "facts": "ComfyUI 是开源的节点式生成工作流工具，支持能力取决于模型和节点。商用权利需要单独核查模型许可。",
+  "value": "适合道具图标、卡牌插画、概念图和批量变体。",
+  "action": "固定一套工作流，输出16张同系列图标并评估一致性。",
+  "url": "https://github.com/comfyanonymous/ComfyUI",
+  "type": "工具档案",
+  "id": "post-7d5f53abaf3cae03",
+  "legacyIndex": 14,
+  "slug": "post-7d5f53abaf3cae03",
+  "sources": [
+    {
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "title": "github.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "工具介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "ComfyUI 是开源的节点式生成工作流工具，支持能力取决于模型和节点。商用权利需要单独核查模型许可。"
+    },
+    {
+      "type": "heading",
+      "text": "适用场景与限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合道具图标、卡牌插画、概念图和批量变体。"
+    },
+    {
+      "type": "heading",
+      "text": "使用建议"
+    },
+    {
+      "type": "paragraph",
+      "text": "固定一套工作流，输出16张同系列图标并评估一致性。"
+    }
+  ],
+  "legacyCover": {
+    "src": "./assets/covers/tools.svg",
+    "alt": "开发工具组件的概念插画"
+  },
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+  }
+}

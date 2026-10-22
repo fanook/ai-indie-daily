@@ -1,0 +1,12 @@
+# Keep GitHub Pages' existing main/root Jekyll publishing mode.
+# Nested JSON files in _data/articles are discovered automatically.
+exclude:
+  - node_modules
+  - dist
+  - scripts
+  - tests
+  - docs
+  - README.md
+  - AGENTS.md
+  - package.json
+  - package-lock.json
