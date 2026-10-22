@@ -29,7 +29,7 @@ function coverHTML(item) {
   const cover = item.cover;
   const src = imageURL(cover?.src);
   if (!src) return '';
-  return `<div class="entry-media"><img class="entry-cover" src="${e(src)}" alt="${e(cover.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
+  return `<div class="entry-media"><img class="entry-cover${cover.position === 'left top' ? ' left-aligned' : ''}" src="${e(src)}" alt="${e(cover.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
 }
 function card(item) {
   return `<article class="entry" data-category="${e(item.category)}">${coverHTML(item)}<div class="entry-content"><h2><a class="entry-link" href="${e(articleURL(item))}">${e(item.title)}</a></h2><p class="entry-summary">${e(item.summary)}</p><div class="entry-meta entry-bottom"><span class="tag">${e(SECTIONS[item.category].name)}</span><span>${e(item.label || typeLabel(item))}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div></div></article>`;

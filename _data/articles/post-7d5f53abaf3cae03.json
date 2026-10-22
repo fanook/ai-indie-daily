@@ -73,8 +73,19 @@
     "alt": "开发工具组件的概念插画"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://github.com/Comfy-Org/docs/blob/main/interface/canvas-controls.mdx",
+    "sourceTitle": "ComfyUI 官方文档：画布控制",
+    "accessed": "2026-10-22",
+    "licenseURL": "https://github.com/Comfy-Org/docs/blob/main/LICENSE",
+    "rightsNote": "Comfy-Org 官方文档仓库内截图，按仓库 GPL-3.0 许可使用；原始 PNG 与完整许可随 assets/covers/sources 和 licenses 提供。本站等比例缩小、转为 WebP，列表右侧可能显示裁切；这不是本文实验的运行结果。"
   },
-  "revised": "2026-10-22"
+  "revised": "2026-10-22",
+  "cover": {
+    "src": "./assets/covers/comfyui-canvas.webp",
+    "alt": "ComfyUI 官方文档的加载、缩放和保存图像节点示例",
+    "fit": "cover",
+    "position": "left top"
+  }
 }

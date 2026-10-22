@@ -74,8 +74,18 @@
     "alt": "开发工具组件的概念插画"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/window_system/introduction.rst",
+    "sourceTitle": "Blender 官方手册：窗口系统介绍",
+    "accessed": "2026-10-22",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rightsNote": "Blender Documentation Team（https://docs.blender.org/manual/）。手册图片 CC BY-SA 4.0，不另授予界面商标或图标权利。本站等比例缩小、转为 WebP，列表可能作显示裁切；保留同一许可。"
   },
-  "revised": "2026-10-22"
+  "revised": "2026-10-22",
+  "cover": {
+    "src": "./assets/covers/blender-default.webp",
+    "alt": "Blender 官方手册中的默认启动界面",
+    "fit": "cover"
+  }
 }
