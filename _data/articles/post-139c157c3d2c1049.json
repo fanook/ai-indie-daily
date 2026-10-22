@@ -1,46 +1,68 @@
 {
-  "category": "news",
+  "category": "learn",
   "label": "AI 模型 API",
   "date": "2026-10-21",
   "title": "关注长上下文缓存在游戏 Agent 中的成本价值",
-  "summary": "重复使用世界观、角色设定和工具定义时，缓存机制值得单独评估。",
+  "summary": "把世界观与工具定义放进稳定前缀，测量缓存命中、首字延迟与真实账单；这是一项工程优化，不是新模型发布。",
   "facts": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。",
   "value": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。",
   "action": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。",
-  "url": "https://platform.openai.com/docs/guides/prompt-caching",
+  "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
   "id": "post-139c157c3d2c1049",
   "legacyIndex": 0,
   "slug": "post-139c157c3d2c1049",
   "sources": [
     {
-      "url": "https://platform.openai.com/docs/guides/prompt-caching",
-      "title": "platform.openai.com"
+      "title": "OpenAI：Prompt caching（机制、模型差异与计费边界）",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "事实与背景"
+      "text": "先把新闻与工程主题分开"
     },
     {
       "type": "paragraph",
-      "text": "这是一项工程实践主题，并非本日已核实的模型新品发布。不同供应商的缓存策略、计费与过期时间各不相同，应以各自官方文档为准。"
+      "text": "这篇是对既有 API 能力的工程分析，不是 10 月 21 日发生的新品发布。2026 年 10 月 22 日复核 OpenAI 官方文档后补充：提示词缓存复用的是相同前缀的计算状态，不是把旧答案原样返回。新的输入仍需处理，输出仍需生成，因此缓存命中不等于角色回答固定，也不能替代游戏状态管理。"
     },
     {
       "type": "heading",
-      "text": "对开发者的价值"
+      "text": "为什么游戏 Agent 容易重复付出输入成本"
     },
     {
       "type": "paragraph",
-      "text": "NPC Agent、剧情生成和游戏制作 Agent 常重复提交较长的固定上下文。"
+      "text": "假设一个村庄里有三名 NPC，它们共享世界历史、禁忌设定和工具接口，却分别看到不同任务状态。编辑建议是把这些信息分成三层：项目级固定资料、角色级设定、当轮状态与玩家问题。不要在最前面插入每次变化的时间戳或随机编号，让所有后续内容失去复用机会。这个组织方式是可测试的设计建议，不是对节省比例的承诺。"
     },
     {
       "type": "heading",
-      "text": "可执行建议"
+      "text": "官方机制带来的限制"
     },
     {
       "type": "paragraph",
-      "text": "构建固定提示词的测试集，对比有无缓存时的总费用、延迟与输出质量。"
+      "text": "官方文档要求可复用前缀匹配，并区分模型、缓存边界和保留时长。不同模型的最低长度、读写费用与参数并不完全相同；只把固定文字放在前面不保证每次命中。首次写入、缓存过期或变更模型等因素都应计入成本，不能只用“命中时的单价”估算整场游戏。"
+    },
+    {
+      "type": "heading",
+      "text": "做一个可复现的小实验"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "从真实玩法选取一组固定对话，例如问路、拒绝交易、任务完成和诱导角色越权。锁定模型、角色资料和输出长度范围。",
+        "先保留现有提示词作为基线，再只改变信息顺序或缓存配置。不要同时换模型、缩短正文，否则很难知道收益来自哪里。",
+        "分别记录首次请求、同一会话后续请求和间隔一段时间后的请求。保存实际 input、cached、output 用量以及总费用，另记首字延迟和完整响应耗时。",
+        "人工检查任务状态是否正确、禁忌是否被遵守、回答是否可用于游戏。只有质量不下降且完整账单改善，才把方案推广到更多角色。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "不要为了命中率牺牲玩法"
+    },
+    {
+      "type": "paragraph",
+      "text": "如果大多数玩家只和角色说一句话，复杂缓存策略未必值得；如果对话长期持续，复用收益也不能掩盖上下文无限增长的问题。建议给每次实验保存提示词版本和测量表，把“省输入费用”“降低延迟”“保持叙事一致性”分开验收。本文未在真实游戏负载上执行基准测试，实际收益仍需项目自行测量。"
     }
   ],
   "legacyCover": {
@@ -48,16 +70,9 @@
     "alt": "上下文复用与缓存流程示意"
   },
   "coverProvenance": {
-    "status": "verified",
-    "kind": "official-material",
-    "sourceURL": "https://developers.openai.com/api/docs/guides/prompt-caching",
-    "sourceTitle": "OpenAI Prompt caching 官方文档",
-    "accessed": "2026-10-22",
-    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+    "status": "unavailable",
+    "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "cover": {
-    "src": "https://developers.openai.com/og/api/docs/guides/prompt-caching.png",
-    "alt": "OpenAI 官方 Prompt caching 文档预览图",
-    "fit": "contain"
-  }
+  "type": "工程实践",
+  "revised": "2026-10-22"
 }

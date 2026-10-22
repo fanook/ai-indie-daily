@@ -3,7 +3,7 @@
   "label": "AI 编程 · CLI",
   "date": "2026-10-21",
   "title": "Claude Code：多文件协作与长任务助手",
-  "summary": "重构、查 Bug、整理规范和脚本开发。",
+  "summary": "把 Claude Code 用于有边界的跨文件重构：先建立行为基线，再审查调用链、权限与实际测试证据。",
   "facts": "Claude Code 是 Anthropic 的 Agent 编程工具，权限与费用需参考官方文档。",
   "value": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。",
   "action": "在测试分支完成跨文件重构并验证原有行为。",
@@ -14,34 +14,58 @@
   "slug": "post-3d6b839afc9f7867",
   "sources": [
     {
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
-      "title": "docs.anthropic.com"
+      "title": "Overview · Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/overview",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Configure permissions · Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/permissions",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Common workflows · Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/common-workflows",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "工具介绍"
+      "text": "它适合接手哪些工程工作"
     },
     {
       "type": "paragraph",
-      "text": "Claude Code 是 Anthropic 的 Agent 编程工具，权限与费用需参考官方文档。"
+      "text": "Claude Code 是能读取代码、编辑文件并运行命令的编程工具，官方工作流覆盖排查问题、重构和测试。对独立游戏开发者，较好的切入点是整理重复逻辑、查找调用链、补充数据校验或维护构建脚本，而不是一次性要求它重写整个游戏。是否节省时间取决于项目可测试程度，不能由演示推断。"
     },
     {
       "type": "heading",
-      "text": "适用场景与限制"
+      "text": "练习：把重复伤害计算集中到一处"
     },
     {
       "type": "paragraph",
-      "text": "适合维护复杂游戏系统，尤其需要最小权限和变更审查。"
+      "text": "以下为编辑建议的评估任务：假设近战、远程与陷阱脚本都各自计算伤害，先保持数值和公开接口不变，只抽出共用计算函数。这样可以把“重构是否正确”与“战斗数值是否更好”分开，避免两个目标同时变化后无法定位回归。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "创建可回退分支并记录基线：相同攻击力、护甲、暴击和伤害类型输入，应分别得到哪些结果。已有异常也如实保留记录。",
+        "先让工具只读列出全部调用点、相关资源和依赖关系，并标明尚未确认的动态引用。不要因为文本搜索没找到就认定没有场景引用。",
+        "确认最小改动方案后逐个迁移调用者，再运行旧用例与新增边界用例。不要顺手升级引擎、重命名整套资源或格式化无关目录。",
+        "在引擎中检查一场实际战斗，尤其零伤害、死亡触发、重复命中和攻击者已离场的情况。核对日志与 UI，不只看测试命令变绿。"
+      ]
     },
     {
       "type": "heading",
-      "text": "使用建议"
+      "text": "权限不是文档中的一句提醒"
     },
     {
       "type": "paragraph",
-      "text": "在测试分支完成跨文件重构并验证原有行为。"
+      "text": "官方提供细粒度权限规则；应按当前工作授予所需的文件和命令访问。项目说明文件能表达约定，但不等于系统级访问控制。需要安装依赖、访问网络、修改发布脚本或读取凭据时，单独检查原因和范围，不为省事关闭全部确认。"
+    },
+    {
+      "type": "paragraph",
+      "text": "最终比较重复代码减少了多少、测试是否覆盖旧行为、人工审查花了多久。若调用链仍不清楚，先让它做定位报告，比扩大自动修改范围更稳妥。本文核对的是公开功能与权限文档，没有执行该重构，也没有比较不同套餐；当前费用、额度与平台支持请以使用入口为准。"
     }
   ],
   "legacyCover": {
@@ -51,5 +75,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

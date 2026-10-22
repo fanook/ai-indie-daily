@@ -1,9 +1,9 @@
 {
   "category": "learn",
-  "label": "实战教程 · 20分钟",
+  "label": "验收测试",
   "date": "2026-10-21",
-  "title": "用 Codex 建立需求到验收的开发闭环",
-  "summary": "让 Agent 不只写代码，还能跑测试并接受人工检查。",
+  "title": "用 Codex 给背包系统建立验收测试",
+  "summary": "以有限容量背包为例，把自然语言需求拆成状态不变量、边界用例、修改步骤与人工验收。",
   "facts": "学习路线：先写目标、约束和验收标准，再让 Agent 阅读代码仓库、修改文件、运行测试，最后人工审查 Diff。此条为编辑整理的教程，不是当天新闻。",
   "value": "减少游戏功能实现后才发现边界遗漏的情况。",
   "action": "为背包系统写3条验收标准，再用 Codex 实现并记录返工时间。",
@@ -14,34 +14,61 @@
   "slug": "post-651e12b1c194ec54",
   "sources": [
     {
+      "title": "openai/codex · Official repository",
       "url": "https://github.com/openai/codex",
-      "title": "github.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Custom instructions with AGENTS.md · OpenAI",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "学习目标与方法"
+      "text": "把“能用的背包”改写成可观察行为"
     },
     {
       "type": "paragraph",
-      "text": "学习路线：先写目标、约束和验收标准，再让 Agent 阅读代码仓库、修改文件、运行测试，最后人工审查 Diff。此条为编辑整理的教程，不是当天新闻。"
+      "text": "本练习面向已有项目、能运行基本测试的开发者。目标不是生成整个物品系统，而是给现有背包增加一种明确行为：拾取可堆叠物品。以下容量和上限是编辑选取的教学参数，不是引擎默认值。Codex 的项目指导机制可保存测试入口，但验收标准仍需要你亲自确认。"
     },
     {
       "type": "heading",
-      "text": "为什么值得实践"
+      "text": "先固定三个不变量"
     },
     {
-      "type": "paragraph",
-      "text": "减少游戏功能实现后才发现边界遗漏的情况。"
+      "type": "list",
+      "items": [
+        "守恒：拾取前后的物品总数应一致，成功进入背包的数量加上地面剩余数量，等于原有总量。",
+        "容量：背包最多 4 格，同类物品每格最多 10 个；先填已有堆栈，再占空格，不悄悄覆盖其他物品。",
+        "失败安全：无法放入的部分留在原处并返回明确结果；非法数量、未知物品 ID 或重复拾取事件不能凭空创造物品。"
+      ]
     },
     {
       "type": "heading",
-      "text": "动手练习"
+      "text": "用输入与结果驱动开发"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "构造三种初始状态：空背包、一个装有 8 个药水的格子、全部格子已满。先写出每次拾取后的期望格子内容与剩余量。",
+        "给第二种状态加入 5 个药水，应得到原格 10 个、新格 3 个。满背包加入物品时，若没有可用堆叠空间，所有数量必须保留在地面。",
+        "让 Codex 先定位物品数据、添加接口和 UI 刷新路径，说明现有实现是否支持部分成功。先补能暴露问题的测试，再改最少的逻辑。",
+        "加入连续点击、数量为零或负数、切场景后重新拾取的用例。多人游戏还涉及服务端权威与并发，不应把这个单机练习直接当作联机实现。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "测试之外还要验收什么"
     },
     {
       "type": "paragraph",
-      "text": "为背包系统写3条验收标准，再用 Codex 实现并记录返工时间。"
+      "text": "自动测试检查状态与返回值；在引擎里再看图标数量是否同步、提示是否遮挡操作、失败拾取有没有播放成功音效。最后保存并重新加载，确认物品 ID 和数量没有变化。若存档模块不在本次范围，应明确列为待验证而不是宣称兼容。"
+    },
+    {
+      "type": "paragraph",
+      "text": "审查 Diff 时特别留意 Agent 是否通过放宽断言、删除失败测试或改动物品配置绕过问题。交付记录应区分已通过、失败、未执行三类，并附实际命令。这个闭环的价值在于让缺陷可重现，不是让测试数量看起来更多。本文只设计了用例，没有在具体游戏中执行或测得返工收益。"
     }
   ],
   "legacyCover": {
@@ -49,7 +76,18 @@
     "alt": "实践学习与项目笔记的概念插画"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://github.com/openai/codex",
+    "sourceTitle": "OpenAI Codex 官方 README",
+    "accessed": "2026-10-22",
+    "rightsNote": "来源：OpenAI Codex 官方仓库内截图；仓库 README 声明 Apache-2.0，LICENSE 与 NOTICE 已核验。Copyright 2025 OpenAI。保留 Apache-2.0 许可与 NOTICE，标明显示裁切或尺寸调整；不主张商标授权，不暗示 OpenAI 背书。 本站将原图等比例缩小并转为 WebP；列表显示可能裁切。",
+    "licenseURL": "https://github.com/openai/codex/blob/main/LICENSE"
+  },
+  "revised": "2026-10-22",
+  "cover": {
+    "src": "./assets/covers/codex-cli.webp",
+    "alt": "OpenAI Codex 官方仓库展示的终端界面与代码库分析任务",
+    "fit": "cover"
   }
 }

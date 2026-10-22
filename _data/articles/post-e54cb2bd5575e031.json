@@ -3,7 +3,7 @@
   "label": "开源 · 3D 制作",
   "date": "2026-10-21",
   "title": "Blender：独立游戏 3D 资产核心工具",
-  "summary": "建模、绑定、动画、烘焙和导出集中完成。",
+  "summary": "用一个低模道具走通 Blender 到 Godot 的资产链路，优先检查尺寸、材质、法线与重新导入稳定性。",
   "facts": "Blender 是免费开源 3D 创作软件，包含建模、动画、材质和渲染工具。",
   "value": "适合风格化道具、低多边形场景与角色原型。",
   "action": "制作一个低模道具，导出 glTF 并导入游戏引擎。",
@@ -14,34 +14,59 @@
   "slug": "post-e54cb2bd5575e031",
   "sources": [
     {
-      "url": "https://www.blender.org/",
-      "title": "www.blender.org"
+      "title": "blender/blender · Official mirror of Blender",
+      "url": "https://github.com/blender/blender",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Available 3D formats · Godot documentation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Model export considerations · Godot documentation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/model_export_considerations.html",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "工具介绍"
+      "text": "先验证进入游戏，再追求渲染效果"
     },
     {
       "type": "paragraph",
-      "text": "Blender 是免费开源 3D 创作软件，包含建模、动画、材质和渲染工具。"
+      "text": "Blender 的官方仓库将其定位为自由开源 3D 创作工具。对独立游戏来说，模型在制作软件里好看只是第一步；更重要的是导入引擎后比例正确、材质完整、碰撞可用，而且修改源文件后能稳定更新。以下选择一个低模木箱作为编辑建议练习，不涉及角色绑定或复杂动画。"
     },
     {
       "type": "heading",
-      "text": "适用场景与限制"
+      "text": "为什么先选 glTF / GLB"
     },
     {
       "type": "paragraph",
-      "text": "适合风格化道具、低多边形场景与角色原型。"
+      "text": "Godot 官方文档推荐 glTF 2.0，并支持文本 .gltf 与二进制 .glb。直接导入 .blend 则会调用已安装的 Blender 转成 glTF，意味着开发环境还依赖 Blender。若要降低其他成员打开工程的环境要求，可先用明确导出的 GLB 验证交付链路。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "在 Blender 中建立尺寸明确的木箱，把原点放在便于摆放的位置，使用简单材质和可追踪的纹理文件。保存源文件，不把最终导出文件当作唯一备份。",
+        "导出前检查变换与法线。Godot 的官方建议包括应用物体变换，并在需要时由建模软件完成三角化，以减少导入结果差异。保留可编辑源模型再执行相关处理。",
+        "导出 GLB 后复制到测试项目，放在已知尺寸的参考物旁。检查朝向、比例、材质缺失、背面显示和阴影，不依赖制作软件的灯光效果判断引擎表现。",
+        "在引擎侧添加合适的碰撞并测试角色接近、跳上与边缘移动。碰撞设置是否随重导入保留要实际验证，不默认模型文件已经包含最终游戏逻辑。",
+        "修改木箱一个明显细节，重新导出与导入。确认实例位置、碰撞和材质覆盖没有意外丢失，再把同一流程用于整套道具。"
+      ]
     },
     {
       "type": "heading",
-      "text": "使用建议"
+      "text": "常见误判与验收边界"
     },
     {
       "type": "paragraph",
-      "text": "制作一个低模道具，导出 glTF 并导入游戏引擎。"
+      "text": "不同渲染器不一定呈现相同光照，复杂材质也不能仅凭视口效果判断交换格式能否完整表达。建议先用简单材质走通流程，遇到问题再分离模型、纹理与引擎设置逐项定位。多边形数低也不自动等于性能好，材质数量、纹理尺寸和场景中的实例规模同样需要测量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "交付应包含源文件、导出物、纹理来源、版本和验收截图；最终在目标设备检查，而不是只看编辑器。本文核对了 Blender 官方仓库及 Godot 资产文档，未实际制作或导入模型。外部字体、贴图、插件和模型的使用权需要另行核查，不由创作软件的开源身份自动覆盖。"
     }
   ],
   "legacyCover": {
@@ -51,5 +76,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

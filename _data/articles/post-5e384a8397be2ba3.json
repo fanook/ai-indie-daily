@@ -1,9 +1,9 @@
 {
   "category": "news",
   "label": "Steam 官方",
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "title": "Steam Next Fest 十月档开启",
-  "summary": "官方规则明确了 Demo、商店页面与参展时间要求。",
+  "summary": "十月活动为 10 月 19–26 日，报名与审核早于开幕。把 Demo、商店页和反馈闭环拆开准备，比只盯着活动当天更有用。",
   "facts": "Steamworks 官方说明活动于10月19日10:00 PDT开始，10月26日结束。参展游戏须尚未发售且具有公开商店页面和试玩版。",
   "value": "适合建立未来游戏的发行时间表，提前准备商店页与试玩版审核。",
   "action": "为自己的项目倒排 Demo 完成、商店页和宣传视频时间。",
@@ -11,38 +11,62 @@
   "type": "新闻",
   "id": "post-5e384a8397be2ba3",
   "legacyIndex": 7,
-  "verification": "unreviewed",
   "slug": "post-5e384a8397be2ba3",
   "sources": [
     {
+      "title": "Steamworks：Steam Next Fest October 2026 官方日程与资格",
       "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
-      "title": "partner.steamgames.com"
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "事实与背景"
+      "text": "官方日程与当前所处阶段"
     },
     {
       "type": "paragraph",
-      "text": "Steamworks 官方说明活动于10月19日10:00 PDT开始，10月26日结束。参展游戏须尚未发售且具有公开商店页面和试玩版。"
+      "text": "Steamworks 官方确认：2026 年十月 Next Fest 从 10 月 19 日 10:00 PDT 持续到 10 月 26 日 10:00 PDT，即北京时间 10 月 20 日凌晨 1 点至 27 日凌晨 1 点。本次复核日期为 10 月 22 日，活动已经进行中，不能把旧报名日期当作现在仍可执行的入口。本站原日期采用活动当地的 10 月 19 日，现按统一北京时间改为 10 月 20 日，活动本身的起止时间没有变化。"
     },
     {
       "type": "heading",
-      "text": "对开发者的价值"
+      "text": "不是开幕当天上传就能参展"
     },
     {
       "type": "paragraph",
-      "text": "适合建立未来游戏的发行时间表，提前准备商店页与试玩版审核。"
+      "text": "本届官方日程列出的报名截止为 8 月 31 日，全部必要材料送审节点为 9 月 28 日。资格要求包括公开商店页、开幕时可玩的 Demo，以及计划在活动结束后发行的游戏。活动规则和未来届次会变化，下一次参与应重新打开对应届次的文档，不能机械复制本届日期。"
     },
     {
       "type": "heading",
-      "text": "可执行建议"
+      "text": "把准备拆成三条线"
+    },
+    {
+      "type": "list",
+      "items": [
+        "体验线：玩家能否在短时间内理解目标、完成一次核心循环并看到下一步吸引力。试玩不必很长，但不应让玩家花大部分时间学习未打磨的操作。",
+        "交付线：商店素材、可下载构建、首次启动、输入设备和反馈入口是否全部闭合。发布成功与玩家能顺利游玩不是同一件事。",
+        "观察线：提前决定收集什么反馈。把启动失败、教程卡住、主动退出和愿望单意愿分开记录，避免活动结束后只剩一个访问总量。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "已经参展时，优先做什么"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "从普通玩家路径检查商店页到下载、启动和结束页，不能只从编辑器运行。把严重崩溃和阻断进度问题排在新功能前面。",
+        "用相同问题记录试玩反馈：最先困惑在哪里、什么时候第一次做出有意义的选择、结束时想不想继续。不要用引导式提问只收集表扬。",
+        "每次修补保留版本号和时间，把更新前后的反馈分开。若同时改了难度、教程与宣传文案，结论应保守，不能把所有变化归功于一个改动。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "没有参展，也能完成一轮研究"
     },
     {
       "type": "paragraph",
-      "text": "为自己的项目倒排 Demo 完成、商店页和宣传视频时间。"
+      "text": "以下是编辑建议而非官方营销承诺：挑选与自己玩法接近的少量 Demo，记录它们如何说明核心循环、如何处理失败和何时出现结束页。研究的是具体设计选择，不是照搬美术与关卡。不要假定入选活动就有固定曝光或愿望单增幅；本页官方资料没有给出这类保证。"
     }
   ],
   "legacyCover": {
@@ -50,16 +74,8 @@
     "alt": "游戏活动日历的概念插画"
   },
   "coverProvenance": {
-    "status": "verified",
-    "kind": "official-material",
-    "sourceURL": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
-    "sourceTitle": "Steam Next Fest October 2026 官方活动文档",
-    "accessed": "2026-10-22",
-    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+    "status": "unavailable",
+    "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "cover": {
-    "src": "https://shared.fastly.steamstatic.com/community_assets/images/steamworks_docs/english/nf_oct26_doc_banner.jpg",
-    "alt": "Steam Next Fest 官方活动横幅，标注 10 月 19 日至 26 日",
-    "fit": "contain"
-  }
+  "revised": "2026-10-22"
 }

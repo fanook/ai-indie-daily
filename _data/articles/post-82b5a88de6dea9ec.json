@@ -1,48 +1,82 @@
 {
   "category": "news",
   "label": "Claude Code",
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "title": "Claude Code 2.1.305 发布",
-  "summary": "新稳定版可用；升级前应核对修复内容与兼容性。",
+  "summary": "官方 2.1.305 更新聚焦网关兼容、worktree 与任务恢复等可靠性问题；对游戏项目，更值得验证的是升级后工作流是否保持一致。",
   "facts": "公开版本跟踪显示 Claude Code 2.1.305 于10月20日发布。具体修复项以官方 GitHub Release Notes 为准，不代表底层模型能力升级。",
   "value": "游戏工程的复杂目录、资源依赖和脚本可能受到 CLI 版本变化影响。",
   "action": "先在测试分支执行固定的重构与自动测试任务。",
-  "url": "https://github.com/anthropics/claude-code/releases",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
   "type": "新闻",
   "id": "post-82b5a88de6dea9ec",
   "legacyIndex": 5,
-  "verification": "unreviewed",
   "slug": "post-82b5a88de6dea9ec",
   "sources": [
     {
-      "url": "https://github.com/anthropics/claude-code/releases",
-      "title": "github.com"
+      "title": "Anthropic 官方 Claude Code v2.1.305 发布说明",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "GitHub 官方 Release API：精确发布时间（UTC）",
+      "url": "https://api.github.com/repos/anthropics/claude-code/releases/tags/v2.1.305",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "事实与背景"
+      "text": "已核实的发布与范围"
     },
     {
       "type": "paragraph",
-      "text": "公开版本跟踪显示 Claude Code 2.1.305 于10月20日发布。具体修复项以官方 GitHub Release Notes 为准，不代表底层模型能力升级。"
+      "text": "Anthropic 官方 GitHub 发布记录确认 v2.1.305 发布于 2026 年 10 月 20 日 20:46 UTC，即北京时间 10 月 21 日 04:46。本站原条目使用了 UTC 日期，现按本站北京时间规范更正为 10 月 21 日。它是 Claude Code 客户端更新，不是新基础模型，也不意味着它始终是最新版本。此前简报未列具体变化，本次直接复核发布说明后补充。"
     },
     {
       "type": "heading",
-      "text": "对开发者的价值"
+      "text": "几项与日常开发直接相关的修复"
+    },
+    {
+      "type": "list",
+      "items": [
+        "修复某些网关或模型供应端不接受 tool search 时请求失败的问题，发布说明将其标记为 2.1.304 的回归。",
+        "修复 bare repository 中新 worktree 起点和部分未清理 worktree 的问题。",
+        "修复 Workflow 恢复时重复运行已经完成的部分 agent，以及部分上下文压缩信息未被告知的问题。"
+      ]
     },
     {
       "type": "paragraph",
-      "text": "游戏工程的复杂目录、资源依赖和脚本可能受到 CLI 版本变化影响。"
+      "text": "这些变化影响的是工具执行和任务连续性。若项目并未使用相应网关、worktree 或恢复流程，不应把每一项更新都理解成自己的效率必然提升。"
     },
     {
       "type": "heading",
-      "text": "可执行建议"
+      "text": "游戏项目为什么需要升级回归"
     },
     {
       "type": "paragraph",
-      "text": "先在测试分支执行固定的重构与自动测试任务。"
+      "text": "本站建议把一次客户端升级当作开发工具链变更，而不是随手点更新。多场景工程、自动导入资源、长时间打包和跨文件重构往往存在隐含状态：同一个任务如果落在错误分支、恢复后重复执行或漏掉旧约束，最终 diff 可能看似合理，却改变了不该动的资产。"
+    },
+    {
+      "type": "heading",
+      "text": "建议的最小验证包"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "保留升级前客户端版本和当前配置摘要。在干净测试分支执行一个已知小任务，记录基线 diff、测试和耗时，不用生产分支做实验。",
+        "选择三个代表性任务：只读定位脚本、修改一个带测试的小功能、跨文件重命名。验收重点是范围正确与结果可重复，不是代码行数。",
+        "若确实使用 worktree，确认起始提交、工作目录及结束后的残留状态；若使用自建网关，执行一次实际请求验证可用性。",
+        "只在可安全中断的小任务上测试恢复，确认已完成步骤没有产生重复资源或重复提交。保存失败条件，能回到此前可用的工作流。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "安全设置不能随升级默认放宽"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布说明还包含 Linux 用户命名空间相关沙箱设置。不要为了让浏览器测试或容器工具启动，就把新的放宽选项全开；先确认具体阻塞原因和权限后果。本文只核对发布说明，没有在你的本地游戏仓库运行此版本的升级基准，不能据此宣称兼容性已经验证。"
     }
   ],
   "legacyCover": {
@@ -52,5 +86,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

@@ -2,45 +2,67 @@
   "category": "ideas",
   "label": "玩法创意",
   "date": "2026-10-21",
-  "title": "从信息不对称设计低成本双人合作玩法",
-  "summary": "让两名玩家各自掌握不同信息，可以用较少资产创造沟通乐趣。",
+  "title": "90 秒双人沟通实验：让信息差成为玩法",
+  "summary": "先做一个90秒双人沟通实验：不制作完整迷宫，验证信息分工是否真的让两个人都有事可做。",
   "facts": "这是玩法设计思路，不是新闻报道。典型机制包括一人负责操作，另一人掌握路线或谜题信息。",
   "value": "机制易于用小型原型验证，不必先制作大量关卡或复杂美术。",
   "action": "制作90秒双人原型：一人移动，一人只能通过语言提示方向，测试误解是否带来有趣体验。",
-  "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+  "url": "https://docs.godotengine.org/en/stable/classes/class_timer.html",
   "id": "post-78716180acd5adfb",
   "legacyIndex": 3,
   "slug": "post-78716180acd5adfb",
   "sources": [
     {
-      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
-      "title": "partner.steamgames.com"
+      "title": "Godot 官方文档：Timer（实现参考）",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_timer.html",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Godot 官方文档：Using signals（实现参考）",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
-      "type": "heading",
-      "text": "核心玩法"
-    },
-    {
       "type": "paragraph",
-      "text": "这是玩法设计思路，不是新闻报道。典型机制包括一人负责操作，另一人掌握路线或谜题信息。"
+      "text": "这是一项未经过试玩验证的原创构想，不是已发行游戏案例，也没有市场表现数据。目标很窄：验证“我知道但做不到，你做得到但不知道”的信息分工，能否产生可修正的误解，而不是让其中一人只听命令。"
     },
     {
       "type": "heading",
-      "text": "设计价值"
+      "text": "先把沟通本身做成原型"
     },
     {
       "type": "paragraph",
-      "text": "机制易于用小型原型验证，不必先制作大量关卡或复杂美术。"
+      "text": "操作员面对一张6×6的空白格板，只能上下左右移动棋子；向导拿到印有墙壁、起点和出口的纸质地图，但看不到实时棋子。每走一步，操作员口头报告朝向或碰壁结果，向导修正位置估计，再给下一条指令。一次行动的循环是描述、执行、反馈、纠错，90秒后结束，不加敌人、剧情和收集品。"
+    },
+    {
+      "type": "paragraph",
+      "text": "关键取舍不是“越难交流越好”。允许绝对方位容易建立共同语言，但可能退化成报坐标；只允许左右转会增加参照系误解，却也更容易让操作员丢失主动性。操作员保留“先停一下、要求确认”的权利，避免以操作迟钝制造假难度。"
     },
     {
       "type": "heading",
-      "text": "最小可玩原型"
+      "text": "最小实验与记录方法"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "先用纸格板和棋子演一局，确认双方必须互相询问。数字版只需移动、碰壁反馈、倒计时和重开，暂不做联网或语音识别。",
+        "准备两张难度相近的固定地图，对比“可报坐标”和“只能说相对方向”。轮换两人的角色，也轮换规则顺序，降低熟悉路线的影响。",
+        "找3组双人搭档各玩数局，记下成功与否、第一次误解发生点、纠错耗时，以及是谁发现并解决问题。结束后分别问：你做过哪个自己的决定？"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "什么结果值得继续"
     },
     {
       "type": "paragraph",
-      "text": "制作90秒双人原型：一人移动，一人只能通过语言提示方向，测试误解是否带来有趣体验。"
+      "text": "初步继续条件是：双方都能举出一次有效贡献，误解后能恢复合作，而且至少愿意交换角色再试。若一人长时间沉默，或第二局只是背路线，应先改信息分配，不急着加关卡。这些是拟定的原型判断标准，不是行业基准；小样本也不能证明商业需求。"
+    },
+    {
+      "type": "paragraph",
+      "text": "AI可在制作期提出含糊指令和地标称呼，供人工筛选成测试题；运行时不需要模型。Godot的Timer可提供倒计时，signals可传递碰壁和结束事件。下列官方资料仅支持这些实现方法，不证明玩法好玩或开发成本。"
     }
   ],
   "legacyCover": {
@@ -50,5 +72,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

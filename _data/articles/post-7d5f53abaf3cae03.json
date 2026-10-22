@@ -3,7 +3,7 @@
   "label": "开源 · AI 美术",
   "date": "2026-10-21",
   "title": "ComfyUI：节点式图像生成工作流",
-  "summary": "把角色、道具和场景素材生产变成可复现流程。",
+  "summary": "理解 ComfyUI 的模型、提示、采样和保存链路，再用小批量图标检查它能否满足项目生产要求。",
   "facts": "ComfyUI 是开源的节点式生成工作流工具，支持能力取决于模型和节点。商用权利需要单独核查模型许可。",
   "value": "适合道具图标、卡牌插画、概念图和批量变体。",
   "action": "固定一套工作流，输出16张同系列图标并评估一致性。",
@@ -14,34 +14,58 @@
   "slug": "post-7d5f53abaf3cae03",
   "sources": [
     {
-      "url": "https://github.com/comfyanonymous/ComfyUI",
-      "title": "github.com"
+      "title": "Comfy-Org/ComfyUI · Official repository",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Getting Started with AI Image Generation · ComfyUI",
+      "url": "https://docs.comfy.org/get_started/first_generation",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "ComfyUI Text to Image Workflow",
+      "url": "https://docs.comfy.org/tutorials/basic/text-to-image",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "工具介绍"
+      "text": "节点图解决的是流程可见性"
     },
     {
       "type": "paragraph",
-      "text": "ComfyUI 是开源的节点式生成工作流工具，支持能力取决于模型和节点。商用权利需要单独核查模型许可。"
+      "text": "ComfyUI 用节点组织生成流程，具体能力取决于所选模型和节点。它适合需要保留参数、反复调整环节的图像工作，而不是“连接几个节点就能稳定产出整套美术”的保证。官方入门文档支持加载工作流与导出 JSON；这些文件保存流程，但不自动包含你机器上的全部模型和依赖。"
     },
     {
       "type": "heading",
-      "text": "适用场景与限制"
+      "text": "先看懂一条最小链路"
     },
     {
       "type": "paragraph",
-      "text": "适合道具图标、卡牌插画、概念图和批量变体。"
+      "text": "以官方文生图示例为起点，分清模型载入、文本条件、潜空间采样、图像解码和保存几个环节。报错时先查缺失模型、路径和节点，不要直接复制网上一大串第三方扩展。自定义节点也是运行在电脑上的代码，需要单独判断来源与维护情况。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "先使用官方示例和你有权使用的模型，生成一张测试图；记下软件版本、模型文件、分辨率、提示词和采样参数。",
+        "为游戏图标列出可观察要求：主体朝向、留白、轮廓、光源与背景。先做 4 件形状差异大的道具，检查流程是否能承受题材变化。",
+        "保留一套基准参数，每轮只改一个条件。若同时换模型、提示和采样设置，无法判断改善来自哪里。",
+        "通过初轮后再扩到 16 张，把它们以游戏实际显示尺寸放在同一张联系表上。比较的是整体可读性，而不是逐张放大后的细节。"
+      ]
     },
     {
       "type": "heading",
-      "text": "使用建议"
+      "text": "工具开源不等于素材自动可商用"
     },
     {
       "type": "paragraph",
-      "text": "固定一套工作流，输出16张同系列图标并评估一致性。"
+      "text": "官方仓库标示的是 ComfyUI 软件自身许可。模型、LoRA、输入图片和最终用途需要另查对应条款；不知道就记录为待核实，不使用“开源所以随便商用”的结论。没有使用第三方素材的权利，也不能靠重新生成来自动消除这个问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "性能主要取决于模型、显存、尺寸和批量规模。先测单张，再逐步扩量，记录生成失败、人工修图和导入时间。验收结果应是一份可重新加载的工作流、依赖清单与图标可用率，而不是只有一张最好看的样图。本文只核对官方流程，未安装模型或执行这组生成实验。"
     }
   ],
   "legacyCover": {
@@ -51,5 +75,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

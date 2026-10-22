@@ -3,7 +3,7 @@
   "label": "Steam 新品节",
   "date": "2026-10-20",
   "title": "Steam 新品节出现数千款 Demo",
-  "summary": "玩家注意力竞争加剧，游戏前几分钟的体验更重要。",
+  "summary": "“数千款 Demo”说明发现成本很高，但统计快照不是最终总量。用一个小型竞品样本观察开场、核心循环和试玩结束，比盲目刷榜更实用。",
   "facts": "Steam 官方确认本届活动于10月19日至26日举行。GamingOnLinux 10月20日援引 SteamDB 统计约7164款 Demo；具体数量会因统计口径变化。",
   "value": "独立开发者需要在封面、截图、玩法首屏和试玩流程中清晰传达差异化。",
   "action": "试玩三款同类型 Demo，记录核心乐趣出现时间。",
@@ -11,38 +11,77 @@
   "type": "新闻",
   "id": "post-ec20ea6072221c11",
   "legacyIndex": 6,
-  "verification": "unreviewed",
   "slug": "post-ec20ea6072221c11",
   "sources": [
     {
+      "title": "GamingOnLinux：Steam Next Fest Oct 2026 is live with thousands of demos（数量快照来源）",
       "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
-      "title": "www.gamingonlinux.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "SteamDB：October 2026 活动条目（动态第三方数据，不是官方最终统计）",
+      "url": "https://steamdb.info/sales/event/713414759190366804/?displayOnly=Demo",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Steamworks：本届 Next Fest 官方资料",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "事实与背景"
+      "text": "数量来自哪里，不能证明什么"
     },
     {
       "type": "paragraph",
-      "text": "Steam 官方确认本届活动于10月19日至26日举行。GamingOnLinux 10月20日援引 SteamDB 统计约7164款 Demo；具体数量会因统计口径变化。"
+      "text": "GamingOnLinux 在 2026 年 10 月 20 日的报道中，根据当时 SteamDB 活动页记录列出了 7,164 款 Demo；这是媒体引用第三方数据库的时间点快照，不是 Valve 的最终统计。本次保留“数千款”这一有出处的概述，不把随时变化的数字写成官方定案。"
+    },
+    {
+      "type": "paragraph",
+      "text": "同一报道提到部分游戏具有 AI 使用披露。披露只说明声明了某种 AI 使用，不能自动推出产品质量、制作投入、代码来源或是否抄袭。数量多与“每个项目更难成功”之间也缺少直接的因果测量，不应把焦虑当作统计结论。"
     },
     {
       "type": "heading",
-      "text": "对开发者的价值"
+      "text": "真正值得研究的是玩家如何做选择"
     },
     {
       "type": "paragraph",
-      "text": "独立开发者需要在封面、截图、玩法首屏和试玩流程中清晰传达差异化。"
+      "text": "本站的分析是：小团队不可能全面试玩所有参展项目，更实用的是构建一个有明确目的的样本。比如正在做俯视角战斗，就分别挑选视觉接近、循环接近和受众接近的项目，不必只追热门榜。样本不是市场全貌，却能帮助发现自己开场与表达上的具体问题。"
     },
     {
       "type": "heading",
-      "text": "可执行建议"
+      "text": "一张可复用的试玩记录"
+    },
+    {
+      "type": "list",
+      "items": [
+        "入口：商店首屏承诺了什么玩法？预告片展示的是可操作过程还是主要依赖气氛剪辑？",
+        "开场：首次输入、首次目标说明和首次有意义的选择分别发生在哪里？需要重复解释的地方是什么？",
+        "循环：玩家做了哪一个决定，获得什么反馈，又为什么愿意继续下一轮？记录行为而不是只写“好玩”。",
+        "结束：Demo 在高潮、完整小结还是突然中断处结束？是否清楚说明完整版还会增加什么？"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "如何把观察变成自己的改动"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "先试玩，再写一句可以被验证的假设。例如“我的教程没有告诉玩家失败后保留什么”，而不是“竞品更有吸引力”。",
+        "只挑一个假设改原型，用新玩家再试。记录是否还出现同样困惑，不需要先重做全部美术。",
+        "每条记录保留游戏名称、观察日期和版本。不同日期的 Demo 可能已经变化，不能把旧问题当成当前事实。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "证据边界"
     },
     {
       "type": "paragraph",
-      "text": "试玩三款同类型 Demo，记录核心乐趣出现时间。"
+      "text": "本条复核了报道原文与活动官方背景，没有亲自完成上述样本试玩，因此所有研究步骤都是建议，不是已有测试结论。若后续要发布竞品评价，应补上实际体验与具体证据，不能将这份方法清单包装成对数千款游戏的质量调查。"
     }
   ],
   "legacyCover": {
@@ -50,16 +89,8 @@
     "alt": "游戏手柄与试玩卡片的概念插画"
   },
   "coverProvenance": {
-    "status": "verified",
-    "kind": "official-material",
-    "sourceURL": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october",
-    "sourceTitle": "Steam Next Fest October 2026 官方活动文档",
-    "accessed": "2026-10-22",
-    "rightsNote": "原官方页面公开展示素材，以原站地址引用并标注来源；未发现开放许可声明，不主张转载或再授权权利。"
+    "status": "unavailable",
+    "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "cover": {
-    "src": "https://shared.fastly.steamstatic.com/community_assets/images/steamworks_docs/english/nf_oct26_doc_banner.jpg",
-    "alt": "Steam Next Fest 官方活动横幅，标注 10 月 19 日至 26 日",
-    "fit": "contain"
-  }
+  "revised": "2026-10-22"
 }

@@ -3,7 +3,7 @@
   "label": "发行 · 平台工具",
   "date": "2026-10-21",
   "title": "Steamworks：Demo、商店页和愿望单运营",
-  "summary": "从游戏开发中期就开始规划发行节奏。",
+  "summary": "把 Demo 当独立发布产物管理：先核对新品节资格，再倒排商店、构建审核、试玩修复与反馈收集。",
   "facts": "Steamworks 提供 Steam 商店管理、发行、活动参与等官方文档；参与活动须满足平台规则。",
   "value": "有助于把 Demo 测试与真实玩家反馈连接起来。",
   "action": "阅读新品节规则并制定商店页和 Demo 审核日历。",
@@ -14,34 +14,62 @@
   "slug": "post-e1d036a2c342450a",
   "sources": [
     {
+      "title": "Steam Next Fest · Steamworks Documentation",
       "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
-      "title": "partner.steamgames.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Demos · Steamworks Documentation",
+      "url": "https://partner.steamgames.com/doc/store/application/demos",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Review Process · Steamworks Documentation",
+      "url": "https://partner.steamgames.com/doc/store/review_process",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "工具介绍"
+      "text": "Steamworks 不只是上传按钮"
     },
     {
       "type": "paragraph",
-      "text": "Steamworks 提供 Steam 商店管理、发行、活动参与等官方文档；参与活动须满足平台规则。"
+      "text": "对小团队而言，发行准备包括商店表达、可安装构建、审核和活动资格，而不仅是开发完成后再上传。Steam 官方说明 Demo 拥有与本体关联的独立 App ID，并有自己的配置与发布检查清单。因此应把 Demo 作为一份需要版本管理和验收的产品，而不是临时删掉后半段内容的工程副本。"
     },
     {
       "type": "heading",
-      "text": "适用场景与限制"
+      "text": "先检查资格，再确定活动时间"
     },
     {
       "type": "paragraph",
-      "text": "有助于把 Demo 测试与真实玩家反馈连接起来。"
+      "text": "按本次访问的 Steam 新品节常青规则，游戏只能参加一次新品节；本体商店页需公开，活动开始时需有公开可玩的 Demo，游戏不能在该届活动结束前发布。具体届次的报名、送审与活动日期必须查看该届页面，不能把一篇常青文章里的日期当作下一届截止日。"
     },
     {
       "type": "heading",
-      "text": "使用建议"
+      "text": "建立两条并行的准备线"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "商店线：确认一句话卖点、实际游戏截图、支持语言和玩家能体验的内容。未完成的功能不能写成已存在的卖点，宣传材料应与玩家打开 Demo 后看到的体验相符。",
+        "构建线：单独记录 Demo 的 App ID、上传构建、默认分支与测试账号条件。检查全新安装、首次启动、退出、再次启动和卸载后重装，不只在开发机运行。",
+        "审核线：倒排商店页与构建送审。官方通用审核说明给出通常 3–5 个工作日，并建议至少预留 7 个工作日应对问题；这不是审批时限承诺，活动另有更早要求时遵循活动日程。",
+        "反馈线：在游戏结束处给出简短反馈入口，提前规定收集哪些技术与玩法问题。活动期间优先处理无法启动、存档或关键进程阻塞，再评估平衡与内容建议。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "怎样使用愿望单与试玩数据"
     },
     {
       "type": "paragraph",
-      "text": "阅读新品节规则并制定商店页和 Demo 审核日历。"
+      "text": "编辑建议把页面访问、Demo 下载、完成率和愿望单变化分开记录，并注明时间范围与外部宣传。它们回答不同问题：下载不等于玩过，完成不等于愿意购买，愿望单更不是销量保证。小样本反馈可以暴露问题，但不足以预测市场规模。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布前的最终清单应有“谁检查、哪个构建、结果是什么”，不要只写“已测试”。本文核对的是公开流程，没有登录任何开发者后台、报名活动或提交构建，也没有替项目确定发行日期；实际费用、协议与资格以你的账户及对应活动页面为准。"
     }
   ],
   "legacyCover": {
@@ -51,5 +79,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

@@ -3,7 +3,7 @@
   "label": "AI 编程 · CLI",
   "date": "2026-10-21",
   "title": "Codex：在真实仓库中执行开发任务",
-  "summary": "跨文件修改、补测试、查 Bug 和自动化工程任务。",
+  "summary": "用一项小型回归测试评估 Codex：看它能否定位真实代码、复现问题、给出最小修复并留下可审查证据。",
   "facts": "Codex 提供 AI 辅助软件开发工作流；可用功能、额度和计费以官方说明为准。",
   "value": "适合重复性游戏工程任务，但仍需要人工验收。",
   "action": "选择一个模块让 Codex 补测试并检查结果。",
@@ -14,34 +14,58 @@
   "slug": "post-fb7cb5d8d08607ca",
   "sources": [
     {
+      "title": "openai/codex · Official repository",
       "url": "https://github.com/openai/codex",
-      "title": "github.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Custom instructions with AGENTS.md · OpenAI",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Agent approvals & security · OpenAI",
+      "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "工具介绍"
+      "text": "从真实仓库里的小问题开始"
     },
     {
       "type": "paragraph",
-      "text": "Codex 提供 AI 辅助软件开发工作流；可用功能、额度和计费以官方说明为准。"
+      "text": "Codex 官方仓库提供运行在终端中的编程代理。与复制代码到聊天框相比，仓库工作流的重点是把修改与实际文件、命令和测试连接起来；但能执行命令，不代表工具理解了全部游戏设计。适用任务包括查找回归、补测试、整理数据导入与构建脚本，最终仍需要开发者审查。"
     },
     {
       "type": "heading",
-      "text": "适用场景与限制"
+      "text": "一个可比较的试用任务"
     },
     {
       "type": "paragraph",
-      "text": "适合重复性游戏工程任务，但仍需要人工验收。"
+      "text": "编辑建议选择“读取空存档时显示新游戏，而不是报错”作为初次任务。它的输入和结果相对明确，又能暴露错误处理、界面状态与文件路径的关联。先保留有问题的最小存档样本或模拟数据，不上传玩家真实信息。不要同时要求改 UI、换存档格式和优化性能。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "确认工作区、分支和未提交修改，运行现有检查。把实际可用的启动、测试命令写入项目指导文件；没有测试时，先记录人工复现过程。",
+        "让 Codex 找出读取入口、解析逻辑和界面决策位置，并引用具体文件说明原因。先检查其解释，再允许修改。",
+        "要求先新增能够复现空文件问题的用例，再做最小修复；增加损坏 JSON、缺字段与旧版本存档的边界检查，但不要擅自改变旧数据格式。",
+        "审查差异与执行记录，确认失败用例在修复后通过，其他用例没有被删改。最后人工启动游戏，检查新游戏、继续游戏和错误提示三个路径。"
+      ]
     },
     {
       "type": "heading",
-      "text": "使用建议"
+      "text": "区分工具能力与运行环境"
     },
     {
       "type": "paragraph",
-      "text": "选择一个模块让 Codex 补测试并检查结果。"
+      "text": "官方安全文档将沙箱、审批和网络访问作为不同控制层。测试缺少引擎可执行文件、资源或依赖时，应报告未执行及具体缺项，不能把“建议运行”写成“已经通过”。涉及外部服务、发布凭据和删除操作时，也不能把普通代码任务当成无限授权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "评价结果可记录定位时间、有效修改量、返工次数与人工审查成本。若测试只证明解析函数不报错，还不能推出存档不会丢失。本文未替读者运行这个用例，且不提供未经核实的最新价格或额度。软件仓库许可、模型服务费用与游戏自身内容权利是不同问题，选型时应分别核对。"
     }
   ],
   "legacyCover": {
@@ -49,7 +73,18 @@
     "alt": "开发工具组件的概念插画"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://github.com/openai/codex",
+    "sourceTitle": "OpenAI Codex 官方 README",
+    "accessed": "2026-10-22",
+    "rightsNote": "来源：OpenAI Codex 官方仓库内截图；仓库 README 声明 Apache-2.0，LICENSE 与 NOTICE 已核验。Copyright 2025 OpenAI。保留 Apache-2.0 许可与 NOTICE，标明显示裁切或尺寸调整；不主张商标授权，不暗示 OpenAI 背书。 本站将原图等比例缩小并转为 WebP；列表显示可能裁切。",
+    "licenseURL": "https://github.com/openai/codex/blob/main/LICENSE"
+  },
+  "revised": "2026-10-22",
+  "cover": {
+    "src": "./assets/covers/codex-cli.webp",
+    "alt": "OpenAI Codex 官方仓库展示的终端界面与代码库分析任务",
+    "fit": "cover"
   }
 }

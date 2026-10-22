@@ -3,7 +3,7 @@
   "label": "独立游戏观察",
   "date": "2026-10-19",
   "title": "AI 辅助快速克隆引发独立开发者担忧",
-  "summary": "制作门槛下降的同时，创意曝光与模仿风险引发讨论。",
+  "summary": "媒体报道了开发者因快速仿制风险调整 Demo 计划。应区分公开玩法、素材或代码复制指控，以及尚未确认的法律结论。",
   "facts": "PC Gamer 10月19日周报讨论了 AI 辅助游戏制作和模仿的争议。报道包含作者评论，不应等同于平台官方结论。",
   "value": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。",
   "action": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。",
@@ -11,38 +11,65 @@
   "type": "新闻",
   "id": "post-bb8f70b509e23521",
   "legacyIndex": 8,
-  "verification": "unreviewed",
+  "verification": "secondary-source",
   "slug": "post-bb8f70b509e23521",
   "sources": [
     {
+      "title": "PC Gamer：Steam Week in Review（本条已读的报道原文）",
       "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
-      "title": "www.pcgamer.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Alliance Arts：Drunken Goddess Reflux Demo 计划调整公告（已定位，正文尚待独立复核）",
+      "url": "https://store.steampowered.com/news/app/4150720/view/746066581090468248",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "事实与背景"
+      "text": "报道说了什么，核实到了哪一层"
     },
     {
       "type": "paragraph",
-      "text": "PC Gamer 10月19日周报讨论了 AI 辅助游戏制作和模仿的争议。报道包含作者评论，不应等同于平台官方结论。"
+      "text": "PC Gamer 的 2026 年 10 月周报讨论了快速仿制对独立游戏宣传的影响，并链接到 Alliance Arts 对 Drunken Goddess Reflux 试玩计划的调整公告。报道转述：团队担忧公开 Demo 后，呈现方式与玩法可能被快速仿制，因此转向受控试玩。该选择属于具体团队的风险判断，不代表所有独立项目都应该停止发 Demo。"
     },
     {
       "type": "heading",
-      "text": "对开发者的价值"
+      "text": "媒体来源已核对，原始声明仍有边界"
     },
     {
       "type": "paragraph",
-      "text": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。"
+      "text": "本次已读到 PC Gamer 报道并定位到开发者的 Steam 公告，但当前读取方式未能取得公告完整正文，所以没有把媒体转述冒充对声明原文的独立核实。报道还包含另一开发者对代码复制的指控；指控不等于裁决，本文不把被指控方是否侵权写成确定事实。"
     },
     {
       "type": "heading",
-      "text": "可执行建议"
+      "text": "小团队面对的是发布取舍"
     },
     {
       "type": "paragraph",
-      "text": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。"
+      "text": "以下是本站的产品分析，不是法律意见。公开试玩能收集反馈、检验上手过程，也会更早暴露核心创意的表达方式；闭门试玩能控制参与范围，却可能减少自然传播和样本多样性。决定公开到什么程度前，先问清楚：现在最需要验证玩法是否成立、操作是否易懂，还是宣传是否能触达目标玩家？三种目标并不需要同样的试玩内容。"
+    },
+    {
+      "type": "heading",
+      "text": "一个不依赖猜测的应对清单"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "为当前版本保留源文件、提交记录、素材来源与制作过程。这样至少能清晰说明自己做了什么，不必事后靠记忆补材料。",
+        "把试玩内容划为必需展示与可以后置两组。公开版应能兑现玩法承诺，但不必一次放出所有关卡、叙事反转和未完成资源。",
+        "若选择受控试玩，先明确参加范围、反馈方式和录屏规则；不要临时向玩家承诺自己没有准备执行的保密措施。",
+        "看到相似作品时，先保存具体证据并区分相似机制、相似表达、素材和代码问题。不要仅靠截图或“像 AI 生成”就公开下结论。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "AI 的角色需要单独说明"
+    },
+    {
+      "type": "paragraph",
+      "text": "AI 可以降低试验门槛，但“使用 AI”本身不能证明复制，也不能证明原创。对自己的项目，更可控的做法是保留输入素材与工具使用记录，审查输出的来源和一致性，把迭代速度用在验证独特体验上。是否需要法律处理应交由了解完整事实的专业人士判断，不能由这篇报道推导出统一做法。"
     }
   ],
   "legacyCover": {
@@ -50,16 +77,8 @@
     "alt": "原创与复制机制的概念示意"
   },
   "coverProvenance": {
-    "status": "verified",
-    "kind": "primary-article",
-    "sourceURL": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
-    "sourceTitle": "Pandorio Games | Grow the CCU | Vasals Studio，via PC Gamer",
-    "accessed": "2026-10-22",
-    "rightsNote": "原报道公开展示的图片，以原站地址引用并注明来源；未核实开放许可，不主张转载或再授权权利。"
+    "status": "unavailable",
+    "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "cover": {
-    "src": "https://cdn.mos.cms.futurecdn.net/FrgMgQ2p7MyoQneDwiatAg-480-80.png.webp",
-    "alt": "PC Gamer 原文配图：三款击打或破坏墙壁的游戏画面对比",
-    "fit": "contain"
-  }
+  "revised": "2026-10-22"
 }

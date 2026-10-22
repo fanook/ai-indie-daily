@@ -1,9 +1,9 @@
 {
   "category": "learn",
-  "label": "实战教程 · 30分钟",
+  "label": "项目记忆",
   "date": "2026-10-21",
   "title": "为 AI 游戏开发建立长期项目记忆",
-  "summary": "将世界观、玩法规则和架构地图沉淀为可维护文档。",
+  "summary": "把玩法规则、代码入口与设计决策拆成可维护的项目记忆，并用一次新会话检查它是否真的可用。",
   "facts": "推荐维护 README、设计约束、架构图和决策记录，避免长期项目依赖对话上下文。不同 Agent 的项目规则机制需查阅各自文档。",
   "value": "有助于跨仓库协作和长期开发时减少重复解释。",
   "action": "写一页 game-design.md 与 architecture.md，让 Agent 先读后改。",
@@ -14,34 +14,53 @@
   "slug": "post-119e1b48c591b518",
   "sources": [
     {
-      "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
-      "title": "docs.anthropic.com"
+      "title": "How Claude remembers your project · Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/memory",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Custom instructions with AGENTS.md · OpenAI",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "学习目标与方法"
+      "text": "项目记忆不是保存整段聊天"
     },
     {
       "type": "paragraph",
-      "text": "推荐维护 README、设计约束、架构图和决策记录，避免长期项目依赖对话上下文。不同 Agent 的项目规则机制需查阅各自文档。"
+      "text": "游戏做到第三个系统时，真正容易丢失的往往不是代码，而是“为什么不能这样改”：背包为什么不用重量、战斗为什么固定回合、旧存档为什么必须兼容。把这些决定只留在聊天里，新任务就可能重新讨论甚至推翻它们。本文给出一套编辑设计的文档练习，不是某个模型永久记住项目的保证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方机制需要分清：Codex 会读取 AGENTS.md 项目指导；Claude Code 文档介绍了 CLAUDE.md 与自动记忆，并明确这些内容是上下文，不是强制执行的安全配置。文件是否加载、作用范围和优先级，应按正在使用的客户端核对。"
     },
     {
       "type": "heading",
-      "text": "为什么值得实践"
+      "text": "先建立三份小文档"
     },
     {
-      "type": "paragraph",
-      "text": "有助于跨仓库协作和长期开发时减少重复解释。"
+      "type": "steps",
+      "items": [
+        "在 game-design.md 写核心循环、胜负条件、三个不可破坏的规则。例如“任务道具不可出售”“暂停时世界计时停止”。把尚未确定的想法单独标为待验证，避免被当成规格。",
+        "在 architecture.md 记录场景入口、状态由谁持有、存档从哪里读写，以及运行与测试命令。每条尽量链接实际路径，不画无法对应代码的宏大架构图。",
+        "在 decisions.md 记录一次决定的日期、背景、选择和放弃的方案。例如暂不联网，是因为本轮只验证单人战斗，而不是因为联机永远不重要。",
+        "在工具实际读取的项目指导文件中只保留简短入口、编辑禁区、验收命令，并明确要求先读相关文档。详细剧情和素材表按需加载，不把所有历史堆进入口。"
+      ]
     },
     {
       "type": "heading",
-      "text": "动手练习"
+      "text": "让记忆接受一次盲测"
     },
     {
       "type": "paragraph",
-      "text": "写一页 game-design.md 与 architecture.md，让 Agent 先读后改。"
+      "text": "开一个不带原聊天的新会话，只要求它解释“加入任务道具会影响哪些模块”，暂不改文件。对照代码检查它是否找对入口、复述规则并指出未知事项。答错时修复文档中的缺口，而不是继续追加长提示词；答对也不代表以后不会犯错。"
+    },
+    {
+      "type": "paragraph",
+      "text": "后续每次改规则，把对应文档与代码放在同一轮审查中。过时约束应标注被哪条决定替代，密钥和个人敏感数据不要写入仓库。验收产物是三份可定位的文档与一张缺口清单，不是对“记忆力更强”的主观感受。本文核对了官方加载机制，未在读者项目中执行该练习。"
     }
   ],
   "legacyCover": {
@@ -51,5 +70,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
-  }
+  },
+  "revised": "2026-10-22"
 }

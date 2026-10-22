@@ -3,7 +3,7 @@
   "label": "AI 实战教程",
   "date": "2026-10-21",
   "title": "用 Claude Code / Codex 建立可复现的游戏开发任务",
-  "summary": "从单次提示词转向项目文档、明确验收标准和自动测试。",
+  "summary": "用一张任务卡固定环境、边界、输入和交付物，让同一个游戏功能能被另一位开发者重新验证。",
   "facts": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。",
   "value": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。",
   "action": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。",
@@ -13,34 +13,67 @@
   "slug": "post-1f66b3bc5f831b80",
   "sources": [
     {
+      "title": "openai/codex · Official repository",
       "url": "https://github.com/openai/codex",
-      "title": "github.com"
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Custom instructions with AGENTS.md · OpenAI",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "accessed": "2026-10-22"
+    },
+    {
+      "title": "Common workflows · Claude Code Docs",
+      "url": "https://code.claude.com/docs/en/common-workflows",
+      "accessed": "2026-10-22"
     }
   ],
   "blocks": [
     {
       "type": "heading",
-      "text": "学习目标与方法"
+      "text": "可复现从任务边界开始"
     },
     {
       "type": "paragraph",
-      "text": "面向 AI 编程助手的实践教程：先明确项目结构、任务边界、测试方式，再让 Agent 执行。不是当日新闻。"
+      "text": "“把游戏做得更好”很难验收；“为暂停菜单补齐键盘操作，并保留现有鼠标行为”才是可执行任务。Codex 官方仓库提供终端编程代理，Claude Code 官方工作流覆盖代码探索、修复与测试。工具可以执行工程步骤，但不能替你定义什么才算完成。下面是编辑整理的方法，而非两款工具的性能比较。"
     },
     {
       "type": "heading",
-      "text": "为什么值得实践"
+      "text": "准备一张能转交的任务卡"
     },
     {
-      "type": "paragraph",
-      "text": "减少长任务上下文丢失、误改资源和重复沟通，适合独立游戏长期开发。"
+      "type": "list",
+      "items": [
+        "目标：玩家按 Esc 打开暂停菜单，继续按钮恢复游戏；明确这次不改存档、音频设置或视觉样式。",
+        "环境：记录引擎与语言版本、当前分支或提交、启动方法及所需资源。测试命令来自仓库，不由模型猜测。",
+        "边界：列出允许修改的模块、必须保持的接口，以及需先讨论的依赖升级、资源批量转换和工程配置改动。",
+        "证据：约定交付 Diff、实际运行的命令、退出状态、人工检查步骤与未覆盖项；截图只是界面证据，不能代替逻辑测试。"
+      ]
     },
     {
       "type": "heading",
-      "text": "动手练习"
+      "text": "从只读探索到小步实现"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "先保存当前工作，并跑一次已有测试或最短启动检查。基线已经失败时记录原因，避免把旧故障归到新改动。",
+        "让 Agent 只读查找输入映射、暂停状态与菜单场景，先列出候选文件和风险。若找不到真实入口，先解决定位问题，不要让它另造一套系统。",
+        "批准清晰范围后，按状态逻辑、界面绑定、测试三个小步实现。每步检查差异，遇到跨范围需求就拆成下一张任务卡。",
+        "在干净检出或另一台已具备同样依赖的机器复跑说明。若只在原会话里能成功，检查是否漏记资源、环境变量或手动编辑器操作。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "怎样判断这套方法有效"
     },
     {
       "type": "paragraph",
-      "text": "选一个小游戏功能，编写需求、验收标准和测试命令，然后用 Agent 完成并记录返工时间。"
+      "text": "记录首次实现耗时、审查耗时、返工次数与遗漏边界，至少对照几次相近规模的任务再判断。对暂停菜单应额外检查连续按键、切场景、重新开始以及菜单关闭后的输入焦点。自动测试通过不等于手感正确，人工试玩仍是交付的一部分。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目指导文件负责长期约定，单次任务卡负责本次范围，二者不要混成不断增长的聊天记录。本文没有运行示例工程，也不承诺固定完成时间；你最终应得到可复跑的说明和明确的剩余问题。"
     }
   ],
   "legacyCover": {
@@ -48,7 +81,18 @@
     "alt": "实践学习与项目笔记的概念插画"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://github.com/openai/codex",
+    "sourceTitle": "OpenAI Codex 官方 README",
+    "accessed": "2026-10-22",
+    "rightsNote": "来源：OpenAI Codex 官方仓库内截图；仓库 README 声明 Apache-2.0，LICENSE 与 NOTICE 已核验。Copyright 2025 OpenAI。保留 Apache-2.0 许可与 NOTICE，标明显示裁切或尺寸调整；不主张商标授权，不暗示 OpenAI 背书。 本站将原图等比例缩小并转为 WebP；列表显示可能裁切。",
+    "licenseURL": "https://github.com/openai/codex/blob/main/LICENSE"
+  },
+  "revised": "2026-10-22",
+  "cover": {
+    "src": "./assets/covers/codex-cli.webp",
+    "alt": "OpenAI Codex 官方仓库展示的终端界面与代码库分析任务",
+    "fit": "cover"
   }
 }
