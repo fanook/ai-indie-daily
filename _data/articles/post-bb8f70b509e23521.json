@@ -50,7 +50,16 @@
     "alt": "原创与复制机制的概念示意"
   },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已核实的原文或官方配图；不使用概念插画替代。"
+    "status": "verified",
+    "kind": "primary-article",
+    "sourceURL": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
+    "sourceTitle": "Pandorio Games | Grow the CCU | Vasals Studio，via PC Gamer",
+    "accessed": "2026-10-22",
+    "rightsNote": "原报道公开展示的图片，以原站地址引用并注明来源；未核实开放许可，不主张转载或再授权权利。"
+  },
+  "cover": {
+    "src": "https://cdn.mos.cms.futurecdn.net/FrgMgQ2p7MyoQneDwiatAg-480-80.png.webp",
+    "alt": "PC Gamer 原文配图：三款击打或破坏墙壁的游戏画面对比",
+    "fit": "contain"
   }
 }

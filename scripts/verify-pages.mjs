@@ -9,4 +9,4 @@ const expected = loadArticles();
 compiled.items.sort((a,b) => a.id.localeCompare(b.id));
 expected.items.sort((a,b) => a.id.localeCompare(b.id));
 assert.deepEqual(compiled, expected, 'Pages and local build must discover the exact same article data');
-console.log(`Verified actual Jekyll output: ${compiled.items.length} articles match source files.`);
+console.log(`Verified compiled index parity: ${compiled.items.length} articles match source files.`);

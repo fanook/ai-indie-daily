@@ -122,7 +122,8 @@ export function validateData(data) {
     if (item.url && !safeURL(item.url)) fail('来源必须为 HTTPS');
     const provenance = item.coverProvenance;
     if (item.cover !== undefined) {
-      if (!item.cover || !imageURL(item.cover.src) || typeof item.cover.alt !== 'string' || !item.cover.alt.trim()) fail('封面格式无效');
+      if (!item.cover || !imageURL(item.cover.src) || typeof item.cover.alt !== 'string' || !item.cover.alt.trim()
+        || (item.cover.fit !== undefined && !['contain','cover'].includes(item.cover.fit))) fail('封面格式无效');
       if (!provenance || provenance.status !== 'verified' || !['primary-article','official-material'].includes(provenance.kind)
         || !safeURL(provenance.sourceURL) || typeof provenance.sourceTitle !== 'string' || !provenance.sourceTitle.trim()
         || !validDate(provenance.accessed) || typeof provenance.rightsNote !== 'string' || !provenance.rightsNote.trim()) fail('封面缺少已核实的原文/官方来源与使用依据');
