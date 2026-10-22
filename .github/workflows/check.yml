@@ -29,6 +29,8 @@ jobs:
       - run: node scripts/verify-pages.mjs
       - name: Install browser test runner
         run: npm install --no-save --package-lock=false playwright@1.58.2
+      - name: Install Chinese fonts for visual QA
+        run: sudo apt-get install -y fonts-noto-cjk
       - name: Use runner-provided Chrome
         run: google-chrome --version
       - name: Browser checks across mobile and desktop
