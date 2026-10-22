@@ -20,6 +20,7 @@ fs.mkdirSync('test-results', {recursive:true});
       await page.screenshot({path:`test-results/daily-${width}.png`,fullPage:true});
       await page.locator('.entry-link').first().click();
       await page.locator('.prose').waitFor();
+      assert.equal(await page.locator('#article [data-save], #copy-link').count(),0,'detail has no bookmark or copy actions');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `detail overflow ${width}`);
       await page.screenshot({path:`test-results/detail-${width}.png`,fullPage:true});
       console.log(`Viewport ${width}: list/detail and no overflow PASS`);

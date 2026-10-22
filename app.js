@@ -1,4 +1,4 @@
-import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, migrateSaved, parseSaved, sourcesFor, renderBlocks, validateData, shuffleItems} from './content.mjs?v=6';
+import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, migrateSaved, parseSaved, sourcesFor, renderBlocks, validateData, shuffleItems} from './content.mjs?v=7';
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));
@@ -21,9 +21,9 @@ function notify(message) {
 }
 function navigation(active = state.section) {
   $('section-select').value = active || 'all';
-  $('saved-count').textContent = items.filter(x => saved.has(x.id)).length;
+  if ($('saved-count')) $('saved-count').textContent = items.filter(x => saved.has(x.id)).length;
   if (!isArticle && state.saved) $('saved-link').setAttribute('aria-current', 'page');
-  else $('saved-link').removeAttribute('aria-current');
+  else $('saved-link')?.removeAttribute('aria-current');
 }
 function articleURL(item) {
   const params = new URLSearchParams({id: item.id, from: stateQuery(state)});
@@ -36,11 +36,11 @@ function renderSave(item, full = false) {
 function coverHTML(item) {
   const cover = item.cover;
   const src = imageURL(cover?.src);
-  const fallback = `<div class="cover-fallback"><span>${e(SECTIONS[item.category].name)}</span><small>暂无核实配图</small></div>`;
-  return `<div class="entry-media">${src ? `<img class="entry-cover${cover.fit === 'contain' ? ' contain' : ''}" src="${e(src)}" alt="${e(cover.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}${fallback}</div>`;
+  if (!src) return '';
+  return `<div class="entry-media"><img class="entry-cover" src="${e(src)}" alt="${e(cover.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
 }
 function card(item) {
-  return `<article class="entry" data-category="${e(item.category)}">${coverHTML(item)}<div class="entry-content"><div class="entry-meta"><span class="tag">${e(SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h2><a class="entry-link" href="${e(articleURL(item))}">${e(item.title)}</a></h2><p class="entry-summary">${e(item.summary)}</p><div class="entry-bottom"><span>${e(item.label || typeLabel(item))}</span><span aria-hidden="true">阅读文章 ↗</span></div></div>${renderSave(item)}</article>`;
+  return `<article class="entry" data-category="${e(item.category)}">${coverHTML(item)}<div class="entry-content"><h2><a class="entry-link" href="${e(articleURL(item))}">${e(item.title)}</a></h2><p class="entry-summary">${e(item.summary)}</p><div class="entry-meta entry-bottom"><span class="tag">${e(SECTIONS[item.category].name)}</span><span>${e(item.label || typeLabel(item))}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div></div>${renderSave(item)}</article>`;
 }
 function renderList() {
   navigation();
@@ -52,7 +52,7 @@ function renderList() {
   $('shuffle').disabled = results.length < 2;
   $('cards').innerHTML = results.length ? results.slice(0, pageSize).map(card).join('') : `<div class="state-message"><h2>${state.saved ? '还没有收藏' : '这个栏目还没有文章'}</h2><p>${state.saved ? '文章上的书签可以留住值得再读的内容。' : '试试切换至 All 查看所有文章。'}</p><a class="secondary-button" href="./?section=all">浏览全部文章</a></div>`;
   $('cards').querySelectorAll('.entry-cover').forEach(img => {
-    const recover = () => { img.remove(); };
+    const recover = () => { img.closest(".entry-media").remove(); };
     img.addEventListener('error', recover, {once:true});
     if (img.complete && !img.naturalWidth) recover();
   });
@@ -93,12 +93,9 @@ function renderArticle() {
     const tool = item.tool || {};
     toolFacts = `<dl class="tool-facts">${[['platforms','支持平台'],['pricing','价格'],['license','授权']].map(([field, label]) => `<div><dt>${label}</dt><dd>${e(tool[field] || '未知 · 尚未核实')}</dd></div>`).join('')}</dl>`;
   }
-  $('article').innerHTML = `<header class="article-header"><div class="entry-meta"><span class="tag">${e(typeLabel(item))}</span><span>${e(item.label || SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h1>${e(item.title)}</h1><p class="article-deck">${e(item.summary)}</p><div class="article-tools">${renderSave(item, true)}<button class="article-save" id="copy-link"><span aria-hidden="true">↗</span>复制链接</button></div></header>${notes.map(n => `<p class="content-note">${e(n)}</p>`).join('')}${toolFacts}${coverCredit}<div class="prose">${item.blocks?.length ? renderBlocks(item.blocks) : legacyBody(item)}</div>${sources.length ? `<section class="source-list"><h2>${item.category === 'ideas' ? '参考资料' : '来源与延伸阅读'}</h2><ul>${sources.map(s => `<li><a href="${e(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.title || new URL(s.url).hostname)} ↗</a><small>${e(new URL(s.url).hostname)}${s.accessed ? ` · 核对于 ${e(s.accessed)}` : ''}</small></li>`).join('')}</ul></section>` : ''}<div class="reading-end"><a href="${e(back)}">← 返回列表</a><span>${SECTIONS[item.category].name} · 持续积累</span></div>`;
+  $('article').innerHTML = `<header class="article-header"><div class="entry-meta"><span class="tag">${e(typeLabel(item))}</span><span>${e(item.label || SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h1>${e(item.title)}</h1><p class="article-deck">${e(item.summary)}</p></header>${notes.map(n => `<p class="content-note">${e(n)}</p>`).join('')}${toolFacts}${coverCredit}<div class="prose">${item.blocks?.length ? renderBlocks(item.blocks) : legacyBody(item)}</div>${sources.length ? `<section class="source-list"><h2>${item.category === 'ideas' ? '参考资料' : '来源与延伸阅读'}</h2><ul>${sources.map(s => `<li><a href="${e(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.title || new URL(s.url).hostname)} ↗</a><small>${e(new URL(s.url).hostname)}${s.accessed ? ` · 核对于 ${e(s.accessed)}` : ''}</small></li>`).join('')}</ul></section>` : ''}<div class="reading-end"><a href="${e(back)}">← 返回列表</a><span>${SECTIONS[item.category].name} · 持续积累</span></div>`;
   $('article').setAttribute('aria-busy', 'false');
-  $('copy-link').addEventListener('click', async () => {
-    const url = new URL('./article.html', location.href); url.searchParams.set('id', item.id);
-    try { await navigator.clipboard.writeText(url.href); notify('文章链接已复制'); } catch { notify('无法访问剪贴板，请复制浏览器地址栏链接'); }
-  });
+
 }
 function updateList(push = false, controls = false) {
   pageSize = 20;
