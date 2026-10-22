@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const BASE = process.env.TEST_BASE_URL || 'http://127.0.0.1:8767/';
 fs.mkdirSync('test-results', {recursive:true});
 (async () => {
-  const browser = await chromium.launch({headless:true});
+  const browser = await chromium.launch({headless:true, ...(process.env.CI ? {channel:'chrome'} : {})});
   try {
     const page = await browser.newPage();
     const errors = [];
@@ -26,11 +26,19 @@ fs.mkdirSync('test-results', {recursive:true});
     }
     await page.goto(BASE);
     await page.locator('.entry').first().waitFor();
+    await page.selectOption('#section-select','news');
+    await page.goBack();
+    assert.equal(await page.inputValue('#section-select'),'all');
+    await page.goForward();
+    assert.equal(await page.inputValue('#section-select'),'news');
     for (const category of ['news','learn','tools','ideas']) {
       await page.selectOption('#section-select',category);
       await page.reload();
       await page.locator('.entry').first().waitFor();
       assert.equal(await page.inputValue('#section-select'), category);
+      await page.goto(BASE);
+      await page.locator('.entry').first().waitFor();
+      assert.equal(await page.inputValue('#section-select'), category, 'bare URL must restore localStorage preference');
       assert(await page.locator('.entry').evaluateAll((nodes, category) => nodes.every(n => n.dataset.category === category),category));
       const before = await links();
       await page.click('#shuffle');

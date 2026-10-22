@@ -22,7 +22,8 @@ function notify(message) {
 function navigation(active = state.section) {
   $('section-select').value = active || 'all';
   $('saved-count').textContent = items.filter(x => saved.has(x.id)).length;
-  $('saved-link').toggleAttribute('aria-current', !isArticle && state.saved);
+  if (!isArticle && state.saved) $('saved-link').setAttribute('aria-current', 'page');
+  else $('saved-link').removeAttribute('aria-current');
 }
 function articleURL(item) {
   const params = new URLSearchParams({id: item.id, from: stateQuery(state)});
@@ -189,6 +190,7 @@ async function load() {
       if (current === null) localStorage.setItem(SAVE_KEY, JSON.stringify([...saved]));
     } catch { /* Keep in-memory bookmarks available. */ }
     loaded = true;
+    const shuffleRequested = new URLSearchParams(location.search).get('shuffle') === '1';
     // Fixed migration map for old numeric links; never infer from today's array order.
     const old = location.hash.match(/^#article-(\d+)$/);
     if (!isArticle && old) {
@@ -196,7 +198,7 @@ async function load() {
       if (item) { location.replace(`./article.html?id=${encodeURIComponent(item.id)}`); return; }
       notify('旧文章链接未找到，请从列表中查找');
     }
-    if (isArticle) renderArticle(); else { renderList(true); restorePosition(); if (new URLSearchParams(location.search).get('shuffle') === '1') $('shuffle').click(); }
+    if (isArticle) renderArticle(); else { history.replaceState({}, '', `?${stateQuery(state)}${location.hash}`); renderList(true); restorePosition(); if (shuffleRequested) $('shuffle').click(); }
   } catch (error) {
     loaded = false; target.setAttribute('aria-busy', 'false');
     target.innerHTML = '<div class="state-message"><h2>内容暂时未能加载</h2><p>请检查网络后重试，你的收藏不会被清除。</p><button class="secondary-button" id="retry">重新加载</button></div>';

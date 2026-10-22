@@ -9,6 +9,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,7 +29,8 @@ jobs:
       - run: node scripts/verify-pages.mjs
       - name: Install browser test runner
         run: npm install --no-save --package-lock=false playwright@1.58.2
-      - run: npx playwright install --with-deps chromium
+      - name: Use runner-provided Chrome
+        run: google-chrome --version
       - name: Browser checks across mobile and desktop
         run: |
           python3 -m http.server 8767 --bind 127.0.0.1 --directory dist &
