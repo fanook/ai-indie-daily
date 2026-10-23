@@ -30,14 +30,14 @@ jobs:
       - name: Install browser test runner
         run: npm install --no-save --package-lock=false playwright@1.58.2
       - name: Install Chinese fonts for visual QA
-        run: sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 install -y fonts-wqy-microhei
+        run: sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 install -y fonts-wqy-microhei fonts-arphic-uming
       - name: Use runner-provided Chrome
         run: google-chrome --version
       - name: Browser checks across mobile and desktop
         run: |
           python3 -m http.server 8767 --bind 127.0.0.1 --directory dist &
           node tests/browser.cjs
-          node tests/previews.cjs
+          node tests/editorial-preview.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
