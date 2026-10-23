@@ -8,7 +8,7 @@ const keys = ['background','paper','ink','muted','accent','control','control-hov
 const palettes = {
   'A-warm-ivory':['#eee7dd','#fffdf7','#342f2a','#7b7266','#8d6241','#e3d8c9','#d8ccb9','#ded5c6'],
   'B-sage-cream':['#dfe8e1','#fbfcf5','#293c32','#65776c','#47745e','#ccdacf','#bfd0c3','#c9d5cc'],
-  'C-gallery-stone':['#ffffff','#f1f0ec','#292a29','#6e706c','#4e6359','#eeede9','#e1e0da','#dfded8'],
+  'C-gallery-stone':['#ffffff','#f1f0ec','#292a29','#696b67','#4e6359','#eeede9','#e1e0da','#dfded8'],
   'D-pale-ink':['#e2e8f0','#ffffff','#243952','#62758b','#476c96','#ccd8e8','#bdcde0','#c9d4e3'],
 };
 fs.mkdirSync(OUTPUT,{recursive:true});
