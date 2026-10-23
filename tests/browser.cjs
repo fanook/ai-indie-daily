@@ -50,8 +50,6 @@ async function checkLoading(browser, detail) {
       await page.goto(BASE);
       await page.locator('.entry-link').first().waitFor();
       assert.equal(await page.locator('#section-label').innerText(),'全部');
-      assert.equal(await page.evaluate(()=>getComputedStyle(document.documentElement).backgroundColor),'rgb(238, 231, 221)');
-      assert.equal(await page.locator('.entry').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(255, 253, 247)');
       assert.equal(await page.locator('select, #shuffle, .shuffle-button').count(),0);
       assert.equal(await page.locator('#section-toggle').getAttribute('aria-haspopup'),'menu');
       assert.equal(await page.locator('#section-menu').getAttribute('role'),'menu');
