@@ -69,6 +69,10 @@ Cloudflare 的 GitHub 集成在 main 更新后自动构建，不需要在仓库�
 
 迁移时先核实 Cloudflare 部署、生产域名和 HTTPS 正常，再停用旧 GitHub Pages。以后不要恢复 GitHub Pages 发布。合并或直接推送 main 会触发 Cloudflare 构建；分支和草稿 PR 不代表生产上线。发布需用户授权，完成后核实远程提交、Cloudflare 部署状态与线上结果，不把成功 push 当成成功上线。
 
+### 迁移验收记录（2026-10-23）
+
+已实测生产域名与 Pages 默认地址均可通过 HTTPS 阅读 25 篇文章；首页分页、详情与浏览器后退正常，CSS、JavaScript、JSON 索引及四种本地封面均使用根目录路径，不依赖旧 `/ai-indie-daily/` 前缀。Cloudflare 将 `article.html` 规范化为 `/article` 时保留文章 ID 参数。此记录仅覆盖桌面浏览器；旧 GitHub Pages 停用及本次提交的自动构建仍需单独核实。
+
 ## 手动 RSS 候选工具
 
 ```sh
