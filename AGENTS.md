@@ -2,7 +2,7 @@
 
 ## 开始前
 
-- 网站是原生 HTML/CSS/JS，部署到 GitHub Pages 的 `main` 根目录。保留 Jekyll 自动发现 `_data/articles/*.json`，不要添加 `.nojekyll`。保持低维护成本。
+- 网站是原生 HTML/CSS/JS，生产站点为 `https://daily.yifanook.com/`，部署到 Cloudflare Pages 项目 `ai-indie-daily`。GitHub `fanook/ai-indie-daily` 的 `main` 是源码；Cloudflare 自动执行 `npm run build`，发布 `dist/`。`_data/articles/*.json` 仍由构建自动发现，不维护手写索引。不要恢复 GitHub Pages 发布，也不要添加部署密钥。保持低维护成本。
 - 日常内容由用户的定时模型会话创作。先读 `docs/CONTENT_GUIDE.md`。
 - 用户个人目录与网络策略继续适用。不要自行恢复每日 RSS 自动写入，也不要擅自创建另一套定时任务。
 - 先检查 `git status`，保留其他会话/用户改动。多人同时写内容时先拉取最新内容，不强制推送。
@@ -24,4 +24,4 @@
 - UI 改动：检查 375/430/768/1440px、栏目持久化、全部、详情、浏览器后退恢复顺序和滚动位置、无图/坏图回退和禁用存储。必须实际查看截图，不把功能测试当作视觉验收。
 - 对用户要求先确认的界面改动，展示截图后等待确认，再提交/推送。
 - 日常定时内容发布按用户给定的授权执行；本文件不额外要求逐篇审批。
-- 提交后核实 Pages 部署与线上内容。不要把成功 push 当作成功上线。
+- 提交后核实 Cloudflare Pages 对应提交的部署成功，并检查 `https://daily.yifanook.com/` 与线上文章内容。不要把成功 push 当作成功上线。
