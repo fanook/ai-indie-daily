@@ -34,6 +34,8 @@ jobs:
       - name: Use runner-provided Chrome
         run: google-chrome --version
       - name: Browser checks across mobile and desktop
+        env:
+          TEST_BASE_URL: https://fanook.github.io/ai-indie-daily/
         run: |
           python3 -m http.server 8767 --bind 127.0.0.1 --directory dist &
           node tests/browser.cjs
