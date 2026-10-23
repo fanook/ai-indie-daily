@@ -1,4 +1,4 @@
-import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=8';
+import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=9';
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));
@@ -18,10 +18,23 @@ function notify(message) {
   toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3500);
 }
 function navigation(active = state.section) {
-  const select = $('section-select');
-  if (!select) return;
-  select.value = active || 'all';
-  $('section-label').textContent = select.selectedOptions[0].textContent;
+  if (!$('section-toggle')) return;
+  $('section-label').textContent = active === 'all' ? '全部' : SECTIONS[active]?.name || '全部';
+  $('section-toggle').setAttribute('aria-label', `选择栏目，当前：${$('section-label').textContent}`);
+  document.querySelectorAll('.section-option').forEach(option => option.setAttribute('aria-checked', String(option.dataset.section === active)));
+}
+function closeMenu(restoreFocus = false) {
+  if (!$('section-menu')) return;
+  $('section-menu').hidden = true;
+  $('section-toggle').setAttribute('aria-expanded', 'false');
+  if (restoreFocus) $('section-toggle').focus();
+}
+function openMenu(edge) {
+  $('section-menu').hidden = false;
+  $('section-toggle').setAttribute('aria-expanded', 'true');
+  const options = [...document.querySelectorAll('.section-option')];
+  const selected = options.find(option => option.getAttribute('aria-checked') === 'true');
+  (edge === 'last' ? options.at(-1) : edge === 'first' ? options[0] : selected || options[0]).focus();
 }
 function articleURL(item) {
   const params = new URLSearchParams({id: item.id, from: stateQuery(state)});
@@ -83,7 +96,7 @@ function updateList(push = false, controls = false) {
 }
 function resetFilters() {
   state = {...state, q:'', label:'', month:'', order:'new'};
-  updateList(false, true); $('section-select').focus();
+  updateList(false, true); $('section-toggle').focus();
 }
 function savePosition() {
   try { sessionStorage.setItem(`indielab_position:${stateQuery(state)}`, JSON.stringify({y:scrollY, pageSize})); } catch { /* Optional navigation convenience. */ }
@@ -97,27 +110,52 @@ function restorePosition() {
     }
   } catch { /* A malformed or unavailable saved position is ignored. */ }
 }
-$('section-select')?.addEventListener('change', event => {
-  const section = event.target.value;
+function chooseSection(section) {
   if (section !== 'all' && !Object.hasOwn(SECTIONS, section)) return;
   try { localStorage.setItem(SECTION_KEY, section); } catch { notify('浏览器无法保存栏目偏好，本次浏览仍可使用'); }
   savePosition();
   state = readState(`section=${section}`);
+  navigation(); closeMenu(true);
   if (loaded) { updateList(true, true); window.scrollTo(0, 0); }
+}
+document.documentElement.dataset.inputMode = 'keyboard';
+document.addEventListener('pointerdown', event => {
+  document.documentElement.dataset.inputMode = 'pointer';
+  if (!event.target.closest('.section-picker')) closeMenu();
 });
+document.addEventListener('keydown', () => { document.documentElement.dataset.inputMode = 'keyboard'; }, true);
+if (!isArticle) {
+  $('section-toggle').addEventListener('click', () => $('section-menu').hidden ? openMenu() : closeMenu(true));
+  $('section-toggle').addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); openMenu(event.key === 'ArrowUp' ? 'last' : 'first'); }
+    if (event.key === 'Escape') closeMenu(true);
+  });
+  document.querySelectorAll('.section-option').forEach(option => option.addEventListener('click', () => chooseSection(option.dataset.section)));
+  $('section-menu').addEventListener('keydown', event => {
+    const options = [...document.querySelectorAll('.section-option')];
+    const index = options.indexOf(document.activeElement);
+    const keys = {ArrowDown:(index + 1) % options.length, ArrowUp:(index - 1 + options.length) % options.length, Home:0, End:options.length - 1};
+    if (Object.hasOwn(keys, event.key)) { event.preventDefault(); options[keys[event.key]].focus(); }
+    if (event.key === 'Escape') { event.preventDefault(); closeMenu(true); }
+    if (event.key === 'Tab') closeMenu(true);
+  });
+}
 document.addEventListener('click', event => {
   if (event.target.closest('[data-reset]')) { resetFilters(); return; }
   if (event.target.closest('.entry-link') && !isArticle) savePosition();
 });
 if (!isArticle) {
   $('load-more').addEventListener('click', () => { const previous = pageSize; pageSize += 20; renderList(); document.querySelectorAll('.entry-link')[previous]?.focus(); });
-  window.addEventListener('popstate', () => { if (!loaded) return; state = initialState(); pageSize = 20; renderList(true); restorePosition(); });
+  window.addEventListener('popstate', () => { if (!loaded) return; state = initialState(); closeMenu(); pageSize = 20; renderList(true); restorePosition(); });
   window.addEventListener('pagehide', savePosition);
   window.addEventListener('pageshow', event => { if (event.persisted && loaded) { renderList(true); } });
 }
+const loadingMarkup = (isArticle ? $('article') : $('cards')).innerHTML;
 async function load() {
   const target = isArticle ? $('article') : $('cards');
   target.setAttribute('aria-busy', 'true');
+  target.innerHTML = loadingMarkup;
+  if ($('pagination')) $('pagination').hidden = true;
   try {
     const response = await fetch('./data/news.json', {cache:'no-store', signal:AbortSignal.timeout(15000)});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
