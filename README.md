@@ -2,7 +2,9 @@
 
 面向 AI 辅助独立游戏开发者的阅读与知识积累入口。
 
-**线上地址：https://fanook.github.io/ai-indie-daily/**
+**生产域名：https://daily.yifanook.com/**
+
+Cloudflare Pages 默认地址：https://ai-indie-daily.pages.dev/
 
 ## 阅读体验
 
@@ -41,24 +43,31 @@ python3 -m http.server 8767 --bind 127.0.0.1 --directory dist
 ## 页面与内容分离
 
 - `_data/articles/*.json`：唯一文章源，一篇一个文件，自动发现。
-- `data/news.json`：GitHub Pages 的 Liquid 索引模板，自动序列化全部文章，不手工维护。
+- `data/news.json`：保留的旧 Jekyll 兼容模板，不直接作为生产 JSON 发布。Cloudflare 构建由 `scripts/build.mjs` 从文章源生成 `dist/data/news.json`。
 - `scripts/articles.mjs`：本地构建/检查使用相同文件集合；文件名、slug、日期、正文、来源、封面 provenance 校验。
-- `scripts/build.mjs`：无依赖的本地构建，产出 `dist/` 和可浏览 JSON 索引。
+- `scripts/build.mjs`：本地与 Cloudflare 共用的无依赖构建，产出 `dist/` 和可浏览 JSON 索引。
 - `index.html` / `article.html` / `app.js` / `styles.css`：共用展示和交互，不嵌入文章。
 - `content.mjs`：安全渲染、过滤、打乱与 schema 校验。正文不执行 HTML。
 - `docs/article-template.json`：不参与发布的贡献模板。
 
 栏目偏好只保存在当前浏览器；禁用存储时仍可阅读。界面不提供收藏、复制链接或额外返回入口，使用浏览器后退恢复列表位置与顺序。历史收藏存储不主动删除。2026-10-22 对现有内容完成来源复核与扩写，二手报道和原创原型的证据边界在正文中说明。
 
-## 发布：保留 GitHub Pages main 根目录
+## 发布：Cloudflare Pages
 
-仍使用已有的 GitHub Pages `main` / 根目录分支发布，不需要改 Pages 设置或增加部署凭证。Pages 内置 Jekyll 自动读取 `_data/articles`，`data/news.json` 的 Liquid 模板使用 `jsonify` 输出有效 JSON。不要添加 `.nojekyll`，否则文章索引不会生成。
+GitHub 仓库 `fanook/ai-indie-daily` 继续保存源码和内容；生产托管改为 Cloudflare Pages 项目 `ai-indie-daily`，不影响独立的 motes 站点。
 
-仅提交独立文章后，Pages 自动重新构建并加载它。索引更新时间取实际文章 `revised` / `date`，不是构建时间。`dist/`、`_site/` 都是生成目录，不提交。
+- 生产分支：`main`
+- 根目录：仓库根目录
+- 构建命令：`npm run build`
+- 输出目录：`dist`
+- 生产域名：`daily.yifanook.com`
+- 默认地址：`ai-indie-daily.pages.dev`
 
-`Validate site and content` 对 PR 运行数据检查、回归测试、本地构建以及真实 Pages Jekyll 构建，验证 Jekyll JSON 与源文章完全一致。检查与分支发布互相独立，因此发布前仍需本地通过检查。
+Cloudflare 的 GitHub 集成在 main 更新后自动构建，不需要在仓库添加 API Key、部署 Token 或新的定时任务。只提交一篇独立文章及其素材即可，索引仍自动生成；索引更新时间取文章 `revised` / `date`，不是构建时间。`dist/`、`_site/` 为生成目录，不提交。
 
-合并或直接推送 main 会更新线上站点；分支和草稿 PR 不代表已上线。发布需用户授权，完成后核实远程提交、Pages 工作流与线上结果。GitHub Pages/CDN 可能有短暂延迟。
+`Validate site and content` 继续执行数据检查、回归测试、构建和浏览器验收；保留的 Jekyll 检查仅用于旧格式兼容，不再代表生产部署。发布前仍需本地通过检查。
+
+迁移时先核实 Cloudflare 部署、生产域名和 HTTPS 正常，再停用旧 GitHub Pages。以后不要恢复 GitHub Pages 发布。合并或直接推送 main 会触发 Cloudflare 构建；分支和草稿 PR 不代表生产上线。发布需用户授权，完成后核实远程提交、Cloudflare 部署状态与线上结果，不把成功 push 当成成功上线。
 
 ## 手动 RSS 候选工具
 
