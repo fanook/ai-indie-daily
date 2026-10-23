@@ -73,7 +73,7 @@
     },
     {
       "type": "paragraph",
-      "text": "项目指导文件负责长期约定，单次任务卡负责本次范围，二者不要混成不断增长的聊天记录。本文没有运行示例工程，也不承诺固定完成时间；你最终应得到可复跑的说明和明确的剩余问题。"
+      "text": "项目指导文件负责长期约定，单次任务卡负责本次范围，二者不要混成不断增长的聊天记录。最终应留下可复跑的说明和明确的剩余问题。"
     }
   ],
   "legacyCover": {
@@ -89,7 +89,7 @@
     "rightsNote": "来源：OpenAI Codex 官方仓库内截图；仓库 README 声明 Apache-2.0，LICENSE 与 NOTICE 已核验。Copyright 2025 OpenAI。保留 Apache-2.0 许可与 NOTICE，标明显示裁切或尺寸调整；不主张商标授权，不暗示 OpenAI 背书。 本站将原图等比例缩小并转为 WebP；列表显示可能裁切。",
     "licenseURL": "https://github.com/openai/codex/blob/main/LICENSE"
   },
-  "revised": "2026-10-22",
+  "revised": "2026-10-23",
   "cover": {
     "src": "./assets/covers/codex-cli.webp",
     "alt": "OpenAI Codex 官方仓库展示的终端界面与代码库分析任务",

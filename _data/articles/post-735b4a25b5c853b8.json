@@ -69,7 +69,7 @@
     },
     {
       "type": "paragraph",
-      "text": "保存可运行工程、导出产物、环境版本和问题记录。验收至少覆盖首次启动、切换窗口、重新开始、不同显示尺寸以及目标设备性能。记录从空工程到首个产物的耗时，但不要把第一次练习速度当成熟练开发效率。本文核对了官方入门、导出和许可说明，没有执行性能测试，也不保证任意项目都比其他引擎更省时间。"
+      "text": "保存可运行工程、导出产物、环境版本和问题记录。验收至少覆盖首次启动、切换窗口、重新开始、不同显示尺寸以及目标设备性能。记录从空工程到首个产物的耗时，但不要把第一次练习速度当成熟练开发效率。"
     }
   ],
   "legacyCover": {
@@ -85,7 +85,7 @@
     "rightsNote": "Godot 官方文档截图，CC BY 3.0。署名：Juan Linietsky, Ariel Manzur and the Godot community。来源与许可见链接。卡片可能作显示裁切和尺寸调整；不暗示作者背书。 本站将原图等比例缩小并转为 WebP；列表显示可能裁切。",
     "licenseURL": "https://creativecommons.org/licenses/by/3.0/"
   },
-  "revised": "2026-10-22",
+  "revised": "2026-10-23",
   "cover": {
     "src": "./assets/covers/godot-editor.webp",
     "alt": "Godot 官方文档的 3D 编辑器与角色动画状态机截图",

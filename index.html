@@ -2,20 +2,19 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f8f9fb">
+  <meta name="theme-color" content="#e9eef3">
   <meta name="description" content="为 AI 辅助独立游戏开发者整理值得读的资讯、可以实践的教程、趁手的工具与值得验证的创意。">
   <title>AI × INDIE LAB · 独立游戏开发者的每日阅读</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=7">
-  <script src="./app.js?v=7" type="module"></script>
+  <link rel="stylesheet" href="./styles.css?v=8">
+  <script src="./app.js?v=8" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到内容</a>
   <header class="site-header"><div class="header-inner">
     <a class="brand" href="./" aria-label="AI × INDIE LAB 首页">AI <span>×</span> INDIE LAB</a>
     <div class="header-actions">
-      <label class="section-picker"><span class="sr-only">选择栏目</span><select id="section-select" aria-label="选择栏目"><option value="all">全部</option><option value="news">AI 资讯</option><option value="learn">AI 学习</option><option value="tools">游戏工具</option><option value="ideas">游戏创意</option></select></label>
-      <button id="shuffle" class="shuffle-button" aria-label="打乱当前栏目的文章顺序" title="Shuffle · 打乱顺序"><span>Shuffle</span></button>
+      <label class="section-picker"><span class="sr-only">选择栏目</span><span id="section-label" aria-hidden="true">全部</span><select id="section-select" aria-label="选择栏目"><option value="all">全部</option><option value="news">AI 资讯</option><option value="learn">AI 学习</option><option value="tools">游戏工具</option><option value="ideas">游戏创意</option></select></label>
     </div>
   </div></header>
   <main id="main" class="main-shell" tabindex="-1">

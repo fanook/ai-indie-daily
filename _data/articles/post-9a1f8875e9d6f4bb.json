@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "text": "这些组织方法是编辑提出的生产建议，不是官方对一致性或效率的承诺。本文没有实际生成十件道具，也没有给出商用权利结论。真正的交付应能追溯、重做并进入游戏测试，而不是只在图库里看起来整齐。"
+      "text": "交付时检查三个结果：资产能否追溯到工作流和依赖版本，能否重做，以及是否通过游戏内测试。不要只看图库里的排列是否整齐。"
     }
   ],
   "legacyCover": {
@@ -84,7 +84,7 @@
     "licenseURL": "https://github.com/Comfy-Org/docs/blob/main/LICENSE",
     "rightsNote": "Comfy-Org 官方文档仓库内截图，按仓库 GPL-3.0 许可使用；原始 PNG 与完整许可随 assets/covers/sources 和 licenses 提供。本站等比例缩小、转为 WebP，列表右侧可能显示裁切；这不是本文实验的运行结果。"
   },
-  "revised": "2026-10-22",
+  "revised": "2026-10-23",
   "cover": {
     "src": "./assets/covers/comfyui-canvas.webp",
     "alt": "ComfyUI 官方文档的加载、缩放和保存图像节点示例",

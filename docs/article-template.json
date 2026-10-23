@@ -9,11 +9,31 @@
   "summary": "替换为中性、具体的摘要。",
   "tags": [],
   "blocks": [
-    {"type": "heading", "text": "替换为章节标题"},
-    {"type": "paragraph", "text": "替换为核实过的实际正文；格式模板本身不是可发布文章。"}
+    {
+      "type": "heading",
+      "text": "替换为读者要解决的具体问题"
+    },
+    {
+      "type": "paragraph",
+      "text": "替换为有来源的事实或明确标注的建议；影响判断的具体限制写在相关内容旁，不添加通用免责声明。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "替换为可执行的第一步",
+        "替换为可观察的结果检查"
+      ]
+    }
   ],
   "sources": [
-    {"title": "替换为核实过的来源标题", "url": "https://example.org/replace-with-verified-source", "accessed": "2026-10-22"}
+    {
+      "title": "替换为核实过的来源标题",
+      "url": "https://example.org/replace-with-verified-source",
+      "accessed": "2026-10-22"
+    }
   ],
-  "coverProvenance": {"status": "unavailable", "reason": "暂无已核实的原文或官方配图。"}
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实的原文或官方配图。"
+  }
 }

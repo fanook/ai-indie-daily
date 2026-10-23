@@ -76,16 +76,7 @@ export function renderBlocks(blocks) {
     }
   }).join('');
 }
-export function shuffleItems(items, random = Math.random) {
-  const result = [...items];
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
-  }
-  // A deliberate click should visibly change a multi-item collection.
-  if (result.length > 1 && result.every((item, i) => item === items[i])) result.push(result.shift());
-  return result;
-}
+
 const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)
   && Number.isFinite(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;

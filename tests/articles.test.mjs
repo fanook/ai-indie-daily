@@ -4,7 +4,7 @@ import {mkdtempSync, writeFileSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {loadArticles} from '../scripts/articles.mjs';
-import {filterItems, readState, shuffleItems, validateData} from '../content.mjs';
+import {filterItems, readState, validateData} from '../content.mjs';
 const data = loadArticles();
 const base = data.items[0];
 const valid = patch => ({...structuredClone(base), ...patch});
@@ -28,16 +28,6 @@ test('all is the default and all four categories remain independently filterable
   for (const category of ['news','learn','tools','ideas']) {
     assert(filterItems(data.items, readState(`?section=${category}`)).every(item => item.category === category));
   }
-});
-test('shuffle keeps the same filtered set without mutation and always visibly changes multiple items', () => {
-  const filtered = filterItems(data.items, readState('?section=learn'));
-  const before = filtered.map(item => item.id);
-  const result = shuffleItems(filtered, () => 0.999999);
-  assert.deepEqual(filtered.map(item => item.id), before);
-  assert.deepEqual(result.map(item => item.id).sort(), [...before].sort());
-  assert.notDeepEqual(result.map(item => item.id), before);
-  assert.deepEqual(shuffleItems([]), []);
-  assert.deepEqual(shuffleItems([base]), [base]);
 });
 test('article schema rejects malformed stable slug, calendar date, category, body and source', () => {
   for (const patch of [{slug:'changed'}, {date:'2026-02-30'}, {category:'unknown'}, {blocks:[]},

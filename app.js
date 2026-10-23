@@ -1,4 +1,4 @@
-import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData, shuffleItems} from './content.mjs?v=7';
+import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=8';
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));
@@ -10,7 +10,7 @@ function initialState() {
   }
   return {...readState(query), saved:false};
 }
-let data, items = [], state = initialState(), pageSize = 20, loaded = false, toastTimer, shuffled = null;
+let data, items = [], state = initialState(), pageSize = 20, loaded = false, toastTimer;
 const sectionName = section => SECTIONS[section]?.name || '全部文章';
 
 function notify(message) {
@@ -18,8 +18,10 @@ function notify(message) {
   toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3500);
 }
 function navigation(active = state.section) {
-  $('section-select').value = active || 'all';
-
+  const select = $('section-select');
+  if (!select) return;
+  select.value = active || 'all';
+  $('section-label').textContent = select.selectedOptions[0].textContent;
 }
 function articleURL(item) {
   const params = new URLSearchParams({id: item.id, from: stateQuery(state)});
@@ -38,10 +40,8 @@ function renderList() {
   navigation();
   $('heading').textContent = sectionName(state.section);
   document.title = `${sectionName(state.section)} · AI × INDIE LAB`;
-  const filtered = filterItems(items, state);
-  const results = shuffled ? [...filtered].sort((a,b) => shuffled.indexOf(a.id)-shuffled.indexOf(b.id)) : filtered;
-  $('result-count').textContent = `${results.length} 篇文章${shuffled ? '，已打乱顺序' : ''}`;
-  $('shuffle').disabled = results.length < 2;
+  const results = filterItems(items, state);
+  $('result-count').textContent = `${results.length} 篇文章`;
   $('cards').innerHTML = results.length ? results.slice(0, pageSize).map(card).join('') : `<div class="state-message"><h2>这个栏目还没有文章</h2><p>试试切换至全部查看所有文章。</p><a class="secondary-button" href="./?section=all">浏览全部文章</a></div>`;
   $('cards').querySelectorAll('.entry-cover').forEach(img => {
     const recover = () => { img.closest(".entry-media").remove(); };
@@ -86,24 +86,22 @@ function resetFilters() {
   updateList(false, true); $('section-select').focus();
 }
 function savePosition() {
-  try { sessionStorage.setItem(`indielab_position:${stateQuery(state)}`, JSON.stringify({y:scrollY, pageSize, shuffled})); } catch { /* Optional navigation convenience. */ }
+  try { sessionStorage.setItem(`indielab_position:${stateQuery(state)}`, JSON.stringify({y:scrollY, pageSize})); } catch { /* Optional navigation convenience. */ }
 }
 function restorePosition() {
   try {
     const position = JSON.parse(sessionStorage.getItem(`indielab_position:${stateQuery(state)}`));
     if (position && Number.isFinite(position.y)) {
-      pageSize = Math.max(20, Number(position.pageSize) || 20); shuffled = Array.isArray(position.shuffled) ? position.shuffled : null; renderList();
+      pageSize = Math.max(20, Number(position.pageSize) || 20); renderList();
       requestAnimationFrame(() => window.scrollTo(0, position.y));
     }
   } catch { /* A malformed or unavailable saved position is ignored. */ }
 }
-$('section-select').addEventListener('change', event => {
+$('section-select')?.addEventListener('change', event => {
   const section = event.target.value;
   if (section !== 'all' && !Object.hasOwn(SECTIONS, section)) return;
   try { localStorage.setItem(SECTION_KEY, section); } catch { notify('浏览器无法保存栏目偏好，本次浏览仍可使用'); }
-  if (isArticle) { location.href = `./?section=${encodeURIComponent(section)}`; return; }
   savePosition();
-  shuffled = null;
   state = readState(`section=${section}`);
   if (loaded) { updateList(true, true); window.scrollTo(0, 0); }
 });
@@ -112,20 +110,11 @@ document.addEventListener('click', event => {
   if (event.target.closest('.entry-link') && !isArticle) savePosition();
 });
 if (!isArticle) {
-  $('shuffle').addEventListener('click', () => {
-    if (!loaded) return;
-    const filtered = filterItems(items, state);
-    const current = shuffled ? [...filtered].sort((a,b) => shuffled.indexOf(a.id)-shuffled.indexOf(b.id)) : filtered;
-    shuffled = shuffleItems(current).map(x => x.id);
-    renderList(); savePosition();
-    notify('已打乱当前栏目顺序');
-  });
   $('load-more').addEventListener('click', () => { const previous = pageSize; pageSize += 20; renderList(); document.querySelectorAll('.entry-link')[previous]?.focus(); });
-  window.addEventListener('popstate', () => { if (!loaded) return; state = initialState(); shuffled = null; pageSize = 20; renderList(true); restorePosition(); if (new URLSearchParams(location.search).get('shuffle') === '1') $('shuffle').click(); });
+  window.addEventListener('popstate', () => { if (!loaded) return; state = initialState(); pageSize = 20; renderList(true); restorePosition(); });
   window.addEventListener('pagehide', savePosition);
   window.addEventListener('pageshow', event => { if (event.persisted && loaded) { renderList(true); } });
 }
-if (isArticle) $('shuffle').addEventListener('click', () => { location.href = `./?section=${encodeURIComponent($('section-select').value)}&shuffle=1`; });
 async function load() {
   const target = isArticle ? $('article') : $('cards');
   target.setAttribute('aria-busy', 'true');
@@ -134,7 +123,6 @@ async function load() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = validateData(await response.json()); items = data.items;
     loaded = true;
-    const shuffleRequested = new URLSearchParams(location.search).get('shuffle') === '1';
     // Fixed migration map for old numeric links; never infer from today's array order.
     const old = location.hash.match(/^#article-(\d+)$/);
     if (!isArticle && old) {
@@ -142,7 +130,7 @@ async function load() {
       if (item) { location.replace(`./article.html?id=${encodeURIComponent(item.id)}`); return; }
       notify('旧文章链接未找到，请从列表中查找');
     }
-    if (isArticle) renderArticle(); else { history.replaceState({}, '', `?${stateQuery(state)}${location.hash}`); renderList(true); restorePosition(); if (shuffleRequested) $('shuffle').click(); }
+    if (isArticle) renderArticle(); else { history.replaceState({}, '', `?${stateQuery(state)}${location.hash}`); renderList(true); restorePosition(); }
   } catch (error) {
     loaded = false; target.setAttribute('aria-busy', 'false');
     target.innerHTML = '<div class="state-message"><h2>内容暂时未能加载</h2><p>请检查网络后重试。</p><button class="secondary-button" id="retry">重新加载</button></div>';

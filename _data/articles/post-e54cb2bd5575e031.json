@@ -58,7 +58,7 @@
     },
     {
       "type": "heading",
-      "text": "常见误判与验收边界"
+      "text": "从贴图到碰撞，检查导入结果"
     },
     {
       "type": "paragraph",
@@ -66,7 +66,7 @@
     },
     {
       "type": "paragraph",
-      "text": "交付应包含源文件、导出物、纹理来源、版本和验收截图；最终在目标设备检查，而不是只看编辑器。本文核对了 Blender 官方仓库及 Godot 资产文档，未实际制作或导入模型。外部字体、贴图、插件和模型的使用权需要另行核查，不由创作软件的开源身份自动覆盖。"
+      "text": "交付应包含源文件、导出物、纹理来源、版本和验收截图；最终在目标设备检查，而不是只看编辑器。外部字体、贴图、插件和模型的使用权需要另行核查，不由创作软件的开源身份自动覆盖。"
     }
   ],
   "legacyCover": {
@@ -82,7 +82,7 @@
     "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
     "rightsNote": "Blender Documentation Team（https://docs.blender.org/manual/）。手册图片 CC BY-SA 4.0，不另授予界面商标或图标权利。本站等比例缩小、转为 WebP，列表可能作显示裁切；保留同一许可。"
   },
-  "revised": "2026-10-22",
+  "revised": "2026-10-23",
   "cover": {
     "src": "./assets/covers/blender-default.webp",
     "alt": "Blender 官方手册中的默认启动界面",

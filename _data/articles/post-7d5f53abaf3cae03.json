@@ -65,7 +65,7 @@
     },
     {
       "type": "paragraph",
-      "text": "性能主要取决于模型、显存、尺寸和批量规模。先测单张，再逐步扩量，记录生成失败、人工修图和导入时间。验收结果应是一份可重新加载的工作流、依赖清单与图标可用率，而不是只有一张最好看的样图。本文只核对官方流程，未安装模型或执行这组生成实验。"
+      "text": "性能主要取决于模型、显存、尺寸和批量规模。先测单张，再逐步扩量，记录生成失败、人工修图和导入时间。验收结果应是一份可重新加载的工作流、依赖清单与图标可用率，而不是只有一张最好看的样图。"
     }
   ],
   "legacyCover": {
@@ -81,7 +81,7 @@
     "licenseURL": "https://github.com/Comfy-Org/docs/blob/main/LICENSE",
     "rightsNote": "Comfy-Org 官方文档仓库内截图，按仓库 GPL-3.0 许可使用；原始 PNG 与完整许可随 assets/covers/sources 和 licenses 提供。本站等比例缩小、转为 WebP，列表右侧可能显示裁切；这不是本文实验的运行结果。"
   },
-  "revised": "2026-10-22",
+  "revised": "2026-10-23",
   "cover": {
     "src": "./assets/covers/comfyui-canvas.webp",
     "alt": "ComfyUI 官方文档的加载、缩放和保存图像节点示例",
