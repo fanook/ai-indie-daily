@@ -1,0 +1,100 @@
+{
+  "id": "news-agent-skills-aaif-20261022",
+  "slug": "news-agent-skills-aaif-20261022",
+  "category": "news",
+  "type": "新闻分析",
+  "label": "Agent 生态",
+  "date": "2026-10-22",
+  "title": "Agent Skills 交给 AAIF：值得带走的不是提示词，而是可验证的工作流",
+  "summary": "Anthropic 宣布将 Agent Skills 标准交给中立基金会。对小团队，真正的机会是把流程、检查脚本与失败案例一起保存，但格式兼容不等于执行结果一致。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "结论：这件事比“又多了一套 Agent 名词”更值得关注，因为团队沉淀的工作方法有机会不再绑死一个聊天界面。但标准治理的变化不会自动解决工具权限、依赖环境和模型行为差异；迁移仍然需要验收。"
+    },
+    {
+      "type": "heading",
+      "text": "发生了什么，什么还只是计划"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anthropic 在 2026 年 10 月 22 日的公告中宣布，把 Agent Skills 的名称与标识、GitHub 组织和域名捐给 Linux Foundation 旗下的 Agentic AI Foundation（AAIF）。公告称已有超过 70 个 Agent 平台集成该标准；这是公司披露的采用情况，不是本站的兼容性测试。版本化发布、正式提案流程和安全指导被列为拟议路线，而非已经完成的能力。"
+    },
+    {
+      "type": "heading",
+      "text": "一个 Skill 到底装什么"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方格式要求一个包含 SKILL.md 的文件夹；文件具有名称、描述等元信息和执行说明，旁边可以放脚本、参考资料与模板。它不是新模型，也不是一次训练。其价值在于把“遇到什么任务、先看什么、怎样做、怎样判断完成”变成能版本管理的文件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "本站的判断是，小团队最值得保存的不是“你是一位资深专家”这种角色提示，而是经常遗漏的项目约束。例如发布说明必须对应真实改动，中文文案要验证字体覆盖，素材导出后必须检查尺寸和命名。换一款助手时，这些要求不应该从聊天记录里重新挖一遍。"
+    },
+    {
+      "type": "heading",
+      "text": "示例：把版本发布检查做成一个可搬走的包"
+    },
+    {
+      "type": "list",
+      "items": [
+        "触发条件：只有准备候选发布包、核对版本差异或复查交付文件时使用；普通头脑风暴不加载它。",
+        "输入契约：候选版本号、目标平台、起始提交和待验证目录。缺少起始提交就先补齐，不能凭记忆写更新日志。",
+        "固定流程：读取项目发布规则，比较变更范围，跑已有校验器，检查输出目录，再汇总阻塞项。",
+        "可重复资源：检查文件命名与缺失资源的脚本、一个正确报告样例，以及故意缺少文件的失败样例。",
+        "输出契约：每条结论附检查对象与证据；没有运行的检查写成待执行，不能把计划改写为通过。"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "这份设计本身与某个具体 Agent 无关。需要适配的是它怎样执行脚本、怎样拿到仓库路径，以及能否访问构建工具。将这些差异放在单独的环境说明中，比在主流程里堆满某个平台专属命令更容易维护。"
+    },
+    {
+      "type": "heading",
+      "text": "跨平台迁移先测三件事"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "第一轮只读：让两个客户端对同一份冻结的输入生成报告，核对它们是否找到了同一批缺失项。此时不要开放写入和发布权限。",
+        "第二轮故障注入：准备一个资源缺失、一个版本号冲突、一个测试无法运行的样例。合格标准是明确拒绝报告“全部通过”，并指出下一步。",
+        "第三轮才接真实工程：用独立分支与最小权限跑完整流程，比较工具调用记录、修改范围及输出。保留原有人工发布关卡，直到实际可靠性有证据。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "不要把“标准格式”误当成“可信软件”"
+    },
+    {
+      "type": "paragraph",
+      "text": "一个文件夹可能同时包含自然语言指令和可执行脚本。安装前应读脚本内容、依赖来源、网络请求与写入范围；更新后也要复查差异。官方规范中的 allowed-tools 仍标为实验性，支持方式可能因客户端而异，不能靠一个字段假定权限已被统一限制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "成本也不会因为格式开放就消失。模型调用、运行机器、工具服务和维护测试仍要付费。合理的首个目标不是收集一百个 Skill，而是挑一个每周都会重复、验收标准清晰的流程，确认它在换工具后依然能给出同样可检查的结果。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic：Donating Agent Skills to the Agentic AI Foundation",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "accessed": "2026-10-23"
+    },
+    {
+      "title": "Agent Skills 官方格式规范",
+      "url": "https://agentskills.io/specification",
+      "accessed": "2026-10-23"
+    },
+    {
+      "title": "Agent Skills 官方概览",
+      "url": "https://agentskills.io/home",
+      "accessed": "2026-10-23"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已核实转载许可的对应官方配图，采用文字卡片。"
+  },
+  "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+}
