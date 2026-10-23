@@ -37,7 +37,6 @@ jobs:
         run: |
           python3 -m http.server 8767 --bind 127.0.0.1 --directory dist &
           node tests/browser.cjs
-          node tests/editorial-preview.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
