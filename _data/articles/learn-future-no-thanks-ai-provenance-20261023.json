@@ -1,0 +1,82 @@
+{
+  "id": "learn-future-no-thanks-ai-provenance-20261023",
+  "slug": "learn-future-no-thanks-ai-provenance-20261023",
+  "category": "learn",
+  "type": "案例复盘",
+  "label": "AI 使用披露",
+  "date": "2026-10-23",
+  "title": "《Future? No Thanks!》AI 披露回看：替换素材与追踪代码是两件不同的工作",
+  "summary": "10 月 23 日更新以真人录音替换两段语音；这次回看关注来源记录与受众预期，不将作品称为彻底无 AI。",
+  "tags": [
+    "素材来源",
+    "AI 编程",
+    "发行准备"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "结论：AI 使用记录越接近具体文件、修改和发布版本，后续披露与替换越容易执行；笼统地给整个项目贴一个标签，往往掩盖了真正需要处理的差异。"
+    },
+    {
+      "type": "heading",
+      "text": "这是 10 月 23 日事件回看"
+    },
+    {
+      "type": "paragraph",
+      "text": "Molleindustria 的 AI 披露页最初发表于 2026 年 10 月 17 日，正文标注 10 月 23 日更新；页头还显示 10 月 26 日修改日期。真人语音替换公告发表于 10 月 23 日。本文于 10 月 27 日核对这些资料，按 23 日的更新事件复盘，不将网页修改时间包装成新的游戏更新。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者称，约 99% 代码在 AI 可用作编程工具之前完成，后期少量借助 ChatGPT 或 Claude 修复 shader 和诊断加载序列的一帧异常。他也明确承认，混合修改后已难逐行区分自己与 AI 写的代码。这些是作者自述，本站没有审计代码仓库。"
+    },
+    {
+      "type": "heading",
+      "text": "已替换的内容与仍存在的历史"
+    },
+    {
+      "type": "paragraph",
+      "text": "更新公告确认，厕所与理发店自动翻译器的两段声音已改为真人模仿机器人。披露页另称，早期 demo 曾使用两段 Suno 音乐循环，后来换成免版税循环素材。语音与音乐的替换不抹去既往的 AI 辅助代码，也不能据此把游戏称作彻底无 AI。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者表示这类使用影响了部分展示机会与同行评价，但没有提供可用于量化的费用、工时或收益数据。本文不估算替换成本，也不把单个案例推成所有玩家、节展或发行平台的统一态度。"
+    },
+    {
+      "type": "heading",
+      "text": "给开发流程增加可执行的记录"
+    },
+    {
+      "type": "paragraph",
+      "text": "下面是本站从案例提出的工作方法，未在该作品中实测。对素材可以按文件追踪；对代码则应按任务和提交追踪，尽量避免事后仅凭风格猜测来源。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "素材记录：保存来源地址、获取日期、授权文本、是否生成、修改方式与实际进入的构建版本。免版税不能替代具体授权核对。",
+        "代码记录：在提交说明中记录 AI 参与的任务、采纳范围与人工检查方式；保留可重现问题和测试结果，不声称由此能精确测出 AI 代码占比。",
+        "替换检查：更换声音后实际试听、检查字幕和播放触发，再搜索发布包是否仍包含旧文件或旧入口。",
+        "发行沟通：按目标商店、节展与受众分别核对当前披露要求，说明实际使用与替换历史；不要假定一处接受的表述在所有场合都足够。"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "这个案例留下的实用问题是：如果明天必须换掉某项输入，团队能否找到它、解释它的来源，并确认发布包已完成替换。把这些信息放进制作流程，比在发布争议发生后回忆使用历史更可控。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Molleindustria：Future? No Thanks! AI disclosure",
+      "url": "https://www.molleindustria.org/blog/future-no-thanks-ai-disclosure/",
+      "accessed": "2026-10-27"
+    },
+    {
+      "title": "Molleindustria：10 月 23 日真人语音更新公告",
+      "url": "https://www.molleindustria.org/blog/future-no-thanks-update-now-with-no-ai-generated-voices/",
+      "accessed": "2026-10-27"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "未核实对应官方配图的转载使用依据，采用文字卡片。"
+  }
+}
