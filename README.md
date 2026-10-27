@@ -1,6 +1,6 @@
 # AI × INDIE LAB
 
-面向 AI 辅助独立游戏开发者的阅读与知识积累入口。
+面向一般读者的 AI 与独立游戏阅读和知识积累入口。
 
 **生产域名：https://daily.yifanook.com/**
 

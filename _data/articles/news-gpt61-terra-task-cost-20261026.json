@@ -2,56 +2,40 @@
   "id": "news-gpt61-terra-task-cost-20261026",
   "slug": "news-gpt61-terra-task-cost-20261026",
   "category": "news",
-  "type": "新闻分析",
+  "type": "新闻",
   "label": "模型与成本",
   "date": "2026-10-26",
-  "title": "GPT-6.1 Terra 发布：用成功任务成本判断是否值得换模型",
-  "summary": "Terra 降低了标准 API 单价并强调视觉理解和电脑操作；小团队应把返工、人工复核与任务成功率一起纳入选型。",
+  "title": "OpenAI 发布 GPT-6.1 Terra，标准 API 输入价格为每百万 token 1 美元",
+  "summary": "GPT-6.1 Terra 于 10 月 26 日发布，支持 API，并向 ChatGPT Work 和 Codex 的相应订阅用户开放。",
   "tags": [
     "OpenAI",
-    "模型选型",
+    "模型发布",
     "AI 编程"
   ],
   "blocks": [
     {
       "type": "paragraph",
-      "text": "结论：GPT-6.1 Terra 值得进入重复工作的小规模对比测试，但便宜的 token 只有在任务通过验收时才会变成实际节省。"
+      "text": "OpenAI 于 2026 年 10 月 26 日发布 GPT-6.1 Terra。官方 API 更新日志确认了发布日期，API 模型名称为 gpt-6.1-terra。"
     },
     {
       "type": "heading",
-      "text": "10 月 26 日发布，价格与入口已明确"
+      "text": "价格与可用范围"
     },
     {
       "type": "paragraph",
-      "text": "OpenAI API 更新日志将 GPT-6.1 Terra 的发布记在 2026 年 10 月 26 日。发布页列出的标准 API 价格为每百万输入 token 1 美元、缓存输入 token 0.05 美元、输出 token 5 美元，API 名称为 gpt-6.1-terra。公司称 ChatGPT Work 与 Codex 的 Plus、Pro、Enterprise、Edu 用户可使用该模型；订阅额度与 API 计费应分别看待。"
-    },
-    {
-      "type": "paragraph",
-      "text": "OpenAI 将它定位于视觉推理、电脑操作与写作，并报告了编码和事实准确性方面的提升。这些数字来自厂商评测，本站没有复跑。发布页仍把最复杂的编码任务指向 GPT-6.1 Sol 和 GPT-6 Astra，因此不能把新品理解成所有任务的统一替代品。"
+      "text": "发布页列出的标准 API 价格为每百万输入 token 1 美元、缓存输入 token 0.05 美元、输出 token 5 美元。OpenAI 称，该模型在 ChatGPT Work 和 Codex 中向 Plus、Pro、Enterprise、Edu 用户开放。"
     },
     {
       "type": "heading",
-      "text": "独立开发者可以怎样比较"
+      "text": "官方披露的能力与评测"
     },
     {
       "type": "paragraph",
-      "text": "本站建议先选边界明确、输出容易检查的工作，例如检查一组界面截图中的文字遮挡、整理已确认的更新记录，或修复带有重现步骤的小缺陷。这些只是待验证的适用场景，并非对特定引擎或编辑器兼容性的实测结论。"
-    },
-    {
-      "type": "list",
-      "items": [
-        "冻结一批真实任务，为每项写出验收条件；两个模型读取相同输入，使用相同工具权限。",
-        "记录完整调用费用、耗时、重试次数和人工复核时间；失败任务消耗也计入总成本。",
-        "以通过验收的任务数作分母比较费用，另看人工时间与严重错误；不要只比较单次调用价格。"
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "何时升级模型"
+      "text": "OpenAI 将 GPT-6.1 Terra 定位于视觉推理、电脑操作和自然语言写作，并报告其编码能力与事实准确性较 GPT-5.6 Terra 有所提升。这些表现来自厂商评测，尚非本站独立测试结果。"
     },
     {
       "type": "paragraph",
-      "text": "如果一个任务连续失败、修改范围不断扩大，或需要理解多个系统的耦合关系，应暂停重复尝试，检查输入是否充分，再考虑更强模型。团队可以先让 Terra 处理有清晰验收规则的工作，把复杂架构决策保留给经过项目测试的工具。这个分工需要自己的成功率数据，不能从厂商排行榜直接推导。"
+      "text": "发布说明同时指出，对于最复杂的编码任务，GPT-6.1 Sol 和 GPT-6 Astra 仍是更合适的选择。"
     }
   ],
   "sources": [
@@ -68,6 +52,7 @@
   ],
   "coverProvenance": {
     "status": "unavailable",
-    "reason": "未核实对应官方配图的转载使用依据，采用文字卡片。"
-  }
+    "reason": "已核查官方发布说明；暂未取得可核实内容和使用依据的对应配图，保留文字卡片。"
+  },
+  "revised": "2026-10-27"
 }

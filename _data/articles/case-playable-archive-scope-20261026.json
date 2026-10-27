@@ -3,59 +3,41 @@
   "slug": "case-playable-archive-scope-20261026",
   "category": "ideas",
   "type": "真实游戏案例",
-  "label": "项目收束",
+  "label": "独立游戏",
   "date": "2026-10-26",
-  "title": "Playable Archive 免费推出：把取消项目收束成一段可完成的体验",
-  "summary": "这款 30–60 分钟恐怖短篇保留了取消项目的一部分成果，提供了控制范围、解释体验边界的真实案例。",
+  "title": "Playable Archive 免费上线 Steam，时长约 30–60 分钟",
+  "summary": "DarkStone Digital 开发、DreadXP 发行的恐怖短篇于 10 月 26 日推出；官方说明没有存档系统，需要一次完成。",
   "tags": [
     "独立游戏",
     "恐怖游戏",
-    "范围管理"
+    "游戏发行"
   ],
   "blocks": [
     {
       "type": "paragraph",
-      "text": "结论：Playable Archive 展示了一种项目收尾路径——从已有成果中选出能够独立成立的体验，再按这个范围打磨和发布。"
+      "text": "Playable Archive 于 2026 年 10 月 26 日在 Steam 免费推出，开发者为 DarkStone Digital，发行商为 DreadXP。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/playable-archive-official-20261026.png",
+      "alt": "Playable Archive 官方截图：昏暗房间的木桌上放着油灯、打开的盒子和带符号的物件。",
+      "caption": "游戏中的桌面场景。来源：DarkStone Digital / DreadXP 官方截图画廊。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方商店以神秘档案、异常事件与仪式介绍游戏的恐怖叙事，并将游戏时长标为约 30–60 分钟。商店明确说明没有存档系统，需要一次玩完；该时长为官方描述。"
     },
     {
       "type": "heading",
-      "text": "玩家实际得到什么"
+      "text": "内容来自已取消的项目"
     },
     {
       "type": "paragraph",
-      "text": "Steam 官方商店将发行日期列为 2026 年 10 月 26 日，开发者为 DarkStone Digital，发行商为 DreadXP，游戏免费。商店明确说明时长约 30–60 分钟，没有存档系统，需要一次玩完；这是官方预期时长，本站尚未实机游玩。"
+      "text": "作者在发布公告中表示，原计划作为下一部大作的项目已取消。DreadXP 后来提出发布已有成果的想法，他据此调整并打磨部分内容，形成此次推出的 Playable Archive，仍有不少原有工作未被保留。"
     },
     {
       "type": "paragraph",
-      "text": "商店以神秘档案、异常事件与仪式构成恐怖叙事。这种对体验形式和长度的提前说明，比让玩家自行猜测“免费内容究竟是一章、试玩还是完整短篇”更有助于建立预期。后一判断是编辑分析，并非玩家调查结果。"
-    },
-    {
-      "type": "heading",
-      "text": "取消之后，怎样留下可交付的部分"
-    },
-    {
-      "type": "paragraph",
-      "text": "作者在发布公告中解释，原计划作为下一部大作的项目已取消；在 DreadXP 提议后，他调整并打磨已有内容，将其中一部分公开，仍有不少工作未被保留。Steam Community 公告正文此次无法直接读取，这段开发背景依据 SteamDB 对该公告的二手转录；商店信息则已直接核实。"
-    },
-    {
-      "type": "paragraph",
-      "text": "因此，它应被理解为取消项目成果的一次收束，不能写成原定大作恢复开发。现有来源也不足以确认其制作过程使用 AI。此处讨论的是项目管理和设计范围，而非 AI 制作成功案例。"
-    },
-    {
-      "type": "heading",
-      "text": "可借鉴的范围检查"
-    },
-    {
-      "type": "list",
-      "items": [
-        "先找一条有开场、核心交互和结尾的完整体验路径，确认它不依赖尚未制作的大量系统。",
-        "逐项检查被删除内容的残留：菜单入口、叙事提示、任务目标和音频不能继续承诺不存在的功能。",
-        "将一次完成、时长和存档限制写在玩家会看到的地方，并在实际试玩中检查中途退出的代价。"
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "这些是从案例提出的制作建议。没有存档并不适合所有短篇；团队仍应结合玩家可支配时间和退出场景测试。免费发行也不能证明回收了开发成本，早期少量评价不足以判定商业成功。这个案例最清楚的价值，是把“还想做多少”转化为“现在能够完整交付什么”。"
+      "text": "这段开发背景依据 SteamDB 对作者公告的二手转录；Steam Community 原公告正文此次无法直接读取。Steam 商店的发行日期、免费状态、时长和存档说明已直接核实。"
     }
   ],
   "sources": [
@@ -73,10 +55,25 @@
       "title": "SteamDB：作者发布公告的二手转录",
       "url": "https://steamdb.info/patchnotes/26137575/",
       "accessed": "2026-10-27"
+    },
+    {
+      "title": "DreadXP：Playable Archive 官方截图画廊",
+      "url": "https://dreadxp.com/playable-archive/",
+      "accessed": "2026-10-27"
     }
   ],
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "未核实对应官方配图的转载使用依据，采用文字卡片。"
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://dreadxp.com/playable-archive/",
+    "sourceTitle": "DreadXP：Playable Archive 官方截图画廊",
+    "accessed": "2026-10-27",
+    "rightsNote": "官方宣传截图，由 DarkStone Digital / DreadXP 发布；用于本篇游戏发行报道的必要图像引用。版权归原权利人，不作为开放许可素材再分发；原图未改动，列表显示可能裁切。",
+    "imageURL": "https://dreadxp.com/wp-content/uploads/2026/10/Shot1-1024x574.png"
+  },
+  "revised": "2026-10-27",
+  "cover": {
+    "src": "./assets/covers/playable-archive-official-20261026.png",
+    "alt": "Playable Archive 官方截图：昏暗房间的木桌上放着油灯、打开的盒子和带符号的物件。"
   }
 }
