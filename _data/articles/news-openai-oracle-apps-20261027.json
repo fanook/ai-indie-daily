@@ -1,0 +1,39 @@
+{
+  "id": "news-openai-oracle-apps-20261027",
+  "slug": "news-openai-oracle-apps-20261027",
+  "category": "news",
+  "type": "新闻",
+  "label": "OpenAI",
+  "date": "2026-10-27",
+  "title": "OpenAI与Oracle扩展合作，计划把企业应用接入ChatGPT",
+  "summary": "Oracle正在开发AI Workspace；美国客户也可通过Oracle Marketplace采购部分OpenAI服务。",
+  "tags": [
+    "ChatGPT",
+    "企业应用"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI官方公告标注2026年10月27日。双方计划将Oracle应用和数据接入ChatGPT，并以OpenAI模型与工具支持新的Oracle产品。Oracle正在开发的AI Workspace旨在让员工通过自然语言查找信息、完成获批的业务流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "公告举例称，财务人员未来可在一个入口查看财务、采购及规划信息。这是目标体验，仍须遵循企业权限与审批，不代表所有Oracle客户现在已经能够在ChatGPT中使用这些功能。"
+    },
+    {
+      "type": "paragraph",
+      "text": "公告还介绍了面向安全检查、应用创建和小企业的软件组合。已明确的采购变化是：美国Oracle客户可通过Oracle Marketplace购买OpenAI API、Codex和ChatGPT Work，并使用符合条件的Oracle Universal Credits。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI：OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt/",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "本次未确认可直接用于该条报道的配图使用依据，暂不配图。"
+  }
+}

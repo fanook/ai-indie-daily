@@ -1,0 +1,35 @@
+{
+  "id": "ideas-nintendo-indie-world-preview-20261028",
+  "slug": "ideas-nintendo-indie-world-preview-20261028",
+  "category": "ideas",
+  "type": "活动预告",
+  "label": "独立游戏",
+  "date": "2026-10-28",
+  "title": "任天堂Indie World将于北京时间10月28日22时播出",
+  "summary": "官方预告约15分钟，内容聚焦Switch 2与Switch上的独立游戏新消息。",
+  "tags": [
+    "独立游戏",
+    "Nintendo"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "任天堂官方Indie World页面确认，新一期展示会定于2026年10月28日太平洋时间上午7时播出，即北京时间10月28日22时，时长约15分钟。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方预告范围是即将登陆Nintendo Switch 2和Nintendo Switch的独立游戏新公告与更新。截至本期北京时间09:30截稿，展示会尚未开始；本条记录的是活动预告，而不是已公布的游戏名单或发售结果。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nintendo官方：Indie World Showcase 10.28.2026",
+      "url": "https://www.nintendo.com/us/indie-world/showcase/",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "官方页图片为Indie World通用标志，图片抓取未成功，亦未确认本条预告的可用报道素材，暂不配图。"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "news-claude-drug-research-20261027",
+  "slug": "news-claude-drug-research-20261027",
+  "category": "news",
+  "type": "新闻",
+  "label": "Anthropic",
+  "date": "2026-10-27",
+  "title": "Anthropic披露六家机构的药物研发合作，多数研究仍处临床前阶段",
+  "summary": "官方案例涉及分子设计、实验分析与文档审核，尚不能据此判断新药在人类患者中的疗效。",
+  "tags": [
+    "AI科研",
+    "真实工作流"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic在标注2026年10月27日的研究文章中，介绍了过去数月与六家机构推进的药物研发合作，伙伴包括Generate Biomedicines、Divergence Labs、BigHat Biosciences、Enveda、The Column Group及Bristol Myers Squibb。"
+    },
+    {
+      "type": "paragraph",
+      "text": "其中，Enveda把生产文档接入Claude用于问题筛查。按官方报告，在1,061页文档测试中，系统找出了人工已发现的11个问题及另外7个问题，人工审核耗时由超过25小时降至不足3小时。这是特定测试的结果，并非所有监管文档都能达到同样表现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "另一些合作涉及抗体设计与实验反馈。Anthropic强调这些工作仍属早期，且多数尚未进入人体测试；实验室结果不能等同于获批疗法或已证实的临床收益。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic：Early progress on accelerating drug development with Claude",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核对官方原文研究配图，但未确认该图片的转载使用依据，因此暂不配图。"
+  }
+}

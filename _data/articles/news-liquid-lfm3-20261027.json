@@ -1,0 +1,44 @@
+{
+  "id": "news-liquid-lfm3-20261027",
+  "slug": "news-liquid-lfm3-20261027",
+  "category": "news",
+  "type": "新闻",
+  "label": "Liquid AI",
+  "date": "2026-10-27",
+  "title": "Liquid AI发布LFM3小模型家族，覆盖文字、视觉与语音",
+  "summary": "LFM3开放模型权重，并把多种模态放在同一骨干架构上；小体积不等于能胜任复杂推理。",
+  "tags": [
+    "小模型",
+    "多模态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Liquid AI在Hugging Face发布的官方团队文章标注2026年10月27日。LFM3家族以约20亿参数级模型覆盖文字、视觉、音频、全模态和结构化决策，其中视觉模型新增视频输入，权重已在Hugging Face提供。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文字版LFM3-1.7B模型卡列出17.3亿参数、256K词元上下文，并称4位精度下约需1GB内存。这些是官方规格及描述，不能推导为任何手机上的完整运行内存或固定速度保证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡明确不推荐将这个小型文字模型用于代理式编程或复杂多步推理。许可为LFM Open License v1.0；开放权重不等于所有用途都没有许可限制。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Liquid AI官方团队：Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "accessed": "2026-10-28"
+    },
+    {
+      "title": "LiquidAI/LFM3-1.7B官方模型卡",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "本次未确认可直接用于该条报道的配图使用依据，暂不配图。"
+  }
+}

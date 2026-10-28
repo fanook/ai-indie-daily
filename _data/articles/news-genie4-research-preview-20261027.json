@@ -1,0 +1,39 @@
+{
+  "id": "news-genie4-research-preview-20261027",
+  "slug": "news-genie4-research-preview-20261027",
+  "category": "news",
+  "type": "新闻",
+  "label": "Google DeepMind",
+  "date": "2026-10-27",
+  "title": "Genie 4加入原生声音与实时对话，目前仅向可信测试者开放",
+  "summary": "Google DeepMind公布可实时修改场景的世界模型Genie 4，仍处研究预览阶段。",
+  "tags": [
+    "世界模型",
+    "多模态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Google DeepMind官方文章标注2026年10月27日。Genie 4能在交互世界中同时生成画面、环境声音和人物对话；用户可用键盘移动，并用文字改变天气、镜头或场景中的人物与物体。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方表示，游戏开发者与创意技术测试者正在用它探索视觉风格和交互概念，从想法生成可探索的原型；这描述的是测试阶段的概念设计用途，而非已经交付的完整游戏制作系统。"
+    },
+    {
+      "type": "paragraph",
+      "text": "目前研究预览仅向可信测试者开放。Google AI Ultra订阅者及Gemini API、Google AI Studio早期合作伙伴的访问仍属后续计划。官方同时指出，长时间模拟与复杂编辑可能造成物体和视觉细节漂移，物理交互、空间精度、文字可读性及长期一致性仍有局限。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Google DeepMind：Genie 4: A new generation of world simulation",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "原文可抓取的图片链接为通用视频占位图，不适合作为本条报道封面；未取得可核实使用依据的演示截图。"
+  }
+}

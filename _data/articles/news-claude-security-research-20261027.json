@@ -1,0 +1,39 @@
+{
+  "id": "news-claude-security-research-20261027",
+  "slug": "news-claude-security-research-20261027",
+  "category": "news",
+  "type": "新闻",
+  "label": "Anthropic",
+  "date": "2026-10-27",
+  "title": "Anthropic披露内部模型发现的五类软件攻击链，称相关漏洞已交厂商处理",
+  "summary": "报告涉及浏览器及操作系统，使用的是尚未发布的内部研究模型，不是一次面向公众的新模型发布。",
+  "tags": [
+    "AI安全",
+    "研究"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic Frontier Red Team在标注2026年10月27日的文章中，披露过去数月利用尚未发布的内部研究模型发现软件漏洞的工作。报告覆盖Chrome、Safari、Android、Windows及Linux中的五类攻击链。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方称，各项漏洞已通过协调披露流程报告给对应厂商，文中所述问题已有修复或处理。例如Chrome相关发现获分配62个CVE，并在Chrome 156时得到修补。这里描述的是研究与披露结果，不代表所有用户设备已经安装更新。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这也不是“Claude完全无人参与攻击”的证明：文章描述了研究人员的初始指令、扫描平台和标准化验证流程。成果来自内部模型及研究系统，不能直接视为当前公开聊天产品的能力保证。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic：Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+      "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+      "accessed": "2026-10-28"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "本次未确认可直接用于该条报道的配图使用依据，暂不配图。"
+  }
+}
