@@ -1,0 +1,45 @@
+{
+  "id": "news-nvidia-nemotron-transcribe-20261028",
+  "slug": "news-nvidia-nemotron-transcribe-20261028",
+  "category": "news",
+  "type": "新闻",
+  "label": "语音模型",
+  "date": "2026-10-28",
+  "title": "NVIDIA发布Nemotron 3.5 Transcribe，支持40种语言录音转写",
+  "summary": "同一模型可处理转写、翻译、说话人区分和音频问答，但并非实时流式语音服务。",
+  "tags": [
+    "NVIDIA",
+    "语音识别",
+    "开放权重"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "NVIDIA于10月28日发布开放权重模型Nemotron 3.5 Transcribe。官方资料列出40种语言转写、最长一小时录音，以及文字指令控制输出的能力。说话人标签用于区分录音中的不同发言者，不代表识别真实身份。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布文章称，31种语言支持与英语互译，13种支持说话人区分，最多标记八名发言者；音频问答主要以英语训练。不同任务的语言覆盖并不相同，模型面向已录制音频，不是实时流式识别服务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配套Granary v2公开清单覆盖48种语言、16个来源语料库及约46.3万小时数据；这不等于模型的完整训练混合。模型采用OpenMDW-1.1许可，来源音频仍受各自许可约束。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发布文章的演示及评测图说明；未确认可转载图片与其使用授权，采用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "NVIDIA-Nemotron-3.5-Transcribe-30B-A4B model card",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "accessed": "2026-10-29"
+    }
+  ]
+}

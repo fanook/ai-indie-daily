@@ -1,0 +1,39 @@
+{
+  "id": "news-anthropic-science-institutions-20261028",
+  "slug": "news-anthropic-science-institutions-20261028",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 科研",
+  "date": "2026-10-28",
+  "title": "Anthropic扩展AI for Science计划，公布20家机构与团队合作",
+  "summary": "科研支持从个人研究者扩展到基金会、科研机构和项目，主要提供Claude使用额度。",
+  "tags": [
+    "Anthropic",
+    "科研支持"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic于10月28日公布AI for Science计划的扩展，列出20家科学基金会、机构与研究团队。该计划自2025年5月启动，为科研项目提供免费Claude额度；此次新增了由科研组织分配或使用额度的合作方式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "名单包括Sloan与Simons基金会、美国国家科学基金会、空间望远镜科学研究所、Wellcome Sanger Institute等。项目层面的支持涉及果蝇神经连接图、气候建模、基因组资源及数学形式化。"
+    },
+    {
+      "type": "paragraph",
+      "text": "公司同时介绍了与HHMI Janelia共同开发的Model Hardware Standard，目标是让AI代理操作实验仪器，目前仍属研究预览。Anthropic表示，多项合作尚在早期；此次公告是资源支持与合作范围的更新，而非这些项目已经产生科学突破的证明。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已打开官方公告及其标题配图链接；未获得明确转载使用依据，暂不配图。"
+  },
+  "sources": [
+    {
+      "title": "AI for Science expands to foundations and research institutions",
+      "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "accessed": "2026-10-29"
+    }
+  ]
+}

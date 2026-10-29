@@ -1,0 +1,44 @@
+{
+  "id": "news-github-copilot-fusion-20261028",
+  "slug": "news-github-copilot-fusion-20261028",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 编程",
+  "date": "2026-10-28",
+  "title": "GitHub Copilot Fusion正式开放，按任务选择并协调多个模型",
+  "summary": "Fusion提供三档投入级别，可在单模型、逐级升级和交叉评审之间选择执行方式。",
+  "tags": [
+    "GitHub Copilot",
+    "多模型"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "GitHub于10月28日宣布Copilot Fusion正式可用。它不是一个独立基础模型，而是为每次任务选择模型、安排协作的系统，整合了此前的自动模型选择和HydraFusion。用户可选Standard、High或Max三档投入级别。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方列出三种执行方式：由单个模型完成；先让较高效的模型尝试，通过质量检查决定是否升级；或由其他模型审阅初稿，再交回原模型修改。企业管理员仍可限制Fusion使用的模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "此次覆盖所有Copilot套餐，支持VS Code、Copilot应用、CLI及JetBrains IDE。费用按实际使用的各模型标准费率计算；官方文档注明，付费套餐的模型费用七折优惠持续至2026年11月30日。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方更新页中的Fusion设置截图及流程图；未确认图片转载授权，暂不使用。"
+  },
+  "sources": [
+    {
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+      "accessed": "2026-10-29"
+    },
+    {
+      "title": "About GitHub Copilot Fusion",
+      "url": "https://docs.github.com/en/copilot/concepts/models/copilot-fusion",
+      "accessed": "2026-10-29"
+    }
+  ]
+}

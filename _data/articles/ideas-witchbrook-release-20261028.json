@@ -1,0 +1,38 @@
+{
+  "id": "ideas-witchbrook-release-20261028",
+  "slug": "ideas-witchbrook-release-20261028",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-10-28",
+  "title": "《Witchbrook》亮相Indie World，确定2027年1月28日发售",
+  "summary": "Chucklefish与Robotality的魔法生活模拟游戏公布正式日期，首发平台新增PS5，支持最多四人在线合作。",
+  "tags": ["独立游戏", "生活模拟", "Nintendo"],
+  "blocks": [
+    {"type": "paragraph", "text": "任天堂10月28日Indie World展示会的官方游戏名单已公布，其中包括《Witchbrook》。Chucklefish确认，这款由其与Robotality共同开发的魔法生活模拟游戏将于2027年1月28日推出；任天堂Switch商店页也列出了同一日期。"},
+    {"type": "heading", "text": "从魔法学院延伸到小镇生活"},
+    {"type": "paragraph", "text": "游戏以海边小镇Mossport为舞台。玩家进入Witchbrook College，学习炼金术、占星、塔罗与仪式等课程，通过作业和考试解锁魔法；课余可以参与季节活动、经营魔法服务、结交居民并布置住宅。官方列出的游玩方式包括单人和最多四人的在线合作。"},
+    {"type": "heading", "text": "数字版与实体版分开推出"},
+    {"type": "paragraph", "text": "首发平台为PC、Nintendo Switch、Switch 2、Xbox One、Xbox Series S/X和PS5。官方确认简体中文与繁体中文支持，并公布数字版首发价格为24.99美元，其他地区价格将于临近发售时披露。标准实体版与收藏版仍在制作，计划晚于数字版推出，具体平台和日期尚未公布。"},
+    {"type": "paragraph", "text": "官方发售日博客页面标注10月27日，同时将其中的预告片描述为任天堂展示版本的加长版；本文以10月28日展示会作为事件日期，不据此推定博客的准确上线时刻。"},
+    {"type": "link", "text": "Witchbrook官方Steam页面", "url": "https://store.steampowered.com/app/1846700/Witchbrook/"}
+  ],
+  "cover": {
+    "src": "https://www.witchbrook.com/assets/shots/college-bridge.webp",
+    "alt": "《Witchbrook》官方截图：学生与骑扫帚的角色聚集在花坛环绕的学院石桥及门前"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://www.witchbrook.com/media/",
+    "sourceTitle": "Witchbrook — Media",
+    "accessed": "2026-10-29",
+    "rightsNote": "官方媒体页明确为报道或直播Witchbrook者提供截图、预告片与美术素材；本图为该页college-bridge官方截图，仅随本篇游戏报道使用。Witchbrook™ © 2026 Chucklefish LTD. All Rights Reserved."
+  },
+  "sources": [
+    {"title": "Nintendo：Indie World Showcase 10.28.2026", "url": "https://www.nintendo.com/us/indie-world/showcase/", "accessed": "2026-10-29"},
+    {"title": "Chucklefish：Release Date Announcement（页面标注2026年10月27日）", "url": "https://www.witchbrook.com/release-date/", "accessed": "2026-10-29"},
+    {"title": "Nintendo：Witchbrook for Nintendo Switch", "url": "https://www.nintendo.com/us/store/products/witchbrook-switch/", "accessed": "2026-10-29"},
+    {"title": "Witchbrook官方媒体资料与截图", "url": "https://www.witchbrook.com/media/", "accessed": "2026-10-29"}
+  ]
+}
