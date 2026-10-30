@@ -1,0 +1,53 @@
+{
+  "id": "tools-godot48-beta2-20261029",
+  "slug": "tools-godot48-beta2-20261029",
+  "category": "tools",
+  "type": "版本更新",
+  "label": "游戏引擎",
+  "date": "2026-10-29",
+  "title": "Godot 4.8 beta 2 发布，重点修复回归问题",
+  "summary": "官方称本次测试版汇集 59 位贡献者的 144 项修复；4.8 已进入功能完整的公开测试阶段，尚非稳定版。",
+  "tags": [
+    "Godot",
+    "游戏引擎",
+    "测试版"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Godot 团队于 10 月 29 日发布 4.8 beta 2。官方发布记录将其标为预发布版本：主要功能已齐备，当前工作集中于发现和修复新功能带来的错误，以及旧版正常、更新后失效的回归问题。"
+    },
+    {
+      "type": "heading",
+      "text": "动画、触摸与兼容渲染修复"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方更新说明列出 144 项修复，涉及 59 位贡献者。其中包括贝塞尔动画轨道缩放后的撤销数据错误、按钮处理触摸事件时对可见视口范围的检查，以及 Compatibility 渲染模式下正片叠底混合过暗的问题。资源商店的默认排序也恢复为相关性优先。"
+    },
+    {
+      "type": "heading",
+      "text": "仍处于测试阶段"
+    },
+    {
+      "type": "paragraph",
+      "text": "这一版并非 Godot 4.8 稳定版，官方仍维护待解决的回归与重要问题清单。.NET 版本要求 .NET 10.0 或更新版本，最低要求由 .NET 8 提升至 10；标准版本继续提供 GDScript 与 GDExtension 支持。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 2",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
+      "accessed": "2026-10-30"
+    },
+    {
+      "title": "Godot builds: 4.8-beta2",
+      "url": "https://github.com/godotengine/godot-builds/releases/tag/4.8-beta2",
+      "accessed": "2026-10-30"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看官方发布页；其封面展示另一款游戏 Heartfall，并非本次引擎修复界面，未采用为更新配图。"
+  }
+}

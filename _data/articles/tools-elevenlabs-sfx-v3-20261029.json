@@ -1,0 +1,45 @@
+{
+  "id": "tools-elevenlabs-sfx-v3-20261029",
+  "slug": "tools-elevenlabs-sfx-v3-20261029",
+  "category": "tools",
+  "type": "版本更新",
+  "label": "音频工具",
+  "date": "2026-10-29",
+  "title": "ElevenLabs 推出 SFX v3 音效模型，强化多声音指令处理",
+  "summary": "官方称音乐、人声与高频音效表现改善；文档同时注明，目前仍有账户和地区访问限制。",
+  "tags": [
+    "ElevenLabs",
+    "音效",
+    "生成式 AI"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "ElevenLabs 于10月29日推出 SFX v3，可通过文字描述生成音效，已接入 ElevenCreative 和 ElevenAPI。公司称，新版相较 SFX v2 更能处理一句提示中的多个声音，并改善包含音乐、人声和高频音效的输出。上述效果比较来自厂商自身测试。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方产品入口包括 Sound Effects、Flows 和 Studio；API 模型标识为 eleven_text_to_sound_v3。音效文档列出的单次生成时长为0.1至30秒，循环功能用于把音效重复播放，而不是一次生成无限长音频。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布公告称产品已可使用，但文档补充说明 SFX v3 仍属有限开放，未必覆盖所有地区；无权限账户可能收到 Unknown model 错误。文档也指出，要求声音精确重复若干次等指令不一定被遵守。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发布页的声音演示与相关素材，未找到使用依据明确的对应静态配图；不以作者头像或无关产品图替代。"
+  },
+  "sources": [
+    {
+      "title": "Introducing SFX v3 in ElevenCreative and ElevenAPI",
+      "url": "https://elevenlabs.io/blog/sound-effects-v3",
+      "accessed": "2026-10-30"
+    },
+    {
+      "title": "Sound effects — ElevenLabs Documentation",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "accessed": "2026-10-30"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "news-gpt6-luna-october-update-20261029",
+  "slug": "news-gpt6-luna-october-update-20261029",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 动态",
+  "date": "2026-10-29",
+  "title": "GPT-6 Luna 更新：OpenAI 称回答更简洁、减少过度附和",
+  "summary": "10月29日系统卡补充说明同时披露安全评估变化；部分健康基准分数下降，并非全面提升。",
+  "tags": [
+    "OpenAI",
+    "GPT-6 Luna"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 在10月29日发布的系统卡补充说明中介绍 GPT-6 Luna 更新，称新版回答更简洁，并减少过度附和的表达。GPT-6 Luna 此前于10月7日进入 ChatGPT，此次属于同一模型的后续更新。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方评估显示，新版在未成年人相关的性内容、饮食失调、情感依赖及血腥内容测试中有所改善。公司继续将其网络安全以及生物与化学能力按 High 等级处理，并沿用10月7日版本的防护体系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "结果并非各项齐升：长度调整后的 HealthBench 总分由50.4降至48.2，MentalHealthBench 总体分数由51.73降至48.68。这些是 OpenAI 公布的特定基准结果，不能直接解释为每次真实对话都会出现同等变化。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方系统卡页面及评估表格，未确认可转载的独立新闻配图，保留文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "Addendum to GPT-6 Luna System Card: October 29, 2026 Update",
+      "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum",
+      "accessed": "2026-10-30"
+    }
+  ]
+}

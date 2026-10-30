@@ -1,0 +1,81 @@
+{
+  "id": "ideas-danchi-days-release-20261029",
+  "slug": "ideas-danchi-days-release-20261029",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-10-29",
+  "title": "《Danchi Days》上线 Steam，以重办夏日祭串起邻里故事",
+  "summary": "这款以 2000 年代日本住宅区为舞台的叙事冒险已推出 Windows 与 macOS 版，首发支持简体中文。",
+  "tags": [
+    "Danchi Days",
+    "叙事冒险",
+    "独立游戏"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "gingham games 于 10 月 29 日宣布《Danchi Days》已在 Steam 发售，发行商为 Analgesic Productions。商店列出 Windows 与 macOS 支持，首发语言为英语、日语和简体中文；发行公告称繁体中文计划于今年稍后推出。"
+    },
+    {
+      "type": "heading",
+      "text": "从邀请邻居开始的夏日祭"
+    },
+    {
+      "type": "paragraph",
+      "text": "故事主角是 12 岁的 Hoshino。她回到日本故乡陪伴患有认知症的祖母，希望通过重办社区夏日祭让祖母开心起来。官方介绍把探索住宅区、与邻居交谈和邀请居民参加活动作为冒险主线；发行公告称游戏共有 51 位邻居。"
+    },
+    {
+      "type": "paragraph",
+      "text": "寻找线索不只发生在街道和建筑中，也包括浏览游戏里的互联网。河童伙伴 Moro-Q 会陪伴主角寻找恢复祭典所需的五份供品，过程中穿插与嗅觉、触觉和声音有关的小游戏。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/danchi-days-official.png",
+      "alt": "《Danchi Days》官方截图：Hoshino 与绿色河童伙伴走在住宅楼前的道路上",
+      "caption": "官方媒体包截图「EN 19 BigRoad.png」。图片：gingham games / Analgesic Productions。"
+    },
+    {
+      "type": "heading",
+      "text": "试玩版与正式版存档分开"
+    },
+    {
+      "type": "paragraph",
+      "text": "开发团队此前说明，发售日会以较短的新试玩版替换旧试玩版；新旧试玩版之间的存档不兼容，试玩进度也不能继承到正式版。当前商店仍提供试玩入口。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Danchi Days — Steam 商店",
+      "url": "https://store.steampowered.com/app/3107530/Danchi_Days/",
+      "accessed": "2026-10-30"
+    },
+    {
+      "title": "Danchi Days — 官方发行与试玩公告",
+      "url": "https://steamcommunity.com/app/3107530/allnews/",
+      "accessed": "2026-10-30"
+    },
+    {
+      "title": "Danchi Days — 官方网站与媒体包入口",
+      "url": "https://danchidays.com/",
+      "accessed": "2026-10-30"
+    },
+    {
+      "title": "Danchi Days Press Kit — English Screenshots",
+      "url": "https://drive.google.com/drive/folders/1z5TeolNFaYLwuTZA0vOW1-MyECQtEWqy",
+      "accessed": "2026-10-30"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/danchi-days-official.png",
+    "alt": "《Danchi Days》官方截图：Hoshino 与绿色河童伙伴走在住宅楼前的道路上"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://danchidays.com/",
+    "sourceTitle": "Danchi Days — Streamer Info / Press Kit",
+    "accessed": "2026-10-30",
+    "rightsNote": "素材来自游戏官网直接链接的公开媒体包 English Screenshots，文件 EN 19 BigRoad.png，用于本游戏发行报道；官网同时将此类素材提供作配信与投稿使用。保留 gingham games / Analgesic Productions 署名，不主张开放许可或其他用途授权。"
+  }
+}

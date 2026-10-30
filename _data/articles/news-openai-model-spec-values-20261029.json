@@ -1,0 +1,39 @@
+{
+  "id": "news-openai-model-spec-values-20261029",
+  "slug": "news-openai-model-spec-values-20261029",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 动态",
+  "date": "2026-10-29",
+  "title": "OpenAI 更新 Model Spec，以五项核心价值重组模型行为规范",
+  "summary": "新版增加上下文、监督与自主选择相关指引，并撤去大部分细节化的文风规定。",
+  "tags": [
+    "OpenAI",
+    "Model Spec"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于10月29日更新公开的 Model Spec，围绕忠于人类意图、减少伤害、诚实透明、人的自主性和关怀五项价值重新组织内容。这份文件描述的是公司希望模型达到的行为方式，而非新的模型产品。"
+    },
+    {
+      "type": "paragraph",
+      "text": "新版修订了处理指令冲突的规则，增加如何结合对话、记忆等上下文理解意图的说明，并扩展对行动副作用的控制与告知要求。多数细节化文风规定被移除，但客观回答等较强默认原则仍被保留。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 同时明确，现有模型尚未完全体现这份规范；文件更新代表训练和改进方向，不能等同于所有线上模型已经具备相应行为。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方公告，未发现与此次规范变更直接对应且使用依据明确的配图，保留文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "url": "https://openai.com/index/updated-model-spec/",
+      "accessed": "2026-10-30"
+    }
+  ]
+}
