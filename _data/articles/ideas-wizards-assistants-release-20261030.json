@@ -1,0 +1,77 @@
+{
+  "id": "ideas-wizards-assistants-release-20261030",
+  "slug": "ideas-wizards-assistants-release-20261030",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-10-30",
+  "title": "《The Wizard’s Assistants》上线：以 90 天创作挑战完成一场无失败探索",
+  "summary": "Twin Suns 的单人探索游戏于 10 月 30 日上线 Steam；官方介绍，它来自一次项目取消后发起的 90 天创作挑战。",
+  "tags": [
+    "独立游戏",
+    "探索",
+    "开发过程"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "《The Wizard’s Assistants》已于 2026 年 10 月 30 日在 Steam 发售。玩家扮演困在巫师塔中的助手，在逐渐崩塌的塔内寻找向上通往月亮的路径，帮助其他助手并收集 Quarks，以取得新的魔法能力。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/wizards-assistants-press.webp",
+      "alt": "《The Wizard’s Assistants》官方新闻稿截图：紫色光球、悬浮角色与石砌平台，画面保留 Twin Suns 和 90 Days of Joy 标识。",
+      "caption": "Twin Suns 官方新闻稿截图，保留原画面标识。"
+    },
+    {
+      "type": "heading",
+      "text": "移动能力与安全探索"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方介绍的互动包括借助药水瓶让书本悬浮、乘坐光束以及寻找隐藏空间。游戏不设生命耗尽或 Game Over，解谜与移动能力共同构成推进过程。"
+    },
+    {
+      "type": "heading",
+      "text": "来自一次 90 天创作挑战"
+    },
+    {
+      "type": "paragraph",
+      "text": "Twin Suns 在 10 月 24 日发布的新闻稿中称，团队在一个项目取消后，一边通过合作开发维持工作室，一边发起“90 Days of Joy”：由小团队用 90 天制作自己愿意创作的游戏，不以发行商提案或融资路演为前提。工作室称本作由此在约三个月内形成。这是团队披露的开发过程，不能据此推算完整预算、人员投入或商业回报。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Steam 商店页",
+      "url": "https://store.steampowered.com/app/5223870/The_Wizards_Assistants/"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/wizards-assistants-press.webp",
+    "alt": "《The Wizard’s Assistants》官方新闻稿截图：紫色光球、悬浮角色与石砌平台，画面保留 Twin Suns 和 90 Days of Joy 标识。"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://www.twinsunscorp.net/thewizardsassistantspressrelease",
+    "sourceTitle": "Twin Suns Corp Reignites the Joy of Making Games with The Wizard's Assistants",
+    "accessed": "2026-10-31",
+    "rightsNote": "采用开发商官方新闻稿提供的 press1.png 媒体截图，仅用于报道对应游戏；保留画面中的 Twin Suns 与 90 Days of Joy 标识，版权归原权利人，不宣称开放许可。"
+  },
+  "sources": [
+    {
+      "title": "Twin Suns 官方新闻稿（2026-10-24）",
+      "url": "https://www.twinsunscorp.net/thewizardsassistantspressrelease",
+      "accessed": "2026-10-31"
+    },
+    {
+      "title": "The Wizard’s Assistants — Steam",
+      "url": "https://store.steampowered.com/app/5223870/The_Wizards_Assistants/",
+      "accessed": "2026-10-31"
+    },
+    {
+      "title": "Steam 商店公开数据：发布日期与上架状态",
+      "url": "https://store.steampowered.com/api/appdetails?appids=5223870",
+      "accessed": "2026-10-31"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "news-google-suncatcher-orbit-response-20261031",
+  "slug": "news-google-suncatcher-orbit-response-20261031",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 动态",
+  "date": "2026-10-31",
+  "title": "Google 称 Suncatcher 原型卫星完成在轨 TPU 的首次 AI 回复",
+  "summary": "Google 披露在轨 Gemma 4 生成回复的测试；接下来仍需验证芯片在热应力与辐射条件下的可靠性。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Google 在当地 10 月 30 日发布的文章中披露，Project Suncatcher 原型卫星已完成“Hello World”测试。页面发布时间为 17:00 UTC，对应北京时间 10 月 31 日 01:00。Google 将其描述为数据中心级 TPU 在轨生成的首次 AI 回复。"
+    },
+    {
+      "type": "paragraph",
+      "text": "原型卫星于 10 月 1 日发射。团队完成主机与 TPU 托盘上电及早期机器学习测试后，从地面向卫星上的 Gemma 4 开放模型发送了一条太空俳句提示；卫星经过挪威斯瓦尔巴附近时，地面接收到生成的诗句。随后还测试了打油诗与报告载荷系统状态的遥测提示。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 表示，下一步将测试 TPU 在轨道热应力与辐射条件下的表现，并把 2027 年的两颗互联卫星作为下一里程碑。当前结果是原型计算链路验证，公告没有给出商业数据中心规模的持续运行、经济性或成本结论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "We’ve received our first response from the Project Suncatcher prototype satellite",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查原文嵌入视频与缩略图；未核实缩略图转载依据，保留官方视频所在原文链接，不另造卫星实拍。"
+  }
+}

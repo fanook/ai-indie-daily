@@ -1,0 +1,41 @@
+{
+  "id": "news-openai-training-preferences-20261030",
+  "slug": "news-openai-training-preferences-20261030",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 动态",
+  "date": "2026-10-30",
+  "title": "OpenAI 将支持网站统一表达 AI 训练偏好，计划未来数月实施",
+  "summary": "新的 robots.txt 共同信号旨在让网站一次向多个参与厂商表达训练偏好；现有爬虫控制继续保留。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 2026 年 10 月 30 日宣布，将遵循 robots.txt 中的一种共同信号，让网站运营者表达其内容用于基础生成式 AI 训练的偏好。该公司称，这项自愿协作机制可以减少网站分别维护每家厂商爬虫规则的工作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 的实施目标是未来数月，并表示届时会公布具体实现细节。因此，公告属于支持与实施计划，不表示新信号已在其所有系统中生效。既有 robots.txt 爬虫控制不会被替换，仍继续适用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "公告引用 IETF AI Preferences 工作组相关讨论及训练偏好信号草案。该方案面向愿意遵循它的参与方，不能等同于阻止所有 AI 抓取的技术屏障，也不是已经获 IETF 批准的最终标准。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Making it easier for websites to express AI training preferences",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+      "accessed": "2026-10-31"
+    },
+    {
+      "title": "AI Training Preference Signal — Internet-Draft",
+      "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方公告；未找到与此信号直接对应且转载依据明确的官方配图，不以概念图替代。"
+  }
+}

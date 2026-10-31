@@ -1,0 +1,36 @@
+{
+  "id": "news-claude-opus48-fast-deprecation-20261030",
+  "slug": "news-claude-opus48-fast-deprecation-20261030",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 动态",
+  "date": "2026-10-30",
+  "title": "Claude Opus 4.8 快速模式进入弃用期，将于 11 月 30 日移除",
+  "summary": "Anthropic 公布 Opus 4.8 fast mode 的移除时间；该变更针对快速模式，不等同于整个模型下线。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic 在 2026 年 10 月 30 日的 Claude Platform 更新日志中宣布，Claude Opus 4.8 的 fast mode 进入弃用期，计划于 11 月 30 日移除。"
+    },
+    {
+      "type": "paragraph",
+      "text": "移除之后，向 claude-opus-4-8 发送带有 speed: \"fast\" 的请求会返回错误。官方给出的继续使用快速模式的迁移目标是 Claude Opus 5.5。公告说的是 Opus 4.8 的这一请求模式，并没有宣布整个 Opus 4.8 模型在同日下线。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作为背景，10 月 15 日的更新日志已将 Opus 5.5 快速模式移出研究预览，取消单独申请使用资格的要求；当时 Opus 5 与 Opus 4.8 的快速模式仍属于研究预览。此次公告进一步确定了 Opus 4.8 快速模式的退出日期。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Claude Platform release notes",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方更新日志；这是 API 生命周期变更，未找到与该条公告直接对应且使用依据明确的官方配图，保留文字卡片。"
+  }
+}
