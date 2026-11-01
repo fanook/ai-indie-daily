@@ -6,7 +6,7 @@ import * as content from '../content.mjs';
 
 // Exercise the shipped navigation functions and lifecycle callbacks, not a copy.
 function app() {
-  const listeners = {}, elements = new Map();
+  const listeners = {}, documentListeners = {}, elements = new Map();
   const entries = [{dataset:{id:'first'}, getBoundingClientRect:()=>({top:-100,bottom:200})}];
   const element = id => id === 'article' ? null : elements.get(id) || elements.set(id, {
     innerHTML:'', textContent:'', dataset:{}, hidden:false,
@@ -17,7 +17,7 @@ function app() {
     location:{search:'?section=all',hash:''}, history, scrollY:1200,
     localStorage:{getItem:()=>null}, sessionStorage:{setItem(){throw Error('disabled');}},
     requestAnimationFrame:()=>1, cancelAnimationFrame(){}, setTimeout:()=>1,clearTimeout(){},
-    document:{getElementById:element, querySelectorAll:()=>[], documentElement:{dataset:{}}, addEventListener(){}, fonts:{ready:Promise.resolve()}},
+    document:{getElementById:element, querySelectorAll:()=>[], documentElement:{dataset:{}}, addEventListener(name,fn){documentListeners[name]=fn;}, fonts:{ready:Promise.resolve()}},
     window:{scrollTo(x,y){context.scrollY=y;}, addEventListener(name,fn){listeners[name]=fn;},removeEventListener(){}}
   });
   let source = readFileSync(new URL('../app.js',import.meta.url),'utf8');
@@ -25,7 +25,7 @@ function app() {
   vm.runInContext(source, context);
   const run = code => vm.runInContext(code, context);
   run('loaded = true;');
-  return {context, history, listeners, entries, run};
+  return {context, history, listeners, documentListeners, entries, run};
 }
 test('each history entry owns its pagination and position, even for the same query', () => {
   const a = app(); a.run('pageSize = 40; savePosition()');
@@ -67,4 +67,12 @@ test('scroll snapshots stay in memory and do not exhaust Safari history mutation
   for(let i=0;i<200;i++){a.context.scrollY=i; a.run('savePosition(false)');}
   assert.equal(a.history.state.indielab_list.y,persisted);
   assert.equal(a.run('savedPosition().y'),199);
+});
+
+test('accessibility click without pointerdown saves a new snapshot during restoration', () => {
+  const a=app(); a.run('savePosition(); restorePosition()');
+  a.context.scrollY=1500;
+  a.documentListeners.click({target:{closest:selector=>selector==='.entry-link'?{}:null},button:0});
+  assert.equal(a.run('restoring'),false);
+  assert.equal(a.history.state.indielab_list.y,1500);
 });

@@ -148,7 +148,7 @@ function restorePosition(position = savedPosition()) {
 function chooseSection(section) {
   if (section !== 'all' && !Object.hasOwn(SECTIONS, section)) return;
   try { localStorage.setItem(SECTION_KEY, section); } catch { notify('浏览器无法保存栏目偏好，本次浏览仍可使用'); }
-  savePosition();
+  cancelRestore(); savePosition();
   state = readState(`section=${section}`);
   navigation(); closeMenu(true);
   if (loaded) { updateList(true, true); window.scrollTo(0, 0); }
@@ -179,6 +179,7 @@ document.addEventListener('click', event => {
   if (event.target.closest('[data-reset]')) { resetFilters(); return; }
   const link = event.target.closest('.entry-link');
   if (link && !isArticle) {
+    cancelRestore();
     const position = savePosition();
     // A scoped return token also supports the existing title/home link, without
     // restoring an unrelated old visit on a fresh list navigation.
