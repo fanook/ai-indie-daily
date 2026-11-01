@@ -1,0 +1,65 @@
+{
+  "id": "news-claude-code-21316-20261031",
+  "slug": "news-claude-code-21316-20261031",
+  "category": "news",
+  "type": "版本更新",
+  "label": "AI 编程",
+  "date": "2026-10-31",
+  "title": "Claude Code 2.1.316 发布，新增子代理思考强度设置并修复文件边界问题",
+  "summary": "本次更新加入子代理默认 effort 配置和云会话表单卡，并修复受限会话文件上传、进程清理及子代理模型继承问题。",
+  "tags": [
+    "Anthropic",
+    "Claude Code",
+    "子代理",
+    "权限"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic 于北京时间 10 月 31 日 09:01 发布 Claude Code 2.1.316。官方发布说明列出了子代理配置、云会话交互，以及文件访问和进程管理方面的改动。"
+    },
+    {
+      "type": "heading",
+      "text": "子代理可以设置独立的默认 effort"
+    },
+    {
+      "type": "paragraph",
+      "text": "新增环境变量 CLAUDE_CODE_SUBAGENT_EFFORT：当没有其他设置指定子代理的思考强度时，子代理可使用这个默认值，而不是继承当前会话的设置。另一个新增变量 CLAUDE_CODE_DISABLE_ULTRATHINK 可关闭 ultrathink 关键词。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布说明同时列出一项模型继承修复：此前，继承上一级子代理模型的子代理，在被后台任务或消息唤醒时，可能切换到主模型。"
+    },
+    {
+      "type": "heading",
+      "text": "文件边界与进程清理修复"
+    },
+    {
+      "type": "list",
+      "items": [
+        "修复 --restricted 会话在 Read 允许规则覆盖相关文件时，仍可上传工作目录之外文件的问题。",
+        "修复 Claude Code 自行退出后，macOS 和 Linux 上 shell 命令仍留在后台运行的问题；发布说明举出的触发情形包括凭据被拒绝或云会话被归档。",
+        "修复部分网络请求在压缩响应被截断或损坏时挂起的问题。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "云会话增加表单卡"
+    },
+    {
+      "type": "paragraph",
+      "text": "当 MCP 服务器请求填写表单时，云会话现在会展示可填写或拒绝的表单卡，而不是在用户看不到请求的情况下取消它。切回云会话或 Remote Control 会话时，也新增了表示消息仍在同步的状态提示。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查该版本官方 GitHub 发布页，页面以文字变更说明为主，没有与这些改动直接对应且使用依据明确的产品截图。"
+  },
+  "sources": [
+    {
+      "title": "Claude Code v2.1.316 官方发布说明",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "accessed": "2026-11-01"
+    }
+  ]
+}

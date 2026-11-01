@@ -1,0 +1,71 @@
+{
+  "id": "news-openai-gpt6-rosalind-20261030",
+  "slug": "news-openai-gpt6-rosalind-20261030",
+  "category": "news",
+  "type": "新闻",
+  "label": "模型动态",
+  "date": "2026-10-30",
+  "title": "OpenAI 发布 GPT-6 Rosalind，面向获批的生命科学研究机构",
+  "summary": "10 月 30 日公布的生命科学模型沿用 GPT-6 Astra 权重，通过受信任访问计划开放；Research 与 Discovery 的授权范围不同。",
+  "tags": [
+    "OpenAI",
+    "GPT-6 Rosalind",
+    "生命科学",
+    "模型访问"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 的 API 更新日志和系统卡均标注 2026 年 10 月 30 日，公布面向生命科学研究的 GPT-6 Rosalind。这是 10 月 30 日的较早更新，并非 11 月 1 日的新发布；官方页面未给出可换算为北京时间的具体发布时刻，本文保留其标注日期。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 将其定位为支持生物学、药物发现和转化医学研究的推理模型，结合科学工具处理研究任务。系统卡称，该版本使用与 GPT-6 Astra 相同的权重，本次发布没有增加训练数据或进行额外后训练。"
+    },
+    {
+      "type": "heading",
+      "text": "Research 批准不等于普通订阅"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方帮助文档说明，GPT-6 Rosalind Research 只向有限的获批 Research 组织和用户开放，可在 Work 和 Codex 中使用；API 访问需另行获批，Chat 标签页不提供该模型。购买订阅或加入工作区不会自动获得访问权限。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rosalind 分为 Research 与 Discovery 两种访问层级。Discovery 使用现有的 Rosalind 5.5 模型及相应防护，获得 Discovery 批准并不包含 GPT-6 Rosalind Research；转入 Research 需要额外审核。"
+    },
+    {
+      "type": "heading",
+      "text": "企业工作区先进入两周管理员预览"
+    },
+    {
+      "type": "paragraph",
+      "text": "在 Enterprise 工作区，GPT-6 Rosalind Research 首先进入为期两周的 Admin Preview，期间默认关闭。管理员可以为获批的 Research 用户启用模型，并配置预览期结束后的访问；已有 Research 批准不能跳过这一阶段。"
+    },
+    {
+      "type": "paragraph",
+      "text": "系统卡说明，OpenAI 会审查申请方的研究目的、使用场景、治理和访问控制能力。本次发布没有在先前公告基础上扩大申请资格，获批客户仍须遵守对应的用户权限、安全与人工审查要求。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方 API 更新日志、系统卡和访问说明，未找到针对本次 GPT-6 Rosalind 发布、使用依据明确的新闻配图；不以通用品牌图或其他版本图片替代。"
+  },
+  "sources": [
+    {
+      "title": "OpenAI API Changelog：2026 年 10 月 30 日 GPT-6 Rosalind",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "accessed": "2026-11-01"
+    },
+    {
+      "title": "GPT-Rosalind-6 System Card Addendum",
+      "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+      "accessed": "2026-11-01"
+    },
+    {
+      "title": "GPT-Rosalind for life sciences research",
+      "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research",
+      "accessed": "2026-11-01"
+    }
+  ]
+}

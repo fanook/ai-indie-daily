@@ -1,0 +1,57 @@
+{
+  "id": "ideas-rat-game-release-20261030",
+  "slug": "ideas-rat-game-release-20261030",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-10-30",
+  "title": "《Rat Game》上线：在一间餐厅里随机安排老鼠与厨师的对抗",
+  "summary": "Sokpop 的新作以单张地图、随机破坏任务和非对称角色构成多人对局；开发者披露两年开发周期，并说明未使用 AI。",
+  "tags": [
+    "Sokpop",
+    "多人游戏",
+    "关卡设计"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Sokpop Collective 于 2026 年 10 月 30 日发布《Rat Game》。Steam 商店列出 Windows 与 macOS 版本，支持简体中文界面。这是一款最多 8 人的非对称恐怖喜剧游戏：老鼠合作破坏餐厅，厨师负责阻止它们。本文补录这条 10 月 30 日的发售消息。"
+    },
+    {
+      "type": "heading",
+      "text": "一张地图，改变任务与入口"
+    },
+    {
+      "type": "paragraph",
+      "text": "开发者在发售 FAQ 中表示，项目历时两年。团队选择只制作一间细节较多的餐厅，而不是多张相近地图；每局从 16 项破坏任务中抽取部分任务，并随机安排老鼠入口和道具位置。商店展示的行动包括咬断电线、堵塞厕所和入侵电脑，老鼠还可利用暗处与隐蔽通道。"
+    },
+    {
+      "type": "heading",
+      "text": "人数与内容边界"
+    },
+    {
+      "type": "paragraph",
+      "text": "对抗模式由一名玩家扮演厨师；合作模式则由程序控制 RoboChef。官方建议对抗至少 3 人、合作至少 2 人，设计人数上限为 8 人。虽然大厅技术上可容纳 10 人，开发者明确说未测试这种规模。游戏不提供公共大厅，团队给出的原因包括小团队的管理负担。"
+    },
+    {
+      "type": "paragraph",
+      "text": "开发者称音乐与音效由 Tumult Kollektiv 的 Alexander van der Kruijf 制作，并在 FAQ 中明确表示开发过程没有使用 AI。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rat Game — Steam 商店",
+      "url": "https://store.steampowered.com/app/3347910/Rat_Game/",
+      "accessed": "2026-11-01"
+    },
+    {
+      "title": "Rat Game is out now! (+ FAQ) — Sokpop 官方公告",
+      "url": "https://steamcommunity.com/games/3347910/announcements/detail/679639664218341773",
+      "accessed": "2026-11-01"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核实官方商店与发售公告，并检索开发者官网的媒体资料；未找到使用依据明确的本作新闻配图，暂保留文字卡片，不搬用第三方截图。"
+  }
+}
