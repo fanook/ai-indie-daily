@@ -2,6 +2,12 @@ import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, 
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));
+const POSITION_KEY = 'indielab_list';
+const entryID = () => `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+let currentEntry = history.state?.indielab_entry || entryID();
+const positions = new Map();
+let restoring = false, cancelRestore = () => {};
+if (!isArticle && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
 const SECTION_KEY = 'indielab_section';
 function initialState() {
   let query = location.search;
@@ -47,7 +53,7 @@ function coverHTML(item) {
   return `<div class="entry-media"><img class="entry-cover${cover.position === 'left top' ? ' left-aligned' : ''}" src="${e(src)}" alt="${e(cover.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
 }
 function card(item) {
-  return `<article class="entry" data-category="${e(item.category)}">${coverHTML(item)}<div class="entry-content"><h2><a class="entry-link" href="${e(articleURL(item))}">${e(item.title)}</a></h2><p class="entry-summary">${e(item.summary)}</p><div class="entry-meta entry-bottom"><span class="tag">${e(SECTIONS[item.category].name)}</span><span>${e(item.label || typeLabel(item))}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div></div></article>`;
+  return `<article class="entry" data-id="${e(item.id)}" data-category="${e(item.category)}">${coverHTML(item)}<div class="entry-content"><h2><a class="entry-link" href="${e(articleURL(item))}">${e(item.title)}</a></h2><p class="entry-summary">${e(item.summary)}</p><div class="entry-meta entry-bottom"><span class="tag">${e(SECTIONS[item.category].name)}</span><span>${e(item.label || typeLabel(item))}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div></div></article>`;
 }
 function renderList() {
   navigation();
@@ -90,25 +96,54 @@ function renderArticle() {
 
 }
 function updateList(push = false, controls = false) {
+  cancelRestore();
   pageSize = 20;
-  history[push ? 'pushState' : 'replaceState']({}, '', `?${stateQuery(state)}`);
+  if (push) currentEntry = entryID();
+  history[push ? 'pushState' : 'replaceState']({indielab_entry:currentEntry}, '', `?${stateQuery(state)}`);
   renderList(controls);
 }
 function resetFilters() {
   state = {...state, q:'', label:'', month:'', order:'new'};
   updateList(false, true); $('section-toggle').focus();
 }
-function savePosition() {
-  try { sessionStorage.setItem(`indielab_position:${stateQuery(state)}`, JSON.stringify({y:scrollY, pageSize})); } catch { /* Optional navigation convenience. */ }
+// Position belongs to a history entry, never to a shared section preference.
+function savedPosition(value = positions.get(currentEntry) || history.state?.[POSITION_KEY]) {
+  return value && value.query === stateQuery(state) && Number.isFinite(value.y) &&
+    value.y >= 0 && Number.isInteger(value.pageSize) && value.pageSize >= 20 ? value : null;
 }
-function restorePosition() {
-  try {
-    const position = JSON.parse(sessionStorage.getItem(`indielab_position:${stateQuery(state)}`));
-    if (position && Number.isFinite(position.y)) {
-      pageSize = Math.max(20, Number(position.pageSize) || 20); renderList();
-      requestAnimationFrame(() => window.scrollTo(0, position.y));
-    }
-  } catch { /* A malformed or unavailable saved position is ignored. */ }
+function savePosition(persist = true) {
+  if (!loaded || isArticle || restoring) return;
+  const entries = [...$('cards').querySelectorAll('.entry')];
+  const anchor = entries.find(el => el.getBoundingClientRect().bottom > 0);
+  const position = {query:stateQuery(state), y:Math.max(0, scrollY), pageSize,
+    anchor:anchor?.dataset.id, offset:anchor?.getBoundingClientRect().top};
+  positions.set(currentEntry, position);
+  if (persist !== false) try { history.replaceState({...history.state, indielab_entry:currentEntry, [POSITION_KEY]:position}, ''); } catch {}
+  return position;
+}
+function restorePosition(position = savedPosition()) {
+  cancelRestore();
+  if (!position) { window.scrollTo(0, 0); return; }
+  restoring = true;
+  let frame, timer, observer;
+  const stop = () => {
+    restoring = false; cancelAnimationFrame(frame); clearTimeout(timer); observer?.disconnect();
+    for (const name of ['wheel', 'touchstart', 'pointerdown', 'keydown']) window.removeEventListener(name, stop);
+  };
+  cancelRestore = stop;
+  const apply = () => {
+    if (!restoring) return;
+    const anchor = [...$('cards').querySelectorAll('.entry')].find(el => el.dataset.id === position.anchor);
+    const y = anchor && Number.isFinite(position.offset) ? scrollY + anchor.getBoundingClientRect().top - position.offset : position.y;
+    window.scrollTo(0, Math.max(0, y));
+  };
+  const schedule = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(apply); };
+  // Images reserve their space, but a failed image removes its wrapper; track that
+  // layout change as well as font completion. User input always wins over recovery.
+  if (typeof ResizeObserver !== 'undefined') { observer = new ResizeObserver(schedule); observer.observe($('cards')); $('cards').querySelectorAll('.entry').forEach(el => observer.observe(el)); }
+  for (const name of ['wheel', 'touchstart', 'pointerdown', 'keydown']) window.addEventListener(name, stop, {passive:true});
+  document.fonts?.ready.then(schedule);
+  apply(); schedule(); timer = setTimeout(stop, 10000);
 }
 function chooseSection(section) {
   if (section !== 'all' && !Object.hasOwn(SECTIONS, section)) return;
@@ -142,13 +177,42 @@ if (!isArticle) {
 }
 document.addEventListener('click', event => {
   if (event.target.closest('[data-reset]')) { resetFilters(); return; }
-  if (event.target.closest('.entry-link') && !isArticle) savePosition();
+  const link = event.target.closest('.entry-link');
+  if (link && !isArticle) {
+    const position = savePosition();
+    // A scoped return token also supports the existing title/home link, without
+    // restoring an unrelated old visit on a fresh list navigation.
+    if (position && !event.defaultPrevented && event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) try {
+      const keys = Object.keys(sessionStorage).filter(key => key.startsWith('indielab_return:'));
+      for (const key of keys.slice(0, Math.max(0, keys.length - 29))) sessionStorage.removeItem(key);
+      const token = crypto.randomUUID();
+      sessionStorage.setItem(`indielab_return:${token}`, JSON.stringify(position));
+      const url = new URL(link.href); url.searchParams.set('return', token);
+      event.preventDefault(); location.assign(url);
+    } catch {}
+  }
 });
 if (!isArticle) {
-  $('load-more').addEventListener('click', () => { const previous = pageSize; pageSize += 20; renderList(); document.querySelectorAll('.entry-link')[previous]?.focus(); });
-  window.addEventListener('popstate', () => { if (!loaded) return; state = initialState(); closeMenu(); pageSize = 20; renderList(true); restorePosition(); });
+  $('load-more').addEventListener('click', () => { cancelRestore(); const previous = pageSize; pageSize += 20; renderList(); document.querySelectorAll('.entry-link')[previous]?.focus(); savePosition(); });
+  window.addEventListener('popstate', () => {
+    if (!loaded) return;
+    cancelRestore();
+    const previousQuery = stateQuery(state);
+    currentEntry = history.state?.indielab_entry || entryID();
+    state = initialState(); closeMenu();
+    const position = savedPosition(), nextSize = position?.pageSize || 20;
+    if (previousQuery !== stateQuery(state) || pageSize !== nextSize) {
+      pageSize = nextSize; renderList();
+    }
+    restorePosition(position);
+  });
   window.addEventListener('pagehide', savePosition);
-  window.addEventListener('pageshow', event => { if (event.persisted && loaded) { renderList(true); } });
+  window.addEventListener('pageshow', event => { if (event.persisted && loaded) restorePosition(); });
+  // Keep scroll samples in memory: writing history every frame hits Safari's
+  // mutation limit. Flush only at navigation/lifecycle boundaries.
+  let scrollFrame;
+  window.addEventListener('scroll', () => { if (!restoring) { cancelAnimationFrame(scrollFrame); scrollFrame = requestAnimationFrame(() => savePosition(false)); } }, {passive:true});
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') savePosition(); });
 }
 const loadingMarkup = (isArticle ? $('article') : $('cards')).innerHTML;
 async function load() {
@@ -168,7 +232,25 @@ async function load() {
       if (item) { location.replace(`./article.html?id=${encodeURIComponent(item.id)}`); return; }
       notify('旧文章链接未找到，请从列表中查找');
     }
-    if (isArticle) renderArticle(); else { history.replaceState({}, '', `?${stateQuery(state)}${location.hash}`); renderList(true); restorePosition(); }
+    if (isArticle) {
+      renderArticle();
+      const params = new URLSearchParams(location.search);
+      const from = params.get('from');
+      if (from) {
+        const url = new URL('./', location.href); url.search = stateQuery(readState(from));
+        const token = params.get('return'); if (token && /^[\w-]{1,80}$/.test(token)) url.searchParams.set('return', token);
+        document.querySelector('.brand').href = url;
+      }
+    } else {
+      let position = savedPosition();
+      const token = new URLSearchParams(location.search).get('return');
+      if (!position && token && /^[\w-]{1,80}$/.test(token)) try {
+        position = savedPosition(JSON.parse(sessionStorage.getItem(`indielab_return:${token}`)));
+      } catch {}
+      history.replaceState({...history.state, indielab_entry:currentEntry, [POSITION_KEY]:position}, '', `?${stateQuery(state)}${location.hash}`);
+      pageSize = position?.pageSize || 20; renderList();
+      if (position) restorePosition(position);
+    }
   } catch (error) {
     loaded = false; target.setAttribute('aria-busy', 'false');
     target.innerHTML = '<div class="state-message"><h2>内容暂时未能加载</h2><p>请检查网络后重试。</p><button class="secondary-button" id="retry">重新加载</button></div>';

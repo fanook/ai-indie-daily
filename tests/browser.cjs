@@ -127,6 +127,35 @@ async function checkLoading(browser, detail) {
       assert.deepEqual(await links(),before);
       await page.waitForFunction(y => Math.abs(scrollY-y)<3,scrollBefore);
     }
+    // Same-query visits must not overwrite older entries (the reported regression).
+    for (const width of [375,1440]) {
+      await page.setViewportSize({width,height:1000});
+      await page.goto(BASE+'?section=all');
+      await page.locator('.entry-link').first().waitFor();
+      await page.locator('#load-more').click();
+      await page.mouse.wheel(0,250);
+      const initialCount = await page.locator('.entry').count();
+      const y = await page.evaluate(() => scrollY);
+      await chooseSection(page,'news');
+      await chooseSection(page,'all');
+      await page.locator('.entry-link').first().click();
+      await page.locator('.prose').waitFor();
+      for (let step=0; step<3; step++) { await page.goBack(); await page.locator('.entry-link').first().waitFor(); }
+      assert.equal(await page.locator('.entry').count(),initialCount);
+      await page.waitForFunction(y => Math.abs(scrollY-y)<3,y);
+      const href = await page.locator('.entry-link').nth(20).getAttribute('href');
+      await page.locator('.entry-link').nth(20).click();
+      await page.locator('.prose').waitFor();
+      await page.locator('.brand').click();
+      await page.locator('.entry-link').first().waitFor();
+      assert.equal(await page.locator('.entry').count(),initialCount,'title home restores matching list snapshot');
+      await page.goto(BASE+'article.html?id='+new URL(href,BASE).searchParams.get('id'));
+      await page.locator('.prose').waitFor();
+      await page.locator('.brand').click();
+      await page.locator('.entry-link').first().waitFor();
+      assert.equal(await page.locator('.entry').count(),20,'direct article home is a fresh list');
+      assert.equal(await page.evaluate(() => scrollY),0);
+    }
     console.log('Custom menu pointer/keyboard, persistence, category history and detail scroll restoration PASS');
     assert.equal(await page.locator('[data-save], #saved-link, #saved-count').count(),0);
     await page.goto(BASE+'article.html?id=bad');
@@ -136,7 +165,7 @@ async function checkLoading(browser, detail) {
     assert.match(page.url(),/article\.html\?id=post-/);
     assert.deepEqual(errors,[]);
     const restricted = await browser.newContext();
-    await restricted.addInitScript(() => {Object.defineProperty(window,'localStorage',{get(){throw new Error('storage disabled');}});});
+    await restricted.addInitScript(() => {for(const name of ['localStorage','sessionStorage']) Object.defineProperty(window,name,{get(){throw new Error('storage disabled');}});});
     const restrictedPage = await restricted.newPage();
     await restrictedPage.route('**/*',route => route.request().resourceType()==='image' ? route.abort() : route.continue());
     await restrictedPage.goto(BASE);
