@@ -1,0 +1,58 @@
+{
+  "id": "news-clover-diffusion-preview-20261030",
+  "slug": "news-clover-diffusion-preview-20261030",
+  "category": "news",
+  "type": "新闻",
+  "label": "开源模型",
+  "date": "2026-10-30",
+  "title": "DiffuSpace 发布 Clover 扩散语言模型预览版，公开 35B 参数权重",
+  "summary": "10 月 30 日发布的纯文本 MoE 模型采用块扩散生成；官方性能数字附带硬件和精度条件，不能直接视作端到端任务速度。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DiffuSpace 于 10 月 30 日发布 Clover-35B-A3B-Preview。官方模型卡列出约 350 亿总参数、每 token 约 30 亿激活参数和 128K 上下文，模型仅处理文本，基于 Qwen3.6-35B-A3B 架构改造。Hugging Face 权重页标注 Apache 2.0 许可。"
+    },
+    {
+      "type": "heading",
+      "text": "按块生成，而非只逐个预测"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型保留 Gated DeltaNet 与完整注意力的混合骨干，引入块内双向交互，在保留已有前缀的同时对一块文本进行去噪生成。官方发布了模型权重及推理相关代码，并展示编程和工具调用评测。"
+    },
+    {
+      "type": "heading",
+      "text": "速度数字对应的条件"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布团队称，在单张 NVIDIA GB300、BF16 精度、批大小 1 的内部 Agent 工作负载上，整体生成速度达到每秒 680 token。这个数字来自厂商测试，衡量文本生成，不包含所有外部工具等待，也不是每项任务都能达到的固定速度。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方仓库的 BF16 示例要求约 69 GB 权重空间之外再预留推理状态内存；约 30 亿激活参数不代表只需加载 30 亿参数。团队另行报告了 16 GB 显存 RTX 5070 Ti 上的 INT4 部署，测试精度与任务条件不同，不能与 BF16 结果直接混作同一配置。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "DiffuSpace 官方团队发布文章",
+      "url": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview",
+      "accessed": "2026-11-02"
+    },
+    {
+      "title": "官方模型卡",
+      "url": "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview",
+      "accessed": "2026-11-02"
+    },
+    {
+      "title": "官方代码与推理说明",
+      "url": "https://github.com/DiffuSpace/Clover-35B-A3B-Preview",
+      "accessed": "2026-11-02"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方模型卡、发布文章与代码仓库；评测图的独立转载授权未确认，模型权重许可不自动用作全部宣传图片的授权依据。"
+  }
+}

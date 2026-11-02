@@ -1,0 +1,53 @@
+{
+  "id": "ideas-game-off-shift-20261102",
+  "slug": "ideas-game-off-shift-20261102",
+  "category": "ideas",
+  "type": "活动资讯",
+  "label": "Game Jam",
+  "date": "2026-11-02",
+  "title": "Game Off 2026 公布 SHIFT 主题，允许 AI 辅助并要求说明使用情况",
+  "summary": "GitHub 的一个月游戏创作活动开放提交；作品需存放于 GitHub，提交截止时间为北京时间 12 月 2 日 05:37。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "GitHub 于当地时间 11 月 1 日公布 Game Off 2026 的主题 SHIFT。官方 itch.io 页面记录的开放时间为 UTC 11 月 1 日 21:37，对应北京时间 11 月 2 日 05:37。这是活动的第 14 届，可由个人或团队参与。"
+    },
+    {
+      "type": "heading",
+      "text": "主题、提交与评选"
+    },
+    {
+      "type": "paragraph",
+      "text": "SHIFT 可以解释为视角、形态或维度的转换，也可以直接围绕键盘 Shift 键展开。官方给出了旋转视角解谜、在重叠世界间切换等示例；这些是创作提示，并非本届已完成作品。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作品须存放在 GitHub 仓库并通过 itch.io 提交。截止时间为 12 月 1 日 13:37 PST，即北京时间 12 月 2 日 05:37。提交期结束后由参与者评分，项目包括整体、玩法、画面、音频、创新及主题诠释。"
+    },
+    {
+      "type": "heading",
+      "text": "AI 使用与授权规则"
+    },
+    {
+      "type": "paragraph",
+      "text": "GitHub 公告明确允许 AI 辅助开发，提交时会询问 AI 的使用情况，以便其他人了解作品如何制作。活动鼓励开源，但不强制开源许可证；允许使用不同引擎、工具和素材。活动规则本身并不替代外部素材或工具的许可。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GitHub：Game Off 2026 主题公告",
+      "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+      "accessed": "2026-11-02"
+    },
+    {
+      "title": "Game Off 2026 官方活动页",
+      "url": "https://itch.io/jam/game-off-2026",
+      "accessed": "2026-11-02"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看 GitHub 公告与 itch.io 官方活动页；主题图未找到明确的转载许可，本篇保留文字卡片并直接链接原图所在页面。"
+  }
+}

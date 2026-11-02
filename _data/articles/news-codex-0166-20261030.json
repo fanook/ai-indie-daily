@@ -1,0 +1,53 @@
+{
+  "id": "news-codex-0166-20261030",
+  "slug": "news-codex-0166-20261030",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 编程",
+  "date": "2026-10-30",
+  "title": "Codex 0.166.0 加入网络诊断，并修复会话恢复时的权限与计量问题",
+  "summary": "补记 10 月 30 日（北京时间）发布的稳定版本：新增键盘选择会话文本、恢复排队任务及网络专项诊断。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 的 Codex 0.166.0 于 UTC 10 月 29 日 19:47 发布，即北京时间 10 月 30 日 03:47。GitHub 将该版本标记为稳定版；截至本次核查，随后出现的 0.167.0 alpha 构建仍属于预发布版本。"
+    },
+    {
+      "type": "heading",
+      "text": "终端交互与诊断"
+    },
+    {
+      "type": "paragraph",
+      "text": "版本说明列出了按词、行和页移动的键盘文本选择、集成搜索及可配置快捷键。新增的 codex doctor --network-only 用于配置、连接与 WebSocket 专项诊断；codex queue --resume 可在排入消息后恢复已卸载的会话。"
+    },
+    {
+      "type": "heading",
+      "text": "恢复会话时保留状态"
+    },
+    {
+      "type": "paragraph",
+      "text": "修复项包括：恢复或分叉会话时保留已确认的审批和权限设置，恢复编辑框文字时保留本地图片附件，以及保留推理 token 计量以避免过早压缩上下文。终端的重连恢复和离线退出处理也有改进。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发行说明同时记录了 GPT-6.1 Terra 加入内置、Vertex AI 与 Amazon Bedrock 模型目录。目录条目的增加不等于所有账户已获得对应模型的调用权限。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Codex 0.166.0 官方发行说明",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+      "accessed": "2026-11-02"
+    },
+    {
+      "title": "GitHub Release 时间与预发布标记",
+      "url": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.166.0",
+      "accessed": "2026-11-02"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看对应 GitHub 发行说明，未提供与版本功能直接对应的官方配图；不采用通用标志或无关截图。"
+  }
+}
