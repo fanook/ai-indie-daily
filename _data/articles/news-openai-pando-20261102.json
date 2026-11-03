@@ -1,0 +1,40 @@
+{
+  "id": "news-openai-pando-20261102",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 工程",
+  "date": "2026-11-02",
+  "title": "OpenAI 披露 Pando：为 Agent 并行开发重做 Git 后端",
+  "summary": "11 月 2 日发布的工程文章介绍按分支协调写入、复用 packfile 的设计；Git 客户端工作流保持不变。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 11 月 2 日介绍内部 Git 后端 Pando，称其已用于公司单体仓库开发。它保留 Git 协议与现有客户端工作流，重点处理大量人类与 Agent 同时读写仓库的负载。"
+    },
+    {
+      "type": "heading",
+      "text": "分支各自协调，读取复用已有数据"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pando 将不同分支的写入协调分开，同一分支仍维持串行化语义，但不提供跨全部引用的全局时间点快照。读取端尽量复用已有 packfile，而不是为每位客户端重新打包；代价是客户端可能下载部分已经持有的对象。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 称上线后推送延迟中位数改善接近 5 倍，每天服务接近 1 PB 的 Git 数据。这是公司披露的自身生产负载结果，并非对其他仓库的通用性能保证。该文章介绍的是内部基础设施，不是 Pando 开源发布公告。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI：Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai/",
+      "accessed": "2026-11-03"
+    }
+  ],
+  "slug": "news-openai-pando-20261102",
+  "tags": [],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看官方工程文章；未确认其中图表的独立转载许可，暂不采用配图。"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "news-openai-lifeval-20261102",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 评测",
+  "date": "2026-11-02",
+  "title": "OpenAI 介绍 LifeVal：围绕日常事务评估个人 Agent",
+  "summary": "11 月 2 日公布的评测工作从时间使用调查与 3,995 人问卷出发，考察购物、家庭管理等实际任务。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 11 月 2 日介绍 LifeVal，评估 AI 能否帮助完成现实生活中的事务，而不只回答知识问题。任务领域以美国时间使用调查和跨国时间使用研究为基础，再通过 3,995 名受访者的调查确定人们希望获得帮助的事项。"
+    },
+    {
+      "type": "paragraph",
+      "text": "覆盖范围包括照护、健康、教育、家庭行政、个人财务、购物和政府服务。官方展示的例子包括寻找幼儿园、安排志愿活动及规划餐食，涉及浏览器、电脑操作和连接器等能力。"
+    },
+    {
+      "type": "paragraph",
+      "text": "页面列出的分数对应具体示例任务，不等同于所有日常事务的整体成功率，也不能据此推断某个未公布模型的通用表现。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI：LifeVal",
+      "url": "https://openai.com/index/lifeval/",
+      "accessed": "2026-11-03"
+    }
+  ],
+  "slug": "news-openai-lifeval-20261102",
+  "tags": [],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看官方介绍，未确认页面照片的转载授权；以文字说明评测内容，不使用无关装饰图。"
+  }
+}

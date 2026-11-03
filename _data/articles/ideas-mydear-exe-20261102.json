@@ -1,0 +1,45 @@
+{
+  "id": "ideas-mydear-exe-20261102",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-11-02",
+  "title": "MyDear.exe 发售：在旧电脑文件夹里解开 57 年的共同回忆",
+  "summary": "11 月 2 日上线的约两小时叙事解谜作品，以照片、文字和小游戏组成一封可探索的情书。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "MyDear.exe 的 Steam 页面标注 11 月 2 日发售。玩家扮演 Ellie，在丈夫 Lucien 留下的旧电脑中探索文件夹、照片与文字，通过谜题和小游戏回顾两人 57 年的共同生活。官方介绍给出的体验时长约为两小时。"
+    },
+    {
+      "type": "heading",
+      "text": "小团队与短制作周期"
+    },
+    {
+      "type": "paragraph",
+      "text": "Falling Leaves Studio 在官网介绍，团队约有四人，包含两名经常合作的自由职业者，分别参与开发与声音工作；首作 MyDear.exe 制作耗时八个月。工作室将可一次玩完的小型作品作为方向，通常以六至八个月开发周期为目标。"
+    },
+    {
+      "type": "paragraph",
+      "text": "游戏将熟悉的文件夹操作转为叙事探索：寻找私人纪念物与解谜共享同一套旧电脑界面。这里的规模与周期来自团队自述，不能据此推导成本、销量或盈利情况。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MyDear.exe 官方 Steam 商店页",
+      "url": "https://store.steampowered.com/app/4255640/MyDearexe/",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Falling Leaves Studio：作品与团队介绍",
+      "url": "https://fallingleaves-studio.com/",
+      "accessed": "2026-11-03"
+    }
+  ],
+  "slug": "ideas-mydear-exe-20261102",
+  "tags": [],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官网媒体包入口与官方商店图；媒体包资产无法完整解析，未核实具体图片转载依据，暂留空而不使用未经确认的图。"
+  }
+}
