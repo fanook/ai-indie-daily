@@ -4,30 +4,56 @@
   "type": "新闻",
   "label": "AI 工程",
   "date": "2026-11-02",
-  "title": "OpenAI 披露 Pando：为 Agent 并行开发重做 Git 后端",
-  "summary": "11 月 2 日发布的工程文章介绍按分支协调写入、复用 packfile 的设计；Git 客户端工作流保持不变。",
+  "title": "Pando 如何支撑 Agent 并行开发：按分支协调，复用 Git 数据包",
+  "summary": "OpenAI 报告推送延迟中位数降低近 80%；核心交换是少做全库协调和重复打包，容许额外传输。",
   "blocks": [
     {
+      "type": "heading",
+      "text": "解决的瓶颈与生产结果"
+    },
+    {
       "type": "paragraph",
-      "text": "OpenAI 于 11 月 2 日介绍内部 Git 后端 Pando，称其已用于公司单体仓库开发。它保留 Git 协议与现有客户端工作流，重点处理大量人类与 Agent 同时读写仓库的负载。"
+      "text": "OpenAI 11 月 2 日披露 Git 后端 Pando。Codex 带来更多并行分支和 CI 拉取，原系统曾出现低于 90% 的可靠性。公司称迁移后推送延迟中位数降低近 80%，单小时曾提供超过 57 TB 数据，逾 99% 字节来自本地缓存。"
     },
     {
       "type": "heading",
-      "text": "分支各自协调，读取复用已有数据"
+      "text": "为什么能减少等待"
     },
     {
       "type": "paragraph",
-      "text": "Pando 将不同分支的写入协调分开，同一分支仍维持串行化语义，但不提供跨全部引用的全局时间点快照。读取端尽量复用已有 packfile，而不是为每位客户端重新打包；代价是客户端可能下载部分已经持有的对象。"
+      "text": "写入按分支协调，不同分支不必争用同一全库更新点；读取复用已存 packfile（压缩对象包），避免为每位客户端重新打包。代价是跨分支读取不保证同一时刻快照，客户端也可能重复传输对象。"
+    },
+    {
+      "type": "heading",
+      "text": "怎样验证与迁移"
     },
     {
       "type": "paragraph",
-      "text": "OpenAI 称上线后推送延迟中位数改善接近 5 倍，每天服务接近 1 PB 的 Git 数据。这是公司披露的自身生产负载结果，并非对其他仓库的通用性能保证。该文章介绍的是内部基础设施，不是 Pando 开源发布公告。"
+      "text": "团队使用标准 Git 一致性测试、确定性模拟和形式化检查，再以读写代理逐步迁移。文章中的千客户端比较是教学模拟，不是生产基准；上述生产数字则来自 OpenAI 自述。"
+    },
+    {
+      "type": "paragraph",
+      "text": "公开的 openai/git 是 Git 分支仓库，另有补丁跟踪页。不能把客户端改进公开等同于 Pando 后端开源。"
+    },
+    {
+      "type": "paragraph",
+      "text": "11 月 3 日补充：生产结果、验证方法与迁移过程。"
     }
   ],
   "sources": [
     {
       "title": "OpenAI：Scaling Git at OpenAI",
       "url": "https://openai.com/index/scaling-git-at-openai/",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI Git 公开仓库",
+      "url": "https://github.com/openai/git",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI Git 补丁跟踪",
+      "url": "https://oai-git.openai.chatgpt.site/",
       "accessed": "2026-11-03"
     }
   ],
@@ -36,5 +62,6 @@
   "coverProvenance": {
     "status": "unavailable",
     "reason": "已查看官方工程文章；未确认其中图表的独立转载许可，暂不采用配图。"
-  }
+  },
+  "revised": "2026-11-03"
 }
