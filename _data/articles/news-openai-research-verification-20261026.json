@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "AI 科研",
   "date": "2026-10-26",
-  "title": "OpenAI 披露调和分析、复杂性理论和量子场论研究结果",
-  "summary": "OpenAI 称模型产出了局部平滑猜想证明及 ETH 反证，已公开部分自然语言与 Lean 材料；物理方向材料暂缓公开。",
+  "title": "OpenAI 公布三项理论研究主张：证明材料怎样接受核查",
+  "summary": "局部平滑与 ETH 材料已公开，量子场论材料交由外部团队先行整理；形式化核查与学术解释承担不同工作。",
   "tags": [
     "AI 科研",
     "形式化验证",
@@ -15,43 +15,92 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "OpenAI 于 2026 年 10 月 26 日公布调和分析、计算复杂性和量子场论三个方向的研究结果，并介绍了与外部学术团队合作检查和解释这些结果的安排。"
+      "text": "OpenAI 于 2026 年 10 月 26 日宣布三项理论研究结果，并邀请外部学者核查。数学与复杂性方向公开了自然语言稿和 Lean 材料，物理材料暂缓公开。"
     },
     {
       "type": "heading",
-      "text": "数学与计算复杂性"
+      "text": "局部平滑：极端聚焦能持续多久"
     },
     {
       "type": "paragraph",
-      "text": "公司称，模型给出了所有维度的局部平滑猜想证明，以及指数时间假设 ETH 的反证，并公开了相应的自然语言材料和 Lean 形式化证明。上述结论来自 OpenAI 公告；本站未独立审查或运行这些证明，外部研究者的检查与解释仍在进行。"
+      "text": "局部平滑猜想约束波的极端聚焦在时间上的持续程度。OpenAI 称，新证明通过辅助偏微分方程覆盖所有维度。"
     },
     {
       "type": "paragraph",
-      "text": "根据公告，数学方向的模型输出产生于 10 月 18 日，19 日完成形式化；ETH 方向的模型输出产生于 10 月 16 日，17 日完成形式化。10 月 26 日是这些结果的对外披露日期。"
+      "text": "官方形式化说明把范围写得更具体：对维度至少为二的欧氏波方程，控制一段时间内的空间—时间平均大小，并列出由此得到的 Kakeya 等结论。Kakeya 的直观问题是：一个集合若在每个方向都容纳一条单位线段，它能有多“薄”？该材料给出的结论是，其 Hausdorff 维数等于所在空间的维数；这是维数结论，不等于说集合必有正体积。"
     },
     {
       "type": "heading",
-      "text": "物理材料与外部合作"
+      "text": "ETH：讨论的是增长速度，不是直接宣布 P=NP"
     },
     {
       "type": "paragraph",
-      "text": "量子场论方向的材料暂缓公开，由外部合作组先整理研究。OpenAI 将模型稿件描述为有待转化为科学理解的原始研究资料，并表示合作研究者独立参与，可以公开讨论工作和发表结论。"
+      "text": "布尔可满足性问题询问，能否给一组真假变量赋值，使所有约束同时成立。ETH 大意是某类此问题不能普遍用次指数时间解决。公开的 Lean 范围说明称，对固定的每项约束长度，存在精确计算满足条件赋值数量的确定性算法，耗时是输入长度的多项式因子乘以次指数因子，并使用多项式空间。"
     },
     {
       "type": "paragraph",
-      "text": "关于 ETH 结果，公告指出，寻找更快算法并把理论进展转化为实际改进仍需进一步研究。此次公告未提供可直接用于生产系统的算法改进结果。"
+      "text": "这里的“次指数”仍不等于“多项式”：指数中的增长项变小，不代表大规模输入立刻变得容易。说明文件也分别列出 Lean 证明的界和 10 月 25 日手稿中更紧的界，二者不能混写。公告所称的理论结果本身不提供实际程序的运行加速数据。"
+    },
+    {
+      "type": "heading",
+      "text": "量子场论：存在性与质量间隙是两件事"
+    },
+    {
+      "type": "paragraph",
+      "text": "物理方向，OpenAI 称已给出包括量子色动力学在内的一些四维量子场论的存在性证明，由 David Gross 牵头的外部团队整理。公告只报告纯 Yang–Mills 存在性的 Lean 形式化，没有宣布完整解决千禧年难题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Clay 数学研究所的问题定义同时要求 Yang–Mills 理论存在和正的质量间隙。后者大意是，真空与非零激发之间存在最低能量差。因此，仅有“存在性”这一项，不能自动替代整个问题的要求。"
+    },
+    {
+      "type": "heading",
+      "text": "模型、验证器和研究者分别做什么"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型产出论证稿，形式化材料把论证写成精确的定义和定理。仓库提供 Comparator 检查入口；该工具核对证明是否针对指定命题、是否只用了允许的公理，并由 Lean 内核检查。它检查的是形式系统里的证明，仍须确认所写定义和命题确实对应原研究问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "ETH 核查组由 Impagliazzo、Paturi 和 Williams 牵头，参与者可公开发表独立结论。参与核查不代表为结果背书，公司发布与学术认可仍须区分。"
     }
   ],
   "sources": [
     {
       "title": "OpenAI：Working with academic communities to build scientific understanding",
       "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI 数学仓库：局部平滑形式化范围",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/079.md",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI 数学仓库：ETH 形式化范围与手稿界的差别",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/378.md",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI 数学仓库：Comparator 检查入口",
+      "url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Lean 官方 Comparator：检查保证与前提",
+      "url": "https://github.com/leanprover/comparator",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Clay Mathematics Institute：Yang–Mills 存在性与质量间隙问题定义",
+      "url": "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "已核查官方研究公告；暂未取得与这些研究结果直接对应且可核实使用依据的图像，不用通用科研插画代替。"
   },
-  "revised": "2026-10-27"
+  "revised": "2026-11-03"
 }

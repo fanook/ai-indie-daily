@@ -1,11 +1,11 @@
 {
-  "category": "news",
+  "category": "learn",
   "label": "Steam 数据复盘",
   "date": "2026-10-20",
-  "title": "别再只数新品节 Demo：用同一张账表复盘曝光、试玩与愿望单",
-  "summary": "把“竞争很挤”换成可行动的问题：玩家没点进来、没玩下去，还是玩完没兴趣？用明确分母和一组假设数据，避免把相关性误读成增长。",
-  "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
-  "type": "发行分析",
+  "title": "Steam 活动复盘：区分访问、试玩会话与愿望单的统计口径",
+  "summary": "一组假设数据解释不同分母、归因窗口和会话统计为何不能直接连成同一批玩家的转化漏斗。",
+  "url": "https://partner.steamgames.com/doc/marketing/utm_analytics",
+  "type": "复盘方法",
   "id": "post-ec20ea6072221c11",
   "legacyIndex": 6,
   "slug": "post-ec20ea6072221c11",
@@ -13,18 +13,18 @@
     {
       "title": "Steamworks：UTM Analytics 访问与转化口径",
       "url": "https://partner.steamgames.com/doc/marketing/utm_analytics",
-      "accessed": "2026-10-23"
+      "accessed": "2026-11-03"
     },
     {
       "title": "Steamworks：Wishlists 数据更新与使用说明",
       "url": "https://partner.steamgames.com/doc/marketing/wishlist",
-      "accessed": "2026-10-23"
+      "accessed": "2026-11-03"
     }
   ],
   "blocks": [
     {
       "type": "paragraph",
-      "text": "结论：参展数量不能告诉你应该修宣传片还是修教程，分阶段观察才可以。本文由原“数千款 Demo”简报扩写为活动复盘方法，保留原链接；活动日期另见本站十月档日程文，不再重复用一个不断变化的数量制造竞争焦虑。以下数字全部是编辑构造的算例，不是本届新品节或某款游戏的实绩。"
+      "text": "本文保留原活动简报链接，整理为复盘方法。以下数字全部是自拟算例，不是某届新品节或某款游戏的实绩；重点是区分报表口径与因果结论。"
     },
     {
       "type": "heading",
@@ -89,7 +89,7 @@
     },
     {
       "type": "paragraph",
-      "text": "复盘的产物应是一项有证据支持的下一步，而不是预测销量的漂亮数字。愿望单是兴趣信号，不是订单；下载是获得试玩资格，不是实际游玩。只有把这些差别保留下来，活动数据才会帮助小团队少做错误的功能。"
+      "text": "愿望单是兴趣信号，下载不等于实际游玩。复盘结果能支持下一轮测试假设，但仅凭这些指标不能预测销量或证明某次改动带来增长。"
     }
   ],
   "legacyCover": {
@@ -100,8 +100,8 @@
     "status": "unavailable",
     "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "revised": "2026-10-23",
-  "facts": "把“竞争很挤”换成可行动的问题：玩家没点进来、没玩下去，还是玩完没兴趣？用明确分母和一组假设数据，避免把相关性误读成增长。",
-  "value": "区分流量、试玩与愿望单口径，找到下一项该修的具体问题。",
-  "action": "统一时间与分母，记录构建版本，并每轮只验证一个改动。"
+  "revised": "2026-11-03",
+  "facts": "一组假设数据解释不同分母、归因窗口和会话统计为何不能直接连成同一批玩家的转化漏斗。",
+  "value": "",
+  "action": ""
 }

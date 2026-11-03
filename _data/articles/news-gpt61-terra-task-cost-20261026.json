@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "模型与成本",
   "date": "2026-10-26",
-  "title": "OpenAI 发布 GPT-6.1 Terra，标准 API 输入价格为每百万 token 1 美元",
-  "summary": "GPT-6.1 Terra 于 10 月 26 日发布，支持 API，并向 ChatGPT Work 和 Codex 的相应订阅用户开放。",
+  "title": "GPT-6.1 Terra 专业电脑任务得分提高，官方图表列出每项任务成本",
+  "summary": "中等推理强度下，Agents’ Last Exam 得分为 57.6%，前代为 42.6%；价格、任务成本与推理强度需分开看。",
   "tags": [
     "OpenAI",
     "模型发布",
@@ -15,44 +15,66 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "OpenAI 于 2026 年 10 月 26 日发布 GPT-6.1 Terra。官方 API 更新日志确认了发布日期，API 模型名称为 gpt-6.1-terra。"
+      "text": "OpenAI API 更新日志确认 GPT-6.1 Terra 于 10 月 26 日发布。它面向视觉推理、电脑操作和文字工作；模型文档还列出图像输入、文本输出以及从不推理到最高强度的不同设置。"
     },
     {
       "type": "heading",
-      "text": "价格与可用范围"
+      "text": "专业任务测什么，比较条件是什么"
     },
     {
       "type": "paragraph",
-      "text": "发布页列出的标准 API 价格为每百万输入 token 1 美元、缓存输入 token 0.05 美元、输出 token 5 美元。OpenAI 称，该模型在 ChatGPT Work 和 Codex 中向 Plus、Pro、Enterprise、Edu 用户开放。"
+      "text": "Agents’ Last Exam v1 包含按建筑图纸建 3D 模型、逐镜头查看动画并制作时间码日志等工作。官方交互图显示，中等推理强度下，Terra 得 57.6%、每任务成本 0.29 美元；GPT-5.6 Terra 为 42.6%、0.84 美元。这里是基准得分和该测试的成本，不是所有真实工作的完成率或统一报价。"
+    },
+    {
+      "type": "paragraph",
+      "text": "最高强度下，新 Terra 为 60.0%、1.01 美元，Claude Opus 5.5 为 63.2%、8.82 美元。因而“约九分之一成本”伴随不同得分，不能改写为同样质量全面便宜九倍。编程方面，Terminal-Bench 4.0 的最高强度任务解决率为 50.3%，前代公开结果为 21.5%。"
     },
     {
       "type": "heading",
-      "text": "官方披露的能力与评测"
+      "text": "事实准确性也有专门测试"
     },
     {
       "type": "paragraph",
-      "text": "OpenAI 将 GPT-6.1 Terra 定位于视觉推理、电脑操作和自然语言写作，并报告其编码能力与事实准确性较 GPT-5.6 Terra 有所提升。这些表现来自厂商评测，尚非本站独立测试结果。"
+      "text": "系统卡用用户曾标记出事实错误的去标识对话测试模型，并同时检查整条回答是否出现任何错误、是否重犯原来那一项错误。此次题集经过加难，旧模型重新跑过，因此应比较本轮数据，不能直接拼接其他系统卡的历史分数；困难样本的错误率也不等于日常使用的出错率。"
+    },
+    {
+      "type": "heading",
+      "text": "API 单价与整项任务费用不同"
     },
     {
       "type": "paragraph",
-      "text": "发布说明同时指出，对于最复杂的编码任务，GPT-6.1 Sol 和 GPT-6 Astra 仍是更合适的选择。"
+      "text": "标准 API 基础价为每百万输入 token 1 美元、缓存输入 0.05 美元、输出 5 美元。当前文档注明，输入超过 272K token 时整次请求采用更高费率，缓存写入与工具调用也有各自计费。任务费用还取决于模型实际读取、思考、输出和调用工具的数量，不能只看输入单价。"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布时的可用范围包括 API，以及 ChatGPT Work 和 Codex 的 Plus、Pro、Enterprise、Edu 用户。"
     }
   ],
   "sources": [
     {
-      "title": "OpenAI：GPT-6.1 Terra 发布说明",
+      "title": "OpenAI：GPT-6.1 Terra 发布说明及 Agents’ Last Exam 交互图",
       "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "OpenAI API Changelog：2026 年 10 月 26 日",
+      "title": "OpenAI API Changelog：Oct 26",
       "url": "https://developers.openai.com/api/docs/changelog",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI：GPT-6.1 Terra 系统卡，事实准确性评测方法",
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI API：GPT-6.1 Terra 模型、价格和计费条件",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "已核查官方发布说明；暂未取得可核实内容和使用依据的对应配图，保留文字卡片。"
   },
-  "revised": "2026-10-27"
+  "revised": "2026-11-03"
 }

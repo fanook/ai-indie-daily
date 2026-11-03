@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "AI 动态",
   "date": "2026-10-29",
-  "title": "GPT-6 Luna 更新：OpenAI 称回答更简洁、减少过度附和",
-  "summary": "10月29日系统卡补充说明同时披露安全评估变化；部分健康基准分数下降，并非全面提升。",
+  "title": "GPT-6 Luna 更新评估：未成年人保护改善，健康与间接注入指标有回退",
+  "summary": "更新主打简洁与减少附和；系统卡披露了评分方法和不同方向的变化。",
   "tags": [
     "OpenAI",
     "GPT-6 Luna"
@@ -14,15 +14,31 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "OpenAI 在10月29日发布的系统卡补充说明中介绍 GPT-6 Luna 更新，称新版回答更简洁，并减少过度附和的表达。GPT-6 Luna 此前于10月7日进入 ChatGPT，此次属于同一模型的后续更新。"
+      "text": "OpenAI 10 月 29 日更新 GPT-6 Luna，称回答更简洁、减少过度附和。此次对照对象是 10 月 7 日版本；网络安全及生物化学能力仍按 High 等级处理，沿用相同防护体系。"
+    },
+    {
+      "type": "heading",
+      "text": "安全测试怎样构造"
     },
     {
       "type": "paragraph",
-      "text": "官方评估显示，新版在未成年人相关的性内容、饮食失调、情感依赖及血腥内容测试中有所改善。公司继续将其网络安全以及生物与化学能力按 High 等级处理，并沿用10月7日版本的防护体系。"
+      "text": "原系统卡说明，安全评测刻意挑选源自生产环境的困难和对抗性案例，判断回答是否遵守安全规则，分数不代表普通对话里的风险发生率。未成年人测试另设更严格的年龄边界；模型层评测不计入家长控制等系统级保护。"
     },
     {
       "type": "paragraph",
-      "text": "结果并非各项齐升：长度调整后的 HealthBench 总分由50.4降至48.2，MentalHealthBench 总体分数由51.73降至48.68。这些是 OpenAI 公布的特定基准结果，不能直接解释为每次真实对话都会出现同等变化。"
+      "text": "更新表中，未成年人情感依赖安全得分从 0.734 升至 0.870，饮食失调从 0.776 升至 0.817；性内容和血腥内容也有改善。另一方面，PDF 表 4 的间接提示注入防御率由 95.80% 降至 94.50%，按可用推理等级等权平均；不能只用直接指令层级测试的 99.91% 概括全部注入风险。"
+    },
+    {
+      "type": "heading",
+      "text": "健康分数已经校正回答长度"
+    },
+    {
+      "type": "paragraph",
+      "text": "HealthBench 用评分规则衡量健康回答。由于长回答更容易覆盖加分项，系统卡以 2,000 字符为基准校正长度，较长扣分、较短加分。MentalHealthBench 则包含 1,215 个合成对话任务，按临床专家制定的规则评分；每题生成四次，先取题内平均，再汇总各题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "新版 HealthBench 长度调整后总分为 48.2，旧版为 50.4；原始分也由 58.5 降至 54.0，不能把下降全部归因于回答变短。MentalHealthBench 总分由 51.73 降至 48.68。这些量表反映特定测试中的回答质量，不是诊断准确率或真实患者治疗效果。"
     }
   ],
   "coverProvenance": {
@@ -31,9 +47,20 @@
   },
   "sources": [
     {
-      "title": "Addendum to GPT-6 Luna System Card: October 29, 2026 Update",
+      "title": "OpenAI：GPT-6 Luna 10 月 29 日系统卡补充说明",
       "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum",
-      "accessed": "2026-10-30"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI：同一补充说明 PDF，表 2、4、5、6",
+      "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum/gpt-6-luna-october-28-2026-addendum.pdf",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI：10 月 7 日系统卡中的评测方法",
+      "url": "https://deploymentsafety.openai.com/gpt-6-october/safeguards",
+      "accessed": "2026-11-03"
     }
-  ]
+  ],
+  "revised": "2026-11-03"
 }

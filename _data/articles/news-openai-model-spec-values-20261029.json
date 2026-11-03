@@ -6,7 +6,7 @@
   "label": "AI 动态",
   "date": "2026-10-29",
   "title": "OpenAI 更新 Model Spec，以五项核心价值重组模型行为规范",
-  "summary": "新版增加上下文、监督与自主选择相关指引，并撤去大部分细节化的文风规定。",
+  "summary": "新版围绕五项价值重组规范；网页指令的权限与图像生成预算示例，具体说明模型应如何处理冲突和行动成本。",
   "tags": [
     "OpenAI",
     "Model Spec"
@@ -14,15 +14,27 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "OpenAI 于10月29日更新公开的 Model Spec，围绕忠于人类意图、减少伤害、诚实透明、人的自主性和关怀五项价值重新组织内容。这份文件描述的是公司希望模型达到的行为方式，而非新的模型产品。"
+      "text": "OpenAI 于 10 月 29 日更新公开的 Model Spec，以忠于人类意图、减少伤害、诚实透明、人的自主性和关怀五项价值组织行为规范。新版加强了上下文、监督和行动副作用方面的说明，并撤去多数细节化文风规定；客观回答等较强默认原则仍然保留。"
+    },
+    {
+      "type": "heading",
+      "text": "读到网页上的命令，不等于获得新指令"
     },
     {
       "type": "paragraph",
-      "text": "新版修订了处理指令冲突的规则，增加如何结合对话、记忆等上下文理解意图的说明，并扩展对行动副作用的控制与告知要求。多数细节化文风规定被移除，但客观回答等较强默认原则仍被保留。"
+      "text": "规范按权限处理指令冲突，同一权限下较新的指令可取代旧指令。网页、附件和工具输出默认是资料，不自动获得命令权。原文举例：网页要求模型插入特定链接，模型应忽略这种操纵。"
+    },
+    {
+      "type": "heading",
+      "text": "允许花 30 美元，不意味着必须花完"
     },
     {
       "type": "paragraph",
-      "text": "OpenAI 同时明确，现有模型尚未完全体现这份规范；文件更新代表训练和改进方向，不能等同于所有线上模型已经具备相应行为。"
+      "text": "原文设定：生成图片每张 1 美元，用户允许最多花 30 美元制作一张邀请函。试做三张、花 3 美元后交付成品属于合规示例；生成 30 张近似图耗完预算不合规，明知再试一次能改善结果却只为省钱停在差稿也不合规。预算是允许范围，模型仍应权衡成本与质量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这些是公开规范中的预期行为与示例，并非产品实测。OpenAI 明确表示，现有模型尚未完全体现这份规范，更新描述的是训练和改进方向。"
     }
   ],
   "coverProvenance": {
@@ -31,9 +43,15 @@
   },
   "sources": [
     {
-      "title": "An updated Model Spec for more capable and beneficial AI",
+      "title": "OpenAI：An updated Model Spec for more capable and beneficial AI",
       "url": "https://openai.com/index/updated-model-spec/",
-      "accessed": "2026-10-30"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "OpenAI：Model Spec，2026-10-29 版本",
+      "url": "https://model-spec.openai.com/2026-10-29.html",
+      "accessed": "2026-11-03"
     }
-  ]
+  ],
+  "revised": "2026-11-03"
 }

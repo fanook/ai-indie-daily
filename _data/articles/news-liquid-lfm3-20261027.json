@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "Liquid AI",
   "date": "2026-10-27",
-  "title": "Liquid AI发布LFM3小模型家族，覆盖文字、视觉与语音",
-  "summary": "LFM3开放模型权重，并把多种模态放在同一骨干架构上；小体积不等于能胜任复杂推理。",
+  "title": "Liquid AI 发布 LFM3：六款小模型分担文字、视觉与语音任务",
+  "summary": "LFM3 共用基础架构，但不同版本的输入输出、上下文和推理能力不同；官方评测显示文字工具任务与视频理解均有进步。",
   "tags": [
     "小模型",
     "多模态"
@@ -14,31 +14,79 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Liquid AI在Hugging Face发布的官方团队文章标注2026年10月27日。LFM3家族以约20亿参数级模型覆盖文字、视觉、音频、全模态和结构化决策，其中视觉模型新增视频输入，权重已在Hugging Face提供。"
+      "text": "Liquid AI 于 2026 年 10 月 27 日发布 LFM3 家族。它不是一个 17 亿参数模型包办所有模态，而是从同一基础模型分出六款约 20 亿参数级产品。团队通过包含实际硬件测试的架构搜索，把短卷积、局部注意力和全局注意力组合起来，目标是在有限内存中处理专门任务。"
+    },
+    {
+      "type": "heading",
+      "text": "六款模型各自接收什么、输出什么"
+    },
+    {
+      "type": "list",
+      "items": [
+        "LFM3-1.7B 接收和生成文字；LFM3-VL-2B 接收文字、图片和视频，回答仍是文字。",
+        "LFM3-Audio-2B 面向文字与音频，可生成文字或语音；LFM3-Omni-2B 再加入图片与视频输入。",
+        "d1-2B 与 d1-omni-2B 是决策版本，分别承接视觉和全模态输入，输出带校准的答案。"
+      ]
     },
     {
       "type": "paragraph",
-      "text": "文字版LFM3-1.7B模型卡列出17.3亿参数、256K词元上下文，并称4位精度下约需1GB内存。这些是官方规格及描述，不能推导为任何手机上的完整运行内存或固定速度保证。"
+      "text": "Omni 模型卡给出的用法包括把照片与口头问题一同输入，或对带声音的视频提问，再选择文字或语音回答。它是非推理模型，不支持打开 thinking 模式；不能把文字版的推理设置直接套到 Omni。"
+    },
+    {
+      "type": "heading",
+      "text": "评测进步发生在哪些任务"
     },
     {
       "type": "paragraph",
-      "text": "模型卡明确不推荐将这个小型文字模型用于代理式编程或复杂多步推理。许可为LFM Open License v1.0；开放权重不等于所有用途都没有许可限制。"
+      "text": "文字版模型卡中，WebArena-Verified 得分从前代 LFM2.5-2.6B 的 3.02 提高到 38.42，对照 Qwen3.5-9B 为 28.94。该项每个任务最多执行 40 步；模型以 BF16 在 vLLM 中评测。这是指定环境的网页任务成绩，不是所有代理任务的成功率。官方仍不推荐它处理代理式编程或复杂多步推理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "视觉版首次支持视频问答，例如询问录制课程的内容。模型默认每秒抽取两帧，使用 128K 上下文。在不带字幕的 Video-MME v1 中，官方给出的推理模式得分为 62.8，前代 LFM2.5-VL-3B 为 44.3，Qwen3.5-4B 为 71.1。该表采用 vLLM、各模型的推荐生成配置；结果显示提升，也显示它并非在所有对照中领先。"
+    },
+    {
+      "type": "heading",
+      "text": "小体积与许可的具体条件"
+    },
+    {
+      "type": "paragraph",
+      "text": "文字版为 17.3 亿参数、256K 输入加输出上下文；官方称 4 位精度下约占 1GB 内存。这一描述不是整套应用在任意设备上的内存保证，长上下文与运行框架也需占用资源。"
+    },
+    {
+      "type": "paragraph",
+      "text": "LFM Open License v1.0 对商业使用设有年收入 1000 万美元门槛，超过门槛的法律实体不能仅依该许可取得商业使用授权；再分发还须保留许可和相关声明。开放权重不等于无条件商用。"
     }
   ],
   "sources": [
     {
-      "title": "Liquid AI官方团队：Build specialized multimodal models with LFM3",
+      "title": "Liquid AI：Build specialized multimodal models with LFM3",
       "url": "https://huggingface.co/blog/LiquidAI/lfm3",
-      "accessed": "2026-10-28"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "LiquidAI/LFM3-1.7B官方模型卡",
+      "title": "LFM3-1.7B：规格、文字评测及评测配置",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-      "accessed": "2026-10-28"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "LFM3-VL-2B：视频输入、Video-MME 及评测方法",
+      "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "LFM3-Omni-2B：多模态用法与非推理模式",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "LFM Open License v1.0：官方模型仓库许可全文",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "本次未确认可直接用于该条报道的配图使用依据，暂不配图。"
-  }
+  },
+  "revised": "2026-11-03"
 }

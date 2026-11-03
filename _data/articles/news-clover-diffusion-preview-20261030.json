@@ -5,54 +5,68 @@
   "type": "新闻",
   "label": "开源模型",
   "date": "2026-10-30",
-  "title": "DiffuSpace 发布 Clover 扩散语言模型预览版，公开 35B 参数权重",
-  "summary": "10 月 30 日发布的纯文本 MoE 模型采用块扩散生成；官方性能数字附带硬件和精度条件，不能直接视作端到端任务速度。",
+  "title": "Clover 扩散语言模型公开权重：按块生成，编程评测与速度条件一并披露",
+  "summary": "35B 总参数、约 3B 激活参数的纯文本预览版提供任务对照；生成速度和整项任务耗时仍是不同指标。",
   "tags": [],
   "blocks": [
     {
       "type": "paragraph",
-      "text": "DiffuSpace 于 10 月 30 日发布 Clover-35B-A3B-Preview。官方模型卡列出约 350 亿总参数、每 token 约 30 亿激活参数和 128K 上下文，模型仅处理文本，基于 Qwen3.6-35B-A3B 架构改造。Hugging Face 权重页标注 Apache 2.0 许可。"
+      "text": "DiffuSpace 10 月 30 日发布 Clover-35B-A3B-Preview。模型卡列出 350 亿总参数、每 token 约 30 亿激活参数，输入与输出合计支持 128K 上下文，权重采用 Apache 2.0 许可。它基于 Qwen3.6-35B-A3B 改造，只处理文本。"
     },
     {
       "type": "heading",
-      "text": "按块生成，而非只逐个预测"
+      "text": "一块文本如何生成"
     },
     {
       "type": "paragraph",
-      "text": "模型保留 Gated DeltaNet 与完整注意力的混合骨干，引入块内双向交互，在保留已有前缀的同时对一块文本进行去噪生成。官方发布了模型权重及推理相关代码，并展示编程和工具调用评测。"
+      "text": "官方 Hugging Face 实现先放入一块待填位置，再并行填入置信度足够高的 token；没有位置过线时，至少填入最有把握的一个。整块完成后才加入历史前缀，继续下一块。默认块长 32、阈值 0.95，块内信息可以双向交互。"
     },
     {
       "type": "heading",
-      "text": "速度数字对应的条件"
+      "text": "质量对照：不是只有速度数字"
     },
     {
       "type": "paragraph",
-      "text": "发布团队称，在单张 NVIDIA GB300、BF16 精度、批大小 1 的内部 Agent 工作负载上，整体生成速度达到每秒 680 token。这个数字来自厂商测试，衡量文本生成，不包含所有外部工具等待，也不是每项任务都能达到的固定速度。"
+      "text": "官方评测图中，Clover 在 SWE-bench Verified 软件修复任务得 73.6，Qwen3.6-35B-A3B 为 65.8；在 Terminal-Bench 2.1 命令行任务中为 51.7 对 43.1；τ³ 综合工具任务得分为 65.3 对 43.4。这些是团队发布的指定模型和测试配置对照，不能扩展为所有 Agent 任务的胜率。"
     },
     {
       "type": "paragraph",
-      "text": "官方仓库的 BF16 示例要求约 69 GB 权重空间之外再预留推理状态内存；约 30 亿激活参数不代表只需加载 30 亿参数。团队另行报告了 16 GB 显存 RTX 5070 Ti 上的 INT4 部署，测试精度与任务条件不同，不能与 BF16 结果直接混作同一配置。"
+      "text": "速度测试使用单张 NVIDIA GB300、BF16 精度、批大小 1 的内部 Agent 工作负载，报告生成速度 680 token/秒；同文的 H200 对照为 Clover 515、DFlash2 加速方案 365 token/秒。它测的是生成环节，不是包含网页加载和工具等待的整项任务耗时。"
+    },
+    {
+      "type": "heading",
+      "text": "部署条件和长输出限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方代码说明，BF16 权重约占 69 GB，推理状态还需额外内存；“3B 激活”不代表只加载 3B 权重。模型卡也记录长输出可能重复，不同推理后端可能生成不同文本。因此同一模型的量化、解码设置与后端，都是复现评测时需要保留的条件。"
     }
   ],
   "sources": [
     {
-      "title": "DiffuSpace 官方团队发布文章",
+      "title": "DiffuSpace：Clover 发布文章与评测图",
       "url": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview",
-      "accessed": "2026-11-02"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "官方模型卡",
+      "title": "DiffuSpace：官方发布页及原始评测图",
+      "url": "https://diffuspace.ai/blog/clover-35b/",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Clover 官方模型卡：架构、解码和限制",
       "url": "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview",
-      "accessed": "2026-11-02"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "官方代码与推理说明",
+      "title": "Clover 官方代码与推理说明",
       "url": "https://github.com/DiffuSpace/Clover-35B-A3B-Preview",
-      "accessed": "2026-11-02"
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "已检查官方模型卡、发布文章与代码仓库；评测图的独立转载授权未确认，模型权重许可不自动用作全部宣传图片的授权依据。"
-  }
+  },
+  "revised": "2026-11-03"
 }

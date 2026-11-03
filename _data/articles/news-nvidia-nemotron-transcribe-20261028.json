@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "语音模型",
   "date": "2026-10-28",
-  "title": "NVIDIA发布Nemotron 3.5 Transcribe，支持40种语言录音转写",
-  "summary": "同一模型可处理转写、翻译、说话人区分和音频问答，但并非实时流式语音服务。",
+  "title": "NVIDIA 发布 Nemotron 3.5 Transcribe：从录音转写到按说话人整理",
+  "summary": "模型支持 40 种语言转写；官方公开了多语、长录音与多人转写结果，并用按说话人留出的医疗语音样本检验微调效果。",
   "tags": [
     "NVIDIA",
     "语音识别",
@@ -15,15 +15,43 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "NVIDIA于10月28日发布开放权重模型Nemotron 3.5 Transcribe。官方资料列出40种语言转写、最长一小时录音，以及文字指令控制输出的能力。说话人标签用于区分录音中的不同发言者，不代表识别真实身份。"
+      "text": "NVIDIA 于 2026 年 10 月 28 日发布开放权重的 Nemotron 3.5 Transcribe。它处理已录制音频，支持最长一小时录音和 40 种语言转写；31 种语言支持与英语互译，13 种支持区分说话人，最多标记八人。说话人标签表示录音中的发言归属，不是确认真实身份。"
+    },
+    {
+      "type": "heading",
+      "text": "同一段录音，指令改变输出"
     },
     {
       "type": "paragraph",
-      "text": "发布文章称，31种语言支持与英语互译，13种支持说话人区分，最多标记八名发言者；音频问答主要以英语训练。不同任务的语言覆盖并不相同，模型面向已录制音频，不是实时流式识别服务。"
+      "text": "官方展示了三类请求：把会议逐字转写并标记发言人、把录音翻译成英语、提取会议作出的决定。音频问答主要以英语训练，不能由“40 种语言转写”推出所有任务都有相同语言覆盖；该模型也不是实时流式识别服务。"
+    },
+    {
+      "type": "heading",
+      "text": "错误率如何比较"
     },
     {
       "type": "paragraph",
-      "text": "配套Granary v2公开清单覆盖48种语言、16个来源语料库及约46.3万小时数据；这不等于模型的完整训练混合。模型采用OpenMDW-1.1许可，来源音频仍受各自许可约束。"
+      "text": "官方模型卡的不含中文的七语言 Open ASR 对照中，平均词错误率为 4.62%，Qwen3-ASR-1.7B 为 6.49%；长录音平均为 10.98%，Parakeet-TDT-0.6B-v3 为 13.37%。词错误率统计相对参考文本的替换、遗漏和多写，越低越好。这些均是测试集平均，不能解释为每段录音都有同样准确率。"
+    },
+    {
+      "type": "paragraph",
+      "text": "多人转写另用 cpWER：先匹配预测的说话人标签，再计算转写错误。AMI、CALLHOME、Mixer 6、NOTSOFAR-1 完整录音的平均值为 15.80%，对照 DiCoW v3.3 加 DiariZen 为 16.83%。同一模型在 AMI 的个人耳麦录音上为 10.29%，远场单麦为 17.34%，可见录音条件会影响结果。模型采用 OpenMDW-1.1 许可。"
+    },
+    {
+      "type": "heading",
+      "text": "医疗语音实验怎样检验新说话人的表现"
+    },
+    {
+      "type": "paragraph",
+      "text": "配套 NeMo 实验针对印度医生及医学生的英语录音。研究者把数据按说话人划为 855 段调参录音和 2,764 段留出录音，前者用于选择提示词和模型，后者用于最终评估。训练结合合成医疗语音、带口音的通用英语和真实医疗录音，并过滤与评测文本重合的训练片段。"
+    },
+    {
+      "type": "paragraph",
+      "text": "使用同一 KARMA 评分流程，留出集词错误率从最佳提示词基线的 22.44% 降至微调后的 12.17%，相对下降 45.8%。这不是基础模型开箱即用的成绩，也不是下降了 45.8 个百分点。代价是通用 LibriSpeech test-clean 的错误率从 1.54% 小幅升至 1.69%；品牌药名精确匹配仍落后于对照的医疗专用模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配套 Granary v2 提供约 46.3 万小时、48 种语言的数据清单，不是完整模型训练集；原始音频仍受各自许可约束。"
     }
   ],
   "coverProvenance": {
@@ -32,14 +60,20 @@
   },
   "sources": [
     {
-      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2",
+      "title": "NVIDIA：Nemotron 3.5 Transcribe 与 Granary v2 发布说明",
       "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
-      "accessed": "2026-10-29"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "NVIDIA-Nemotron-3.5-Transcribe-30B-A4B model card",
+      "title": "Nemotron 3.5 Transcribe 官方模型卡：任务与分项评测",
       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-      "accessed": "2026-10-29"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "NVIDIA NeMo：医疗语音微调实验、留出方法与结果",
+      "url": "https://github.com/NVIDIA-NeMo/Speech/blob/main/examples/speechlm2/finetuning/docs/medical-asr-synthetic-data.md",
+      "accessed": "2026-11-03"
     }
-  ]
+  ],
+  "revised": "2026-11-03"
 }

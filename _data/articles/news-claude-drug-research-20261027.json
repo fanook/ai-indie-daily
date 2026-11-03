@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "Anthropic",
   "date": "2026-10-27",
-  "title": "Anthropic披露六家机构的药物研发合作，多数研究仍处临床前阶段",
-  "summary": "官方案例涉及分子设计、实验分析与文档审核，尚不能据此判断新药在人类患者中的疗效。",
+  "title": "Claude 药研合作披露实验结果：改造抗体，也协助审核生产记录",
+  "summary": "六家合作覆盖不同研发环节；分子实验和文档审核各有进展，尚不是人体疗效结论。",
   "tags": [
     "AI科研",
     "真实工作流"
@@ -14,26 +14,52 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Anthropic在标注2026年10月27日的研究文章中，介绍了过去数月与六家机构推进的药物研发合作，伙伴包括Generate Biomedicines、Divergence Labs、BigHat Biosciences、Enveda、The Column Group及Bristol Myers Squibb。"
+      "text": "Anthropic 10 月 27 日公布六家机构的药研合作。三个代表案例分别考察治疗结构、候选分子性质和生产记录审核，测量的不是同一种“药研成功率”。"
+    },
+    {
+      "type": "heading",
+      "text": "分子设计经过实验室检验"
     },
     {
       "type": "paragraph",
-      "text": "其中，Enveda把生产文档接入Claude用于问题筛查。按官方报告，在1,061页文档测试中，系统找出了人工已发现的11个问题及另外7个问题，人工审核耗时由超过25小时降至不足3小时。这是特定测试的结果，并非所有监管文档都能达到同样表现。"
+      "text": "据 Anthropic 报告，Generate Biomedicines 的六名科学家用 Claude Code 改造 CAR T 疗法的一段遗传指令，为其他功能腾出空间。一种设计缩短约 70%；实验室测试中，免疫细胞产生的受体约增至十倍，杀伤肿瘤细胞更有效、活性维持更久。"
     },
     {
       "type": "paragraph",
-      "text": "另一些合作涉及抗体设计与实验反馈。Anthropic强调这些工作仍属早期，且多数尚未进入人体测试；实验室结果不能等同于获批疗法或已证实的临床收益。"
+      "text": "BigHat 则让 Claude 读取实验数据、提出抗体片段变体，实验室在约十周测试了约 1,010 种。团队发现常用稳定性指标可能误导判断，重新分析原始数据并由科学家调整实验。最佳变体的结合能力提高逾十倍；这仍是候选分子的实验指标，不是患者获益。"
+    },
+    {
+      "type": "heading",
+      "text": "生产记录：模型提问题，人来裁定"
+    },
+    {
+      "type": "paragraph",
+      "text": "Enveda 的技术报告测试了同一临床项目的四份生产批记录，共 1,061 页。CDP 系统把连续页面及关联标准交给 Claude，以批注返回疑点，不改原件。内部人员和外部顾问也审核这些记录，再由两人统一判定哪些问题需要处理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "报告中的 11 项人工发现，均被 CDP 在至少一次运行中检出；Opus 4.7 对这四份记录的一次 CDP 审核新增了人工未提出的 7 项有效问题。但约八成批注无需行动，仍需人工筛选。处理加复核用时为 166 分钟，人工独立审核为 1,553 分钟；比较只覆盖这四份记录。"
+    },
+    {
+      "type": "paragraph",
+      "text": "修订说明：此前“找出了人工发现的全部 11 个问题”的表述不够精确，现补明多次运行口径，不能读成每次运行都零漏检。"
     }
   ],
   "sources": [
     {
       "title": "Anthropic：Early progress on accelerating drug development with Claude",
       "url": "https://www.anthropic.com/research/early-progress-drug-development",
-      "accessed": "2026-10-28"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Enveda：CDP 药品生产批记录审核技术报告",
+      "url": "https://enveda.com/CMC-Document-Processor/",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "已核对官方原文研究配图，但未确认该图片的转载使用依据，因此暂不配图。"
-  }
+  },
+  "revised": "2026-11-03"
 }

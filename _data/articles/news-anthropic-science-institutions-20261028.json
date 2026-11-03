@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "AI 科研",
   "date": "2026-10-28",
-  "title": "Anthropic扩展AI for Science计划，公布20家机构与团队合作",
-  "summary": "科研支持从个人研究者扩展到基金会、科研机构和项目，主要提供Claude使用额度。",
+  "title": "Anthropic 扩展 AI for Science 计划，公布 20 家机构与团队合作",
+  "summary": "免费 Claude 额度支持从个人扩展至科研组织；AstroPath 的肿瘤细胞地图与 gnomAD 的遗传变异数据库展示了两种具体研究基础。",
   "tags": [
     "Anthropic",
     "科研支持"
@@ -14,15 +14,31 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Anthropic于10月28日公布AI for Science计划的扩展，列出20家科学基金会、机构与研究团队。该计划自2025年5月启动，为科研项目提供免费Claude额度；此次新增了由科研组织分配或使用额度的合作方式。"
+      "text": "Anthropic 于 10 月 28 日公布 AI for Science 计划的扩展，列出 20 家科学基金会、机构与研究团队。计划自 2025 年 5 月启动，主要提供免费 Claude 使用额度；此次既包括由 Sloan、Simons 等基金会向研究者分配额度，也包括机构内部使用和对具体项目的支持。"
+    },
+    {
+      "type": "heading",
+      "text": "AstroPath：把天文测绘方法用于肿瘤细胞地图"
     },
     {
       "type": "paragraph",
-      "text": "名单包括Sloan与Simons基金会、美国国家科学基金会、空间望远镜科学研究所、Wellcome Sanger Institute等。项目层面的支持涉及果蝇神经连接图、气候建模、基因组资源及数学形式化。"
+      "text": "约翰斯·霍普金斯大学的 AstroPath 以肿瘤影像为输入，借用斯隆数字巡天的数据基础设施，绘制癌细胞、免疫细胞及周边细胞的位置与相互关系，研究哪些生物标志物与免疫治疗反应有关。"
     },
     {
       "type": "paragraph",
-      "text": "公司同时介绍了与HHMI Janelia共同开发的Model Hardware Standard，目标是让AI代理操作实验仪器，目前仍属研究预览。Anthropic表示，多项合作尚在早期；此次公告是资源支持与合作范围的更新，而非这些项目已经产生科学突破的证明。"
+      "text": "院方在 10 月 29 日说明，团队正在用受监督的 AI 工具加快细胞识别和轮廓标注，相关任务可在数分钟内完成，并尝试把空间地图与遗传、分子信息结合。这是既有平台的研究进展，不是此次 Claude 资助已经提高治疗效果的结论。"
+    },
+    {
+      "type": "heading",
+      "text": "gnomAD：为罕见病研究提供遗传变异参照"
+    },
+    {
+      "type": "paragraph",
+      "text": "Broad Institute 的 gnomAD 汇集人类 DNA 数据，形成可查询的遗传变异参考资源。其 2023 年发布的 v4 数据集包含 807,162 人：730,947 份外显子组与 76,215 份全基因组，统一比对到 GRCh38 参考基因组。外显子组数据经合并、覆盖度及样本质量筛选后发布，人数不是模型测试样本，也不是此次资助新增的数据量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "此次公告把 gnomAD 列为额度支持项目，未报告新的 Claude 对照实验结果。Anthropic 表示，多项合作仍在早期；与 HHMI Janelia 合作的实验仪器接口 Model Hardware Standard 也仍为研究预览。"
     }
   ],
   "coverProvenance": {
@@ -31,9 +47,20 @@
   },
   "sources": [
     {
-      "title": "AI for Science expands to foundations and research institutions",
+      "title": "Anthropic：AI for Science expands to foundations and research institutions",
       "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
-      "accessed": "2026-10-29"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Johns Hopkins Medicine：AstroPath 入选 AI for Science 项目",
+      "url": "https://www.hopkinsmedicine.org/news/newsroom/news-releases/2026/10/johns-hopkins-researchers-cancer-cell-mapping-technology-chosen-for-anthropic-ai-for-science-project",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "gnomAD：v4.0 数据规模与质量控制说明（2023 年）",
+      "url": "https://gnomad.broadinstitute.org/news/2023-11-gnomad-v4-0/",
+      "accessed": "2026-11-03"
     }
-  ]
+  ],
+  "revised": "2026-11-03"
 }

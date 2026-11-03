@@ -2,11 +2,11 @@
   "id": "ideas-nintendo-indie-world-preview-20261028",
   "slug": "ideas-nintendo-indie-world-preview-20261028",
   "category": "ideas",
-  "type": "活动预告",
+  "type": "活动报道",
   "label": "独立游戏",
   "date": "2026-10-28",
-  "title": "任天堂Indie World将于北京时间10月28日22时播出",
-  "summary": "官方预告约15分钟，内容聚焦Switch 2与Switch上的独立游戏新消息。",
+  "title": "任天堂 10 月 28 日 Indie World 已播出，官方列出 16 款游戏",
+  "summary": "官方页面已更新展示作品与回看入口，包括 Witchbrook、Tenjutsu 和 Slime Rancher 2；本文保留原预告日期，补入会后信息。",
   "tags": [
     "独立游戏",
     "Nintendo"
@@ -14,22 +14,46 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "任天堂官方Indie World页面确认，新一期展示会定于2026年10月28日太平洋时间上午7时播出，即北京时间10月28日22时，时长约15分钟。"
+      "text": "11 月 3 日更新：本条原为 10 月 28 日展示会的播前预告。活动已经结束，任天堂官方页面现列出 16 款展示作品，并保留视频入口。原预告所说的约 15 分钟，是当时公布的节目预计时长。"
+    },
+    {
+      "type": "heading",
+      "text": "展示了哪些作品"
     },
     {
       "type": "paragraph",
-      "text": "官方预告范围是即将登陆Nintendo Switch 2和Nintendo Switch的独立游戏新公告与更新。截至本期北京时间09:30截稿，展示会尚未开始；本条记录的是活动预告，而不是已公布的游戏名单或发售结果。"
+      "text": "官方名单包括 Witchbrook、Spirit Crossing、RACCOIN: Chaos Max Edition、Tenjutsu、Sword of the Sea、Slime Rancher 2、R.E.P.O 与 Super Battle Golf 等，内容面向 Nintendo Switch 2 和 Nintendo Switch。列入展示名单不代表每款游戏都已发售，也不代表全部作品都支持两款主机。"
+    },
+    {
+      "type": "paragraph",
+      "text": "其中，Chucklefish 已确认 Witchbrook 将于 2027 年 1 月 28 日推出。官方发售日预告展示了施法、学习、制药和塔罗等内容，并宣布 PS5 与 PC、Switch 系列及 Xbox 同期推出。本站另文介绍了它的魔法学院与小镇生活玩法。"
+    },
+    {
+      "type": "link",
+      "text": "阅读本站的 Witchbrook 报道",
+      "url": "https://daily.yifanook.com/article.html?id=ideas-witchbrook-release-20261028"
+    },
+    {
+      "type": "link",
+      "text": "查看任天堂官方展示名单与视频",
+      "url": "https://www.nintendo.com/us/indie-world/showcase/"
     }
   ],
   "sources": [
     {
-      "title": "Nintendo官方：Indie World Showcase 10.28.2026",
+      "title": "Nintendo：Indie World Showcase 10.28.2026 展示作品与视频",
       "url": "https://www.nintendo.com/us/indie-world/showcase/",
-      "accessed": "2026-10-28"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Chucklefish：Witchbrook Release Date Announcement",
+      "url": "https://www.witchbrook.com/release-date/",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "官方页图片为Indie World通用标志，图片抓取未成功，亦未确认本条预告的可用报道素材，暂不配图。"
-  }
+  },
+  "revised": "2026-11-03"
 }

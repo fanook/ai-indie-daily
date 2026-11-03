@@ -5,8 +5,8 @@
   "type": "新闻",
   "label": "Anthropic",
   "date": "2026-10-27",
-  "title": "Anthropic披露内部模型发现的五类软件攻击链，称相关漏洞已交厂商处理",
-  "summary": "报告涉及浏览器及操作系统，使用的是尚未发布的内部研究模型，不是一次面向公众的新模型发布。",
+  "title": "Claude 漏洞研究披露五组攻击链，发现之后仍需核验和修补",
+  "summary": "内部模型在浏览器和操作系统中串联漏洞；研究说明了扫描、复现与披露流程。",
   "tags": [
     "AI安全",
     "研究"
@@ -14,26 +14,53 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Anthropic Frontier Red Team在标注2026年10月27日的文章中，披露过去数月利用尚未发布的内部研究模型发现软件漏洞的工作。报告覆盖Chrome、Safari、Android、Windows及Linux中的五类攻击链。"
+      "text": "Anthropic 10 月 27 日披露内部研究模型在 Chrome、Safari、Android、Windows 和 Linux 中发现的五组攻击链。它尚未公开发布，不等于普通聊天产品的能力。"
+    },
+    {
+      "type": "heading",
+      "text": "并行扫描，再复现和核验"
     },
     {
       "type": "paragraph",
-      "text": "官方称，各项漏洞已通过协调披露流程报告给对应厂商，文中所述问题已有修复或处理。例如Chrome相关发现获分配62个CVE，并在Chrome 156时得到修补。这里描述的是研究与披露结果，不代表所有用户设备已经安装更新。"
+      "text": "研究平台按代码覆盖、数据安全目标和产品威胁模型并行扫描，补齐未覆盖区域，并对已确认问题查找同类变体。发现经过统一验证和风险评级；研究人员仍负责给定目标和初始指令。"
     },
     {
       "type": "paragraph",
-      "text": "这也不是“Claude完全无人参与攻击”的证明：文章描述了研究人员的初始指令、扫描平台和标准化验证流程。成果来自内部模型及研究系统，不能直接视为当前公开聊天产品的能力保证。"
+      "text": "Android 案例结合源码分析、闭源组件逆向和 Pixel 9 真机测试，验证锁屏保护失效。Windows 案例先还原二进制行为并进行比对，再找到可令特定网络服务崩溃的问题。Anthropic 称两者已获厂商处理；Chrome 研究共有 62 个 CVE，包含 13 个沙箱逃逸问题。"
+    },
+    {
+      "type": "heading",
+      "text": "模型发现、人工确认与设备修复分属不同阶段"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anthropic 的协调披露规则说明，通常发送的是人工研究者已复核的报告，并标明 AI 参与；有可用候选修复时一并提供，再与维护者协作。补丁发布后通常还等 45 天才公开完整技术细节，让下游有时间部署。报告给厂商、厂商发布补丁、用户设备安装更新，是三个不同节点。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Chrome 官方公告确认，156 稳定版于 10 月 20 日开始向 Windows、Mac 和 Linux 分批推出，列有安全修复和研究者署名。该版本全部安全修复来自多方，不能都计作 Claude 的发现；上线公告也不表示所有设备已经完成更新。"
     }
   ],
   "sources": [
     {
       "title": "Anthropic：Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
       "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
-      "accessed": "2026-10-28"
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Anthropic：协调漏洞披露规则",
+      "url": "https://www.anthropic.com/coordinated-vulnerability-disclosure",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "Chrome：156 桌面稳定版与安全修复公告",
+      "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html",
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
     "status": "unavailable",
     "reason": "本次未确认可直接用于该条报道的配图使用依据，暂不配图。"
-  }
+  },
+  "revised": "2026-11-03"
 }

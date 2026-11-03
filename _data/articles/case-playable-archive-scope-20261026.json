@@ -6,7 +6,7 @@
   "label": "独立游戏",
   "date": "2026-10-26",
   "title": "Playable Archive 免费上线 Steam，时长约 30–60 分钟",
-  "summary": "DarkStone Digital 开发、DreadXP 发行的恐怖短篇于 10 月 26 日推出；官方说明没有存档系统，需要一次完成。",
+  "summary": "DarkStone Digital 的免费恐怖短篇围绕一对夫妻装修时发现的神秘物件展开，包含仪式、亡灵交流与多条时间线；官方标注约 30–60 分钟，无存档。",
   "tags": [
     "独立游戏",
     "恐怖游戏",
@@ -15,7 +15,15 @@
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Playable Archive 于 2026 年 10 月 26 日在 Steam 免费推出，开发者为 DarkStone Digital，发行商为 DreadXP。"
+      "text": "Playable Archive 于 2026 年 10 月 26 日在 Steam 免费推出，由 DarkStone Digital 开发、DreadXP 发行。官方标注流程约 30–60 分钟，没有存档系统，需要一次完成。"
+    },
+    {
+      "type": "heading",
+      "text": "从装修现场留下的影像进入故事"
+    },
+    {
+      "type": "paragraph",
+      "text": "故事从新英格兰一对夫妻装修住宅时发现神秘物件开始。匿名举报者留下了一份记录异常事件的档案，但报告称，收集到影像时并未找到那件物品。官方介绍将查看档案、接触其中的符号作为叙事入口，列出的体验包括举行恶魔仪式、与亡灵交流，以及经历多条时间线。"
     },
     {
       "type": "image",
@@ -24,42 +32,42 @@
       "caption": "游戏中的桌面场景。来源：DarkStone Digital / DreadXP 官方截图画廊。"
     },
     {
+      "type": "heading",
+      "text": "检视物件之外，还有手电筒与物品栏操作"
+    },
+    {
       "type": "paragraph",
-      "text": "官方商店以神秘档案、异常事件与仪式介绍游戏的恐怖叙事，并将游戏时长标为约 30–60 分钟。商店明确说明没有存档系统，需要一次玩完；该时长为官方描述。"
+      "text": "10 月 27 日的 PA-005 官方补丁进一步列出物品检视、滑动物件、手电筒与物品栏等交互。作者为不同检视和滑动操作增加灵敏度滑块，并补上手电筒等手柄按键、修正物品栏开关响应；公告称已走查这些按键，但还没有加入按键重绑定。"
     },
     {
       "type": "heading",
-      "text": "内容来自已取消的项目"
+      "text": "取消项目留下的可玩短篇"
     },
     {
       "type": "paragraph",
-      "text": "作者在发布公告中表示，原计划作为下一部大作的项目已取消。DreadXP 后来提出发布已有成果的想法，他据此调整并打磨部分内容，形成此次推出的 Playable Archive，仍有不少原有工作未被保留。"
-    },
-    {
-      "type": "paragraph",
-      "text": "这段开发背景依据 SteamDB 对作者公告的二手转录；Steam Community 原公告正文此次无法直接读取。Steam 商店的发行日期、免费状态、时长和存档说明已直接核实。"
+      "text": "作者 Brian 在发布公告中说明，这原本是他筹备数年的下一部大型作品，项目取消后，DreadXP 提议把已有成果发布出来。他重新调整并打磨内容，仍舍弃了不少工作，最终以免费短篇形式推出。11 月 3 日补核：本段已直接核对作者原始 Steam 公告，取代此前依赖二手转录的依据。"
     }
   ],
   "sources": [
     {
       "title": "Steam：Playable Archive 官方商店",
       "url": "https://store.steampowered.com/app/5356470/Playable_Archive/",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "作者原始 Steam 公告入口（正文此次未能直接读取）",
+      "title": "DarkStone Digital：Playable Archive - Free Surprise Micro-Horror（原始发布公告）",
       "url": "https://steamcommunity.com/games/5356470/announcements/detail/712290127331727682",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
     },
     {
-      "title": "SteamDB：作者发布公告的二手转录",
-      "url": "https://steamdb.info/patchnotes/26137575/",
-      "accessed": "2026-10-27"
+      "title": "DarkStone Digital：Minor Hot Fix (PA-005)，交互与手柄修正",
+      "url": "https://steamcommunity.com/games/5356470/announcements/detail/712290127331728831",
+      "accessed": "2026-11-03"
     },
     {
-      "title": "DreadXP：Playable Archive 官方截图画廊",
+      "title": "DreadXP：Playable Archive 官方介绍与截图画廊",
       "url": "https://dreadxp.com/playable-archive/",
-      "accessed": "2026-10-27"
+      "accessed": "2026-11-03"
     }
   ],
   "coverProvenance": {
@@ -71,7 +79,7 @@
     "rightsNote": "官方宣传截图，由 DarkStone Digital / DreadXP 发布；用于本篇游戏发行报道的必要图像引用。版权归原权利人，不作为开放许可素材再分发；原图未改动，列表显示可能裁切。",
     "imageURL": "https://dreadxp.com/wp-content/uploads/2026/10/Shot1-1024x574.png"
   },
-  "revised": "2026-10-27",
+  "revised": "2026-11-03",
   "cover": {
     "src": "./assets/covers/playable-archive-official-20261026.png",
     "alt": "Playable Archive 官方截图：昏暗房间的木桌上放着油灯、打开的盒子和带符号的物件。"

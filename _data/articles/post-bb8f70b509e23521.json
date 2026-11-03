@@ -2,74 +2,73 @@
   "category": "news",
   "label": "独立游戏观察",
   "date": "2026-10-19",
-  "title": "AI 辅助快速克隆引发独立开发者担忧",
-  "summary": "媒体报道了开发者因快速仿制风险调整 Demo 计划。应区分公开玩法、素材或代码复制指控，以及尚未确认的法律结论。",
-  "facts": "PC Gamer 10月19日周报讨论了 AI 辅助游戏制作和模仿的争议。报道包含作者评论，不应等同于平台官方结论。",
-  "value": "小团队需要同时考虑早期试玩反馈、玩法保护和长期内容差异化。",
-  "action": "公开测试聚焦核心乐趣，同时保留中后期内容与机制惊喜。",
+  "title": "《酒鬼女神的酒诡》改为封闭试玩：管理成本与仿制担忧并存",
+  "summary": "Steam 原公告列出两项原因；另一宗干草游戏代码争议属于开发者指控，不能当作已证实的 AI 克隆案例。",
+  "facts": "详见正文中的原始公告核查。",
+  "value": "",
+  "action": "",
   "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
   "type": "新闻",
   "id": "post-bb8f70b509e23521",
   "legacyIndex": 8,
-  "verification": "secondary-source",
   "slug": "post-bb8f70b509e23521",
   "sources": [
     {
-      "title": "PC Gamer：Steam Week in Review（本条已读的报道原文）",
-      "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
-      "accessed": "2026-10-22"
+      "title": "Alliance Arts：关于《酒鬼女神的酒诡》试玩版公开方式变更的通知",
+      "url": "https://store.steampowered.com/news/app/4150720/view/746066581090468248",
+      "accessed": "2026-11-03"
     },
     {
-      "title": "Alliance Arts：Drunken Goddess Reflux Demo 计划调整公告（已定位，正文尚待独立复核）",
-      "url": "https://store.steampowered.com/news/app/4150720/view/746066581090468248",
-      "accessed": "2026-10-22"
+      "title": "NoGlyph：Another game stealing our code...",
+      "url": "https://store.steampowered.com/news/app/5085740/view/716793092553835480",
+      "accessed": "2026-11-03"
+    },
+    {
+      "title": "PC Gamer：Steam Week in Review，2026 年 10 月 19 日",
+      "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-steam-next-fest-has-over-8-000-demos-as-worthless-vibe-coded-slop-levels-up/",
+      "accessed": "2026-11-03"
     }
   ],
   "blocks": [
     {
+      "type": "paragraph",
+      "text": "PC Gamer 10 月 19 日周报报道了《酒鬼女神的酒诡》试玩计划调整。Alliance Arts 已于 10 月 16 日公告，取消原定 10 月 19 日公开的 Demo，改为封闭线上测试。"
+    },
+    {
       "type": "heading",
-      "text": "开发者为何调整 Demo 计划"
+      "text": "原公告不是只提“害怕 AI”"
     },
     {
       "type": "paragraph",
-      "text": "PC Gamer 的 2026 年 10 月周报讨论了快速仿制对独立游戏宣传的影响，并链接到 Alliance Arts 对 Drunken Goddess Reflux 试玩计划的调整公告。报道转述：团队担忧公开 Demo 后，呈现方式与玩法可能被快速仿制，因此转向受控试玩。该选择属于具体团队的风险判断，不代表所有独立项目都应该停止发 Demo。"
-    },
-    {
-      "type": "heading",
-      "text": "区分团队声明与复制指控"
+      "text": "团队列出了两个原因。第一，原计划对游戏视频投稿和直播加以限制，但判断现有运营人员难以妥善管理；第二，担心公开试玩内容被人借助 AI 等工具快速模仿，并抢在正式发售前发布。第二项是对未来风险的判断，公告没有指认某款已复制本作的游戏。"
     },
     {
       "type": "paragraph",
-      "text": "上述计划调整依据 PC Gamer 的转述，开发者公告全文尚未独立核验。报道中另一开发者提出的代码复制指控也尚无定案，不能据此认定被指控方已经侵权。"
+      "text": "团队仍安排发售前试玩：玩家先同意参加条件与视频规则，再进入封闭测试。简体中文公告采用报名后随机抽选的方式，以邮件通知入选者。取消公开下载并不等于取消全部试玩。"
     },
     {
       "type": "heading",
-      "text": "小团队面对的是发布取舍"
+      "text": "另一宗争议提出的是代码匹配证据"
     },
     {
       "type": "paragraph",
-      "text": "以下是本站的产品分析，不是法律意见。公开试玩能收集反馈、检验上手过程，也会更早暴露核心创意的表达方式；闭门试玩能控制参与范围，却可能减少自然传播和样本多样性。决定公开到什么程度前，先问清楚：现在最需要验证玩法是否成立、操作是否易懂，还是宣传是否能触达目标玩家？三种目标并不需要同样的试玩内容。"
-    },
-    {
-      "type": "heading",
-      "text": "一个不依赖猜测的应对清单"
-    },
-    {
-      "type": "steps",
-      "items": [
-        "为当前版本保留源文件、提交记录、素材来源与制作过程。这样至少能清晰说明自己做了什么，不必事后靠记忆补材料。",
-        "把试玩内容划为必需展示与可以后置两组。公开版应能兑现玩法承诺，但不必一次放出所有关卡、叙事反转和未完成资源。",
-        "若选择受控试玩，先明确参加范围、反馈方式和录屏规则；不要临时向玩家承诺自己没有准备执行的保密措施。",
-        "看到相似作品时，先保存具体证据并区分相似机制、相似表达、素材和代码问题。不要仅靠截图或“像 AI 生成”就公开下结论。"
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "AI 的角色需要单独说明"
+      "text": "周报还提到 NoGlyph 对《A Game About Needle In A Haystack》的指控。NoGlyph 在 10 月 17 日的 Steam 声明中称，在对方文件里发现干草系统的 13 个同名类、该部分超过半数函数完全匹配，以及连本作特有报错都保留下来的情况，其中一条指向对方游戏并不存在的着色器。"
     },
     {
       "type": "paragraph",
-      "text": "AI 可以降低试验门槛，但“使用 AI”本身不能证明复制，也不能证明原创。对自己的项目，更可控的做法是保留输入素材与工具使用记录，审查输出的来源和一致性，把迭代速度用在验证独特体验上。是否需要法律处理应交由了解完整事实的专业人士判断，不能由这篇报道推导出统一做法。"
+      "text": "NoGlyph 称这些代码对应自己 9 月 20、21 日公开的 Demo，并表示已向 Valve 提交版权通知。声明同时把争议限制在干草代码，称据其判断，对方美术、声音和其他系统是自行制作。原公告列出了开发者所述的比对发现，但没有附可供读者复核的完整文件，也没有证明 AI 被用于复制。"
+    },
+    {
+      "type": "heading",
+      "text": "报道评论不能代替调查结论"
+    },
+    {
+      "type": "paragraph",
+      "text": "这两件事的证据不同：一件是已经宣布的试玩政策调整，另一件是有具体线索描述、仍需核实的代码复制指控。PC Gamer 对大量相似游戏与 AI 的批评属于作者评论；上述两份公告本身不能证明平台上相似作品的总体来源，也不能代替 Valve 的处理结果或法律认定。"
+    },
+    {
+      "type": "paragraph",
+      "text": "11 月 3 日修订：已直接核对两份 Steam 原公告，补入此前遗漏的视频管理原因与代码指控范围，删除了原稿中与新闻事实无关的通用发布建议。"
     }
   ],
   "legacyCover": {
@@ -80,5 +79,5 @@
     "status": "unavailable",
     "reason": "已核对原始图片来源，但未确认适用于本站转载的许可；不以无关图片替代。"
   },
-  "revised": "2026-10-23"
+  "revised": "2026-11-03"
 }
