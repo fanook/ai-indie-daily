@@ -1,0 +1,48 @@
+{
+  "id": "news-openai-physical-engineering-20261103",
+  "slug": "news-openai-physical-engineering-20261103",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 工程",
+  "date": "2026-11-03",
+  "title": "OpenAI 展示 Astra 硬件设计试验，制造环节仍需反复审核",
+  "summary": "从外壳、电路板到软件的试验已制成原型；评测进步与量产能力仍须区分。",
+  "tags": [
+    "OpenAI",
+    "Astra",
+    "硬件设计"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 11 月 3 日介绍实体工程研究：两名成员利用 Astra，在一周内以业余项目方式设计一款可与 Codex 对话的设备，涵盖外壳、电路板和软件；代工厂随后在一个月内制成小批原型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "试验目标是不直接人工编辑设计，但制造准备仍经历多轮审核与迭代。官方指出，Astra 未能稳定考虑生产限制、公差和装配细节，不能将这次试验理解为无需工程师的量产流程。"
+    },
+    {
+      "type": "heading",
+      "text": "评测与行业试验"
+    },
+    {
+      "type": "paragraph",
+      "text": "BenchCAD 2.0 测试三维零件、装配重建及电路板连接识别。一个未命名内部模型平均得分 0.875，Astra 在最高推理设置下为 0.594；这是任务评分，不是制造成功率。公告没有将内部模型命名为 GPT-6.2。"
+    },
+    {
+      "type": "paragraph",
+      "text": "与 Mazda、Chip Ganassi Racing 的合作仍由工程师审核模型输出，分别探索车辆仿真和扫描数据转 CAD 等流程。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核查原文；Mazda 展示素材明确禁止转载，其他配图未确认使用授权。"
+  },
+  "sources": [
+    {
+      "title": "OpenAI：Accelerating engineering for the physical world",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
+      "accessed": "2026-11-04"
+    }
+  ]
+}

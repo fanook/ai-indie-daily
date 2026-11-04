@@ -1,0 +1,61 @@
+{
+  "id": "ideas-fleming-manor-release-20261103",
+  "slug": "ideas-fleming-manor-release-20261103",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-11-03",
+  "title": "Death at Fleming Manor 发售：用死亡证明完成庄园调查",
+  "summary": "检查尸体、询问证人与填写文书组成推理过程；首日补丁修复了笔迹核验中画面标记与内部计数不同步的问题。",
+  "tags": [
+    "推理解谜",
+    "独立游戏",
+    "交互叙事"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "《Death at Fleming Manor》于 11 月 3 日登陆 Steam，支持 Windows 与 macOS。故事发生在 1959 年英国的一座乡间庄园：玩家调查连续发生的死亡事件，检查现场和尸体、询问相关人物，再把判断填入死亡证明或紧急报告。"
+    },
+    {
+      "type": "heading",
+      "text": "结案不是选出一个嫌疑人"
+    },
+    {
+      "type": "paragraph",
+      "text": "玩家需要确认死者身份、死亡原因，以及死亡属于意外、自杀还是谋杀。文书中的遗漏或错误也会影响结论；游戏不会直接替玩家确认猜测，报告的各项判断都要有证据支撑。官方开发公告介绍，完整故事包含 12 个章节和四种结局，结局取决于选择与最终文书的内容。"
+    },
+    {
+      "type": "heading",
+      "text": "首日修复：画面标记与内部计数不同步"
+    },
+    {
+      "type": "paragraph",
+      "text": "发售当天，团队修复了第二章笔迹核验环节的问题：离开文档视图时，红色圈选标记被重置，内部计数却保留，导致重复计数和提交被拒。开发者表示修复版本已经上线，重启 Steam 并更新即可获取。"
+    },
+    {
+      "type": "heading",
+      "text": "手绘过程与试玩限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "商店页声明，全部图像由人类画师制作，没有使用生成式 AI；团队另设 YouTube 频道，展示 Clip Studio Paint 分层文件及制作过程。正式版支持简体中文等五种语言。免费试玩仍可从主商店页下载，但试玩仅支持 Windows，存档不能继承到正式版。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方 Steam 商店素材及媒体包入口；媒体包未能读取，商店视频与直播许可未明确覆盖文章静态配图转载，因此不使用图片。"
+  },
+  "sources": [
+    {
+      "title": "Death at Fleming Manor 官方 Steam 商店页",
+      "url": "https://store.steampowered.com/app/3758950/Death_at_Fleming_Manor/",
+      "accessed": "2026-11-04"
+    },
+    {
+      "title": "SUPERTHUMb 官方开发公告：发售、首日修复与开发记录",
+      "url": "https://steamcommunity.com/app/3758950/allnews/",
+      "accessed": "2026-11-04"
+    }
+  ]
+}

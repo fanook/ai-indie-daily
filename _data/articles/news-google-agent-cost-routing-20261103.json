@@ -1,0 +1,48 @@
+{
+  "id": "news-google-agent-cost-routing-20261103",
+  "slug": "news-google-agent-cost-routing-20261103",
+  "category": "news",
+  "type": "新闻",
+  "label": "Agent 评测",
+  "date": "2026-11-03",
+  "title": "Google 小样本路由试验：先比较低推理模型，再算任务成本",
+  "summary": "50 道短任务中，分类器路由与低推理 Flash 均全答对；节省幅度受任务和缓存影响。",
+  "tags": [
+    "Google",
+    "Gemini",
+    "Agent"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Google Developers 11 月 3 日公布一项 50 道编程 Agent 短任务试验。Gemini 3.8 Flash 低推理设置全部答对，总费用 0.02632 美元，平均延迟 3.55 秒；Jev 分类器将 Flash-Lite 与低推理 Flash 组合后，同样全部答对，费用为 0.02287 美元，延迟 1.90 秒。"
+    },
+    {
+      "type": "heading",
+      "text": "分类与推理设置怎样影响结果"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究以是否需要连续多步计算或推断进行分类，再选择模型；评价同时考察答对数量、包含推理 token 的费用和延迟。"
+    },
+    {
+      "type": "paragraph",
+      "text": "单纯将 Flash 输出上限压到 300 token，没有降低简单题费用，却导致 7 道难题失败。低推理设置与输出长度上限并非同一种控制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "每种配置仅运行一次，难度由人工标注、答案用简单规则评分。跨模型切换可能损失长上下文缓存折扣。Google 与 Jev 提供方无合作关系；代码仍待开源审核。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看官方策略比较表，未确认图表转载授权；正文仅概述必要结果。"
+  },
+  "sources": [
+    {
+      "title": "Google Developers：Cost per task: Using cheap classifiers to route across Gemini models and thinking levels",
+      "url": "https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/",
+      "accessed": "2026-11-04"
+    }
+  ]
+}
