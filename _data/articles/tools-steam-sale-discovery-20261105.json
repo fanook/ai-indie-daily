@@ -1,0 +1,63 @@
+{
+  "id": "tools-steam-sale-discovery-20261105",
+  "slug": "tools-steam-sale-discovery-20261105",
+  "category": "tools",
+  "type": "平台更新",
+  "label": "发行平台",
+  "date": "2026-11-05",
+  "title": "Steam 调整促销活动展示：移走顶部横幅，改为个性化游戏推荐",
+  "summary": "新模块靠近“更多类似产品”，活动和其中的推荐游戏都会按玩家相关性选择。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Valve 于 11 月 4 日太平洋时间发布 Steam 商店更新公告，换算北京时间为 11 月 5 日。参加发行商、地区、主题或第三方展示活动的游戏页面，将以靠近“更多类似产品”的新模块展示活动，取代页面顶部横幅。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/steam-sale-discovery-20261105.webp",
+      "alt": "Valve 公告截图：Steam 商店页中的活动推荐模块，左侧是活动海报，右侧按玩家展示三款相关游戏，下方还有发行商游戏列表。",
+      "caption": "来源：Valve / Steamworks 官方公告。截图中的价格、活动日期与推荐作品是官方示例画面。"
+    },
+    {
+      "type": "heading",
+      "text": "选择活动，再选择游戏"
+    },
+    {
+      "type": "paragraph",
+      "text": "如果同一游戏同时参加多个活动，Steam 会优先展示包含较多该玩家高相关性游戏的活动，再从中挑选推荐作品。Valve 解释，旧横幅常年占据部分商店页顶部，既遮挡游戏自身的信息，也容易让玩家不清楚活动与自己的关系。"
+    },
+    {
+      "type": "heading",
+      "text": "出现时间与统计入口"
+    },
+    {
+      "type": "paragraph",
+      "text": "新模块可在游戏被纳入活动且在促销页可见时出现，展示期为活动开始后的前两周，或活动结束之前，以较早者为准。Steamworks 将相应曝光与访问归入流量报告的 Other Product Pages → More from sale events。"
+    },
+    {
+      "type": "paragraph",
+      "text": "活动仍需由开发者或发行商自行组织，或获得其参加授权。公告没有给出新展示方式对点击率或销量的测量结果。配图为 Valve 公告中的商店模块示例；其中作品、折扣与日期仅为示意画面。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Updates to how sale events appear on game store pages",
+      "url": "https://steamcommunity.com/groups/steamworks/announcements/detail/696528162820981366",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "primary-article",
+    "sourceURL": "https://steamcommunity.com/groups/steamworks/announcements/detail/696528162820981366",
+    "sourceTitle": "Updates to how sale events appear on game store pages",
+    "accessed": "2026-11-05",
+    "rightsNote": "Valve 官方公告中的界面截图，仅为说明本次商店界面变化作新闻报道所需的适量引用；保留 Valve 来源、图内标识和相关权利人的署名信息，不主张素材的开放许可。"
+  },
+  "cover": {
+    "src": "./assets/covers/steam-sale-discovery-20261105.webp",
+    "alt": "Valve 公告截图：Steam 商店页中的活动推荐模块，左侧是活动海报，右侧按玩家展示三款相关游戏，下方还有发行商游戏列表。",
+    "fit": "contain"
+  }
+}

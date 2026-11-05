@@ -1,0 +1,48 @@
+{
+  "id": "news-tencent-hy4-20261104",
+  "slug": "news-tencent-hy4-20261104",
+  "category": "news",
+  "type": "新闻",
+  "label": "模型动态",
+  "date": "2026-11-04",
+  "title": "腾讯发布 Hy4：增加视觉与电脑操作，模型权重计划稍后公开",
+  "summary": "官方披露 Blender、CAD 与游戏引擎任务训练；游戏能力提升数字来自厂商评测，不是已发布游戏的制作结果。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "腾讯 11 月 4 日发布 Hy4，称其新增视觉理解与电脑操作能力，能够通过命令行和图形界面执行任务，并针对 Blender、CAD 等专业软件接受训练。公告同时写明，模型权重与系统卡计划在随后数日发布，不能据此认定权重已可下载。"
+    },
+    {
+      "type": "heading",
+      "text": "游戏能力披露到什么程度"
+    },
+    {
+      "type": "paragraph",
+      "text": "腾讯称，与互动娱乐事业群开发人员合作后，Hy4 加强了 Unreal Engine、Unity、Godot 中的游戏逻辑和多人功能任务。官方列出的 GameDev 与 GameLogic 指标相对 Hy4 Preview 分别提升 19.1% 和 9.8%；公告未将其定义为百分点变化，也未提供完整样本量、绝对分数和评测流程。这些数字不代表真实游戏项目的交付成功率或成本。"
+    },
+    {
+      "type": "heading",
+      "text": "入口与计费"
+    },
+    {
+      "type": "paragraph",
+      "text": "公告列出的入口包括腾讯云 TokenHub、WorkBuddy、CodeBuddy、元宝等。Hy4 标准价与预览版相同，约为每百万输入 token 0.90 美元、输出 token 2.70 美元、缓存输入 token 0.045 美元；TokenHub 的五折活动计划持续至 2026 年 12 月 31 日。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hy4 Flash 在正文中被描述为即将发布。完整权重、许可条件和系统卡仍须以随后实际公开的材料为准。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tencent Launches Hy4, Joining the Ranks of the World’s Leading Open-Source AI Models",
+      "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查腾讯官方发布页，未发现可确认使用依据且直接展示 Hy4 实际操作结果的配图；不使用通用品牌图代替。"
+  }
+}

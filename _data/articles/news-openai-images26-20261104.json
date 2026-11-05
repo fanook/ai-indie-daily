@@ -1,0 +1,85 @@
+{
+  "id": "news-openai-images26-20261104",
+  "slug": "news-openai-images26-20261104",
+  "category": "news",
+  "type": "新闻",
+  "label": "图像生成",
+  "date": "2026-11-04",
+  "title": "OpenAI 发布 Images 2.6，加入 GIF、SVG 与独立复杂度控制",
+  "summary": "Flare 与 Sunburst 同步进入 API；官方称生成提速 50%，复杂度与画质分开设置。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 11 月 4 日宣布 Images 2.6 在 ChatGPT、Codex 与 API 上线。API 提供偏重快速迭代的 Flare，以及偏重细节与多轮编辑一致性的 Sunburst；新增动画 GIF、SVG 输出和用标记指定修改区域的能力。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/openai-images26-20261104.webp",
+      "alt": "OpenAI Images 2.6 官方分享图：中央蓝紫渐变版本卡片，周围排列剪纸、骑行者、角色和花朵等生成示例。",
+      "caption": "来源：OpenAI。官方发布图中的示例为生成内容。"
+    },
+    {
+      "type": "heading",
+      "text": "提速数字有具体条件"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 称新版图像生成比此前快 50%，其中 Flare 在低画质设置下最快约 6 秒。Sunburst 的中、高画质档侧重精细生成和编辑一致性。这些是厂商发布的性能描述，不能视作每次请求的固定等待时间。"
+    },
+    {
+      "type": "heading",
+      "text": "复杂度和画质是两个控制项"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方文档把 complexity 定义为渲染前的规划程度，支持 low、medium、high，省略时默认为 high；quality 则控制渲染质量。较高复杂度可处理密集文字、复杂布局和物体关系，但也可能增加延迟或带来不期望的改动。复杂度设置没有单独收费。"
+    },
+    {
+      "type": "paragraph",
+      "text": "两个 2.6 模型都通过 Image API 支持复杂度控制、标记编辑、SVG 和动画 GIF。文档同时说明，其后大部分既有示例仍使用 2.5 模型，不能仅替换示例标题就当作完整的 2.6 用法。"
+    },
+    {
+      "type": "heading",
+      "text": "开放范围与价格"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布公告称，ChatGPT 与 Codex 的桌面、移动和网页端各订阅档位均可使用 Images 2.6。API 标准价对两款模型相同：每百万图像输入 token 8 美元、图像输出 token 30 美元、缓存图像输入 token 2 美元；文字输入 token 为每百万 5 美元。按 token 计价不等于每张图片固定收费。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配图为 OpenAI 发布页提供的 Images 2.6 产品分享图，展示版本名称与官方生成示例。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introducing Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "accessed": "2026-11-05"
+    },
+    {
+      "title": "Image generation：GPT Image 2.6",
+      "url": "https://developers.openai.com/api/docs/guides/image-generation",
+      "accessed": "2026-11-05"
+    },
+    {
+      "title": "OpenAI API Pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "primary-article",
+    "sourceURL": "https://openai.com/index/introducing-images-2-6/",
+    "sourceTitle": "Introducing Images 2.6",
+    "accessed": "2026-11-05",
+    "rightsNote": "OpenAI 原发布页的公开分享配图；为报道该次发布作新闻报道所需的适量引用，保留 OpenAI 署名和原文链接，不主张开放许可或其他用途授权。"
+  },
+  "cover": {
+    "src": "./assets/covers/openai-images26-20261104.webp",
+    "alt": "OpenAI Images 2.6 官方分享图：中央蓝紫渐变版本卡片，周围排列剪纸、骑行者、角色和花朵等生成示例。",
+    "fit": "contain"
+  }
+}

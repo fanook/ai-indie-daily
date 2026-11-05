@@ -1,0 +1,48 @@
+{
+  "id": "news-openai-linux-research-20261104",
+  "slug": "news-openai-linux-research-20261104",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 安全研究",
+  "date": "2026-11-04",
+  "title": "OpenAI 披露 Linux 漏洞研究：948 组提权结果，候选补丁仍需审核",
+  "summary": "10 月中旬的一次研究运行使用约 121 万美元 API 额度；复现、提权与上游修复数量必须分开理解。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 11 月 4 日披露一项 10 月中旬开展的 Linux 内核研究。其未公布名称的新网络安全模型从 2,308 项候选发现中动态复现 1,724 项漏洞，并按 948 个不同补丁归并出 948 组本地提权结果。本地提权指已有低权限账户取得更高权限，不等于从互联网远程入侵。"
+    },
+    {
+      "type": "heading",
+      "text": "从候选到人工复核"
+    },
+    {
+      "type": "paragraph",
+      "text": "流程依次进行代码审查、隔离环境复现、验证安全影响和生成候选补丁，最后交由人工研究员审核。官方报告总 API 用量折合 1,213,430 美元，按 948 组结果平均约 1,279 美元；这是 API 成本口径，不是完整项目预算。"
+    },
+    {
+      "type": "heading",
+      "text": "生成补丁不等于修复已上线"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 称，在扫描和人工分析历时约 10 天后，其中 61 项已由上游修复、43 项有暂存补丁、299 项在公开讨论。团队按严重程度分批提交报告，不能将 948 当成已合入上游的修复数量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "报告还指出，初始补丁有时只阻断已知复现，仍遗漏同类路径或引入性能与代码维护问题，需继续迭代。上述数量和效果均为 OpenAI 本次研究披露的结果。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方研究页。正文图表用于说明实验流程与成本，未取得可确认的独立转载许可；本篇采用文字呈现主要口径。"
+  }
+}

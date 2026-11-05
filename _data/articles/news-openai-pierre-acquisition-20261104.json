@@ -1,0 +1,48 @@
+{
+  "id": "news-openai-pierre-acquisition-20261104",
+  "slug": "news-openai-pierre-acquisition-20261104",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 编程",
+  "date": "2026-11-04",
+  "title": "OpenAI 拟收购 Pierre，将代码存储能力引入 Codex",
+  "summary": "交易尚待惯常交割条件与监管批准；Pierre 的开源项目将继续保持开源。",
+  "tags": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 11 月 4 日宣布拟收购 Pierre Computer Company。Pierre 开发了基于 Git 的 Code Storage 服务，以及文件导航、差异比较和语法高亮工具。公告称，Codex 已在使用其 Trees 和 Diffs 库。"
+    },
+    {
+      "type": "heading",
+      "text": "已有集成与后续计划"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trees 用于浏览项目文件，Diffs 用于展示代码变化，其 Edit 模式支持直接在差异视图中修改代码。Pierre 的 Highlights 则用于代码输入或流式生成时的语法高亮。Code Storage 负责存储代码并追踪 Git 历史，是计划进一步整合进 Codex 的部分。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 表示，Pierre 的开源项目会继续开源，Code Storage 客户在交割后仍可继续使用服务。公告没有将这些未来整合计划表述为已经上线。"
+    },
+    {
+      "type": "heading",
+      "text": "尚未完成交割"
+    },
+    {
+      "type": "paragraph",
+      "text": "该交易仍须满足惯常交割条件，包括监管批准。交割之前，两家公司保持独立运营；本次公告未披露交易金额。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方原文，暂无可确认使用依据且直接对应正文的配图。"
+  }
+}
