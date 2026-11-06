@@ -1,0 +1,49 @@
+{
+  "id": "tools-metahuman-web-retired-20261105",
+  "slug": "tools-metahuman-web-retired-20261105",
+  "category": "tools",
+  "type": "服务变更",
+  "label": "角色制作",
+  "date": "2026-11-05",
+  "title": "MetaHuman Creator 网页版退役，旧角色保留限期下载窗口",
+  "summary": "11 月 5 日停止网页创作；官方提供额外 90 天取回角色，后续创作转向 UE 5.6+。",
+  "tags": [
+    "Epic Games",
+    "MetaHuman",
+    "Unreal Engine"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Epic 的最新文档确认，MetaHuman Creator 网页应用已于 2026 年 11 月 5 日退役。这是 3 月公布的停用计划进入最后阶段，并非 11 月才首次宣布。"
+    },
+    {
+      "type": "paragraph",
+      "text": "既有角色仍可经 Quixel Bridge 下载。3 月公告规定关闭后另有 90 天取回期，最新文档表述为可下载至 2027 年 2 月；公告说明该窗口结束后，账户中剩余的云端 MetaHuman 将删除。官方当前概览没有给出二月的具体截止时刻。"
+    },
+    {
+      "type": "paragraph",
+      "text": "继续创建和编辑角色使用 Unreal Engine 5.6 及更新版本中的原生 MetaHuman Creator。已经导出到 Unreal Engine 的角色可继续使用；停止的是旧网页服务，不等于已下载素材失效。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方迁移说明区分不同旧版本：完整迁移路线针对网页版 UE 5.5 角色；UE 4.27 创建的角色不能直接升级或迁移。Quixel Bridge 自身也已弃用，目前仍用于取回这批旧角色。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MetaHuman Creator Overview — retirement notice",
+      "url": "https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-creator-overview?application_version=5.0-5.5",
+      "accessed": "2026-11-06"
+    },
+    {
+      "title": "MetaHuman Creator Web Application is being Discontinued — March 5 announcement",
+      "url": "https://forums.unrealengine.com/t/metahuman-creator-web-application-is-being-discontinued/2695297",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查 Epic 官方退役公告和文档配图；未核实图片转载许可，采用文字卡片。"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "news-mistral-studio-managed-20261105",
+  "slug": "news-mistral-studio-managed-20261105",
+  "category": "news",
+  "type": "产品更新",
+  "label": "Agent 平台",
+  "date": "2026-11-05",
+  "title": "Mistral 扩展 Studio：托管 Agent、工作流和应用共用运行平台",
+  "summary": "新增托管 Agent 与应用能力，并补充事件触发、可视化流程和运行追踪。",
+  "tags": [
+    "Mistral",
+    "Studio",
+    "Agent"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Mistral 于 11 月 5 日更新企业 AI 平台 Studio，新增托管 Agent 和应用能力，并扩展工作流、企业上下文、可观测性及评估工具。此次更新是平台功能发布，不是 Mistral Large 4 模型的首次发布。"
+    },
+    {
+      "type": "paragraph",
+      "text": "据官方介绍，托管 Agent 可配置技能、代码沙盒、子代理和执行钩子；工作流将固定规则、模型推理及人工审批组合起来，支持中断后继续运行。此次工作流更新还加入企业系统事件触发和可视化流程图。"
+    },
+    {
+      "type": "paragraph",
+      "text": "应用层提供托管、身份验证和访问控制，可连接 Agent、工作流及企业文档索引。开发者可在本地测试后部署为独立链接，或在 Mistral Vibe 中使用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方称平台和模型可部署于 Mistral 托管环境、自有云、VPC、本地基础设施或混合环境。OpenTelemetry 追踪可记录模型调用、工具操作和审批；评估工具用于在发布前用团队自己的数据集比较变更。具体部署费用和配置条件没有在该公告中列出。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Le Chonk brings the brains. Studio puts it to work.",
+      "url": "https://mistral.ai/news/build-with-studio/",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方更新页和演示内容；未核实演示截图的转载许可，采用文字卡片。"
+  }
+}

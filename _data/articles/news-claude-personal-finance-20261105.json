@@ -1,0 +1,44 @@
+{
+  "id": "news-claude-personal-finance-20261105",
+  "slug": "news-claude-personal-finance-20261105",
+  "category": "news",
+  "type": "新闻",
+  "label": "Claude",
+  "date": "2026-11-05",
+  "title": "Claude 推出个人财务功能，在美国付费套餐开启只读账户连接",
+  "summary": "通过 Plaid 连接账户并解释余额和交易，不能转账、管理或投资资金。",
+  "tags": [
+    "Anthropic",
+    "Claude",
+    "个人财务"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic 于 11 月 5 日公布 Personal Finance in Claude，本周开始向美国 Pro、Max 和 Ultra 用户逐步推出测试版。用户可以连接选择的银行及信用卡账户，查询支出分类、余额和账单等信息。"
+    },
+    {
+      "type": "paragraph",
+      "text": "连接经由 Plaid 完成，用户自行登录银行并授权只读访问。官方说明 Claude 不会索取或看到银行密码；功能不能移动、管理或投资用户资金，也不是为提供投资建议而设计。"
+    },
+    {
+      "type": "paragraph",
+      "text": "对于获授权的账户，Claude 可读取银行和账户名称、账户类型及末四位、余额、信用额度，以及最多两年的交易记录。官方称 Personal Finance 专区中的对话不用于训练模型；在专区之外分享的信息仍适用用户的隐私设置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方展示的功能包括整理重复收费、比较月度支出，以及生成可继续调整的支出图表和到期日历。Claude 的回答仍可能出错，产品说明要求重要数字与银行记录核对。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introducing Personal Finance in Claude",
+      "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方功能介绍及界面示例；未核实示例图片的转载许可，采用文字卡片。"
+  }
+}

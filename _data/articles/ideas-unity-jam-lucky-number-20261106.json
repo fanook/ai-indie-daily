@@ -1,0 +1,44 @@
+{
+  "id": "ideas-unity-jam-lucky-number-20261106",
+  "slug": "ideas-unity-jam-lucky-number-20261106",
+  "category": "ideas",
+  "type": "新闻",
+  "label": "Game Jam",
+  "date": "2026-11-06",
+  "title": "Unity Game Jam 公布 Lucky Number 主题，生成式 AI 使用须披露",
+  "summary": "活动已开启，团队可为 1–5 人，提交截止为北京时间 11 月 14 日 20:00。",
+  "tags": [
+    "Unity",
+    "Game Jam",
+    "AI 披露"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "2026 官方 Unity Game Jam 在 11 月 5 日 UTC 的启动活动后公布主题 Lucky Number（幸运数字），对应北京时间 11 月 6 日。官方以个人或文化中象征好运的数字解释主题，并鼓励把幸运、命运或迷信融入玩法、美术和声音。"
+    },
+    {
+      "type": "paragraph",
+      "text": "团队规模为 1–5 人，每队提交一份作品，游戏须使用 Unity 制作。提交截止为 11 月 14 日 12:00 UTC，即北京时间当日 20:00；社区评分安排在 11 月 14–21 日。主办方将七天制作期与额外打包提交时间分开，不接受逾期提交。"
+    },
+    {
+      "type": "paragraph",
+      "text": "活动允许在作品的任何部分使用生成式 AI，但必须在提交页面披露并说明使用方式。未披露会失去奖项评选资格；所有使用的素材仍须拥有合法使用权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "奖项参评要求提供在 itch.io 浏览器中可玩的 WebGL 版本，并另受正式规则中的资格及地域限制约束。社区投票和 Unity 评委奖项是不同的评选流程。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Official 2026 Unity Game Jam",
+      "url": "https://itch.io/jam/official-unity-game-jam-2026",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方活动页主题图片；未找到可确认的独立转载许可，采用文字卡片。"
+  }
+}
