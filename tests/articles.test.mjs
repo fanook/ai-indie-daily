@@ -4,7 +4,7 @@ import {mkdtempSync, writeFileSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {loadArticles} from '../scripts/articles.mjs';
-import {filterItems, readState, validateData} from '../content.mjs';
+import {SECTIONS, filterItems, readState, validateData} from '../content.mjs';
 const data = loadArticles();
 const base = data.items[0];
 const valid = patch => ({...structuredClone(base), ...patch});
@@ -12,7 +12,7 @@ const valid = patch => ({...structuredClone(base), ...patch});
 test('new independent file is discovered without touching an index or route', () => {
   const dir = mkdtempSync(path.join(tmpdir(), 'indie-articles-'));
   try {
-    const article = valid({id:'new-independent-article', slug:'new-independent-article'});
+    const article = valid({id:'new-independent-article', slug:'new-independent-article', category:'opensource'});
     delete article.legacyIndex;
     writeFileSync(path.join(dir, `${article.id}.json`), JSON.stringify(article));
     assert.equal(loadArticles(dir).items[0].slug, article.slug);
@@ -22,10 +22,12 @@ test('new independent file is discovered without touching an index or route', ()
     assert.throws(() => loadArticles(dir), /filename must match/);
   } finally { rmSync(dir, {recursive:true,force:true}); }
 });
-test('all is the default and all four categories remain independently filterable', () => {
+test('all is the default and all five categories remain independently filterable', () => {
   assert.equal(readState('').section, 'all');
   assert.equal(filterItems(data.items, readState('')).length, data.items.length);
-  for (const category of ['news','learn','tools','ideas']) {
+  assert.equal(Object.keys(SECTIONS).length, 5);
+  for (const category of Object.keys(SECTIONS)) {
+    assert.equal(readState(`?section=${category}`).section, category);
     assert(filterItems(data.items, readState(`?section=${category}`)).every(item => item.category === category));
   }
 });

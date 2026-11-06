@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadArticles} from '../scripts/articles.mjs';
-import {filterItems, readState, stateQuery, renderBlocks, imageURL, safeURL, migrateSaved, validateData} from '../content.mjs';
+import {SECTIONS, filterItems, readState, stateQuery, typeLabel, renderBlocks, imageURL, safeURL, migrateSaved, validateData} from '../content.mjs';
 const data = loadArticles();
 
 test('all current articles have unique stable IDs and fixed legacy links', () => {
@@ -22,9 +22,22 @@ test('search, category, history and ascending date filters combine', () => {
   ];
   assert.deepEqual(filterItems(items, readState('?section=news&q=AGENT&label=Agent&month=2026-10&order=old')).map(x => x.id), ['a','b']);
 });
-test('bookmarks span all four sections and do not depend on array order', () => {
+test('bookmarks span all sections and do not depend on array order', () => {
   const saved = new Set(data.items.map(x => x.id));
   assert.equal(filterItems([...data.items].reverse(), readState('?saved=1'), saved).length, data.items.length);
+});
+test('open source discoveries have a label, stable query and independent filtering', () => {
+  assert.equal(SECTIONS.opensource.name, '开源发现');
+  assert.equal(typeLabel({category:'opensource'}), '开源项目');
+  const state = readState('?section=opensource');
+  assert.equal(state.section, 'opensource');
+  assert.deepEqual(readState(stateQuery(state)), state);
+  const article = {...data.items[0], id:'opensource-test', slug:'opensource-test', category:'opensource'};
+  assert.doesNotThrow(() => validateData({items:[article]}));
+  assert.throws(() => validateData({items:[{...article, sources:[]}]}), /项目来源/);
+  const items = [...data.items.filter(item => item.category !== 'opensource'), article];
+  assert.deepEqual(filterItems(items, state).map(item => item.id), [article.id]);
+  assert.equal(filterItems(items, readState('')).length, items.length);
 });
 test('legacy URL bookmarks migrate once, preserving intentionally removed bookmarks', () => {
   const old = JSON.stringify({[data.items[0].url]:true});

@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const BASE = process.env.TEST_BASE_URL || 'http://127.0.0.1:8767/';
 fs.mkdirSync('test-results', {recursive:true});
-const labels = {all:'全部',news:'AI 资讯',learn:'AI 学习',tools:'游戏工具',ideas:'游戏创意'};
+const labels = {all:'全部',news:'AI 资讯',learn:'AI 学习',tools:'游戏工具',ideas:'游戏创意',opensource:'开源发现'};
 async function chooseSection(page, category) {
   const toggle = page.locator('#section-toggle');
   if (await toggle.getAttribute('aria-expanded') !== 'true') await toggle.click();
@@ -39,7 +39,7 @@ async function checkLoading(browser, detail) {
   } finally {release(); await context.close();}
 }
 (async () => {
-  const browser = await chromium.launch({headless:true,...(process.env.CI ? {channel:'chrome'} : {})});
+  const browser = await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH} : process.env.CI ? {channel:'chrome'} : {})});
   try {
     const page = await browser.newPage();
     const errors = [];
@@ -53,11 +53,16 @@ async function checkLoading(browser, detail) {
       assert.equal(await page.locator('select, #shuffle, .shuffle-button').count(),0);
       assert.equal(await page.locator('#section-toggle').getAttribute('aria-haspopup'),'menu');
       assert.equal(await page.locator('#section-menu').getAttribute('role'),'menu');
-      assert.equal(await page.locator('.section-option[role=menuitemradio]').count(),5);
+      assert.equal(await page.locator('.section-option[role=menuitemradio]').count(),6);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,`list overflow ${width}`);
       await page.locator('.entry-cover').evaluateAll(imgs => Promise.all(imgs.map(img => {img.loading='eager';return img.decode().catch(() => {});})));
       await page.screenshot({path:`test-results/daily-${width}.png`,fullPage:true});
       await page.screenshot({path:`test-results/viewport-${width}.png`});
+      await page.locator('#section-toggle').click();
+      await page.locator('.section-option[data-section="opensource"]').waitFor({state:'visible'});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,`menu overflow ${width}`);
+      await page.screenshot({path:`test-results/menu-${width}.png`});
+      await page.keyboard.press('Escape');
       assert.equal(await page.locator('.entry').first().evaluate(el => getComputedStyle(el).borderWidth),'0px');
       await page.locator('.entry-link').first().click();
       await page.locator('.prose').waitFor();
@@ -90,6 +95,8 @@ async function checkLoading(browser, detail) {
     await page.keyboard.press('ArrowDown');
     assert.equal(await page.evaluate(() => document.activeElement.dataset.section),'news');
     await page.keyboard.press('End');
+    assert.equal(await page.evaluate(() => document.activeElement.dataset.section),'opensource');
+    await page.keyboard.press('ArrowUp');
     assert.equal(await page.evaluate(() => document.activeElement.dataset.section),'ideas');
     await page.keyboard.press('ArrowUp');
     assert.equal(await page.evaluate(() => document.activeElement.dataset.section),'tools');
@@ -107,15 +114,26 @@ async function checkLoading(browser, detail) {
     assert.equal(await page.locator('#section-label').innerText(),labels.all);
     await page.goForward();
     assert.equal(await page.locator('#section-label').innerText(),labels.news);
-    for (const category of ['news','learn','tools','ideas']) {
+    for (const category of ['news','learn','tools','ideas','opensource']) {
       await chooseSection(page,category);
       await page.reload();
-      await page.locator('.entry-link').first().waitFor();
+      await page.locator('#cards[aria-busy="false"]').waitFor();
       assert.equal(await page.locator('#section-label').innerText(),labels[category]);
       await page.goto(BASE);
-      await page.locator('.entry-link').first().waitFor();
+      await page.locator('#cards[aria-busy="false"]').waitFor();
       assert.equal(await page.locator('#section-label').innerText(),labels[category],'bare URL restores localStorage preference');
       assert(await page.locator('.entry').evaluateAll((nodes,category) => nodes.every(n => n.dataset.category===category),category));
+      if (!await page.locator('.entry-link').count()) {
+        await page.getByText('这个栏目还没有文章').waitFor();
+        await page.screenshot({path:`test-results/empty-${category}.png`});
+        await page.getByRole('link',{name:'浏览全部文章'}).click();
+        await page.locator('.entry-link').first().waitFor();
+        assert.equal(await page.locator('#section-label').innerText(),labels.all);
+        await page.goBack();
+        await page.getByText('这个栏目还没有文章').waitFor();
+        assert.equal(await page.locator('#section-label').innerText(),labels[category]);
+        continue;
+      }
       const before = await links();
       await page.locator('.entry-link').last().scrollIntoViewIfNeeded();
       const scrollBefore = await page.evaluate(() => scrollY);
@@ -174,6 +192,31 @@ async function checkLoading(browser, detail) {
     await restrictedPage.locator('.entry-link').first().click();
     await restrictedPage.locator('.prose').waitFor();
     await restricted.close();
+    // Fixture-only data verifies an empty new section and future project details
+    // without publishing placeholder articles in the production content directory.
+    const discoveries = await browser.newContext({viewport:{width:375,height:1000}});
+    const discoveriesPage = await discoveries.newPage();
+    let fixtureItems = [];
+    const project = {id:'opensource-browser-fixture',slug:'opensource-browser-fixture',category:'opensource',date:'2026-11-06',title:'开源项目测试夹具',summary:'仅用于验证列表与详情，不参与发布。',blocks:[{type:'paragraph',text:'项目正文渲染测试。'}],sources:[{title:'测试来源',url:'https://example.org/project',accessed:'2026-11-06'}],coverProvenance:{status:'unavailable',reason:'测试无图卡片。'}};
+    await discoveriesPage.route('**/data/news.json',route => route.fulfill({json:{updated:'2026-11-06',items:fixtureItems}}));
+    await discoveriesPage.goto(BASE+'?section=opensource');
+    await discoveriesPage.getByText('这个栏目还没有文章').waitFor();
+    assert.equal(await discoveriesPage.locator('#section-label').innerText(),labels.opensource);
+    assert.equal(await discoveriesPage.locator('#pagination').isVisible(),false);
+    fixtureItems = [project];
+    await discoveriesPage.reload();
+    await discoveriesPage.locator('.entry-link').waitFor();
+    assert.equal(await discoveriesPage.locator('.entry-bottom .tag').innerText(),labels.opensource);
+    await discoveriesPage.locator('.entry-link').click();
+    await discoveriesPage.locator('.prose').waitFor();
+    assert.equal(await discoveriesPage.locator('.article-header .tag').innerText(),'开源项目');
+    assert.equal(await discoveriesPage.locator('.prose').innerText(),'项目正文渲染测试。');
+    assert.equal(await discoveriesPage.locator('.source-list a').getAttribute('href'),'https://example.org/project');
+    await discoveriesPage.goBack();
+    await discoveriesPage.locator('.entry-link').waitFor();
+    assert.equal(await discoveriesPage.locator('#section-label').innerText(),labels.opensource);
+    await discoveries.close();
+    console.log('Open source empty state, source-backed fixture, default type and detail round trip PASS');
     await checkLoading(browser,false);
     await checkLoading(browser,true);
     console.log('Legacy links, missing article, blocked storage/images, skeleton lifecycle and reduced motion PASS');

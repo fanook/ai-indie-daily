@@ -1,0 +1,80 @@
+{
+  "id": "opensource-pixelorama-20261107",
+  "slug": "opensource-pixelorama-20261107",
+  "category": "opensource",
+  "type": "开源项目",
+  "label": "像素创作",
+  "date": "2026-11-07",
+  "title": "Pixelorama：把像素画、动画与游戏瓦片放进同一张工作台",
+  "summary": "一个采用 MIT 许可的像素创作工具，可做精灵动画、瓦片地图与非破坏式图层效果。",
+  "tags": [
+    "GitHub",
+    "Pixelorama",
+    "像素画",
+    "MIT"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Pixelorama 是 Orama Interactive 维护的开源像素创作工具，基于 Godot 制作。它不只提供逐点绘画：同一个项目可以组织图层与动画帧、预览前后帧的洋葱皮，并制作矩形、等距或六边形的瓦片地图。"
+    },
+    {
+      "type": "heading",
+      "text": "像素工作流里有趣的组合"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目把像素专用的缩放、旋转算法与非破坏式图层效果放在一起。描边、投影、渐变映射等效果可以在不直接改动原始像素的情况下调整，时间轴则支持音频同步与帧标签。输出包括 PNG、动画 PNG、精灵图集、GIF 和视频，也能用命令行批量导出。"
+    },
+    {
+      "type": "paragraph",
+      "text": "另一个特别之处是 3D 图层：可以把 3D 模型或形状带入二维画布。它仍是一套以像素画为中心的工具，而不是完整的三维建模软件。"
+    },
+    {
+      "type": "heading",
+      "text": "近期更新与文件兼容"
+    },
+    {
+      "type": "paragraph",
+      "text": "v1.2.4 的 GitHub 发布时间为 2026 年 11 月 3 日 16:42 UTC，即北京时间 11 月 4 日凌晨。该版本允许 cel（某图层在某一帧的图像单元）保留画布之外的像素，移动到边界外的内容不再直接裁掉；还加入独立的 Layer FX 面板，便于调整图层效果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这次修改改变了 .pxo 工程文件的兼容性：旧版本不能打开由 v1.2.4 及之后版本生成的文件，官方说明新版仍可读取旧文件。画布外内容目前也不适用于等距和六边形瓦片地图，发布说明指出移动工具在这两种形状下不能使用。跨版本协作前应保留旧工程副本。"
+    },
+    {
+      "type": "heading",
+      "text": "获取与许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方提供 Windows、macOS、Linux 的发布包，也有浏览器版本；日常使用可从稳定版开始，主分支的早期构建由项目明确标为不稳定。代码采用 MIT 许可，复制或分发软件时须保留版权和许可声明；这项软件许可并不自动覆盖另行导入的第三方图像或素材。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Pixelorama 官方 GitHub 仓库",
+      "url": "https://github.com/Orama-Interactive/Pixelorama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pixelorama 官方仓库与 README",
+      "url": "https://github.com/Orama-Interactive/Pixelorama",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "Pixelorama v1.2.4 官方发布记录",
+      "url": "https://github.com/Orama-Interactive/Pixelorama/releases/tag/v1.2.4",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "Pixelorama MIT License",
+      "url": "https://github.com/Orama-Interactive/Pixelorama/blob/master/LICENSE",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方 README 中的界面截图；截图引用 Steam 资源，未核实画面中作品的独立转载许可，采用文字卡片。"
+  }
+}

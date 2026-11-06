@@ -1,4 +1,4 @@
-import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=9';
+import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=10';
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));

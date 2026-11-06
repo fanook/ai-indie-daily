@@ -4,6 +4,7 @@ export const SECTIONS = {
   learn: {name: 'AI 学习', description: '从一个具体问题出发，把新的方法用进项目。'},
   tools: {name: '游戏工具', description: '找到趁手的工具，让想法更快成为可玩的作品。'},
   ideas: {name: '游戏创意', description: '收集有趣的机制，从一个小小的原型开始验证。'},
+  opensource: {name: '开源发现', description: '发现 GitHub 上实用、有趣和新奇的开源项目。'},
 };
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function safeURL(value) {
@@ -32,7 +33,7 @@ export function filterItems(items, state, saved = new Set()) {
     .sort((a, b) => (state.order === 'old' ? a.date.localeCompare(b.date) : b.date.localeCompare(a.date)) || a.id.localeCompare(b.id));
 }
 export function typeLabel(item) {
-  return item.type || {news: '资讯笔记', learn: '学习笔记', tools: '工具档案', ideas: '原创构想'}[item.category];
+  return item.type || {news: '资讯笔记', learn: '学习笔记', tools: '工具档案', ideas: '原创构想', opensource: '开源项目'}[item.category];
 }
 export function parseSaved(value) {
   try { const data = JSON.parse(value); return new Set(Array.isArray(data) ? data.filter(x => typeof x === 'string') : []); } catch { return new Set(); }
@@ -110,6 +111,7 @@ export function validateData(data) {
     if (!Array.isArray(item.sources) || item.sources.some(source => !source || !safeURL(source.url)
       || (source.accessed !== undefined && !validDate(source.accessed)))) fail('来源格式无效');
     if (item.category === 'news' && !item.sources.length) fail('资讯必须提供来源');
+    if (item.category === 'opensource' && !item.sources.length) fail('开源发现必须提供项目来源');
     if (item.url && !safeURL(item.url)) fail('来源必须为 HTTPS');
     const provenance = item.coverProvenance;
     if (item.cover !== undefined) {
