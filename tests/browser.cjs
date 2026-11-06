@@ -151,11 +151,15 @@ async function checkLoading(browser, detail) {
       await page.goto(BASE+'?section=all');
       await page.locator('.entry-link').first().waitFor();
       await page.locator('#load-more').click();
-      await page.mouse.wheel(0,250);
+      await page.locator('.entry-cover').evaluateAll(imgs => Promise.all(imgs.map(img => {img.loading='eager';return img.decode().catch(() => {});})));
+      await page.evaluate(() => new Promise(resolve => {window.scrollBy(0,250);requestAnimationFrame(() => requestAnimationFrame(resolve));}));
       const initialCount = await page.locator('.entry').count();
       const y = await page.evaluate(() => scrollY);
-      await chooseSection(page,'news');
-      await chooseSection(page,'all');
+      assert(y > 0,'history scenario starts at a nonzero scroll position');
+      // Isolate history entry recovery from Playwright's automatic scroll to
+      // the off-screen header. Real pointer/keyboard menu flows are tested above.
+      await page.locator('.section-option[data-section="news"]').dispatchEvent('click');
+      await page.locator('.section-option[data-section="all"]').dispatchEvent('click');
       await page.locator('.entry-link').first().click();
       await page.locator('.prose').waitFor();
       for (let step=0; step<3; step++) { await page.goBack(); await page.locator('.entry-link').first().waitFor(); }

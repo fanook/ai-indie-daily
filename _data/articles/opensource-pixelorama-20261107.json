@@ -4,7 +4,7 @@
   "category": "opensource",
   "type": "开源项目",
   "label": "像素创作",
-  "date": "2026-11-07",
+  "date": "2026-11-06",
   "title": "Pixelorama：把像素画、动画与游戏瓦片放进同一张工作台",
   "summary": "一个采用 MIT 许可的像素创作工具，可做精灵动画、瓦片地图与非破坏式图层效果。",
   "tags": [
@@ -60,17 +60,17 @@
     {
       "title": "Pixelorama 官方仓库与 README",
       "url": "https://github.com/Orama-Interactive/Pixelorama",
-      "accessed": "2026-11-07"
+      "accessed": "2026-11-06"
     },
     {
       "title": "Pixelorama v1.2.4 官方发布记录",
       "url": "https://github.com/Orama-Interactive/Pixelorama/releases/tag/v1.2.4",
-      "accessed": "2026-11-07"
+      "accessed": "2026-11-06"
     },
     {
       "title": "Pixelorama MIT License",
       "url": "https://github.com/Orama-Interactive/Pixelorama/blob/master/LICENSE",
-      "accessed": "2026-11-07"
+      "accessed": "2026-11-06"
     }
   ],
   "coverProvenance": {
