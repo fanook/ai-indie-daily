@@ -1,0 +1,101 @@
+{
+  "id": "opensource-rawtherapee-20261107",
+  "slug": "opensource-rawtherapee-20261107",
+  "category": "opensource",
+  "type": "开源项目",
+  "label": "摄影后期",
+  "date": "2026-11-07",
+  "title": "RawTherapee：精细调整 RAW 照片",
+  "summary": "持续维护的 GPLv3 开源显影软件，提供非破坏式颜色、降噪与锐化工具；并非完整的图库管理平台。",
+  "tags": [
+    "GitHub",
+    "RawTherapee",
+    "摄影",
+    "RAW",
+    "GPLv3"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "RawTherapee 是面向数码照片的开源显影软件，重点是细调 RAW 数据转换为图像的过程，也支持 JPEG、TIFF、PNG 和 HDR DNG。截至本次核查，官方稳定版为 2026 年 7 月 26 日发布的 5.13。这里介绍的是持续维护的老项目，并非今日新品。"
+    },
+    {
+      "type": "heading",
+      "text": "照片处理，而不是包办整套摄影流程"
+    },
+    {
+      "type": "paragraph",
+      "text": "处理引擎采用非破坏式、32 位浮点运算，提供去马赛克、颜色和细节调整。更专门的能力包括像素位移 RAW 合成、暗场减除、平场校正和坏点修正，适合希望深入控制显影过程的摄影爱好者。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方 README 提醒，软件需要使用者愿意阅读文档；数字资产管理、打印和上传等外围功能并非其重点。处理单张照片与管理多年图库是不同的需求，后者可能仍需搭配其他软件。"
+    },
+    {
+      "type": "heading",
+      "text": "5.13 的颜色设置变化"
+    },
+    {
+      "type": "paragraph",
+      "text": "5.13 改善了高分屏预览和缩略图，为局部编辑加入 Capture Deconvolution 锐化。默认工作色彩空间从 ProPhoto 改为 Rec2020，ProPhoto 仍可选择。官方提醒，切换工作色彩空间可能改变部分调整工具的行为，旧照片处理结果应在相同设置下比较。"
+    },
+    {
+      "type": "heading",
+      "text": "系统要求与许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方提供 Windows、Linux 和 macOS 下载。5.13 的 Apple Silicon 版要求 macOS Tahoe 26.0 或更新版本，Intel 版要求 Monterey 12.0 或更新版本。Windows 与 Linux 同时提供 x86_64 和 ARM64 包，需要按处理器选择。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目采用 GNU GPLv3，允许依照许可使用、修改和分发；再分发时需遵守版权声明、许可和对应源码提供等要求。这项软件许可不自动覆盖导入的第三方照片。"
+    },
+    {
+      "type": "link",
+      "text": "查看 RawTherapee 官方 GitHub 仓库",
+      "url": "https://github.com/RawTherapee/RawTherapee"
+    },
+    {
+      "type": "link",
+      "text": "查看 5.13 官方下载与发布说明",
+      "url": "https://rawtherapee.com/downloads/5.13/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RawTherapee 官方 README",
+      "url": "https://github.com/RawTherapee/RawTherapee/blob/dev/README.md",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "RawTherapee 官网：处理引擎与 RAW 功能",
+      "url": "https://rawtherapee.com/",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "RawTherapee GitHub 官方发布记录",
+      "url": "https://github.com/RawTherapee/RawTherapee/releases",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "RawTherapee 5.13 发布说明与系统要求",
+      "url": "https://rawtherapee.com/downloads/5.13/",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "RawTherapee GNU GPLv3 许可证",
+      "url": "https://github.com/RawTherapee/RawTherapee/blob/dev/LICENSE",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "找到官网截图 rt57_misty_morning.jpg 与 rt57_cc24_measure.jpg，但未核实截图及其中摄影作品的独立转载许可；软件 GPLv3 不自动覆盖这些图片，采用文字卡片。"
+  },
+  "tool": {
+    "platforms": "Windows、Linux、macOS（按版本核对系统与处理器）",
+    "pricing": "开源软件，可从官方发布页下载",
+    "license": "GNU GPLv3"
+  }
+}

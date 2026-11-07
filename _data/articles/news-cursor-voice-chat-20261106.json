@@ -1,0 +1,54 @@
+{
+  "id": "news-cursor-voice-chat-20261106",
+  "slug": "news-cursor-voice-chat-20261106",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 编程",
+  "date": "2026-11-06",
+  "title": "Cursor 上线 Agent 实时语音通话，编码任务可在交谈时继续运行",
+  "summary": "新增双向语音通话覆盖 IDE、Agents Window、网页及 iOS；Grok Voice 处理听说，编码仍由用户所选模型执行。",
+  "tags": [
+    "Cursor",
+    "Agent",
+    "语音"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Cursor 在标注 11 月 6 日的更新公告中推出 Voice Chat with Agents。用户可以说出修改需求、询问执行进度，并听取 Agent 的口头反馈。新功能覆盖 Agents Window、IDE、网页和 iOS；它是双向通话，与原有将语音转换为输入框文字的听写功能分开。"
+    },
+    {
+      "type": "paragraph",
+      "text": "通话中，语音 Agent 会把代码任务交给当前聊天里的编码 Agent，交谈不必等待编码结束。用户可以继续追问代码差异、运行状态或此前的对话，编码 Agent 则在工作过程中和完成后提供简短播报。"
+    },
+    {
+      "type": "heading",
+      "text": "语音与编码使用不同的模型层"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方文档说明，Grok Voice 负责听说，编码 Agent 仍使用用户已选择的模型。发起通话需要登录 Cursor 账户，单用 API key 的会话不支持。语音通话设有每日限额，文档未公布具体额度；Cursor 表示，开启 Privacy Mode 后，语音通话采用零数据保留。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Cursor 官方语音通话说明",
+      "url": "https://cursor.com/docs/agent/voice-chat"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Voice Chat with Agents — Cursor Changelog",
+      "url": "https://cursor.com/changelog/voice-chat",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "Voice Chat — Cursor Docs",
+      "url": "https://cursor.com/docs/agent/voice-chat",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查本次官方公告和功能文档，未找到可核实复用依据的对应界面配图；不以旧版听写截图替代。"
+  }
+}

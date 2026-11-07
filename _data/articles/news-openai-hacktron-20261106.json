@@ -1,0 +1,41 @@
+{
+  "id": "news-openai-hacktron-20261106",
+  "slug": "news-openai-hacktron-20261106",
+  "category": "news",
+  "type": "新闻",
+  "label": "AI 安全研究",
+  "date": "2026-11-06",
+  "title": "OpenAI 与 Hacktron 合作，重点测试系统与第三方服务的连接",
+  "summary": "双方将共同选择优先测试范围，关注系统与外部服务的交互；Hacktron 同时获得扩展的 Daybreak Red 模型访问权限。",
+  "tags": [
+    "OpenAI",
+    "Hacktron",
+    "Agent",
+    "安全研究"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 在 11 月 6 日公告与安全研究团队 Hacktron 合作。双方将一起选定优先测试的系统区域，重点检查 OpenAI 系统与第三方服务之间的交互，并通过 Daybreak Red 扩展 Hacktron 对其前沿模型的访问。"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 表示，双方此前通过漏洞赏金计划建立联系。Hacktron 开发用于代码审查、渗透测试和红队工作的 AI Agent，其研究覆盖应用、云基础设施与身份系统之间的连接问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这次公布的是合作与测试安排，公告尚未给出本轮合作发现的新漏洞数量或修复结果。OpenAI 将其放在近期扩大漏洞赏金、引入外部研究团队的安全测试计划中。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+      "url": "https://openai.com/index/partnering-with-hacktron/",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方合作公告，未发现能核实使用依据、直接对应本次合作的图片。"
+  }
+}

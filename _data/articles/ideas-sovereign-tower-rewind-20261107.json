@@ -1,0 +1,63 @@
+{
+  "id": "ideas-sovereign-tower-rewind-20261107",
+  "slug": "ideas-sovereign-tower-rewind-20261107",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "叙事设计",
+  "date": "2026-11-07",
+  "title": "《Sovereign Tower》：回溯世界，但保留君主的记忆",
+  "summary": "Godot 新访谈披露这款圆桌管理 RPG 如何分别保存世界状态与已知信息，以及控制叙事分支的制作范围。",
+  "tags": [
+    "Godot",
+    "Sovereign Tower",
+    "时间回溯",
+    "独立游戏"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Godot 于 11 月 6 日刊出 Wild Wits Games 的制作访谈。《Sovereign Tower》已于 8 月 6 日在 Steam 发售，支持 Windows 与 Linux，并提供简体中文界面与字幕。它让玩家扮演君主，处理臣民请求、招募骑士，再按能力把任务分派出去。"
+    },
+    {
+      "type": "heading",
+      "text": "回到过去，不等于清空记忆"
+    },
+    {
+      "type": "paragraph",
+      "text": "游戏中的恶魔可以让时间倒退，君主仍保留已经获知的信息。一次失败因此也可能提供新的线索，让下一轮决策发生变化。骑士各有力量、敏捷、魅力、魔法与智慧等属性，任务结局可能是成功、失败或意外结果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "主程序 Paul Mozet 在访谈中解释，每轮游玩需要上午和下午两份存档，并记住此前各轮的信息；数百个叙事变量、任务和上百名角色，又让简单的整份状态回滚不够用。团队把要保存的信息尽量拆细，并反复测试，发行后仍在修复遗漏的问题。"
+    },
+    {
+      "type": "heading",
+      "text": "分支也受文字量与本地化成本约束"
+    },
+    {
+      "type": "paragraph",
+      "text": "叙事设计师 Lisa Garnier 表示，团队没有给每个小互动都增加回溯选项，而是在主体内容写完后删减部分变化，以控制文字量和本地化开支。访谈也披露，团队在体验《Dispatch》后补入骑士等级与经验系统，并调整标签的表达。"
+    },
+    {
+      "type": "link",
+      "text": "阅读 Godot 官方完整制作访谈",
+      "url": "https://godotengine.org/article/godot-showcase-sovereign-tower/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Godot Showcase — Sovereign Tower",
+      "url": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
+      "accessed": "2026-11-07"
+    },
+    {
+      "title": "Sovereign Tower — 官方 Steam 商店",
+      "url": "https://store.steampowered.com/app/4113940/Sovereign_Tower/",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已找到 Godot 访谈中的官方游戏截图，但本次未能核实其独立转载依据，采用文字卡片。"
+  }
+}
