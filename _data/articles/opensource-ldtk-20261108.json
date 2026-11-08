@@ -1,0 +1,168 @@
+{
+  "id": "opensource-ldtk-20261108",
+  "slug": "opensource-ldtk-20261108",
+  "category": "opensource",
+  "type": "工具档案",
+  "label": "关卡编辑",
+  "date": "2026-11-08",
+  "title": "LDtk：先画关卡规则，再让瓦片自动跟上",
+  "summary": "这款开源 2D 关卡编辑器把地形网格、自动铺图和实体数据分开处理，既能导出完整 JSON，也能从 PNG、CSV 和简化数据开始接入游戏。",
+  "tags": [
+    "LDtk",
+    "关卡编辑",
+    "开源",
+    "2D"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "一张看起来完整的地图，还不是能运行的关卡：哪里挡路、角色从哪里出现、传送门通向哪里，都需要数据。LDtk（Level Designer Toolkit）是一款独立的 2D 关卡编辑器，重点面向横版平台和俯视视角，把这些信息与画面放在同一个编辑流程中。它不是游戏引擎，也不面向等距 3D 场景。"
+    },
+    {
+      "type": "heading",
+      "text": "网格负责含义，瓦片负责外观"
+    },
+    {
+      "type": "paragraph",
+      "text": "LDtk 的 IntGrid 是整数网格，每个数值可以配一种颜色。比如把 1 约定为实心地面、2 约定为另一类地形，就能先用色块安排空间；这些数值的实际游戏行为，仍由游戏程序解释。"
+    },
+    {
+      "type": "paragraph",
+      "text": "自动图层把网格与瓦片集、匹配规则连接起来。官方文档举的例子是：当前格有碰撞值、上方没有，就绘制表面瓦片；一般实心格则绘制填充瓦片。改动地形时，相应图案按规则重新铺设。这里的“自动”是规则匹配，不是生成式 AI。独立的纯自动图层还能读取另一张 IntGrid，让同一份空间数据驱动分开的前景与背景。"
+    },
+    {
+      "type": "paragraph",
+      "text": "实体则处理玩家起点、敌人、道具与触发区域等对象，并可附加有类型的自定义属性，例如生命值、巡逻路径或物品列表。地图画面与对象参数可以一起编辑，但敌人如何移动、触发后发生什么，仍要在运行游戏时实现。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/ldtk-editor-20261108.webp",
+      "alt": "LDtk 官方界面截图：左侧列出实体和图层，右侧显示带平台、梯子与传送点的像素关卡",
+      "caption": "LDtk 官网展示的编辑界面。图源：Deepnight Games；截图用于说明编辑器，不代表本文制作的关卡。"
+    },
+    {
+      "type": "heading",
+      "text": "先用简化导出接通一间房"
+    },
+    {
+      "type": "paragraph",
+      "text": "完整的 .ldtk 项目使用 JSON 格式；已有导入器或需要保留较完整结构时，可以沿这条路线接入。官方还提供 Super Simple Export：每个关卡生成各图层 PNG、合成 PNG、包含实体等信息的简化 JSON，并为 IntGrid 输出 CSV。显示合成图片只解决“看得见”，碰撞和实体逻辑仍需读取数据并实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "下面是一套建议的最小接入练习，目标不是先做大地图，而是验证编辑结果能否可靠进入目标引擎："
+    },
+    {
+      "type": "steps",
+      "items": [
+        "建立一个房间和一张 IntGrid，用两类数值区分空地之外的地形；添加玩家起点和出口实体。先约定数值和实体名称在程序中的含义。",
+        "添加少量自动铺图规则，覆盖地表与内部填充。移动一段墙面，检查画面变化是否仍与网格边界一致。",
+        "在项目设置开启 Super Simple Export 并保存。检查对应关卡目录里的 _composite.png、data.json 与 IntGrid CSV，再把图片和数据分别接入游戏。",
+        "让角色从起点出现，测试不能穿过实心格、出口能正确触发；随后移动起点、修改一段墙面并重新导出，确认游戏读取的是新数据。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "导入器和格式不能只看“支持”二字"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方 Importers 页面列有 Unity、Godot、MonoGame 等生态的项目，并注明各自作者。选用时需要继续检查具体导入器的引擎版本、支持字段与维护情况，不能把目录收录当作所有组合都已兼容。"
+    },
+    {
+      "type": "paragraph",
+      "text": "TMX 导出可作为已有 Tiled 流程的过渡，但并非无损替代：同一格叠放的瓦片可能拆成多个图层，实体数组会拆成顺序属性，点和枚举转为字符串，Aseprite 文件也不能直接沿这条路线使用。官方建议优先解析 LDtk JSON 或采用简化导出。"
+    },
+    {
+      "type": "heading",
+      "text": "版本、平台与许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "截至 2026 年 11 月 8 日核对，官方下载页列出的稳定版是 1.5.3，提供 Windows、Linux Ubuntu 与 macOS 下载；1.5.4 单独标为预览构建，不能当作稳定版。本篇是项目介绍，不是当天发布消息。稳定版发布记录包含实体创建、绘图等崩溃修复，可在采用前与下载包一起核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "LDtk 可免费使用，也可自愿付费支持。仓库采用 MIT 许可，允许使用、修改和分发软件，包括商业用途；复制软件或其重要部分时，需要保留版权与许可声明，软件按原样提供、不作保证。官网下载页允许将用 LDtk 创作的内容用于商业项目，但这不替代外部素材的许可：README 另外指向示例瓦片的授权说明，导入的图片、字体和其他资源仍应逐项核对。"
+    },
+    {
+      "type": "link",
+      "text": "查看 LDtk 项目仓库",
+      "url": "https://github.com/deepnight/ldtk"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/ldtk-editor-20261108.webp",
+    "alt": "LDtk 的图层与实体面板，以及包含梯子和传送点的像素关卡"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://ldtk.io/",
+    "sourceTitle": "LDtk – 2D level editor from the director of Dead Cells",
+    "accessed": "2026-11-08",
+    "rightsNote": "取自 Deepnight Games 官方首页的产品界面截图 appScreenshot-1024x657.png，仅用于对应软件的介绍与界面说明，正文保留图源署名。未将软件 MIT 许可推定为截图中第三方美术素材的独立再利用许可。"
+  },
+  "tool": {
+    "platforms": "Windows、Linux Ubuntu、macOS（官方下载）",
+    "pricing": "免费使用；可自愿付费支持",
+    "license": "软件 MIT；外部及示例素材另查各自许可"
+  },
+  "sources": [
+    {
+      "title": "LDtk 项目 README",
+      "url": "https://github.com/deepnight/ldtk",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "LDtk 官方功能介绍",
+      "url": "https://ldtk.io/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "IntGrid layers",
+      "url": "https://ldtk.io/docs/general/intgrid-layers/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "Auto layers",
+      "url": "https://ldtk.io/docs/general/auto-layers/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "Super simple export",
+      "url": "https://ldtk.io/docs/game-dev/super-simple-export/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "Loading LDtk in your game",
+      "url": "https://ldtk.io/docs/game-dev/loading/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "Tiled TMX export",
+      "url": "https://ldtk.io/docs/game-dev/exporting-tiled-tmx/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "LDtk Importers",
+      "url": "https://ldtk.io/api/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "LDtk Downloads",
+      "url": "https://ldtk.io/download/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "LDtk Releases",
+      "url": "https://github.com/deepnight/ldtk/releases",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "LDtk MIT License",
+      "url": "https://github.com/deepnight/ldtk/blob/master/LICENSE",
+      "accessed": "2026-11-08"
+    }
+  ]
+}

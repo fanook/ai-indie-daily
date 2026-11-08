@@ -1,0 +1,57 @@
+{
+  "id": "news-inkling2-small-20261105",
+  "slug": "news-inkling2-small-20261105",
+  "category": "news",
+  "type": "模型发布",
+  "label": "多模态模型",
+  "date": "2026-11-05",
+  "title": "Inkling 2 Small 发布：先开放 Tinker 使用，模型权重仍待公开",
+  "summary": "Thinking Machines 的新模型支持文字与图片输入，可在 Tinker 推理和微调；完整权重计划在外部安全测试后发布。",
+  "tags": [
+    "Thinking Machines",
+    "Inkling",
+    "Tinker"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Thinking Machines Lab 于 11 月 5 日公布 Inkling 2 Small，作为第二代 Inkling 系列的首款模型。目前可通过 Tinker 使用推理与微调功能，Playground 提供交互试用。"
+    },
+    {
+      "type": "heading",
+      "text": "名称里的 Small，不代表只有少量总参数"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡列出 5940 亿总参数、每个 token 激活约 170 亿参数。它采用混合专家架构，每个 token 路由至 384 个专家中的 8 个。输入支持文字和图片，输出为文字，模型卡标明上下文上限为 100 万 token；公告明确不支持音频。"
+    },
+    {
+      "type": "heading",
+      "text": "已可调用，不等于权重已开放"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布公告称，初期模型权重保持关闭，计划在完成外部安全测试与红队测试后，于发布后的下一周按 Apache 2.0 许可公开完整权重。微调检查点也要等权重发布后才能下载。模型卡当前的许可入口仍是 Tinker 服务条款，因此不能把未来的权重许可当成现阶段的服务使用条件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方同时列出实际使用限制：回答不够简洁，在包含大量技能定义（skills）的代码库中不总能选对工具；模型卡另提示，长轮次对话中的表现可能下降。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Thinking Machines Lab：Introducing Inkling 2 Small",
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "accessed": "2026-11-08"
+    },
+    {
+      "title": "Thinking Machines Lab：Inkling 2 Small Model Card",
+      "url": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发布页与模型卡；发布页的主要演示为视频和交互图表，未取得已核实内容与使用依据的静态封面，采用文字卡片。"
+  }
+}
