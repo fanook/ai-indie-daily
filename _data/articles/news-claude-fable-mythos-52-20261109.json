@@ -1,0 +1,28 @@
+{
+  "id": "news-claude-fable-mythos-52-20261109",
+  "slug": "news-claude-fable-mythos-52-20261109",
+  "category": "news",
+  "type": "模型更新",
+  "label": "AI 模型",
+  "date": "2026-11-09",
+  "title": "Claude Fable 与 Mythos 更新至 5.2：标准 API 价格下调，保留不同访问门槛",
+  "summary": "两款模型共享底层能力；Fable 面向一般用户，Mythos 仍需机构验证。标准输入、输出单价较 5.1 降低 20%。",
+  "tags": ["Anthropic", "Claude", "AI 模型"],
+  "blocks": [
+    {"type": "paragraph", "text": "Anthropic 于 11 月 9 日发布 Claude Fable 5.2 和 Mythos 5.2。两者采用相同底层模型，但 Fable 加入网络安全与生物领域防护；相关研究机构须通过验证计划才能使用 Mythos。"},
+    {"type": "heading", "text": "价格与模型规格"},
+    {"type": "paragraph", "text": "官方更新记录列出的标准价格为每百万输入 token 8 美元、每百万输出 token 40 美元，上一代分别为 10 和 50 美元，即均下降 20%。Claude API 的 Fable 快速模式另收每百万输入 16 美元、输出 80 美元；官方称输出速率最高可达普通模式的 2.5 倍。"},
+    {"type": "paragraph", "text": "Fable 5.2 的模型文档列出 100 万 token 上下文、最多 12.8 万 token 输出，接收文字与图片、输出文字。自适应思考始终开启，无法关闭。文档将其定位于长时间代理任务与复杂推理，而非所有请求都必须采用的默认模型。"},
+    {"type": "heading", "text": "评测数字需要连同条件阅读"},
+    {"type": "paragraph", "text": "Anthropic 发布表中，Fable 5.2 在 FrontierCode 2.0 编程评测为 49.1%，5.1 为 32.4%，两者均使用 Xhigh 思考强度。表下注明，未特别标注的结果采用最高可用强度，Fable 的防护默认开启。这些是厂商公布的评测成绩，不是日常任务成功率。"},
+    {"type": "heading", "text": "接入仍有兼容与数据保留条件"},
+    {"type": "paragraph", "text": "更新记录说明，5.2 会对所有 API 账户检查历史思考块与前文是否一致：修改系统提示、工具定义或早先消息后，再传回后续轮次的旧思考块，会得到 400 错误。它不能被当作只替换模型名称就一定兼容的升级。"},
+    {"type": "paragraph", "text": "模型文档还注明，Fable 5.2 通常要求保留数据 30 天，零数据保留须取得 Anthropic 明确授权。Mythos 的规格与定价相同，但获得 Fable 访问权限并不等于获得 Mythos 权限。"}
+  ],
+  "coverProvenance": {"status": "unavailable", "reason": "已核查官方发布页的评测表及图注；未确认对应图表或硬件演示素材的转载使用依据，采用文字卡片。"},
+  "sources": [
+    {"title": "Claude Fable 5.2 and Mythos 5.2", "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "accessed": "2026-11-11"},
+    {"title": "Claude Fable 5.2 — Claude Platform Docs", "url": "https://platform.claude.com/docs/en/models/fable-5-2/overview", "accessed": "2026-11-11"},
+    {"title": "Claude Platform release notes — November 9, 2026", "url": "https://platform.claude.com/docs/en/release-notes/overview", "accessed": "2026-11-11"}
+  ]
+}

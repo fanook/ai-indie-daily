@@ -1,0 +1,53 @@
+{
+  "id": "opensource-scrcpy-20261111",
+  "slug": "opensource-scrcpy-20261111",
+  "category": "opensource",
+  "type": "工具档案",
+  "label": "手机投屏",
+  "date": "2026-11-11",
+  "title": "scrcpy：把安卓手机搬到电脑屏幕上，顺手录下一段操作",
+  "summary": "通过 USB 或局域网显示和控制安卓手机，不必 root；录制教程时，画面与声音也能直接保存到电脑。",
+  "tags": ["开源", "Android", "屏幕录制"],
+  "tool": {
+    "platforms": "电脑端：Windows、macOS、Linux；手机端：Android 5.0 起，音频转发需 Android 11 起",
+    "pricing": "免费",
+    "license": "Apache-2.0"
+  },
+  "blocks": [
+    {"type": "paragraph", "text": "想演示手机里某个设置藏在哪里，或者录下一段应用操作，不一定要再拿一台相机对着手机拍。scrcpy 将安卓设备的画面显示在电脑窗口中，还可用电脑键盘和鼠标操作手机。它支持 USB 和 TCP/IP 连接，手机无需 root，也不用安装常驻应用。"},
+    {"type": "paragraph", "text": "这是已有正式版本的开源工具，不是今天刚发布的新品。截至 2026 年 11 月 11 日核对，官方发布页列有 5.0.1，修复了部分 Windows、Linux 等环境的硬件解码问题。它有按平台划分的安装说明和专门的连接、音频、录制文档，但使用方式仍以命令行为主。"},
+    {"type": "heading", "text": "投屏和录制，可以是同一件事"},
+    {"type": "paragraph", "text": "scrcpy 的录制功能保存来自手机的音视频流：手机负责编码，电脑负责将它们封装进文件。它不是再次截取电脑上的投屏窗口；文档说明，录制时间戳来自设备，因此传输包到达时间的波动不会改变录制文件的时间基准。"},
+    {"type": "paragraph", "text": "下面是官方录制选项组合成的 20 秒练习命令。连接成功后，它会边投屏边写入 demo.mp4，并在时间到达后退出。"},
+    {"type": "code", "text": "scrcpy --record=demo.mp4 --time-limit=20"},
+    {"type": "paragraph", "text": "适合先录一段不含私人信息的设置操作，再用播放器检查开头、结尾、声音和文字是否清楚。若只需要画面，可以加入 --no-audio。这个练习的验收对象是保存下来的文件，而不只是投屏窗口看起来是否流畅。"},
+    {"type": "heading", "text": "第一次使用，先把有线连接跑通"},
+    {"type": "steps", "items": [
+      "从 Genymobile/scrcpy 官方仓库进入对应系统的安装文档。Windows 用户可下载官方压缩包并解压，再双击目录中的 open_a_terminal_here.bat 打开命令行。不要仅凭第三方网站名称里有 scrcpy 就下载。",
+      "在自己的安卓手机上开启开发者选项中的 USB 调试，连接自己的电脑。首次连接可能出现 RSA 调试授权提示，只允许可信电脑；这项权限用于 ADB 调试，不只是显示画面。",
+      "先运行 adb devices 检查设备列表，再运行 scrcpy。如果连接了多台设备，按官方连接文档使用 --serial 指定目标，避免选错手机。",
+      "确认窗口显示正确手机后，再运行上面的短录制命令。演示前关闭私人通知，并只展示有权公开的内容。"
+    ]},
+    {"type": "paragraph", "text": "无线连接也是正式支持的方式，但设备与电脑须处于同一网络，并完成相应的 ADB 连接配置。先用 USB 确认投屏可用，再尝试无线，有助于把设备问题和网络问题分开。"},
+    {"type": "heading", "text": "有画面，不一定同时有声音"},
+    {"type": "paragraph", "text": "音频转发要求 Android 11 或更新版本。Android 11 在启动 scrcpy 时还须保持手机解锁；Android 10 及更早版本会自动禁用音频捕获。音频捕获失败时，默认可以继续仅显示画面，所以看到投屏窗口并不能证明录音成功。"},
+    {"type": "paragraph", "text": "默认转发的是设备音频输出。若改用 Android 13 起支持的 playback 音源并启用 --audio-dup，让手机和电脑同时播放，应用可以拒绝被捕获。需要录某个具体应用时，应先检查短样片，而不是到完整演示结束才确认声音。"},
+    {"type": "heading", "text": "开源许可覆盖软件，不替录制内容授权"},
+    {"type": "paragraph", "text": "仓库许可证为 Apache-2.0，允许在遵守条款的前提下使用、修改和分发。再分发软件时需附带许可证、保留适用声明，并标明修改；如作品包含 NOTICE，还需按条款处理。这并不意味着录到的音乐、视频、应用素材或他人信息也能自由发布。"},
+    {"type": "link", "text": "查看 scrcpy 官方仓库与各平台安装入口", "url": "https://github.com/Genymobile/scrcpy"}
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方 README 的 assets/screenshot-debian-600.jpg 配图入口及仓库 Apache-2.0 许可；本次未确认截图内第三方界面元素的再利用依据，不采用该图。"
+  },
+  "sources": [
+    {"title": "scrcpy 官方仓库与 README", "url": "https://github.com/Genymobile/scrcpy", "accessed": "2026-11-11"},
+    {"title": "scrcpy 5.0.1 发布记录", "url": "https://github.com/Genymobile/scrcpy/releases/tag/v5.0.1", "accessed": "2026-11-11"},
+    {"title": "Recording：录制、容器与时间限制", "url": "https://github.com/Genymobile/scrcpy/blob/master/doc/recording.md", "accessed": "2026-11-11"},
+    {"title": "On Windows：安装与运行", "url": "https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md", "accessed": "2026-11-11"},
+    {"title": "Connection：选择设备与无线连接", "url": "https://github.com/Genymobile/scrcpy/blob/master/doc/connection.md", "accessed": "2026-11-11"},
+    {"title": "Audio：系统要求与音源差异", "url": "https://github.com/Genymobile/scrcpy/blob/master/doc/audio.md", "accessed": "2026-11-11"},
+    {"title": "Android Debug Bridge：USB 调试与授权", "url": "https://developer.android.com/tools/adb", "accessed": "2026-11-11"},
+    {"title": "scrcpy LICENSE：Apache License 2.0", "url": "https://github.com/Genymobile/scrcpy/blob/master/LICENSE", "accessed": "2026-11-11"}
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "tools-godot48-beta3-20261110",
+  "slug": "tools-godot48-beta3-20261110",
+  "category": "tools",
+  "type": "版本更新",
+  "label": "Godot",
+  "date": "2026-11-10",
+  "title": "Godot 4.8 beta 3 修复场景删除与手柄菜单问题，.NET 版最低要求升至 10",
+  "summary": "这次测试版以回归修复为主，收录 51 位贡献者的 74 项修复；仍不是稳定版。",
+  "tags": [
+    "Godot",
+    "游戏引擎",
+    "版本更新"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Godot 4.8 beta 3 的 GitHub 发行包于北京时间 11 月 10 日 00:16 发布，官网说明标注 11 月 9 日。它仍是用于公开测试的预发布版本，主要处理 beta 2 之后的回归问题，收录 51 位贡献者的 74 项修复。"
+    },
+    {
+      "type": "heading",
+      "text": "被删除的场景不再被自动保存“找回来”"
+    },
+    {
+      "type": "paragraph",
+      "text": "其中一项修复针对编辑器的“失去焦点时保存”：开启后，如果删除的场景仍在编辑器中打开，窗口焦点变化会触发自动保存。原有检查只确认父文件夹存在，结果会重新创建刚移入废纸篓的场景文件。修复后先检查场景文件本身是否仍然存在，再决定是否保存。"
+    },
+    {
+      "type": "heading",
+      "text": "手柄菜单不再被虚假的鼠标移动打断"
+    },
+    {
+      "type": "paragraph",
+      "text": "另一项修复涉及 Windows：切换到捕获鼠标模式时，系统原先会生成一个相对位移为零的鼠标移动事件。在同时支持鼠标和手柄的菜单里，这可能让游戏立即切回鼠标控制，打断手柄导航。新实现直接更新鼠标位置，不再生成这个事件。贡献者与审核者在 Windows 11 的复现项目中报告验证通过。"
+    },
+    {
+      "type": "heading",
+      "text": ".NET 构建提高运行条件"
+    },
+    {
+      "type": "paragraph",
+      "text": "标准版支持 GDScript 与 GDExtension；需要 C# 的 .NET 版最低要求由 .NET 8 提高到 .NET 10。官方同时列出网页 Sample 音频驱动、动画自动插入关键帧等修复。beta 3 尚未进入稳定发布，官方提醒保留备份或版本记录，已知阻塞问题列表仍会更新。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发布页封面：它是 RefinedBearGames 的 Repel The Rifts 游戏画面，未核实转载使用依据，也不是本次修复的界面截图，因此使用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 3",
+      "url": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-3/",
+      "accessed": "2026-11-11"
+    },
+    {
+      "title": "Godot 4.8-beta3 官方发行记录",
+      "url": "https://github.com/godotengine/godot-builds/releases/tag/4.8-beta3",
+      "accessed": "2026-11-11"
+    },
+    {
+      "title": "Fix Save on Focus Loss recreating deleted open scenes · #124931",
+      "url": "https://github.com/godotengine/godot/pull/124931",
+      "accessed": "2026-11-11"
+    },
+    {
+      "title": "Fix mouse motion overrides controller input in menus · #124735",
+      "url": "https://github.com/godotengine/godot/pull/124735",
+      "accessed": "2026-11-11"
+    }
+  ]
+}
