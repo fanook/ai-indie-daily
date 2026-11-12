@@ -1,0 +1,120 @@
+{
+  "id": "opensource-localsend-20261109",
+  "slug": "opensource-localsend-20261109",
+  "category": "opensource",
+  "type": "工具档案",
+  "label": "文件互传",
+  "date": "2026-11-09",
+  "title": "LocalSend：同一局域网，跨系统传文件",
+  "summary": "不用注册账号或先上传网盘，LocalSend 可以在 Windows、macOS、Linux、Android 与 iOS 之间传送文件和文字；前提是设备所在网络允许彼此通信。",
+  "tags": [
+    "LocalSend",
+    "文件传输",
+    "跨平台",
+    "局域网"
+  ],
+  "tool": {
+    "platforms": "Windows、macOS、Linux、Android、iOS；另有 Fire OS 下载渠道",
+    "pricing": "免费",
+    "license": "Apache-2.0"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "手机里的视频要交给另一台电脑，或者把电脑上的 PDF 发到不同系统的手机，LocalSend 提供了一条直接的路径：在局域网内发现接收设备，把文件从一端传到另一端。它不要求注册账号，也不需要第三方服务器中转，设备之间传输时可以没有互联网连接。"
+    },
+    {
+      "type": "heading",
+      "text": "文件之外，也能传文字和链接"
+    },
+    {
+      "type": "paragraph",
+      "text": "LocalSend 提供 Windows、macOS、Linux、Android 和 iOS 客户端，能够传送照片、视频、文档以及文字消息。它的实用之处是把这些系统放进同一种发送流程：打开应用、选择内容，再选择附近设备。临时传一段文字或一个网址，也不必先把内容变成文件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方说明传输采用 HTTPS，并可启用 PIN 验证。接收文件默认保存到下载目录，保存位置可以在设置中调整。它面向的是附近设备之间的传送；需要隔着互联网给远方的人发文件时，就超出了官网描述的基本使用范围。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/localsend-receive-20261109.webp",
+      "alt": "LocalSend 官方 iPhone 界面示意：文件接收队列、单个文件状态和总传输进度",
+      "caption": "官方界面示意，不是本次运行截图。图源：LocalSend / Tien Nam Do，Apache-2.0；原图未修改。"
+    },
+    {
+      "type": "link",
+      "text": "查看官方图片来源与许可",
+      "url": "https://github.com/localsend/website/blob/main/LICENSE"
+    },
+    {
+      "type": "heading",
+      "text": "同一个 Wi-Fi，不一定就能互相发现"
+    },
+    {
+      "type": "paragraph",
+      "text": "使用条件不只是两台设备连上网络，还包括网络允许它们彼此通信。访客 Wi-Fi 的客户端隔离、系统防火墙、阻断局域网流量的 VPN，以及手机的本地网络权限，都可能让设备列表看不到另一端。README 列出的默认入站端口是 TCP／UDP 53317；这些网络条件也是排查发现失败和传输失败的主要线索。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目提供应用商店、包管理器和独立安装包等渠道。README 特别说明应用没有内置自动更新，因此更推荐通过商店或包管理器安装。不同发行版的系统兼容范围会变化，旧设备需要核对所选安装包的要求。"
+    },
+    {
+      "type": "heading",
+      "text": "已有稳定发行版，也仍在维护"
+    },
+    {
+      "type": "paragraph",
+      "text": "截至 2026 年 11 月 9 日核对，GitHub 标记的最新稳定版是 2026 年 8 月 21 日发布的 v1.18.2。它修复了与较旧客户端的部分兼容问题、代理环境下的连接问题和混合拖入文件与文件夹的问题；仓库在 11 月 8 日仍有 Linux 构建修复提交。本文是项目介绍，不是当天的新版本公告。"
+    },
+    {
+      "type": "paragraph",
+      "text": "LocalSend 的代码采用 Apache-2.0 许可证，可以按许可证条件使用、修改与再分发。项目的免费客户端与公开协议，让局域网互传不必绑定同一家硬件厂商的设备生态。"
+    },
+    {
+      "type": "link",
+      "text": "查看 LocalSend GitHub 仓库",
+      "url": "https://github.com/localsend/localsend"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核实官方接收界面的竖屏图并放入正文；该图不适合作为横向卡片封面，列表采用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "LocalSend GitHub 仓库与 README",
+      "url": "https://github.com/localsend/localsend",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "LocalSend 官方介绍与常见问题",
+      "url": "https://localsend.org/",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "LocalSend v1.18.2 发布说明",
+      "url": "https://github.com/localsend/localsend/releases/tag/v1.18.2",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "LocalSend v1.18.2 发布元数据",
+      "url": "https://api.github.com/repos/localsend/localsend/releases/tags/v1.18.2",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "2026-11-08 Linux 构建修复提交",
+      "url": "https://github.com/localsend/localsend/commit/8476c091c5a107e4507b6b3ec0cb15a069e857b5",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "LocalSend Apache-2.0 许可证",
+      "url": "https://github.com/localsend/localsend/blob/main/LICENSE",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "LocalSend 官方网站与素材的许可证",
+      "url": "https://github.com/localsend/website/blob/main/LICENSE",
+      "accessed": "2026-11-09"
+    }
+  ]
+}

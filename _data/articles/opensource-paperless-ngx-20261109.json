@@ -1,0 +1,136 @@
+{
+  "id": "opensource-paperless-ngx-20261109",
+  "slug": "opensource-paperless-ngx-20261109",
+  "category": "opensource",
+  "type": "工具档案",
+  "label": "文档归档",
+  "date": "2026-11-09",
+  "title": "Paperless-ngx：把扫描件变成可搜索档案",
+  "summary": "Paperless-ngx 把 OCR、全文检索、标签和文档分类接在一起，适合持续整理扫描件与电子文件；它需要自托管，也需要管理存储和备份。",
+  "tags": [
+    "Paperless-ngx",
+    "OCR",
+    "文档管理",
+    "自托管"
+  ],
+  "tool": {
+    "platforms": "自托管 Web 应用；官方推荐 Docker Compose，裸机安装支持 Linux",
+    "pricing": "软件免费；运行设备、存储及可选服务成本另计",
+    "license": "GNU GPL v3"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "扫描过的账单、说明书和收据，往往只是从纸堆变成了一堆图片或 PDF。Paperless-ngx 处理的是归档之后的查找问题：提取文字、建立索引，再用标签、往来对象和文档类型组织材料。系统部署在自己的服务器上，日常通过网页上传、浏览和搜索。"
+    },
+    {
+      "type": "heading",
+      "text": "从一份文件到一条可检索记录"
+    },
+    {
+      "type": "paragraph",
+      "text": "文档可以拖入网页，也可以放进指定的导入目录。处理过程中，Paperless-ngx 会对缺少文字层的扫描件执行 OCR，建立检索内容，并匹配标签、往来对象和类型。它使用 Tesseract 进行文字识别，可生成带可选择文字的 PDF/A 归档版本，同时保留原始文件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "指定的导入目录是收件箱，不是长期存放原件的目录：文件导入后会进入 Paperless-ngx 管理的存储结构，并从导入目录移走。原件与归档版本可以一起保留，但不能把导入目录里文件消失误认为没有导入成功。"
+    },
+    {
+      "type": "paragraph",
+      "text": "网页端支持全文搜索、命中内容高亮、多条件筛选和批量编辑。标签允许一份文档同时属于多个集合，例如既属于某项维修记录，也属于待处理材料；自定义字段、保存视图和工作流则能进一步组织固定的归档流程。"
+    },
+    {
+      "type": "heading",
+      "text": "中文识别和 Office 文件需要额外配置"
+    },
+    {
+      "type": "paragraph",
+      "text": "OCR 的默认识别语言是英语。中文材料需要安装对应的 Tesseract 语言包，并设置实际使用的识别语言；多语言同时识别也会增加处理所需的 CPU 时间。Word、Excel 等 Office 文件及邮件文件解析属于可选扩展，需要另行配置 Tika 和 Gotenberg 服务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "核心 OCR 与全文检索不依赖大模型。当前版本还提供可选的 LLM 文档建议、对话和相似文档检索，以及可选远程 OCR；这些功能需要主动启用，不能把启用了外部服务的配置与纯本地处理混为一谈。"
+    },
+    {
+      "type": "heading",
+      "text": "档案留在本地，也意味着自己负责保存"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方推荐使用 Docker Compose 部署；裸机安装面向 Linux，需要自行安装和维护组件。这是一套持续运行的文档管理服务，除了安装应用，还要安排持久化存储、账户权限和备份。"
+    },
+    {
+      "type": "paragraph",
+      "text": "README 明确提醒，文档内容在服务器上以未加密形式存储，因此运行主机本身必须可信。管理文档提供了专门的导出器，可以一起导出文档、缩略图、元数据和数据库内容；按该方式恢复时，导出与导入实例需要使用相同版本。"
+    },
+    {
+      "type": "heading",
+      "text": "社区维护的成熟项目"
+    },
+    {
+      "type": "paragraph",
+      "text": "Paperless-ngx 是 Paperless 与 Paperless-ng 的后继项目，由社区团队维护。2026 年 11 月 9 日核对时，最新稳定版为 v3.4.2，于北京时间 11 月 4 日发布，继续修复移动端界面、批量编辑任务与索引初始化等问题。项目采用 GNU GPL v3 许可证。本文以编写日期归档，不把既有项目介绍成当天发布的新产品。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Paperless-ngx GitHub 仓库",
+      "url": "https://github.com/paperless-ngx/paperless-ngx"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方文档截图并实际查看手机端示例图；图中包含示例文档预览，尚未核清这些素材的独立使用依据，采用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "Paperless-ngx GitHub 仓库",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 README：项目定位、部署方式与明文存储说明",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/README.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 官方文档：功能与截图",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/docs/index.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 官方文档：导入、OCR 与文件保存流程",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/docs/usage.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 官方文档：安装条件",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/docs/setup.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 官方文档：OCR 语言与 Tika、Gotenberg 配置",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/docs/configuration.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "v3.4.2 官方文档：备份与恢复",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/docs/administration.md",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Paperless-ngx v3.4.2 发布说明",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/releases/tag/v3.4.2",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Paperless-ngx 最新稳定版发布元数据",
+      "url": "https://api.github.com/repos/paperless-ngx/paperless-ngx/releases/latest",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Paperless-ngx GNU GPL v3 许可证",
+      "url": "https://github.com/paperless-ngx/paperless-ngx/blob/v3.4.2/LICENSE",
+      "accessed": "2026-11-09"
+    }
+  ]
+}

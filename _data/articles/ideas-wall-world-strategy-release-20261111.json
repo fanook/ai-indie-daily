@@ -1,0 +1,68 @@
+{
+  "id": "ideas-wall-world-strategy-release-20261111",
+  "slug": "ideas-wall-world-strategy-release-20261111",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "殖民地模拟",
+  "date": "2026-11-11",
+  "title": "《Wall World Strategy》发售：在垂直墙面经营殖民地",
+  "summary": "住房、生产与防御沿着巨墙展开，机器人蜘蛛负责向远处探索；沙盒模式取消剧情与时间压力，但敌袭仍会继续。",
+  "tags": [
+    "Wall World Strategy",
+    "Alawar",
+    "殖民地模拟",
+    "独立游戏"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Alawar 的《Wall World Strategy》于 11 月 11 日发售。官方产品页和 Steam 商店均已列为发行状态；Steam 提供 Windows 与 macOS 版本，包含简体中文界面和字幕。这是 Wall World 世界观下的一款殖民地管理游戏。"
+    },
+    {
+      "type": "heading",
+      "text": "住房、生产和防御共用有限资源"
+    },
+    {
+      "type": "paragraph",
+      "text": "殖民地依附在垂直巨墙上。玩家安排关键建筑、生产链、居住区域与基础设施，决定下一批资源优先投向生产、住房还是防御。人口拥挤、食物短缺与供应中断会影响居民状态和工作效率；敌人反复袭击，事故与环境灾害还会打乱原有运转。"
+    },
+    {
+      "type": "paragraph",
+      "text": "探索由机器人蜘蛛承担：它们前往远处区域侦察、采集资源与寻找技术样本，同时面对恶劣环境和不稳定地形。扩张因此不只是在基地里增加建筑，还涉及探险装备和资源回收的安排。"
+    },
+    {
+      "type": "heading",
+      "text": "沙盒模式保留生存压力"
+    },
+    {
+      "type": "paragraph",
+      "text": "沙盒模式允许选择地图与难度，不受剧情条件和时间压力约束，可以持续调整殖民地的布局。但官方说明，Zyrex 敌人仍然会进攻，沙盒并不等于关闭战斗的自由建造。"
+    },
+    {
+      "type": "link",
+      "text": "查看官方产品介绍",
+      "url": "https://alawar.com/games/wall-world-strategy"
+    },
+    {
+      "type": "link",
+      "text": "查看 Steam 商店与系统要求",
+      "url": "https://store.steampowered.com/app/4218360/Wall_World_Strategy/"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方产品页、Steam 配图入口及官方链接的媒体包；尚未取得明确的配图转载条件，采用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "Alawar：Wall World Strategy 官方产品页",
+      "url": "https://alawar.com/games/wall-world-strategy",
+      "accessed": "2026-11-12"
+    },
+    {
+      "title": "Wall World Strategy 官方 Steam 商店",
+      "url": "https://store.steampowered.com/app/4218360/Wall_World_Strategy/",
+      "accessed": "2026-11-12"
+    }
+  ]
+}

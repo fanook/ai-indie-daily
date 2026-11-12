@@ -1,0 +1,66 @@
+{
+  "id": "news-google-workspace-mcp-agentic-20261111",
+  "category": "news",
+  "type": "服务变更",
+  "label": "Agent 接入",
+  "date": "2026-11-11",
+  "title": "Workspace MCP 要求 AI Agent 标记",
+  "summary": "10 月预告的规则进入生效期：通过用户授权接入 MCP 的 OAuth 客户端需要标记为 AI Agent；这一标记不会额外授予数据权限。",
+  "tags": [
+    "Google Workspace",
+    "MCP",
+    "Agent"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Google 在 10 月 12 日发布的 Workspace 开发者公告，将 11 月 11 日定为 MCP 接入新规则的生效日：未标记为 AI Agent 的 OAuth 客户端，其请求将被拒绝。公告覆盖 Gmail、Chat、日历、Docs、Drive、Sheets 与 Slides；这不是这些服务停用，也不是 MCP 服务首次发布。"
+    },
+    {
+      "type": "heading",
+      "text": "区分 AI 代理与普通应用"
+    },
+    {
+      "type": "paragraph",
+      "text": "这项标记位于 Google Auth Platform 的客户端设置中。Google 将它定义为应用的自我声明，说明该客户端代表 AI Agent 获取上下文或执行操作，不等于安全认证，也不会增加访问用户数据的权限。用户同意和应用验证仍然适用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "仅调用传统 Workspace REST API 的非 Agent 应用不受此次变化影响。同一应用兼有人工交互与 Agent 功能时，Google 要求分开使用两套客户端身份，使管理员能分别管理访问。"
+    },
+    {
+      "type": "heading",
+      "text": "截止日期与例外"
+    },
+    {
+      "type": "paragraph",
+      "text": "公告写明，到 11 月 12 日仍未完成标记的客户端会保留为非 Agent 身份；此后要接入 MCP，需要新建已标记的客户端并更新应用。当前 Gmail 配置文档仍列有“现有客户端支持修改”和“不能修改则新建”两条路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gmail 文档另明确：使用全域委派的服务账号不在这一勾选项的管理范围内，不会仅因缺少标记而被拒绝，访问仍由 Workspace 管理员的委派设置控制。Gmail MCP 当前仍属于开发者预览。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发行记录、Gmail MCP 配置页和 OAuth 管理说明；未发现直接展示本次变更的正文配图，不以通用 Google 标志代替。"
+  },
+  "sources": [
+    {
+      "title": "Google Workspace developer release notes：October 12, 2026 公告及 November 11–12 生效安排",
+      "url": "https://developers.google.com/workspace/release-notes?hl=en",
+      "accessed": "2026-11-12"
+    },
+    {
+      "title": "Configure the Gmail MCP server：客户端标记、拒绝请求与服务账号例外",
+      "url": "https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server",
+      "accessed": "2026-11-12"
+    },
+    {
+      "title": "Manage OAuth Clients：Configure OAuth Clients for AI Agents",
+      "url": "https://support.google.com/cloud/answer/15549257",
+      "accessed": "2026-11-12"
+    }
+  ],
+  "slug": "news-google-workspace-mcp-agentic-20261111"
+}

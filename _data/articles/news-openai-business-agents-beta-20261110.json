@@ -1,0 +1,70 @@
+{
+  "id": "news-openai-business-agents-beta-20261110",
+  "category": "news",
+  "type": "产品测试",
+  "label": "ChatGPT",
+  "date": "2026-11-10",
+  "title": "ChatGPT 开放商家资料认领，Business Agent 先面向美国合资格商家",
+  "summary": "Business Hub 可管理资料和汇总互动数据；商家 Agent 使用独立标识的对话回答产品问题，目前不能直接完成购买、预订或查询订单。",
+  "tags": [
+    "OpenAI",
+    "ChatGPT",
+    "Business Agent"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 11 月 10 日宣布 Businesses in ChatGPT 进入 beta。商家可在 Business Hub 认领资料，提供产品价格与库存信息，并查看被提及和网站点击等汇总数据。Business Agent 是其中独立的一项功能，首批面向美国符合条件、拥有网站的电商与在线服务商家。"
+    },
+    {
+      "type": "heading",
+      "text": "商家回答与 ChatGPT 回答分开"
+    },
+    {
+      "type": "paragraph",
+      "text": "用户可以从 ChatGPT 中的商家资料页进入商家 Agent 对话，就产品差异或服务政策继续提问。OpenAI 表示，这段对话有明确标识，与用户原来的 ChatGPT 对话及其独立回答分开。商家也可将 Agent 作为广告的落地入口，赞助展示另行标注。"
+    },
+    {
+      "type": "heading",
+      "text": "认领不等于立即上线 Agent"
+    },
+    {
+      "type": "paragraph",
+      "text": "帮助文档说明，认领申请通过后，还须通过 Persona 身份验证，才能发布资料变更、查看分析或创建合资格 Agent。Agent 必须单独审核并发布。认领、发布 Agent 与投放广告是分开的，不要求先购买广告或签订 Enterprise 协议。"
+    },
+    {
+      "type": "paragraph",
+      "text": "当前 Agent 只能说明产品与政策、链接商家网站，不能直接购买、预订或查询客户订单。即使商家另有 ChatGPT 插件，Agent 的独立聊天也不会使用该插件的数据和能力。"
+    },
+    {
+      "type": "heading",
+      "text": "商家得到汇总指标，不是私人聊天"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI 表示，不会向商家提供用户的原始对话，包括商家 Agent 聊天。帮助文档列出的分析窗口是过去 28 天；空白指标可能是未达到展示门槛或数据尚未齐备，不能直接解读为零。认领资料与接入商品目录也不保证获得更多推荐。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方发布页与商家设置帮助页，未取得与本次功能直接对应且使用依据明确的配图，使用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "OpenAI：Introducing Businesses in ChatGPT",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "accessed": "2026-11-12"
+    },
+    {
+      "title": "OpenAI Help Center：Setting up your business on ChatGPT",
+      "url": "https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt",
+      "accessed": "2026-11-12"
+    },
+    {
+      "title": "ChatGPT release notes：November 10, 2026 Business Hub",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "accessed": "2026-11-12"
+    }
+  ],
+  "slug": "news-openai-business-agents-beta-20261110"
+}

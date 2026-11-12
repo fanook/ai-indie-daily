@@ -1,0 +1,14 @@
+LocalSend official iPhone interface illustration
+
+Source project: LocalSend / Tien Nam Do
+Copyright notice displayed by the official website: © 2022–2026 Tien Nam Do.
+Original image: https://localsend.org/img/screenshot-iphone.webp
+Source file: https://github.com/localsend/website/blob/main/public/img/screenshot-iphone.webp
+License: Apache License 2.0. See ../licenses/localsend-website-LICENSE.txt.
+License source: https://github.com/localsend/website/blob/main/LICENSE
+The downloaded image is unmodified.
+
+Verified on 2026-11-09. The complete upstream repository tree was checked for NOTICE files (case-insensitive); none were present. No upstream NOTICE file is supplied.
+Image Git blob SHA: dbd53a003f504999b700c0693926a64fb26d24d0
+License Git blob SHA: d794ff857b6004d02a5712184d4909ceca38f3de
+Upstream tree SHA inspected: 9377b82b2c3d733990b9819e4970bab051393bb2

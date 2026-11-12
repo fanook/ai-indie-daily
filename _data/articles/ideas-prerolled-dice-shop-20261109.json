@@ -1,0 +1,92 @@
+{
+  "id": "ideas-prerolled-dice-shop-20261109",
+  "slug": "ideas-prerolled-dice-shop-20261109",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "组合解谜",
+  "date": "2026-11-09",
+  "title": "《Prerolled》正式版上线：把骰子装盒，靠摆位组合付房租",
+  "summary": "这款骰子店经营游戏用相邻位置、永久换面贴纸与商店升级构成组合；正式版上线时，试玩版也获得提示、平衡与修复更新。",
+  "tags": [
+    "Prerolled",
+    "独立游戏",
+    "骰子",
+    "组合解谜"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Red Sauce Games 的《Prerolled》正式版已在 Steam 与 itch.io 上线。Christophe 和 Jack 在北京时间 11 月 9 日的发行公告中宣布，试玩版也同步更新，加入正式版制作过程中改进的提示说明、平衡调整与错误修复。Steam 页面列有 Windows 与 Linux 版本，目前语言列表只有英语。"
+    },
+    {
+      "type": "heading",
+      "text": "摆放位置也是骰子能力的一部分"
+    },
+    {
+      "type": "paragraph",
+      "text": "玩家经营一家骰子店，把骰子装进盒子，再卖给提出不同要求的顾客。骰子的效果会受到盒内其他骰子位置的影响，因此同一批骰子换一种排列，便可能形成不同组合；销售所得还要用来支付房租。"
+    },
+    {
+      "type": "paragraph",
+      "text": "贴纸会永久替换骰面，把“这一回合怎么摆”延伸为“之后保留什么能力”。官方列出超过 130 种骰面与 60 多种商店升级，并提供新骰子、盒子和逐步提高难度的可选挑战。这些数量来自开发者的产品介绍。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/covers/prerolled-dice-box-20261109.png",
+      "alt": "Prerolled 官方截图：中央木盒装着四枚不同骰面，右侧手机展示顾客要求，下方摆着待选骰子与贴纸",
+      "caption": "官方媒体包中的装盒界面。图源：Red Sauce Games / Christophe / Jack。媒体包截图可能与当前发行版本的界面细节不同。"
+    },
+    {
+      "type": "heading",
+      "text": "从十天 Game Jam 原型延伸而来"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者在 itch.io 项目页注明，游戏最初为 Shovel Jam 2025 在十天内制作。它后来继续发展成正式作品，试玩版与付费完整版仍分开提供；试玩内容不应等同于完整版的全部可解锁组合。"
+    },
+    {
+      "type": "link",
+      "text": "查看官方发行公告",
+      "url": "https://red-sauce.itch.io/prerolled/devlog/1758307/full-game-out-now"
+    },
+    {
+      "type": "link",
+      "text": "查看 Steam 商店与试玩版",
+      "url": "https://store.steampowered.com/app/4475970/Prerolled/"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/prerolled-dice-box-20261109.png",
+    "alt": "Prerolled 官方装盒界面：不同骰面、顾客要求与换面贴纸"
+  },
+  "coverProvenance": {
+    "status": "verified",
+    "kind": "official-material",
+    "sourceURL": "https://impress.games/press-kit/red-sauce-games/prerolled",
+    "sourceTitle": "Prerolled – Indie Game Press Kit | IMPRESS",
+    "accessed": "2026-11-09",
+    "rightsNote": "Steam 官方网站入口指向的 Red Sauce Games 媒体包，原截图 screenshots/11.png。Brand Guidelines 明确允许将素材用于有关 Prerolled 的视频、直播或帖文缩略图及内容中；本页仅用于对应作品介绍并保留作者署名。不作为素材包再分发、不用于游戏、训练或转售。"
+  },
+  "sources": [
+    {
+      "title": "Prerolled：FULL GAME OUT NOW!!!",
+      "url": "https://red-sauce.itch.io/prerolled/devlog/1758307/full-game-out-now",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Prerolled 官方 itch.io 项目页",
+      "url": "https://red-sauce.itch.io/prerolled",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Prerolled 官方 Steam 商店",
+      "url": "https://store.steampowered.com/app/4475970/Prerolled/",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Prerolled 官方媒体包及素材使用说明",
+      "url": "https://impress.games/press-kit/red-sauce-games/prerolled",
+      "accessed": "2026-11-09"
+    }
+  ]
+}

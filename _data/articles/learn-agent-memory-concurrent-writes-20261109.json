@@ -1,0 +1,103 @@
+{
+  "id": "learn-agent-memory-concurrent-writes-20261109",
+  "slug": "learn-agent-memory-concurrent-writes-20261109",
+  "category": "learn",
+  "type": "案例与练习",
+  "label": "Agent 协作",
+  "date": "2026-11-09",
+  "title": "多个 AI 共写笔记：复现“后保存覆盖前结果”",
+  "summary": "从 Anthropic 的合同 Wiki 案例出发，用两条虚构规则比较共享页覆盖与独立页归并，再看版本校验如何保护共同编辑。",
+  "tags": [
+    "Agent",
+    "记忆",
+    "并发写入",
+    "可复现练习"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "AI 已经读对了资料，最后的笔记仍可能缺内容：两个任务读到同一份旧文件，各自补上一段，后保存的人把前一个人的新段落覆盖了。本文依据 Anthropic 11 月 6 日发布的研究案例，提供一个 11 月 9 日编写的最小练习，专门观察这种写入冲突。"
+    },
+    {
+      "type": "heading",
+      "text": "合同 Wiki 中，少掉的并不只是措辞"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anthropic 在《The components of agent memory》中分析了一个 LAB 收购合同任务：多个 Agent 同时整理一张共用条款表，既有不准确的概括，也有互相覆盖。原文图 14 与正文记录，生成的简报只包含 57 个评分事实中的 41 个。改成每份合同单独一页、每页由一个 Agent 写入，并逐字保留条款后，该任务的 57 项标准都能得到满足。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是厂商披露的单个任务结果，不是所有法律任务的成功率。写入分工和条款保留方式同时改变，因此不能把差异全归因于拆文件。Harvey 的 LAB 仓库也将任务资料、评分标准和执行框架区分开，并提醒不同发布版本的分数未必可比。"
+    },
+    {
+      "type": "heading",
+      "text": "把问题缩小到两条已知信息"
+    },
+    {
+      "type": "paragraph",
+      "text": "下面使用两条完全虚构的项目规则，且预先假定它们都被正确提取。这样排除了模型读错资料的因素，只测试保存过程。脚本用固定的先后顺序模拟两个任务的交错读写，不调用模型，也不是复跑 Anthropic 的评测。"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "准备 Python 3，把下面代码保存为 lost_update_demo.py。它只使用标准库，在临时目录中写入示例文件，运行结束后自动清理。",
+        "运行 python3 lost_update_demo.py。前半段让 A、B 先各自读取空的共享页，再分别保存自己的旧快照加新内容。",
+        "后半段让每条规则写入独立文件，再由一个归并步骤读取两页，检查两条事实是否同时存在。"
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from pathlib import Path\nfrom tempfile import TemporaryDirectory\n\nfacts = {\n    \"A-01\": \"设计稿交付：2026-11-20\",\n    \"B-01\": \"试玩验收：2026-11-22\",\n}\nexpected = set(facts)\n\ndef ids(text):\n    return {key for key in expected if f\"{key}:\" in text}\n\nwith TemporaryDirectory() as folder:\n    root = Path(folder)\n    shared = root / \"shared.md\"\n    shared.write_text(\"\", encoding=\"utf-8\")\n    snapshot_a = shared.read_text(encoding=\"utf-8\")\n    snapshot_b = shared.read_text(encoding=\"utf-8\")\n    shared.write_text(snapshot_a + f\"A-01: {facts['A-01']}\\n\", encoding=\"utf-8\")\n    shared.write_text(snapshot_b + f\"B-01: {facts['B-01']}\\n\", encoding=\"utf-8\")\n    kept_shared = ids(shared.read_text(encoding=\"utf-8\"))\n    assert kept_shared == {\"B-01\"}\n    print(\"共享页保留：\", sorted(kept_shared))\n\n    for key, value in facts.items():\n        (root / f\"{key}.md\").write_text(f\"{key}: {value}\\n\", encoding=\"utf-8\")\n    merged = \"\".join((root / f\"{key}.md\").read_text(encoding=\"utf-8\")\n                     for key in sorted(facts))\n    assert ids(merged) == expected\n    print(\"独立页归并保留：\", sorted(ids(merged)))"
+    },
+    {
+      "type": "heading",
+      "text": "验收看事实是否保留，不只看程序是否报错"
+    },
+    {
+      "type": "paragraph",
+      "text": "本例运行结果为“共享页保留：['B-01']”和“独立页归并保留：['A-01', 'B-01']”。共享页的两次保存都完成了，但 A-01 已经丢失；后半段的断言则要求两个标识都存在。这里的标识检查只能证明示例记录还在，不能证明任意长文的意思被正确保留。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "把共享页的两次保存顺序对调，预期只剩 A-01。丢失哪条取决于谁最后保存，不是哪个任务理解得更好。",
+        "先让 A 保存，再让 B 重新读取当前共享页并追加，预期两条都保留。这说明串行处理是一个可比较的基线。",
+        "独立页归并后，再逐条核对日期和原始文本。实际流程还要检查内容是否错误、来源是否可追溯，以及同一个事实有没有两个相互冲突的版本。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "如果任务必须共写一页"
+    },
+    {
+      "type": "paragraph",
+      "text": "另一种办法是让存储服务原子地核对版本再写入：只有文件仍与读取时一致才接受更新；发生冲突就重新读取，保留已有内容后再提交。Claude Managed Agents 官方文档提供了 content_sha256 前置条件，说明哈希不匹配时应重读并基于新状态重试。这是该 API 的能力，普通本地文件保存不会自动获得相同保护。"
+    },
+    {
+      "type": "paragraph",
+      "text": "分文件也需要明确写入归属：两个任务仍同时改同一份合同页，覆盖问题就会回来。一个可检验的流程是先分配每页的唯一写入者，等所有页面完成，再由单独的归并任务生成索引，并对照源资料清单检查遗漏。练习得到的结论是写入方式会影响资料完整性，不能仅凭笔记更长或保存成功判断整理质量。"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已定位原文图 14 及图注，原文署名 Figures by Monika Tuchowska；尚未核实图像转载许可，采用文字卡片。"
+  },
+  "sources": [
+    {
+      "title": "Anthropic：The components of agent memory（2026-11-06，图 14 与对应案例）",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Claude Platform Docs：Using agent memory / Safe content edits",
+      "url": "https://platform.claude.com/docs/en/managed-agents/memory",
+      "accessed": "2026-11-09"
+    },
+    {
+      "title": "Harvey LAB 官方仓库：任务、评分与版本说明",
+      "url": "https://github.com/harveyai/harvey-labs",
+      "accessed": "2026-11-09"
+    }
+  ]
+}
