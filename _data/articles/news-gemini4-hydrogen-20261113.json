@@ -1,0 +1,57 @@
+{
+  "id": "news-gemini4-hydrogen-20261113",
+  "slug": "news-gemini4-hydrogen-20261113",
+  "category": "news",
+  "type": "产品更新",
+  "label": "Gemini",
+  "date": "2026-11-13",
+  "title": "Gemini 4 Hydrogen 发布：进入搜索、Gemini 应用与 API",
+  "summary": "Google 将 Hydrogen 定位为日常编程和 Agent 执行模型；免费 Gemini 用户通过自动模型选择获得访问，Antigravity 则面向付费 Pro、Ultra 用户。",
+  "tags": [
+    "Google",
+    "Gemini 4",
+    "模型发布"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Google 于 11 月 12 日 18:00 UTC（北京时间 11 月 13 日 02:00）发布 Gemini 4 Hydrogen，定位于快速执行日常编程和 Agent 工作。它进入 Gemini API、AI Studio、Gemini 应用及 Google Search；Antigravity 中的访问面向付费 Google AI Pro 和 Ultra 用户。"
+    },
+    {
+      "type": "heading",
+      "text": "不同入口的开放方式并不相同"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方说明，免费 Gemini 用户并非直接获得同样的手动模型选择权限，而是在提示适合时通过自动选择使用 Hydrogen。API 价格为每百万输入 token 1.50 美元、输出 7.50 美元，整个 100 万 token 上下文窗口采用统一单价。模型提供 low、medium、high 和 xhigh 四档思考强度，默认 high。"
+    },
+    {
+      "type": "heading",
+      "text": "搜索更新侧重复杂提问与结果组织"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Search 的同步公告称，Hydrogen 已向全球所有用户开放。更新重点是理解多部分问题、细致要求和拼写错误，把问题拆成相关子主题并同时检索，以及用图片、比较表和结构化内容呈现答案。语言改进覆盖 AI Mode 已支持的语言，不等于新增所有语言支持。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 将更强的指令遵循、工具调用和检索链接组织能力列为此次升级的主要变化。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Google：Introducing Gemini 4 Hydrogen",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "accessed": "2026-11-13"
+    },
+    {
+      "title": "Google：Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "accessed": "2026-11-13"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核查官方发布页的模型宣传图、评测图与搜索对比截图，并检查 Google Press Corner；后者授权限定该页面提供的图片，尚未确认覆盖本篇对应素材，因此不转载。"
+  }
+}

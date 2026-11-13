@@ -1,0 +1,57 @@
+{
+  "id": "news-claude-meetings-beta-20261112",
+  "slug": "news-claude-meetings-beta-20261112",
+  "category": "news",
+  "type": "产品更新",
+  "label": "Claude",
+  "date": "2026-11-12",
+  "title": "Claude Meetings 进入 beta：可加入 Google Meet，边开会边写文档",
+  "summary": "功能向 Team 和 Enterprise 推出，保存文字转录、摘要和屏幕描述而非音频；外部来宾、连接工具和特殊数据配置另有权限限制。",
+  "tags": [
+    "Anthropic",
+    "会议",
+    "Claude"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Anthropic 在标注 11 月 12 日的公告中推出 Claude Meetings beta，首先支持 Google Meet，并向 Team 和 Enterprise 计划逐步开放。Claude 以可见参会者身份加入，接收语音或聊天提问，默认用文字回答，还可在会议中生成文档、白板等内容，供受邀团队成员继续编辑。"
+    },
+    {
+      "type": "heading",
+      "text": "会议记录与工具权限分别处理"
+    },
+    {
+      "type": "paragraph",
+      "text": "Claude 加入时会在聊天中发出提示，保存转录、摘要和屏幕描述，不保存音频。组织内受邀者可访问会议页面；接入前需确认参会者同意转录。调用某人的连接工具需要该人的许可，目前对口头请求还要逐次确认说话者身份。"
+    },
+    {
+      "type": "paragraph",
+      "text": "帮助文档列出的外部来宾默认设置因计划不同：Team 默认允许、Enterprise 需要组织负责人开启。获准加入这类会议时，Claude 会记录来宾发言，但不在通话聊天中回答；来宾不会因此获得组织内会议页面或回顾邮件。"
+    },
+    {
+      "type": "heading",
+      "text": "可用范围与计费"
+    },
+    {
+      "type": "paragraph",
+      "text": "beta 暂不支持部分采用零数据保留、HIPAA-ready 配置或客户管理加密密钥的组织。笔记、转录以及不调用连接工具的回答包含在 Team、Enterprise 计划内；工具调用计入使用额度，可能产生组织费用。会议中生成的文档和白板免费至 2027 年 2 月 10 日。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic：Introducing Claude Meetings",
+      "url": "https://claude.com/resources/articles/claude-meetings",
+      "accessed": "2026-11-13"
+    },
+    {
+      "title": "Claude Help Center：Use Claude Meetings",
+      "url": "https://support.claude.com/en/articles/18325154-use-claude-meetings",
+      "accessed": "2026-11-13"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已打开官方公告的会议界面截图，内容与功能对应；公告及帮助页未提供已核实的截图转载授权，暂用文字卡片。"
+  }
+}

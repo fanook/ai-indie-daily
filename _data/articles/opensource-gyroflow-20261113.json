@@ -1,0 +1,65 @@
+{
+  "id": "opensource-gyroflow-20261113",
+  "slug": "opensource-gyroflow-20261113",
+  "category": "opensource",
+  "type": "工具档案",
+  "label": "视频处理",
+  "date": "2026-11-13",
+  "title": "Gyroflow：用相机运动数据稳住画面，也开始支持无陀螺仪素材",
+  "summary": "这款开源视频稳定工具把镜头校准、运动数据与后期裁切结合起来。11 月 7 日发布的 1.7.0 又加入光学校正，但能否用好仍取决于镜头信息和画面内容。",
+  "tags": ["Gyroflow", "视频防抖", "开源工具"],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "运动相机或无人机拍到的画面，除了视频本身，还可能保存了陀螺仪记录。Gyroflow 的特点是利用这些数据还原拍摄时的相机运动，再调整画面来抵消抖动；也能读取外部设备记录的运动日志。它不是剪辑软件的替代品，而是把视频稳定这一步单独做深的工具。"
+    },
+    {
+      "type": "heading",
+      "text": "1.7.0 增加了一条不靠陀螺仪的路径"
+    },
+    {
+      "type": "paragraph",
+      "text": "截至 2026 年 11 月 13 日核查，官方最新稳定版是 11 月 7 日发布的 1.7.0，并非今天刚发布。新版的 Optical correction（光学校正）可以直接从视频估计相机运动：既可处理没有运动数据的素材，也可修正受振动污染的运动数据。这不意味着所有视频都能一键修好；官方要求有效的镜头配置，并指出画面需要有适合追踪的特征。"
+    },
+    {
+      "type": "paragraph",
+      "text": "光学追踪也会把独立移动的人、车辆或水面当成相机运动的线索，从而把稳定结果带偏。软件提供追踪点编辑器，可以从计算中排除这些对象。分析之后如果更改镜头配置、同步或帧时序等输入，还需要重新分析，不能把旧结果直接套回去。"
+    },
+    {
+      "type": "heading",
+      "text": "先确认素材，再调整稳定强度"
+    },
+    {
+      "type": "paragraph",
+      "text": "传统陀螺仪流程仍然依赖运动数据与画面的时间对齐：日志记的是某一时刻相机如何转动，如果与视频帧错位，防抖反而可能变差。镜头配置也不是装饰，它用来描述畸变；同一相机不同传感器裁切区域的素材，不一定能共用配置。部分相机会自动提供所需信息，其他情况则要选取配置或校准镜头，并检查同步。"
+    },
+    {
+      "type": "paragraph",
+      "text": "稳定画面需要在保留视野与裁去边缘之间取舍。Gyroflow 提供动态裁切、平滑度和地平线锁定等控制，也能用关键帧改变参数。1.7.0 的 Optimal path 模式会为整段素材规划相机路径；这是官方新增的平滑算法，不是对每段视频效果的保证。适合比较的是同一段素材在不同平滑度、裁切幅度下的构图，而不只是画面是否完全不动。"
+    },
+    {
+      "type": "heading",
+      "text": "平台与开源范围"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方提供 Windows、macOS、Linux、Android 和 iOS 入口，也有与剪辑软件衔接的插件。项目代码采用 GPLv3，并附有应用商店分发和链接 mdk-sdk 的额外许可。需要区分的是，发行程序链接的 mdk-sdk 本身为闭源组件，按其自己的条款分发；不能因此把整个安装包里的每个组件都理解为 GPL 开源。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Gyroflow 官方仓库与下载入口",
+      "url": "https://github.com/gyroflow/gyroflow"
+    }
+  ],
+  "sources": [
+    {"title": "Gyroflow 官方仓库 README", "url": "https://github.com/gyroflow/gyroflow", "accessed": "2026-11-13"},
+    {"title": "Gyroflow v1.7.0 发布说明（2026-11-07）", "url": "https://github.com/gyroflow/gyroflow/releases/tag/v1.7.0", "accessed": "2026-11-13"},
+    {"title": "Gyroflow 官方文档：Basic Usage", "url": "https://docs.gyroflow.xyz/app/getting-started/basic-usage", "accessed": "2026-11-13"},
+    {"title": "Gyroflow 官方文档：Input Data / Optical correction", "url": "https://docs.gyroflow.xyz/app/advanced-usage/input-data", "accessed": "2026-11-13"},
+    {"title": "Gyroflow GPLv3 与额外许可条款", "url": "https://github.com/gyroflow/gyroflow/blob/master/LICENSE", "accessed": "2026-11-13"}
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已检查官方 README 的界面截图：画面包含雪山航拍素材，窗口标注为 v1.0.0-rc0，不能展示本文介绍的 1.7.0 光学校正；本次也未核实截图中航拍素材的单独转载授权，因此不采用该旧图。"
+  }
+}

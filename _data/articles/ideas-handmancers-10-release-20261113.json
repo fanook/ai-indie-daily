@@ -1,0 +1,71 @@
+{
+  "id": "ideas-handmancers-10-release-20261113",
+  "slug": "ideas-handmancers-10-release-20261113",
+  "category": "ideas",
+  "type": "真实游戏案例",
+  "label": "独立游戏",
+  "date": "2026-11-13",
+  "title": "《Handmancers》推出 1.0：把石头剪刀布做成牌组构筑战斗",
+  "summary": "58BLADES 的第一人称卡牌游戏结束抢先体验。正式版新增可玩职业，重做腐化探索与局外成长，战斗仍围绕手势克制、卡牌强化和“抽筋”代价展开。",
+  "tags": [
+    "Handmancers",
+    "牌组构筑",
+    "独立游戏"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "由 58BLADES 开发、与 Human Qube Games 共同发行的《Handmancers》已在 Steam 推出 1.0，结束自 2026 年 5 月开始的抢先体验。开发者的上线公告发布于 UTC 11 月 12 日 17:26，即北京时间 11 月 13 日 01:26；商店与发行新闻稿沿用 11 月 12 日作为发售日。"
+    },
+    {
+      "type": "heading",
+      "text": "熟悉的三种手势，不只是猜拳"
+    },
+    {
+      "type": "paragraph",
+      "text": "游戏把石头、剪刀、布的相互克制放进第一人称牌组构筑战斗。玩家收集和强化卡牌，改变手势的效果，再搭配宝石与神器形成组合。卡牌可以带有最多三个修饰效果；石头偏向防御、剪刀偏向伤害、布偏向叠加增益，选择的不只是当下克制对手的手势，也是整套打法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "强力行动会累积 Cramps（抽筋），在恢复前限制后续选择，因此连续打出大招有代价。地图上的腐化则把更强的收益与额外危险绑在一起。两层约束让每次推进都包含取舍：当前战斗要花掉多少力量，下一步又愿意承担多大风险。"
+    },
+    {
+      "type": "heading",
+      "text": "正式版改了什么"
+    },
+    {
+      "type": "paragraph",
+      "text": "发行方发布说明列出了一个新可玩职业、更多遭遇与神器，以及两项系统重做。Corruption Delving（腐化探索）这个后期玩法加入更丰富的内容和单局规则变化；Meta Progression（局外成长）则重新组织跨局的长期选择。官方将这些内容视为抢先体验路线图的收尾，而非只把版本号改成 1.0。"
+    },
+    {
+      "type": "paragraph",
+      "text": "开发者还在上线公告中宣布更新了试玩版，并称游戏已通过 Steam Deck 验证。当前 Steam 页面提供试玩入口，列有 Windows、macOS、Linux 版本以及简体中文界面和字幕支持。"
+    },
+    {
+      "type": "link",
+      "text": "查看 Steam 商店与试玩版",
+      "url": "https://store.steampowered.com/app/2423290/Handmancers/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "58BLADES：Handmancers 1.0 is FINALLY out!",
+      "url": "https://steamcommunity.com/games/2423290/announcements/detail/678515036155544031",
+      "accessed": "2026-11-13"
+    },
+    {
+      "title": "Handmancers 官方 Steam 商店",
+      "url": "https://store.steampowered.com/app/2423290/Handmancers/",
+      "accessed": "2026-11-13"
+    },
+    {
+      "title": "Human Qube Games 发行新闻稿：Handmancers Launches in 1.0 on Steam",
+      "url": "https://www.gamespress.com/en-US/Rock-Paper-Scissors-Roguelite-Deckbuilder-Handmancers-Human-Qube-Games",
+      "accessed": "2026-11-13"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已查看开发者上线公告中的三角色宣传图，含游戏、58BLADES 与 Human Qube 标识；公告未注明转载许可，Games Press 随稿素材入口需要登录，本次未取得可核实的图片使用条款，因此暂用文字卡片。"
+  }
+}
