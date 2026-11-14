@@ -1,0 +1,43 @@
+{
+  "id": "news-chatgpt-wallet-20261113",
+  "slug": "news-chatgpt-wallet-20261113",
+  "category": "news",
+  "type": "产品更新",
+  "label": "OpenAI",
+  "date": "2026-11-13",
+  "title": "OpenAI 推出 ChatGPT Wallet：逐笔确认的 Agent 支付",
+  "summary": "首批面向美国成年 ChatGPT Pro 用户，通过 dots 开放；实际银行卡信息由支付令牌替代。",
+  "tags": [
+    "OpenAI",
+    "AI工具"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "OpenAI 于 2026 年 11 月 13 日宣布 ChatGPT Wallet，与 American Express、Mastercard 和 Visa 合作，让 Agent 在用户授权后完成购买。首批通过 dots 逐步开放，限美国年满 18 岁的 ChatGPT Pro 用户及符合条件的美国发行卡片。"
+    },
+    {
+      "type": "paragraph",
+      "text": "每笔交易前，用户查看商品、总额和所选卡片，再通过 Face ID、指纹等安全检查批准。支付网络随后提供替代真实卡片信息的支付令牌。OpenAI 表示，Agent 和商家不会收到用户的真实卡片详情，符合条件的原有卡片奖励及争议保护继续保留。"
+    },
+    {
+      "type": "paragraph",
+      "text": "用户仍与商家直接交易，定价、履约、退货和客服由商家负责。OpenAI 同时承认，部分网站或风控系统仍可能拦截 Agent 交易，兼容性与可靠性尚在初期验证阶段。"
+    },
+    {
+      "type": "paragraph",
+      "text": "允许用户按预算、品类或时间范围预先授权 Agent 自主购买，属于公告描述的未来方向，不是本次已经普遍提供的功能。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI：Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "accessed": "2026-11-14"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核对官方发布页，但未取得适用于本站转载的对应配图许可，保留文字卡片。"
+  }
+}

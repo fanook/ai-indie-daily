@@ -1,0 +1,48 @@
+{
+  "id": "news-copilot-model-changes-20261113",
+  "slug": "news-copilot-model-changes-20261113",
+  "category": "news",
+  "type": "产品更新",
+  "label": "GitHub Copilot",
+  "date": "2026-11-13",
+  "title": "Copilot 接入 Gemini 4 Hydrogen，并公布 12 月模型退役名单",
+  "summary": "GitHub 在 11 月 13 日宣布新增模型逐步开放，同时明确六款旧模型的退役日期与年付用户例外。",
+  "tags": [
+    "GitHub Copilot",
+    "AI工具"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "GitHub 于 2026 年 11 月 13 日宣布，Gemini 4 Hydrogen 在 Copilot 正式可用，面向 Pro、Pro+、Max、Business 和 Enterprise 用户逐步开放。入口包括 VS Code、Copilot CLI、coding agent、Copilot 应用和多种 IDE；公告说明采用按用量计费，按模型供应商标价收费。"
+    },
+    {
+      "type": "paragraph",
+      "text": "同日另一份公告列出 2026 年 12 月 14 日将从 Copilot 各体验中退役的模型：Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6 与 Kimi K3。该安排是 Copilot 的模型支持变化，不等于这些模型在原厂 API 同日停止服务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "GitHub 分别列出的替代项为 Claude Fable 5.2、Claude Haiku 5.5、Gemini 4 Hydrogen、Gemini 4 Carbon 和 Grok 4.7；Kimi K3 的替代项尚待公布。个人 Copilot 年付订阅用户仍可使用 Claude Haiku 4.5，不受此次该模型退役安排影响。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Business 和 Enterprise 的模型访问受管理员策略控制。在默认启用新模型的设置下，替代模型会自动启用；若全局默认被关闭或模型被明确禁用，仍受对应策略限制。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GitHub：Gemini 4 Hydrogen in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/",
+      "accessed": "2026-11-14"
+    },
+    {
+      "title": "GitHub：Upcoming deprecation of selected GitHub Copilot models in December",
+      "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december/",
+      "accessed": "2026-11-14"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "已核对官方发布页，但未取得适用于本站转载的对应配图许可，保留文字卡片。"
+  }
+}

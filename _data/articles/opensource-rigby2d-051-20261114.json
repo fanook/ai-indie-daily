@@ -1,0 +1,61 @@
+{
+  "id": "opensource-rigby2d-051-20261114",
+  "slug": "opensource-rigby2d-051-20261114",
+  "category": "opensource",
+  "type": "开源项目更新",
+  "label": "2D 动画",
+  "date": "2026-11-14",
+  "title": "Rigby2D 0.5.1：加入 PixiJS 运行时与 Defold 编辑器预览",
+  "summary": "11 月 11 日发布的开源 2D 骨骼动画工具更新，补上 Defold 场景内动画预览，并提供简体中文界面。",
+  "tags": [
+    "Rigby2D",
+    "开源",
+    "2D动画",
+    "Defold",
+    "PixiJS"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Rigby2D 是用于游戏与影片的 2D 骨骼动画编辑器，支持骨骼、网格、蒙皮和 IK。项目提供桌面版与浏览器编辑器；代码采用 MIT 或 Apache-2.0 双许可证。本条核验于 2026 年 11 月 14 日，介绍的是 11 月 11 日发布的 0.5.1，并非今日新发布。"
+    },
+    {
+      "type": "paragraph",
+      "text": "0.5.1 新增 PixiJS 8 运行时，支持 WebGL 与 WebGPU。Defold 集成新增 .rigbymodel 组件，可在编辑器场景视图预览动画与皮肤；导出会生成骨骼、图集、组件及游戏对象。此前 0.5.0 的原生运行时只在游戏运行时绘制角色，不能直接在 Defold 编辑器里显示。"
+    },
+    {
+      "type": "paragraph",
+      "text": "本次更新还加入完整简体中文界面。原仓库 README 列出 Defold 1.14+、Godot 4.3+ 等版本要求；项目仍标注为公开测试阶段。发布页显示该版本发布后 develop 分支仍有后续提交，是近期持续维护的项目，但这不等于已通过所有引擎与项目组合的兼容性验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "0.5.1 下载页注明桌面安装文件尚未代码签名，并提供 SHA-256 校验值。选择 MIT 授权使用时，需要在副本或实质性代码部分保留版权与许可声明。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rigby2D 0.5.1 发布说明",
+      "url": "https://github.com/jaisurya-dev-art/rigby2d/releases/tag/v0.5.1",
+      "accessed": "2026-11-14"
+    },
+    {
+      "title": "Rigby2D 原仓库与版本要求",
+      "url": "https://github.com/jaisurya-dev-art/rigby2d",
+      "accessed": "2026-11-14"
+    },
+    {
+      "title": "MIT 许可全文",
+      "url": "https://github.com/jaisurya-dev-art/rigby2d/blob/develop/LICENSE-MIT",
+      "accessed": "2026-11-14"
+    },
+    {
+      "title": "作者发布帖与 Defold 集成后续",
+      "url": "https://forum.defold.com/t/rigby2d-a-free-open-source-2d-skeletal-animation-editor-now-with-a-native-defold-runtime/83433",
+      "accessed": "2026-11-14"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "原仓库存在编辑器截图，但尚未核清截图内示例角色的独立素材授权；暂不转载。"
+  }
+}
