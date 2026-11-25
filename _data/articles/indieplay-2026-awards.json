@@ -55,8 +55,6 @@
       "accessed": "2026-11-25"
     }
   ],
-  "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已确认可用于本站的对应配图。"
-  }
+  "cover": {"src": "./assets/covers/indieplay-2026-awards.svg", "alt": "上方的圆环空着，下方的实心圆代表照常颁出的分项奖。"},
+  "coverProvenance": {"status": "original", "kind": "editorial-illustration", "credit": "AI × INDIE LAB 原创"}
 }

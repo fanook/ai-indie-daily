@@ -31,9 +31,9 @@
     },
     {
       "type": "image",
-      "src": "./assets/diagrams/value-hat-contrast.svg",
-      "alt": "同一灰色帽子在浅柜台前轮廓接近背景，在深地板前轮廓清楚。",
-      "caption": "图 1｜帽子的颜色不变，局部明暗对比随相邻背景变化。"
+      "src": "./assets/diagrams/value-hat-contrast-v2.svg",
+      "alt": "两顶轮廓和颜色相同的浅灰帽子，左边贴近浅灰背景，右边在深紫背景上更清楚。",
+      "caption": "图 1｜同一顶帽子换了背景，轮廓两侧的明暗差也随之改变。"
     },
     {
       "type": "heading",
