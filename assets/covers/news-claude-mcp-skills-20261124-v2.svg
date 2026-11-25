@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="深青色封套一侧连着连续展开的浅赭色折页。">
+<defs><filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".76" numOctaves="3" seed="23" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+<rect width="1200" height="675" fill="#ddd8cf"/>
+
+<path fill="#547073" d="M187 226L508 97V402L187 531Z"/>
+<path fill="#bf937a" d="M508 172L688 243V546L508 475Z"/>
+<path fill="#d3ab90" d="M688 243L868 172V475L688 546Z"/>
+<path fill="#bf937a" d="M868 172L1048 243V546L868 475Z"/>
+
+<rect width="1200" height="675" filter="url(#g)" opacity=".17" style="mix-blend-mode:multiply"/>
+</svg>

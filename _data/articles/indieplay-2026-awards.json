@@ -55,6 +55,6 @@
       "accessed": "2026-11-25"
     }
   ],
-  "cover": {"src": "./assets/covers/indieplay-2026-awards.svg", "alt": "上方的圆环空着，下方的实心圆代表照常颁出的分项奖。"},
+  "cover": {"src": "./assets/covers/indieplay-2026-awards-v2.svg", "alt": "两侧高低不同的赭色平台隔着一块宽留白，暗示最高奖的位置空着。"},
   "coverProvenance": {"status": "original", "kind": "editorial-illustration", "credit": "AI × INDIE LAB 原创"}
 }
