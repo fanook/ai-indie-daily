@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">同一顶帽子，两种背景</title>
+  <desc id="desc">两顶帽子使用同一图形和同一填色。浅背景中帽缘不明显，深背景中帽缘清楚。</desc>
+  <style>text{font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif} .heading{font-size:35px;font-weight:680;fill:#292823}.label{font-size:27px;fill:#292823;font-weight:620}.note{font-size:25px;fill:#625c53}</style>
+  <defs><path id="cap" d="M-76 22c0-48 24-73 70-73s68 26 68 71h19a11 11 0 0 1 0 22H-59a17 17 0 0 1-17-17z" fill="#abaea8"/></defs>
+  <rect width="600" height="400" rx="18" fill="#f3ecdf"/>
+  <path d="M28 44h24" stroke="#bc674a" stroke-width="4" stroke-linecap="round"/>
+  <text class="heading" x="28" y="98">同一顶帽子，两种背景</text>
+  <rect x="28" y="126" width="258" height="164" rx="12" fill="#b4b6b0"/>
+  <rect x="314" y="126" width="258" height="164" rx="12" fill="#3b4b59"/>
+  <use href="#cap" x="153" y="210"/>
+  <use href="#cap" x="439" y="210"/>
+  <text class="label" x="28" y="332">浅柜台 · 帽缘不明显</text>
+  <text class="label" x="314" y="332">深地板 · 帽缘清楚</text>
+  <text class="note" x="28" y="372">帽色不变，只有背景变了。</text>
+</svg>
