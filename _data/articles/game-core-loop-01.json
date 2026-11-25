@@ -57,8 +57,13 @@
       "accessed": "2026-11-25"
     }
   ],
+  "cover": {
+    "src": "./assets/covers/game-core-loop-01.svg",
+    "alt": "墨蓝和灰绿的交界上，一个环在两个色面之间反色。"
+  },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已确认可用于本站的对应配图。"
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
   }
 }

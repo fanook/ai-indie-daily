@@ -90,7 +90,9 @@ function renderArticle() {
   document.querySelector('meta[name="description"]').content = item.summary;
   const sources = sourcesFor(item);
   const provenance = item.coverProvenance;
-  const coverCredit = item.cover && provenance?.sourceURL ? `<p class="cover-credit">配图：<a href="${e(safeURL(provenance.sourceURL))}" target="_blank" rel="noopener noreferrer">${e(provenance.sourceTitle || '原文 / 官方资料')} ↗</a>${provenance.licenseURL ? ` · <a href="${e(safeURL(provenance.licenseURL))}" target="_blank" rel="noopener noreferrer">许可</a>` : ''}<br>${e(provenance.rightsNote || '')}</p>` : '';
+  const coverCredit = item.cover && provenance?.status === 'original'
+    ? `<p class="cover-credit">封面插画：${e(provenance.credit)}</p>`
+    : item.cover && provenance?.sourceURL ? `<p class="cover-credit">配图：<a href="${e(safeURL(provenance.sourceURL))}" target="_blank" rel="noopener noreferrer">${e(provenance.sourceTitle || '原文 / 官方资料')} ↗</a>${provenance.licenseURL ? ` · <a href="${e(safeURL(provenance.licenseURL))}" target="_blank" rel="noopener noreferrer">许可</a>` : ''}<br>${e(provenance.rightsNote || '')}</p>` : '';
   $('article').innerHTML = `<header class="article-header"><div class="entry-meta"><span class="tag">${e(typeLabel(item))}</span><span>${e(item.label || SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h1>${e(item.title)}</h1><p class="article-deck">${e(item.summary)}</p></header><div class="prose">${item.blocks?.length ? renderBlocks(item.blocks) : legacyBody(item)}</div>${sources.length ? `<section class="source-list"><h2>${'来源与延伸阅读'}</h2><ul>${sources.map(s => `<li><a href="${e(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.title || new URL(s.url).hostname)} ↗</a><small>${e(new URL(s.url).hostname)}${s.accessed ? ` · 核对于 ${e(s.accessed)}` : ''}</small></li>`).join('')}</ul></section>` : ''}${coverCredit}`;
   $('article').setAttribute('aria-busy', 'false');
 

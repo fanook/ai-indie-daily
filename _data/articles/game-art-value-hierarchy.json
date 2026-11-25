@@ -64,8 +64,13 @@
       "accessed": "2026-11-25"
     }
   ],
+  "cover": {
+    "src": "./assets/covers/game-art-value-hierarchy.svg",
+    "alt": "两个相同的浅紫形状落在明暗不同的背景上，一个更容易从背景中辨认。"
+  },
   "coverProvenance": {
-    "status": "unavailable",
-    "reason": "暂无已确认可用于本站的对应配图。"
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
   }
 }

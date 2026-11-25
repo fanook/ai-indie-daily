@@ -38,12 +38,23 @@ test('article schema rejects malformed stable slug, calendar date, category, bod
     assert.throws(() => validateData({items:[valid(patch)]}));
   }
 });
-test('cover requires original or official material, citation, date and rights basis', () => {
+test('external cover requires primary or official material, citation, date and rights basis', () => {
   const cover = {src:'https://example.org/official-product.webp',alt:'官方产品界面'};
   assert.throws(() => validateData({items:[valid({cover})]}));
   const provenance = {status:'verified',kind:'official-material',sourceURL:'https://example.org/announcement',sourceTitle:'Official announcement',accessed:'2026-10-22',rightsNote:'Published press asset; credit retained.'};
   assert.doesNotThrow(() => validateData({items:[valid({cover,coverProvenance:provenance})]}));
   assert.throws(() => validateData({items:[valid({cover,coverProvenance:{...provenance,kind:'concept-illustration'}})]}));
+});
+test('original editorial covers require a local covers asset, alt text and a credit', () => {
+  const cover = {src:'./assets/covers/cover.svg',alt:'原创封面'};
+  const coverProvenance = {status:'original',kind:'editorial-illustration',credit:'本站原创'};
+  const check = patch => validateData({items:[valid({cover,coverProvenance,...patch})]});
+  assert.doesNotThrow(() => check({}));
+  for (const src of ['https://example.org/cover.svg', './assets/diagrams/cover.svg', './assets/covers/../cover.svg']) {
+    assert.throws(() => check({cover:{...cover,src}}));
+  }
+  assert.throws(() => check({cover:{...cover,alt:''}}));
+  assert.throws(() => check({coverProvenance:{...coverProvenance,credit:' '}}));
 });
 test('the live collection does not expose withdrawn legacy entries', () => {
   assert(data.items.length > 0);

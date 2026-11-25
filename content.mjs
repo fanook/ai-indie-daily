@@ -114,7 +114,10 @@ export function validateData(data) {
     if (item.cover !== undefined) {
       if (!item.cover || !imageURL(item.cover.src) || typeof item.cover.alt !== 'string' || !item.cover.alt.trim()
         || (item.cover.fit !== undefined && !['contain','cover'].includes(item.cover.fit))) fail('封面格式无效');
-      if (!provenance || provenance.status !== 'verified' || !['primary-article','official-material'].includes(provenance.kind)
+      if (provenance?.status === 'original' && provenance.kind === 'editorial-illustration') {
+        if (!/^\.\/assets\/covers\/[a-z0-9][a-z0-9-]*\.(?:svg|webp|avif|png)$/.test(item.cover.src)
+          || typeof provenance.credit !== 'string' || !provenance.credit.trim()) fail('原创封面必须为本站封面文件并注明署名');
+      } else if (!provenance || provenance.status !== 'verified' || !['primary-article','official-material'].includes(provenance.kind)
         || !safeURL(provenance.sourceURL) || typeof provenance.sourceTitle !== 'string' || !provenance.sourceTitle.trim()
         || !validDate(provenance.accessed) || typeof provenance.rightsNote !== 'string' || !provenance.rightsNote.trim()) fail('封面缺少已核实的原文/官方来源与使用依据');
     } else if (!provenance || provenance.status !== 'unavailable' || typeof provenance.reason !== 'string' || !provenance.reason.trim()) fail('无封面时需注明原因');
