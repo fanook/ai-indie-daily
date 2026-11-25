@@ -1,0 +1,25 @@
+{
+  "id": "news-claude-mcp-skills-20261124",
+  "slug": "news-claude-mcp-skills-20261124",
+  "category": "news",
+  "type": "产品更新",
+  "label": "Agent 与开发工具",
+  "date": "2026-11-24",
+  "title": "Claude 公测 MCP Skills：接入工具时，也能拿到它的工作流程",
+  "summary": "Anthropic 将按需加载的 Skills、长期后台任务和中途询问带到 MCP 集成里。公测、正式可用和即将开放，是三种不同的状态。",
+  "tags": ["Anthropic", "Claude Code", "MCP", "Skills"],
+  "blocks": [
+    {"type":"heading","text":"以前接入工具，现在还可以随工具交付工作手册"},
+    {"type":"paragraph","text":"11 月 24 日，Anthropic 宣布 Claude 和 Claude Code 公测 Skills over MCP。MCP 服务原本能告诉 Claude「有哪些工具、它们能做什么」；支持新能力的服务还可以提供多步工作说明。比如同一个服务既提供查询订单的工具，也能告诉 Claude 处理退款时要先查哪些信息。Claude 按需取用说明，服务提供方可以随服务更新；已经支持该功能的集成不需要用户另外安装一份 Skill。"},
+    {"type":"paragraph","text":"这不等于多给了服务权限。工作说明描述操作顺序；能否读取订单或执行退款，仍取决于连接、账户权限和实际工具。有没有可用的 Skill，也要看该服务有没有实现。"},
+    {"type":"heading","text":"后台处理与中途询问不是一回事"},
+    {"type":"list","items":["Tasks：服务可以接手一项长任务，Claude 不必一直等着同一个调用返回，随后再接收结果。它不是让每个旧连接器自动支持异步。","Elicitation：任务中途缺少信息或需要确认时，服务可以通过表单或链接询问。Anthropic 举例说，Railway 会在移除服务等可能造成破坏的操作前询问。这是具体集成的行为，并不代表所有服务都会自动加审批。","文件上传：公告预告了向 MCP 服务传入 PDF、表格、图片等文件，但写的是即将推出，不是当天已普遍可用。"]},
+    {"type":"heading","text":"哪些账户和客户端能用"},
+    {"type":"paragraph","text":"Skills 公测对 Pro、Max、Ultra 默认开放，Team 需管理员启用，Enterprise 尚待推出。Tasks 和 Elicitation 已面向 Pro、Max、Ultra 正式提供，并在 Team 和 Enterprise 逐步推出。Claude Code 文档还区分终端、VS Code、桌面和非交互运行：例如一次性 claude -p 调用不能运行 MCP Tasks，不能用订阅级别推断任意运行方式都支持。"}
+  ],
+  "sources": [
+    {"title":"Anthropic：Skills over MCP、Tasks 和 Elicitation 发布说明","url":"https://claude.com/resources/articles/skills-over-mcp-tasks-and-more","accessed":"2026-11-25"},
+    {"title":"Claude Code 官方文档：MCP 服务与长任务支持条件","url":"https://code.claude.com/docs/en/mcp","accessed":"2026-11-25"}
+  ],
+  "coverProvenance":{"status":"unavailable","reason":"未确认公告配图的转载使用依据，保留文字卡片。"}
+}
