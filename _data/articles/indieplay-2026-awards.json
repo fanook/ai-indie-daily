@@ -1,0 +1,70 @@
+{
+  "id": "indieplay-2026-awards",
+  "slug": "indieplay-2026-awards",
+  "category": "game-news",
+  "type": "行业报道",
+  "label": "国内独立游戏",
+  "date": "2026-11-22",
+  "title": "2026 indiePlay 揭晓：最高奖空缺，推币 Roguelike 获最佳设计",
+  "summary": "11 月 22 日上海 WePlay 现场颁奖。看清最高奖和分项为何是两件事，以及三款获奖作品分别因哪个维度被认可。",
+  "tags": [
+    "indiePlay",
+    "WePlay",
+    "独立游戏"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "这次颁了哪些奖"
+    },
+    {
+      "type": "paragraph",
+      "text": "第 12 届 indiePlay 中国独立游戏大赛于 11 月 22 日在上海 WePlay Expo 舞台颁奖。4Gamer 现场报道与游戏茶馆均记载，本届收到 700 多份投稿，最高奖 indiePlay Award 没有选出得主。这个数字是赛事投稿量，不是当年国产独游的发行量。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "最佳视觉效果：《炎姫》。它同时是最高奖提名之一，视觉分项获奖不等于得到综合大奖。",
+        "最佳设计：《RACCOIN: Coin Pusher Roguelike》。商店公开说明显示，它把街机推币的物理反馈与逐轮构筑结合，设计奖不是销量排名。",
+        "最佳叙事：《紙の家》。适合从叙事呈现角度看，别和最佳设计合并成一张高低榜。"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "最高奖为什么留空"
+    },
+    {
+      "type": "paragraph",
+      "text": "按 4Gamer 对颁奖现场的报道，主办方讨论的是独立创作的边界与原创性，而不是宣布其他分项作品不合格。现场对市场与创作环境的看法属于发言者的判断；仅凭一次评奖，不足以判断行业销量、玩家需求或整个赛道的好坏。"
+    },
+    {
+      "type": "heading",
+      "text": "找作品与查赛制用不同入口"
+    },
+    {
+      "type": "paragraph",
+      "text": "本届完整提名和现场获奖记录可对照现场报道。想看入围作品怎么玩，直接打开作品商店页、试玩版和开发者公开材料；想看下一届能否参赛，则等主办方发布新一届规则，不把今年流程当明年的报名条件。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "4Gamer：颁奖礼现场报道和提名名单",
+      "url": "https://www.4gamer.net/games/991/G999110/20261123004/",
+      "accessed": "2026-11-25"
+    },
+    {
+      "title": "游戏茶馆：2026 indiePlay 中文报道",
+      "url": "https://youxichaguan.com/archives/224458",
+      "accessed": "2026-11-25"
+    },
+    {
+      "title": "Steam：《RACCOIN》官方商店页",
+      "url": "https://store.steampowered.com/app/3784030/",
+      "accessed": "2026-11-25"
+    }
+  ],
+  "coverProvenance": {
+    "status": "unavailable",
+    "reason": "暂无已确认可用于本站的对应配图。"
+  }
+}

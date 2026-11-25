@@ -4,12 +4,11 @@ import {loadArticles} from '../scripts/articles.mjs';
 import {SECTIONS, filterItems, readState, stateQuery, typeLabel, renderBlocks, imageURL, safeURL, migrateSaved, validateData} from '../content.mjs';
 const data = loadArticles();
 
-test('all current articles have unique stable IDs and fixed legacy links', () => {
+test('stable legacy links are mapped by ID, not by array order', () => {
   validateData(data);
-  const old = data.items.filter(x => x.legacyIndex !== undefined);
-  assert.equal(old.length, 25);
-  assert.deepEqual(old.map(x => x.legacyIndex).sort((a,b) => a-b), Array.from({length:25}, (_,i) => i));
-  const shuffled = [...data.items].reverse();
+  const old = [{...data.items[0],legacyIndex:1}, {...data.items[1],legacyIndex:0}];
+  validateData({items:old});
+  const shuffled = [...old].reverse();
   for (const item of old) assert.equal(shuffled.find(x => x.legacyIndex === item.legacyIndex).id, item.id);
 });
 test('search, category, history and ascending date filters combine', () => {
@@ -17,7 +16,7 @@ test('search, category, history and ascending date filters combine', () => {
     {id:'b', category:'news', title:'Agent B', summary:'', label:'Agent', date:'2026-10-21'},
     {id:'a', category:'news', title:'Agent A', summary:'', label:'Agent', date:'2026-10-19'},
     {id:'c', category:'news', title:'Agent C', summary:'', label:'Other', date:'2026-10-20'},
-    {id:'d', category:'learn', title:'Agent D', summary:'', label:'Agent', date:'2026-10-20'},
+    {id:'d', category:'game-knowledge', title:'Agent D', summary:'', label:'Agent', date:'2026-10-20'},
     {id:'e', category:'news', title:'Agent E', summary:'', label:'Agent', date:'2026-09-20'},
   ];
   assert.deepEqual(filterItems(items, readState('?section=news&q=AGENT&label=Agent&month=2026-10&order=old')).map(x => x.id), ['a','b']);
@@ -26,27 +25,28 @@ test('bookmarks span all sections and do not depend on array order', () => {
   const saved = new Set(data.items.map(x => x.id));
   assert.equal(filterItems([...data.items].reverse(), readState('?saved=1'), saved).length, data.items.length);
 });
-test('open source discoveries have a label, stable query and independent filtering', () => {
-  assert.equal(SECTIONS.opensource.name, '开源发现');
-  assert.equal(typeLabel({category:'opensource'}), '开源项目');
-  const state = readState('?section=opensource');
-  assert.equal(state.section, 'opensource');
+test('game knowledge entries have a label, stable query and independent filtering', () => {
+  assert.equal(SECTIONS['game-knowledge'].name, '游戏知识');
+  assert.equal(typeLabel({category:'game-knowledge'}), '专业知识');
+  const state = readState('?section=game-knowledge');
+  assert.equal(state.section, 'game-knowledge');
   assert.deepEqual(readState(stateQuery(state)), state);
-  const article = {...data.items[0], id:'opensource-test', slug:'opensource-test', category:'opensource'};
+  const article = {...data.items[0], id:'game-knowledge-test', slug:'game-knowledge-test', category:'game-knowledge'};
   assert.doesNotThrow(() => validateData({items:[article]}));
-  assert.throws(() => validateData({items:[{...article, sources:[]}]}), /项目来源/);
-  const items = [...data.items.filter(item => item.category !== 'opensource'), article];
+  assert.throws(() => validateData({items:[{...article, sources:[]}]}), /文章必须提供来源/);
+  const items = [...data.items.filter(item => item.category !== 'game-knowledge'), article];
   assert.deepEqual(filterItems(items, state).map(item => item.id), [article.id]);
   assert.equal(filterItems(items, readState('')).length, items.length);
 });
 test('legacy URL bookmarks migrate once, preserving intentionally removed bookmarks', () => {
-  const old = JSON.stringify({[data.items[0].url]:true});
-  assert(migrateSaved(data.items, null, old).has(data.items[0].id));
-  assert.equal(migrateSaved(data.items, '[]', old).size, 0);
-  assert.equal(migrateSaved(data.items, 'broken', old).size, 0);
+  const items = [{...data.items[0], url:'https://example.org/legacy'}];
+  const old = JSON.stringify({[items[0].url]:true});
+  assert(migrateSaved(items, null, old).has(items[0].id));
+  assert.equal(migrateSaved(items, '[]', old).size, 0);
+  assert.equal(migrateSaved(items, 'broken', old).size, 0);
 });
 test('filters survive a detail round trip and reject unknown categories', () => {
-  const state = readState('?section=ideas&q=羊群&label=创意实验+·+模拟&month=2026-10&order=old&saved=1');
+  const state = readState('?section=game-knowledge&q=羊群&label=创意实验+·+模拟&month=2026-10&order=old&saved=1');
   const href = new URL('https://example.org/project/article.html');
   href.searchParams.set('from', stateQuery(state));
   assert.deepEqual(readState(href.searchParams.get('from')), state);

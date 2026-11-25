@@ -1,4 +1,4 @@
-import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=10';
+import {SECTIONS, escapeHTML as e, safeURL, readState, stateQuery, filterItems, typeLabel, imageURL, sourcesFor, renderBlocks, validateData} from './content.mjs?v=11';
 
 const $ = id => document.getElementById(id);
 const isArticle = Boolean($('article'));
@@ -75,7 +75,7 @@ function sectionHTML(title, text, action = false) {
   return text ? `<section${action ? ' class="action-section"' : ''}><h2>${e(title)}</h2><p>${e(text)}</p></section>` : '';
 }
 function legacyBody(item) {
-  const headings = {news: ['事实与背景','对开发者的价值','可执行建议'],learn:['学习目标与方法','为什么值得实践','动手练习'],tools:['工具介绍','适用场景与限制','使用建议'],ideas:['核心玩法','设计价值','最小可玩原型']}[item.category];
+  const headings = item.category === 'game-knowledge' ? ['概念与方法','关键点','动手练习'] : ['事实与背景','补充信息','延伸阅读'];
   return sectionHTML(headings[0], item.facts) + sectionHTML(headings[1], item.value) + sectionHTML(headings[2], item.action, true);
 }
 function renderArticle() {
@@ -91,7 +91,7 @@ function renderArticle() {
   const sources = sourcesFor(item);
   const provenance = item.coverProvenance;
   const coverCredit = item.cover && provenance?.sourceURL ? `<p class="cover-credit">配图：<a href="${e(safeURL(provenance.sourceURL))}" target="_blank" rel="noopener noreferrer">${e(provenance.sourceTitle || '原文 / 官方资料')} ↗</a>${provenance.licenseURL ? ` · <a href="${e(safeURL(provenance.licenseURL))}" target="_blank" rel="noopener noreferrer">许可</a>` : ''}<br>${e(provenance.rightsNote || '')}</p>` : '';
-  $('article').innerHTML = `<header class="article-header"><div class="entry-meta"><span class="tag">${e(typeLabel(item))}</span><span>${e(item.label || SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h1>${e(item.title)}</h1><p class="article-deck">${e(item.summary)}</p></header><div class="prose">${item.blocks?.length ? renderBlocks(item.blocks) : legacyBody(item)}</div>${sources.length ? `<section class="source-list"><h2>${item.category === 'ideas' ? '参考资料' : '来源与延伸阅读'}</h2><ul>${sources.map(s => `<li><a href="${e(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.title || new URL(s.url).hostname)} ↗</a><small>${e(new URL(s.url).hostname)}${s.accessed ? ` · 核对于 ${e(s.accessed)}` : ''}</small></li>`).join('')}</ul></section>` : ''}${coverCredit}`;
+  $('article').innerHTML = `<header class="article-header"><div class="entry-meta"><span class="tag">${e(typeLabel(item))}</span><span>${e(item.label || SECTIONS[item.category].name)}</span><time datetime="${e(item.date)}">${e(item.date.replaceAll('-', '.'))}</time></div><h1>${e(item.title)}</h1><p class="article-deck">${e(item.summary)}</p></header><div class="prose">${item.blocks?.length ? renderBlocks(item.blocks) : legacyBody(item)}</div>${sources.length ? `<section class="source-list"><h2>${'来源与延伸阅读'}</h2><ul>${sources.map(s => `<li><a href="${e(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.title || new URL(s.url).hostname)} ↗</a><small>${e(new URL(s.url).hostname)}${s.accessed ? ` · 核对于 ${e(s.accessed)}` : ''}</small></li>`).join('')}</ul></section>` : ''}${coverCredit}`;
   $('article').setAttribute('aria-busy', 'false');
 
 }

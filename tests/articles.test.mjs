@@ -12,7 +12,7 @@ const valid = patch => ({...structuredClone(base), ...patch});
 test('new independent file is discovered without touching an index or route', () => {
   const dir = mkdtempSync(path.join(tmpdir(), 'indie-articles-'));
   try {
-    const article = valid({id:'new-independent-article', slug:'new-independent-article', category:'opensource'});
+    const article = valid({id:'new-independent-article', slug:'new-independent-article', category:'game-knowledge'});
     delete article.legacyIndex;
     writeFileSync(path.join(dir, `${article.id}.json`), JSON.stringify(article));
     assert.equal(loadArticles(dir).items[0].slug, article.slug);
@@ -22,10 +22,10 @@ test('new independent file is discovered without touching an index or route', ()
     assert.throws(() => loadArticles(dir), /filename must match/);
   } finally { rmSync(dir, {recursive:true,force:true}); }
 });
-test('all is the default and all five categories remain independently filterable', () => {
+test('all is the default and all three categories remain independently filterable', () => {
   assert.equal(readState('').section, 'all');
   assert.equal(filterItems(data.items, readState('')).length, data.items.length);
-  assert.equal(Object.keys(SECTIONS).length, 5);
+  assert.deepEqual(Object.keys(SECTIONS), ['news','game-news','game-knowledge']);
   for (const category of Object.keys(SECTIONS)) {
     assert.equal(readState(`?section=${category}`).section, category);
     assert(filterItems(data.items, readState(`?section=${category}`)).every(item => item.category === category));
@@ -45,15 +45,11 @@ test('cover requires original or official material, citation, date and rights ba
   assert.doesNotThrow(() => validateData({items:[valid({cover,coverProvenance:provenance})]}));
   assert.throws(() => validateData({items:[valid({cover,coverProvenance:{...provenance,kind:'concept-illustration'}})]}));
 });
-test('historical source fields and stable URL mappings survive editorial improvements', () => {
-  assert.equal(data.items.length >= 25, true);
-  for (const article of data.items.filter(item => item.legacyIndex !== undefined)) {
-    for (const field of ['facts','value','action']) assert.equal(typeof article[field], 'string');
-    assert(article.blocks.some(block => block.type === 'paragraph' && block.text.length > 20));
+test('the live collection does not expose withdrawn legacy entries', () => {
+  assert(data.items.length > 0);
+  for (const article of data.items) {
+    assert.equal(article.legacyIndex, undefined);
     assert.equal(article.slug, article.id);
-    if (article.cover) {
-      assert.equal(article.coverProvenance.status, 'verified');
-      assert.notEqual(article.cover.src, article.legacyCover?.src);
-    } else assert.equal(article.coverProvenance.status, 'unavailable');
+    assert(article.sources.length > 0);
   }
 });
