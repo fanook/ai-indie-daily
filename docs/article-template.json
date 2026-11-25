@@ -2,7 +2,7 @@
   "id": "replace-with-stable-id",
   "slug": "replace-with-stable-id",
   "category": "game-knowledge",
-  "type": "实战教程",
+  "type": "概念解析",
   "label": "替换为主题分类",
   "date": "2026-10-22",
   "title": "替换为具体标题",
@@ -16,13 +16,6 @@
     {
       "type": "paragraph",
       "text": "替换为有来源的事实或明确标注的建议；影响判断的具体限制写在相关内容旁，不添加通用免责声明。"
-    },
-    {
-      "type": "steps",
-      "items": [
-        "替换为可执行的第一步",
-        "替换为可观察的结果检查"
-      ]
     }
   ],
   "sources": [
