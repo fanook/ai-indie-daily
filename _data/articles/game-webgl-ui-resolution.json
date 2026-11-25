@@ -32,9 +32,9 @@
     },
     {
       "type": "image",
-      "src": "./assets/diagrams/webgl-sampling-edge-v2.svg",
-      "alt": "同宽的两幅图采样同一条斜边；左图的像素较大、台阶较粗，右图的像素较小、台阶较细。",
-      "caption": "图 1｜同一条斜边、同样的显示宽度。左侧采样点少，放大后仍只有粗台阶。"
+      "src": "./assets/diagrams/webgl-sampling-edge-editorial.svg",
+      "alt": "同一条弧形笔画边缘以两种像素密度采样。左侧更粗，右侧更贴近原弧形。",
+      "caption": "图 1｜同一条弧线、同样的显示宽度。示意中左侧以 8×8 网格采样，右侧以 24×24 采样；色块深浅表示像素被笔画覆盖的比例。"
     },
     {
       "type": "paragraph",
@@ -66,6 +66,6 @@
       "accessed": "2026-11-25"
     }
   ],
-  "cover": {"src": "./assets/covers/game-webgl-ui-resolution.svg", "alt": "一条连续的曲线在画面中间变为像素台阶。"},
+  "cover": {"src": "./assets/covers/game-webgl-ui-resolution-editorial.svg", "alt": "紫蓝湖面上悬着一轮浅色月亮，水里散成一条条随波浮动的微光。"},
   "coverProvenance": {"status": "original", "kind": "editorial-illustration", "credit": "AI × INDIE LAB 原创"}
 }

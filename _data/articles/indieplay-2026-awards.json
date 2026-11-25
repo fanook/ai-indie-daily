@@ -55,6 +55,6 @@
       "accessed": "2026-11-25"
     }
   ],
-  "cover": {"src": "./assets/covers/indieplay-2026-awards-v2.svg", "alt": "两侧高低不同的赭色平台隔着一块宽留白，暗示最高奖的位置空着。"},
+  "cover": {"src": "./assets/covers/indieplay-2026-awards-editorial.svg", "alt": "空荡的暗厅里，一束暖光从门缝斜照到地板上。"},
   "coverProvenance": {"status": "original", "kind": "editorial-illustration", "credit": "AI × INDIE LAB 原创"}
 }

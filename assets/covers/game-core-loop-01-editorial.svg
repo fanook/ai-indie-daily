@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+<defs><filter id="paper" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".55 .72" numOctaves="3" seed="27" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+
+<rect width="1200" height="675" fill="#efe2c4"/>
+<path fill="#c94d38" d="M0 675V390c96 31 189 29 256 1 116-48 153-144 257-195 119-59 281-10 263 91-12 79-84 79-113 58 60-7 78-29 74-65-5-53-106-67-184-31-99 46-128 154-222 228-62 49-125 69-186 75 94 25 185 20 286-23 112-48 185-123 319-139 119-14 263 27 450 99v186Z"/>
+<path fill="#e18455" d="M0 596c151 44 282 37 434-26 141-59 215-139 360-134 126 5 253 43 406 130v109H0Z"/>
+<path fill="#462e33" d="M0 675c141-23 242-22 336-15 106 7 213 6 319-44 94-45 141-83 223-81 97 3 205 55 322 115v25Z"/>
+<path fill="none" stroke="#f9d79c" stroke-width="4" opacity=".77" d="M-19 518C154 558 291 524 408 430c116-95 140-169 244-163M629 590q111-63 193-79t200 25"/>
+<path fill="#543333" d="M812 195c23 5 41 16 54 37-30 1-56-9-76-34 7-3 14-4 22-3ZM919 148c14 2 28 11 38 26-22 0-41-8-56-24 6-2 12-3 18-2Z"/>
+<path fill="#e2a364" d="M1067 130c8 1 17 6 25 16-14 0-27-4-36-14 4-2 7-2 11-2Z"/>
+
+<rect width="1200" height="675" filter="url(#paper)" opacity=".21" style="mix-blend-mode:multiply" pointer-events="none"/>
+</svg>

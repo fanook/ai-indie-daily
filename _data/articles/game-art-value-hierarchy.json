@@ -31,9 +31,9 @@
     },
     {
       "type": "image",
-      "src": "./assets/diagrams/value-hat-contrast-v2.svg",
-      "alt": "两顶轮廓和颜色相同的浅灰帽子，左边贴近浅灰背景，右边在深紫背景上更清楚。",
-      "caption": "图 1｜同一顶帽子换了背景，轮廓两侧的明暗差也随之改变。"
+      "src": "./assets/diagrams/value-hat-contrast-editorial.svg",
+      "alt": "同一顶浅灰帽子放在浅灰和深灰蓝两个背景上，右侧的帽子轮廓较清楚。",
+      "caption": "图 1｜同一顶帽子、同一种填色。左侧背景与帽子明暗相近，右侧反差更大，轮廓更容易辨认。"
     },
     {
       "type": "heading",
@@ -65,8 +65,8 @@
     }
   ],
   "cover": {
-    "src": "./assets/covers/game-art-value-hierarchy.svg",
-    "alt": "两个相同的浅紫形状落在明暗不同的背景上，一个更容易从背景中辨认。"
+    "src": "./assets/covers/game-art-value-hierarchy-editorial.svg",
+    "alt": "黄绿到墨青的坡面层层交错，一块棱石从散落的浅色细点中浮现。"
   },
   "coverProvenance": {
     "status": "original",

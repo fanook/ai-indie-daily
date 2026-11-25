@@ -21,6 +21,6 @@
     {"title":"Anthropic：Skills over MCP、Tasks 和 Elicitation 发布说明","url":"https://claude.com/resources/articles/skills-over-mcp-tasks-and-more","accessed":"2026-11-25"},
     {"title":"Claude Code 官方文档：MCP 服务与长任务支持条件","url":"https://code.claude.com/docs/en/mcp","accessed":"2026-11-25"}
   ],
-  "cover": {"src": "./assets/covers/news-claude-mcp-skills-20261124-v2.svg", "alt": "一组浅赭色折页从深青色封套一侧展开，表示工具随附工作说明。"},
+  "cover": {"src": "./assets/covers/news-claude-mcp-skills-20261124-editorial.svg", "alt": "一片深绿叶子铺在浅色纸上，一根细橙线穿过叶脉。"},
   "coverProvenance": {"status": "original", "kind": "editorial-illustration", "credit": "AI × INDIE LAB 原创"}
 }
