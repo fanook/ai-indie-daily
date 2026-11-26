@@ -1,0 +1,68 @@
+{
+  "id": "game-frame-pacing-same-fps",
+  "slug": "game-frame-pacing-same-fps",
+  "category": "game-knowledge",
+  "type": "概念解析",
+  "label": "引擎与性能",
+  "date": "2026-11-26",
+  "title": "平均帧率一样，为什么一个更容易顿？",
+  "summary": "帧率是总数，帧节奏是每张画面何时出现。两段同为 45 FPS 的画面，慢帧聚在一起时，滚动速度会呈现不同的节奏。",
+  "tags": [
+    "帧节奏",
+    "帧间隔",
+    "游戏性能"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "横向滚动的场景里，镜头本来应当匀速移动。如果画面一会儿更新得快，一会儿又连续几次更新得慢，眼睛看到的是一串不均匀的跳动。平均帧率只数一段时间里更新了多少次，不记录每次等了多久，更不记录哪几次慢更新挨在一起。游戏开发里把这样的呈现节奏称为帧节奏（frame pacing）。"
+    },
+    {
+      "type": "heading",
+      "text": "同是 45 FPS，慢帧可以分散，也可以扎堆"
+    },
+    {
+      "type": "paragraph",
+      "text": "假设屏幕固定以 60 Hz 刷新，每次间隔约 16.7 毫秒。一张新画面如果赶不上下一次刷新，上一张就可能再留一拍；这时相邻两次呈现新画面的间隔是两拍，约 33.3 毫秒。图里两组都用了 16 个刷新间隔来完成 12 次画面更新，平均都是每秒 45 次。两组都只有八个一拍间隔和四个两拍间隔，连最长间隔也一样。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/diagrams/frame-interval-clustering.svg",
+      "alt": "上行每两个短块之后有一个长块，重复四次；下行先连续四个长块，再接八个短块。两行长度相同。",
+      "caption": "图 1｜固定 60 Hz 的假设示例，从左向右读。绿块占一拍，棕块占两拍；上行分散安排两拍间隔，下行让四个两拍间隔连续出现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "不同之处是顺序：上面每两个短间隔后夹一个长间隔，下面先连续四个长间隔，再回到短间隔。下面那组会有约 133 毫秒以较慢的节奏更新，然后恢复较快的节奏；这不是连续冻结 133 毫秒。即使平均帧率、最长帧间隔、乃至帧间隔分布都一样，画面变慢的时间段还是可能不一样。"
+    },
+    {
+      "type": "heading",
+      "text": "浏览器回调和实际显示也不是一回事"
+    },
+    {
+      "type": "paragraph",
+      "text": "网页游戏常用 requestAnimationFrame 的回调时间估算更新节奏。它告诉代码浏览器给了更新画面的机会，不等于这一帧的最终像素已经显示在屏幕上。常见的时间数字还包括 CPU 用时和 GPU 用时，它们回答的是处理用了多久，也不能单独证明画面何时被呈现。这里比较的是呈现出来的新画面之间的时间，不是某段脚本的运行时间。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Android Developers：Frame Pacing library",
+      "url": "https://developer.android.com/games/sdk/frame-pacing",
+      "accessed": "2026-11-26"
+    },
+    {
+      "title": "MDN：Window.requestAnimationFrame()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+      "accessed": "2026-11-26"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/umbrella-in-rain.svg",
+    "alt": "暗绿细雨中，一把陶橘色的伞独自撑开。"
+  },
+  "coverProvenance": {
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
+  }
+}
