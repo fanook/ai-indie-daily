@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<defs>
+<linearGradient id="water" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#202352"/><stop offset="1" stop-color="#3f4c7c"/></linearGradient>
+<linearGradient id="light" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#dc9b82"/><stop offset="1" stop-color="#6c6087"/></linearGradient>
+</defs>
+<path fill="url(#water)" d="M0 0h960v540H0z"/>
+<path fill="#30345d" d="M0 347 Q219 340 340 360 T690 351 Q840 340 960 348 V540H0Z"/>
+<path fill="url(#light)" d="M594 218 C632 209 685 209 730 223 C697 238 688 249 703 261 C713 270 737 275 731 285 C716 306 647 308 633 332 C621 346 663 356 647 369 C624 387 554 391 522 400 C548 384 555 370 540 364 C517 353 480 349 489 337 C502 320 563 319 579 300 C591 283 552 283 548 268 C546 253 582 242 594 218Z"/>
+<path fill="#849fae" opacity=".74" d="M96 350 C286 350 322 382 432 374 C554 366 593 310 724 303 C784 299 840 308 873 302 C816 316 777 306 726 311 C600 322 557 373 432 383 C308 393 278 357 96 350Z"/>
+<path stroke="#d5bbb7" stroke-opacity=".37" stroke-width="2" fill="none" d="M622 247q38-4 74 1m-147 82q38-5 70-5"/>
+</svg>

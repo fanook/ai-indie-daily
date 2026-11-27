@@ -1,0 +1,26 @@
+{
+  "id": "news-ming-image-design-20261127",
+  "slug": "news-ming-image-design-20261127",
+  "category": "news",
+  "type": "模型发布",
+  "label": "图像生成",
+  "date": "2026-11-27",
+  "title": "蚂蚁公开 Ming-Image 0.2 Design 权重：能生成设计图，拆层仍是另一件事",
+  "summary": "新版权重以 MIT 许可公开，官方展示了网页、商品主图和室内空间。透明背景生图与把整张图拆成独立图层，并不是同一项能力。",
+  "tags": ["inclusionAI", "图像生成", "开源权重", "视觉设计"],
+  "blocks": [
+    {"type":"heading","text":"这次公开的是设计图生成模型"},
+    {"type":"paragraph","text":"蚂蚁集团 inclusionAI 公开了 Ming-Image-0.2-Design 的权重，模型卡标注 MIT 许可。官方仓库将它列为视觉设计生成模型，其中扩散 Transformer（DiT）有 60 亿参数。展示案例包括网页构图、电商商品主图和空间效果图。网页案例展示的是生成出的视觉画面，不等于模型直接输出可运行网页。"},
+    {"type":"heading","text":"透明背景和可编辑图层有什么区别"},
+    {"type":"paragraph","text":"透明背景图可以是一个主体外面留透明区域；主体内部的内容仍可能已经合成在一张图里。拆层则从已有的合成图出发，把其中的成分分成几张带透明信息的图。比如，把海报的背景和前景图案拆开后，才有可能独立移动前景。即使拆出了图层，也不等于自动还原原始字体、矢量路径或设计源文件。"},
+    {"type":"paragraph","text":"截至 11 月 27 日，官方仓库里供下载和运行的拆层模型仍是 Ming-Image-0.1-Design-Layer；这次公开的 0.2 是 Design 的新版本，不能把旧版 Layer 的能力算进同一份新权重。"},
+    {"type":"heading","text":"公开权重与本地运行门槛"},
+    {"type":"paragraph","text":"官方仓库给出的完整推理验证配置是单张至少 80 GiB 显存的 CUDA GPU，采用 BF16。这个数字描述的是官方验证过的配置，不能由此断言其他显卡一定跑不起来。官方文档给出的默认文生图输出是 2048 × 2048，也给出了其他长宽比例的示例。"}
+  ],
+  "sources": [
+    {"title":"inclusionAI：Ming-Image 官方仓库与推理配置","url":"https://github.com/inclusionAI/Ming-Image","accessed":"2026-11-27"},
+    {"title":"Hugging Face：Ming-Image-0.2-Design 模型、权重与许可","url":"https://huggingface.co/inclusionAI/Ming-Image-0.2-Design/tree/main","accessed":"2026-11-27"}
+  ],
+  "cover": {"src":"./assets/covers/lagoon-opening.svg","alt":"暮蓝色水面上，一道淡青色弧线掠过一片偏橙的倒影。"},
+  "coverProvenance": {"status":"original","kind":"editorial-illustration","credit":"AI × INDIE LAB 原创"}
+}
