@@ -1,0 +1,26 @@
+{
+  "id": "game-letterbox-input-coordinates",
+  "slug": "game-letterbox-input-coordinates",
+  "category": "game-knowledge",
+  "type": "概念解析",
+  "label": "前端与输入",
+  "date": "2026-11-27",
+  "title": "画面居中了，为什么点按的位置却偏了？",
+  "summary": "保持原比例会在窗口里留下空边。画面按实际显示区域绘制，输入若按整个窗口换算，就会从另一个起点和比例计算。",
+  "tags": ["坐标转换", "游戏输入", "宽高比"],
+  "blocks": [
+    {"type":"paragraph","text":"一个网页游戏在竖一点的窗口里保持横屏比例，上下出现留白。画面本身没有拉伸，按钮也画在正确位置；但如果点击位置用整个窗口去换算，同一个屏幕点会落到另一处游戏坐标。这个误差不一定是触屏不准，而可能是绘制和输入用了两个不同的矩形。"},
+    {"type":"heading","text":"等比缩放留下了两个原点"},
+    {"type":"paragraph","text":"假设原游戏使用 640 × 360 的逻辑坐标，放进一个没有边框或内边距的 480 × 420 CSS 像素容器。宽度先到上限，所以等比缩放是 0.75 倍；游戏画面实际占 480 × 270，上下各留 75 CSS 像素。Godot 的多分辨率文档用 Keep 模式说明同类取舍：维持画面比例时，剩余区域可以成为边条；Expand 则可能展示更多游戏区域。这里的数字是推导示例，不是某款游戏或引擎的故障实测。"},
+    {"type":"image","src":"./assets/diagrams/letterbox-pointer-mapping.svg","alt":"外容器从 0 到 420；内容区从 75 开始，高 270。按点在容器 y=90，对应游戏逻辑 y=20。","caption":"图｜左右不是两个时间点，而是同一次点按的两个坐标系。容器 y=90 减去上边条 75，再除以 0.75，得到游戏 y=20。"},
+    {"type":"paragraph","text":"假设点按在离容器顶 90 CSS 像素处。离游戏可见画面顶只有 15 CSS 像素，除以 0.75 后得到游戏 y=20。若把整个容器当游戏画面，90 ÷ 420 × 360 则约为 77。越靠近上边缘或下边缘，两个结果差得越多；恰好点容器中心时，两种算法却都得到 180。所以中心按钮正常，并不能证明边缘按钮也正常。"},
+    {"type":"heading","text":"坐标偏移不等于渲染分辨率不够"},
+    {"type":"paragraph","text":"网页的 clientX、clientY 以浏览器视口为原点。减去容器在视口中的位置，才变成容器内坐标；减去留白、反向缩放后，才变成游戏坐标。Canvas 用更密的像素渲染，改变的是它的内部像素数量，不会自动改变这些 CSS 坐标的原点或范围。画面之外的留白也没有对应的有效游戏坐标，和「映射到画面最上方的一点」不是一回事。引擎已经帮忙完成视口输入变换的情形，则不属于这里假设的自定义换算。"}
+  ],
+  "cover": {"src":"./assets/covers/window-between-walls.svg","alt":"墨绿色墙面中有一处暖橙色窗口，光斜着落在地面上。"},
+  "coverProvenance":{"status":"original","kind":"editorial-illustration","credit":"AI × INDIE LAB 原创"},
+  "sources":[
+    {"title":"W3C CSSOM View Module：MouseEvent coordinates","url":"https://www.w3.org/TR/cssom-view/#extensions-to-the-mouseevent-interface","accessed":"2026-11-27"},
+    {"title":"Godot Engine 官方文档：Multiple resolutions / Stretch Aspect","url":"https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html#stretch-aspect","accessed":"2026-11-27"}
+  ]
+}

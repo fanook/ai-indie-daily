@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450">
+<rect width="680" height="450" rx="22" fill="#edf0e8"/>
+<g font-family="system-ui,sans-serif" font-weight="650" font-size="27" fill="#283f3a">
+<text x="29" y="49">CSS px</text><text x="490" y="49">游戏 y</text>
+<rect x="122" y="66" width="400" height="350" rx="6" fill="#cfd6c9"/>
+<rect x="122" y="128.5" width="400" height="225" fill="#c1dccc"/>
+<path d="M128 128.5H522M128 353.5H522" stroke="#608577" stroke-width="1.5"/>
+<text x="81" y="86" text-anchor="end">0</text><text x="81" y="133" text-anchor="end">75</text><text x="81" y="163" text-anchor="end" fill="#943c26">90</text><text x="81" y="417" text-anchor="end">420</text>
+<path d="M91 141H522" stroke="#9d492f" stroke-width="2.7"/>
+<circle cx="328" cy="141" r="8.5" fill="#a34c31" stroke="#f2ede1" stroke-width="2"/>
+<text x="555" y="128">0</text><text x="555" y="158" fill="#943c26">20</text><text x="555" y="357">360</text>
+<text x="322" y="273" text-anchor="middle" fill="#456d60" font-size="37">480 × 270</text>
+</g>
+</svg>
