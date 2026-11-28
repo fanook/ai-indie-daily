@@ -1,0 +1,62 @@
+{
+  "id": "news-claude-desktop-artifact-apps-20261124",
+  "slug": "news-claude-desktop-artifact-apps-20261124",
+  "category": "news",
+  "type": "功能更新",
+  "label": "AI 工具",
+  "date": "2026-11-24",
+  "title": "Claude 开始把 Artifacts 装成桌面应用：有独立窗口，仍依赖登录和联网",
+  "summary": "这不是单独导出的安装包。安装后仍是同一份 Artifact；通知与文件访问由不同权限控制。",
+  "tags": [
+    "Claude",
+    "Artifacts",
+    "桌面应用"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "桌面图标背后还是同一份作品"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anthropic 在 11 月 24 日公布这项测试功能。符合条件的 Artifact 可以有自己的窗口和图标，但不是把当时的作品打包成一个独立版本：作者或其他编辑者修改原来的 Artifact，安装后的窗口也会更新。打开时仍需要联网并登录 Claude Desktop。"
+    },
+    {
+      "type": "heading",
+      "text": "安装和授权是两件事"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方文档列出了桌面通知、全局快捷键、悬浮窗口以及菜单栏或系统托盘等权限。完全访问是更高的权限，允许应用运行程序、读取、修改或删除文件，不会为每一步再询问。用户的允许只适用于那个版本；应用有更新时会再次询问。一个例外是应用引用了外站代码，外站代码变动不一定会触发新的提示。"
+    },
+    {
+      "type": "heading",
+      "text": "测试版有哪些范围限制"
+    },
+    {
+      "type": "paragraph",
+      "text": "功能正在 Free、Pro、Max、Ultra、Team 和 Enterprise 逐步开放。需 Mac 或 Windows 版 Claude Desktop 6.28899.0 及以上，网页、移动端和 Linux 不是当前安装目标。Team 的完全访问默认关闭，Enterprise 整项功能默认关闭；旧版 Artifact 和用文档、演示或表格模板创建的 Artifact 不能安装。制作应用和应用调用 Claude 都计入套餐用量。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anthropic：11 月 24 日更新记录",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes?tab=tab-crm",
+      "accessed": "2026-11-28"
+    },
+    {
+      "title": "Anthropic：将 Artifact 安装成应用",
+      "url": "https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app",
+      "accessed": "2026-11-28"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/paper-hinge-at-night.svg",
+    "alt": "蓝黑底面上，一片靛蓝纸页斜搭在半露出的浅青纸页上。"
+  },
+  "coverProvenance": {
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
+  }
+}

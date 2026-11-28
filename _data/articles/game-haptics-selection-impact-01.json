@@ -1,0 +1,62 @@
+{
+  "id": "game-haptics-selection-impact-01",
+  "slug": "game-haptics-selection-impact-01",
+  "category": "game-knowledge",
+  "type": "概念解析",
+  "label": "交互设计",
+  "date": "2026-11-28",
+  "title": "轻震一下，表示调到一格，还是东西落地了？",
+  "summary": "触觉反馈的区别不只在强弱。档位切换、物体接触、任务结束，各有不同的触发时刻。",
+  "tags": [
+    "触觉反馈",
+    "交互设计",
+    "移动游戏"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "同样是短震，发生的时刻决定含义"
+    },
+    {
+      "type": "paragraph",
+      "text": "触觉反馈是通过设备动作传给手的反馈。音效和画面也可以表达冲击，但它们不是触觉本身。以一个有零点的滑杆为例，从正值或负值划入 0 时震一下，传达的是“跨到了这个位置”，不是“拖动结束”。在物品交互中，另一种短震可以只在道具碰到台面时出现；道具离开手、碰到台面和订单达成，可能是三个不同事件。"
+    },
+    {
+      "type": "heading",
+      "text": "选择、碰撞、结果：三种不同的信息"
+    },
+    {
+      "type": "paragraph",
+      "text": "Apple 在 UIKit 中区分选择、冲击和通知反馈。选择反馈标记离散位置变化；冲击反馈可以对应物体接触；通知反馈则表达一次操作的成功、警告或错误。譬如一只木箱拖过一排位置，可以在经过格点时收到轻微档位感；落到最后一格可以另有一次接触感。是否完成整条任务，是再上一层的信息，并不等于箱子碰到地面。"
+    },
+    {
+      "type": "heading",
+      "text": "力度之外还有时长和起落"
+    },
+    {
+      "type": "paragraph",
+      "text": "Core Haptics 把触觉事件分成一瞬的脉冲和有持续时间的事件，并允许分别描述强度与锐度。强度对应轻重，锐度影响感觉偏尖脆还是偏柔和。一个小档位与一块重物着地可以都是短脉冲，区别既可以来自触发时刻和力度，也可以来自脉冲的质感。连续的触觉则能表达接触还没结束，例如设备仍在模拟粗糙表面上的摩擦。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Apple 设计指南：Playing haptics",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics",
+      "accessed": "2026-11-28"
+    },
+    {
+      "title": "Apple WWDC：Core Haptics 中的事件、强度和锐度",
+      "url": "https://developer.apple.com/videos/play/wwdc2019/520/",
+      "accessed": "2026-11-28"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/two-distant-ripples.svg",
+    "alt": "平静的青灰色画面上，两道大小不同的波纹从不同位置扩散。"
+  },
+  "coverProvenance": {
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
+  }
+}

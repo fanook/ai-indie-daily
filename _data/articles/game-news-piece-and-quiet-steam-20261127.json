@@ -1,0 +1,57 @@
+{
+  "id": "game-news-piece-and-quiet-steam-20261127",
+  "slug": "game-news-piece-and-quiet-steam-20261127",
+  "category": "game-news",
+  "type": "独立游戏发售",
+  "label": "Steam",
+  "date": "2026-11-27",
+  "title": "《Piece and Quiet》登陆 Steam：拼好一段玻璃，山间礼拜堂就亮起一角",
+  "summary": "第一人称修复游戏让玩家擦净碎片、按颜色和形状拼回六扇彩窗。放错不会扣分，碎片可以拔出来重放。",
+  "tags": [
+    "独立游戏",
+    "Steam",
+    "休闲游戏"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "礼拜堂里的 2,655 片彩色玻璃"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vahov games 开发、Spaghetti Cat 发行的《Piece and Quiet: A Stained Glass Restoration》于 11 月 27 日在 Steam 发售。故事从一座偏远的山间礼拜堂开始：彩窗落在地板上，玩家要修复六扇窗。Steam 正式商店页已开放购买，列出 Windows 和简体中文界面。"
+    },
+    {
+      "type": "heading",
+      "text": "放错会歪，但不会判输"
+    },
+    {
+      "type": "paragraph",
+      "text": "商店说明中，碎片要先刷去灰尘，再按形状与颜色和祭坛上的草图对应。找到合适位置的碎片会滑入并转正；选错位置时，碎片会歪着留在窗上，玩家可以拔下来重新安排。完成一段后，玻璃上会扫过一道金光。反馈先发生在碎片，再发生在整段窗上，不必等最后一扇修完才看见变化。"
+    },
+    {
+      "type": "heading",
+      "text": "修复也会改变搬运和找片的方式"
+    },
+    {
+      "type": "paragraph",
+      "text": "放对碎片会推进能力解锁。官方举例包括提示碎片的位置、召来玻璃，以及增大一次能携带的数量。六扇窗各自表现玻璃匠生命中的一段场景，礼拜堂里的手写便条补足故事。商店说明游戏没有倒计时和失败条件，并会自动保存。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Steam：Piece and Quiet 官方商店页",
+      "url": "https://store.steampowered.com/app/5066090/",
+      "accessed": "2026-11-28"
+    }
+  ],
+  "cover": {
+    "src": "./assets/covers/amber-in-the-crease.svg",
+    "alt": "暖陶色画面上，一片琥珀色的光嵌在深色斜褶之间。"
+  },
+  "coverProvenance": {
+    "status": "original",
+    "kind": "editorial-illustration",
+    "credit": "AI × INDIE LAB 原创"
+  }
+}

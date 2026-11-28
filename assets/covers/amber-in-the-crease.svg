@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<defs>
+<linearGradient id="field" x1="0" y1=".1" x2="1" y2=".75"><stop stop-color="#bf806a"/><stop offset="1" stop-color="#986057"/></linearGradient>
+<linearGradient id="quiet" x1="0" y1=".1" x2="1" y2=".7"><stop stop-color="#342438"/><stop offset="1" stop-color="#6a4150"/></linearGradient>
+<linearGradient id="light" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#ffda99"/><stop offset=".6" stop-color="#e8aa67"/><stop offset="1" stop-color="#ac6754"/></linearGradient>
+</defs>
+<path fill="url(#field)" d="M0 0h960v540H0Z"/>
+<path fill="#d49c7e" opacity=".55" d="M0 0h718C591 49 550 160 405 235 270 305 147 281 0 344Z"/>
+<path fill="url(#quiet)" d="M960 39v501H0v-70c231-28 305-118 509-129 196-10 331-229 451-302Z"/>
+<path fill="#82565d" d="M0 540H960V303c-130 70-292 86-446 102-163 15-257 88-514 113Z"/>
+<path fill="url(#light)" d="M273 392c101-48 190-54 236-68 65-19 106-48 170-95-30 42-42 73-87 101-90 62-178 40-319 62Z"/>
+<path fill="#f2c48f" opacity=".72" d="m309 381 35-13 67-9-40 12Z"/>
+</svg>
